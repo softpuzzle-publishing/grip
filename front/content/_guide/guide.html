@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+
+    <style>
+        .guide-wrap{padding: 50px;display: flex;flex-wrap:wrap;}
+        section{width: 50%;padding: 20px;}
+
+        @media (max-width: 919.98px){
+            .guide-wrap{padding: 0;}
+            section{width: 100%;}
+        }
+    </style>
+</head>
+
+<body>
+<div class="guide-wrap">
+    <section>
+        <div class="title-area">
+            <div class="title"><span class="text-primary">홍</span>길동님의 프로필</div>
+            <p class="desc">그립의 색다른 맞춤형 추천을 위해 프로필을 완성해주세요</p>
+        </div>
+
+        <div class="subtitle-area">
+            <div class="subtitle">홍길동님의 프로필</div>
+            <p class="desc">그립의 색다른 맞춤형 추천을 위해 프로필을 완성해주세요</p>
+        </div>
+
+        <div class="result-top has-border">
+            <div class="row justify-content-between align-items-end">
+                <div class="col-auto">
+                    <div class="result-title mb-0">
+                        클럽개수 <span class="text-secondary">5</span>
+                    </div>
+                </div>
+                <div class="col-auto text-right">
+                    <ul class="sort" data-sorting="asc">
+                        <li><a href="javascript:;" class="active">거리순</a></li>
+                        <li><a href="javascript:;">가격순</a></li>
+                        <li><a href="javascript:;">평점순</a></li>
+                        <li><a href="javascript:;">난이도순</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+            <ul class="sort no-direction">
+                <li><a href="javascript:;" class="active">최신순</a></li>
+                <li><a href="javascript:;">과거순</a></li>
+                <li><a href="javascript:;">공감수</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="form-wrap">
+            <div class="form-row-line">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="이름">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="email" class="form-control" placeholder="이메일 주소 (추후 변경 불가)">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="password" class="form-control" placeholder="비밀번호 ( 예: 영문, 숫자 포함 6자리 이상)">
+                    </div>
+                </div>
+            </div>
+            <p class="text-valid text-right">
+                <span class="text-primary">인증되었습니다!</span>
+            </p>
+        </div>
+
+        <div class="form-wrap margin-sm">
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="지금 사용중인 비밀번호">
+                    </div>
+                    <div class="col-auto">
+                        <span class="text-danger">불일치</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="변경할 비밀번호">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="변경할 비밀번호 한번 더 입력">
+                    </div>
+                    <div class="col-auto">
+                        <span class="text-primary">일치</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="btn-step-area" data-step="0">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <a href="javascript:;" class="btn-prev"><span>이전</span></a>
+                </div>
+                <div class="col-auto">
+                    <a href="javascript:;" class="btn-next"><span>다음</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="form1">
+            <label class="custom-control-label" for="form1">서비스이용약관 (필수)</label>
+        </div>
+        <div>
+            <div class="hole">
+                <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="radioHole" id="rc1">
+                    <label class="custom-control-label" for="rc1">9H</label>
+                </div>
+                <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="radioHole" id="rc2">
+                    <label class="custom-control-label" for="rc2">18H</label>
+                </div>
+                <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="radioHole" id="rc3">
+                    <label class="custom-control-label" for="rc3">27H</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" name="agree" id="agreeY">
+                <label class="custom-control-label" for="agreeY">동의</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" name="agree" id="agreeN">
+                <label class="custom-control-label" for="agreeN">동의하지 않음</label>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row address-gutter">
+            <div class="col-6">
+                <select name="" id="">
+                    <option value="">시/도</option>
+                    <option value="">강원도</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <select name="" id="">
+                    <option value="">시/군/구</option>
+                    <option value="">강릉시</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <select name="" id="zone-details" class="select-box-style">
+                <option value="">지역을 선택하세요</option>
+                <option value="ZONE1">수도권 전체</option>
+                <option value="addrs-01">파주/고양/김포</option>
+                <option value="addrs-02">인천/안산/시흥</option>
+                <option value="addrs-03">남양주/하남/구리</option>
+                <option value="addrs-04">광주/성남</option>
+                <option value="addrs-05">용인/수원/화성</option>
+                <option value="addrs-06">오산/평택/안성</option>
+                <option value="addrs-07">포천/동두천/양주</option>
+                <option value="addrs-08">여주/이천/양평</option>
+            </select>
+        </div>
+    </section>
+    <section>
+        <div class="profile">
+            <span>
+                <img src="../../resources/images/icon-female.png" alt="여자">
+            </span>
+        </div>
+        <div class="profile">
+            <span>
+                <img src="../../resources/images/icon-male.png" alt="남자">
+            </span>
+        </div>
+    </section>
+    <section>
+        <div class="btn-area btn-area-join">
+            <a href="" class="btn btn-primary min-width-186">확인</a>
+            <a href="" class="btn btn-outline-light min-width-186">플레이 취소하기</a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-primary min-width-150">메인으로</a>
+
+            <button class="btn btn-primary">예약하기</button>
+
+            <button class="btn btn-primary" disabled="disabled">예약하기</button>
+        </div>
+        <div>
+            <button class="btn btn-primary btn-sm">예약하기</button>
+
+            <button class="btn btn-secondary btn-text-sm" disabled="disabled">인증</button>
+
+            <button class="btn btn-secondary btn-text-sm">확인</button>
+        </div>
+    </section>
+    <section>
+        <div class="sympathy">
+            <button role="button" class="good"><span>1</span></button>
+            <button role="button" class="bad"><span>1</span></button>
+        </div>
+    </section>
+    <section>
+        <div class="rating">
+            <span>평점</span>
+            <i data-point="3.5">3.5</i>
+        </div>
+        <div class="level">
+            <span>난이도</span>
+            <i data-point="2.5">2.5</i>
+        </div>
+        <div class="rating-star" data-point="4.5">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="time">
+            <span>00:00</span>
+        </div>
+    </section>
+    <section>
+        <button type="button" class="like"><span class="sr-only">가고싶음</span></button>
+        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+    </section>
+    <section>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">클럽소개 프로그램</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">클럽리뷰</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <div class="tab">
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">록키</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">알프스</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">몽블랑</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<section>
+    <div class="go-top">
+        <a href="javascript:;">
+            <span>TOP</span>
+        </a>
+    </div>
+</section>
+
+
+<div class="feedback" data-flag="on">
+    <article><i></i><span>가고싶음!</span></article>
+</div>
+
+<script>
+	$(document).ready(function(){
+	});
+
+</script>
+
+</body>
+</html>

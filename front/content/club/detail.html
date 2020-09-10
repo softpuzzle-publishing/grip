@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="club-top">
+                    <div class="summary">
+                        <div class="location">강원도 홍천군</div>
+                        <div class="name">
+                            <strong class="club">엘리시안 강촌 나인플러스 골프클럽</strong>
+                            <span class="type">멤버십클럽 (회원용)</span>
+                            <i class="distance">50km</i>
+                        </div>
+                        <div class="info">
+                            <div class="rating">
+                                <span>평점</span>
+                                <i data-point="3.5">3.5</i>
+                            </div>
+                            <div class="level">
+                                <span>난이도</span>
+                                <i data-point="2.5">2.5</i>
+                            </div>
+                            <div class="time">
+                                <span>00:00</span>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-reservation-disabled">(불가)</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-reservation">예약하기</button>
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div class="big">
+                            <div class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_01_main.png" alt="" onload="setDirection(this)">
+                            </div>
+                        </div>
+                        <div class="small">
+                            <div class="row row-10">
+                                <div class="col">
+                                    <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-gallery">
+                                        <img src="../../resources/images/001_oakvalley_cc_05_detail1.png" alt="" onload="setDirection(this)">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-gallery">
+                                        <img src="../../resources/images/001_oakvalley_cc_05_detail2.png" alt="" onload="setDirection(this)">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-gallery">
+                                        <img src="../../resources/images/001_oakvalley_cc_05_detail3.png" alt="" onload="setDirection(this)">
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-gallery">
+                                        <img src="../../resources/images/001_oakvalley_cc_05_detail4.png" alt="" onload="setDirection(this)">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="club-tab">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-lg-auto">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">클럽소개 프로그램</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">클럽리뷰</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-auto">
+                            <div class="util-btns">
+                                <button type="button" class="like"><span>가고싶다</span></button>
+                                <button type="button" class="share"><span>공유하기</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade active show" id="t1" role="tabpanel">
+                        <section class="section-club border-top-0 pt-0">
+                            <div class="club-info">
+                                <div class="row">
+                                    <label class="col-auto">명칭</label>
+                                    <div class="col">엘리시안 강촌 나인플러스 골프클럽</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">개장</label>
+                                    <div class="col">1997.12</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">설계</label>
+                                    <div class="col">노준택, 로빈넬슨, 니클라우스 디자인</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">잔디</label>
+                                    <div class="col">한국잔디, 블루그라스, 벤트그라스</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">부대시설</label>
+                                    <div class="col">
+                                        <span class="option"><i class="icon-driving"></i>드라이빙레인지</span>
+                                        <span class="option"><i class="icon-putting"></i>퍼팅그린</span>
+                                        <span class="option"><i class="icon-rocker"></i>락커룸</span>
+                                        <span class="option"><i class="icon-stay"></i>숙박시설</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">특이사항</label>
+                                    <div class="col">
+                                        <span class="option"><i class="icon-nocaddy"></i>노캐디 선택제</span>
+                                        <span class="option"><i class="icon-night"></i>야간라운드 가능</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">예약인원</label>
+                                    <div class="col">평일 2인이상 / 주말 4인이상</div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-auto">수상실적</label>
+                                    <div class="col">
+                                        <div class="awards fold">
+                                            <div class="item">
+                                                <span class="d-inline-block d-lg-inline">2019년 Asia Top 100 3위</span>
+                                                <span class="d-inline-block d-lg-inline text-secondary">top 100 golf courses </span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="d-inline-block d-lg-inline">2018년 2017-2018 World’s 100 Greatest Golf Coursees 49위 </span>
+                                                <span class="d-inline-block d-lg-inline text-secondary">Golf Digest</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="d-inline-block d-lg-inline">2019년 Asia Top 100 3위</span>
+                                                <span class="d-inline-block d-lg-inline text-secondary">top 100 golf courses </span>
+                                            </div>
+                                        </div>
+                                        <a href="#none" class="more-text" id="btn-more-awards">...더보기</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="introduction fold">
+                                            제주 공항에서 25분 거리, 제주시에 위치한 27홀 규모의 골프장입니다. 제주 내 골프장 중 가장 낮은 고도에 위치해 있어 사계절 라운드가 가능합니다. 자연을 훼손하지 않은 친환경 설계로 페어웨이를 감싸고 있는 깊은 수림지대가 인상적인 <a href="#none" class="more-text" id="btn-more-intro">...더보기</a>
+                                        </div>
+                                        <div class="introduction unfold">
+                                            제주 공항에서 25분 거리, 제주시에 위치한 27홀 규모의 골프장입니다. 제주 내 골프장 중 가장 낮은 고도에 위치해 있어 사계절 라운드가 가능합니다. 자연을 훼손하지 않은 친환경 설계로 페어웨이를 감싸고 있는 깊은 수림지대가 인상적인 골프장입니다. 업다운이 적은 평탄한 코스지만 시각적으로 좁고 교묘히 벙커와 해저드가 배치되어 있어 이를 고려한 플레이가 요구됩니다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section-club">
+                            <div class="subtitle-area border-0">
+                                <div class="subtitle">코스소개</div>
+                            </div>
+                            <div class="course-intro">
+                                <div class="course-row">
+                                    <div class="txt1">총 연장거리 <span class="text-secondary">6,500m</span></div>
+                                    <div class="txt2"><span class="text-primary">6홀</span> 코스로 총 전장 기준 전국 <span class="text-primary">정규코스</span> 중 <span class="text-primary">상위 40%</span> 규모의 클럽입니다</div>
+                                    <div class="progress-distance in" data-event="revealed">
+                                        <div class="progress-distance-wrap">
+                                            <div class="progress-distance-line">
+                                                <span>최단 3,000m</span><span>최장 8,000m</span>
+                                            </div>
+                                            <div class="progress-distance-bar" data-percent="80"
+                                                style="width: 80%;">
+                                                <span class="progress-distance-point">
+                                                    <strong>상위80%</strong>
+                                                    <i class="icon-flg"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-row">
+                                    <div class="txt1">18H 연장거리 <span class="text-secondary">6,500m</span></div>
+                                    <div class="txt2">전국 <span class="text-primary">정규코스</span> 중 상위 40%에 해당하는 긴 코스입니다</div>
+                                    <div class="progress-distance in" data-event="revealed">
+                                        <div class="progress-distance-wrap">
+                                            <div class="progress-distance-line">
+                                                <span>최단 3,000m</span><span>최장 8,000m</span>
+                                            </div>
+                                            <div class="progress-distance-bar" data-percent="80"
+                                                style="width: 80%;">
+                                                <span class="progress-distance-point">
+                                                    <strong>상위80%</strong>
+                                                    <i class="icon-flg"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section-club">
+                            <div class="subtitle-area border-0">
+                                <div class="subtitle">상세코스 <i class="icon-map"></i></div>
+                            </div>
+                            <div class="tab tab-course-detail">
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">록키</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">알프스</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">몽블랑</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="course-detail">
+                                <span class="arr"></span>
+                                <div class="history">
+                                    <button class="btn btn-outline-primary btn-text-sm" id="btn-history" data-toggle="popover" data-placement="bottom" data-trigger="focus"  data-popover-content="#history-popover-content">대회이력</button>
+                                    <div id="history-popover-content" hidden>
+                                        <div class="popover-heading"><span>록키</span>코스 대회이력</div>
+                                        <div class="popover-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>구분</th>
+                                                        <th>투어명</th>
+                                                        <th>개최년도</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Asian Tour</th>
+                                                        <td>Asian Tour 2019</td>
+                                                        <td class="text-center">2019년</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>KGA</th>
+                                                        <td>KGA 주최 대회 2017</td>
+                                                        <td class="text-center">2017년</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asian Tour</th>
+                                                        <td>Asian Tour 2019</td>
+                                                        <td class="text-center">2017년</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-row">
+                                    <div class="txt1">총 연장거리 <span class="text-secondary">6,500m</span></div>
+                                    <div class="txt2">전국 <span class="text-primary">정규코스</span> 중 상위 40%에 해당하는 긴 코스입니다</div>
+                                    <div class="progress-distance in" data-event="revealed">
+                                        <div class="progress-distance-wrap">
+                                            <div class="progress-distance-line">
+                                                <span>최단 3,000m</span><span>최장 8,000m</span>
+                                            </div>
+                                            <div class="progress-distance-bar" data-percent="80"
+                                                style="width: 80%;">
+                                                <span class="progress-distance-point">
+                                                    <strong>상위80%</strong>
+                                                    <i class="icon-flg"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-row">
+                                    <div class="txt1">1H 최장거리 <span class="text-secondary">300m</span></div>
+                                    <div class="txt2">전국 <span class="text-primary">정규코스</span> 중 상위 40%에 해당하는 긴 코스입니다</div>
+                                    <div class="progress-distance in" data-event="revealed">
+                                        <div class="progress-distance-wrap">
+                                            <div class="progress-distance-line">
+                                                <span>최단 100m</span><span>최장 800m</span>
+                                            </div>
+                                            <div class="progress-distance-bar" data-percent="40"
+                                                style="width: 40%;">
+                                                <span class="progress-distance-point">
+                                                    <strong>상위40%</strong>
+                                                    <i class="icon-flg"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-score">
+                                    <div class="txt3">코스재원</div>
+                                    <div class="chart">
+                                        <div class="unit">(단위: m)</div>
+                                        <div class="chart-bar">
+                                            <div class="y">
+                                                <div class="par3">
+                                                    <p>Par3<i>(~183m)</i></p>
+                                                </div>
+                                                <div class="par4">
+                                                    <p>Par4<i>(~439m)</i></p>
+                                                </div>
+                                                <div class="par5">
+                                                    <p>Par5<i>(~549m)</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="x-scroll">
+                                                <div class="x">
+                                                    <div class="hole"><i>1H</i><em>Par4</em>
+                                                        <div class="bar" style="height:67%"><span>368</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>2H</i><em>Par4</em>
+                                                        <div class="bar" style="height:79%"><span>434</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>3H</i><em>Par3</em>
+                                                        <div class="bar" style="height:31%"><span>171</span></div>
+                                                    </div>
+                                                    <div class="hole morethan1000"><i>4H</i><em>Par5</em>
+                                                        <div class="bar" style="height:100%"><span>1,100</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>5H</i><em>Par4</em>
+                                                        <div class="bar" style="height:69%"><span>378</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>6H</i><em>Par3</em>
+                                                        <div class="bar" style="height:39%"><span>215</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>7H</i><em>Par4</em>
+                                                        <div class="bar" style="height:69%"><span>377</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>8H</i><em>Par4</em>
+                                                        <div class="bar" style="height:69%"><span>380</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>9H</i><em>Par5</em>
+                                                        <div class="bar" style="height:86%"><span>471</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>10H</i><em>Par5</em>
+                                                        <div class="bar" style="height:86%"><span>471</span></div>
+                                                    </div>
+                                                    <div class="hole"><i>11H</i><em>Par5</em>
+                                                        <div class="bar" style="height:86%"><span>471</span></div>
+                                                    </div>
+                                                    <div class="hole morethan1000"><i>12H</i><em>Par5</em>
+                                                        <div class="bar" style="height:120%"><span>1,200</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="desc">
+                                        <p>그래프의 Y축은 마이클 허잔(Michael J. Hurdzan)이 코스아키텍처에서 제시한 PAR별 기준거리입니다 <br>
+                                            PAR3는 ~250yd, PAR4는 ~480yd, PAR5는 ~600yd라는 기준값과 홀별 거리간 비교를 통해 코스의 공정성, 샷 밸류, 진행 및 흐름에 대한 판단을 하실 수 있습니다</p>
+                                    </div>
+                                </div>
+                                <div class="course-grass">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <div class="txt1">*이 코스의 잔디는? </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <span class="badge badge-grass">조선잔디</span>
+                                            <span class="badge badge-grass">양잔디</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section-club">
+                            <div class="subtitle-area border-0">
+                                <div class="subtitle">이 클럽이 포함된 기획전</div>
+                            </div>
+                            <div class="card-list p-0">
+                                <div class="row row-20">
+                                    <div class="col-6 col-md-4">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb">
+                                                    <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
+                                                </div>
+                                                <div class="category">클럽추천</div>
+                                                <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                    최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb">
+                                                    <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
+                                                </div>
+                                                <div class="category">클럽추천</div>
+                                                <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                    최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb">
+                                                    <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
+                                                </div>
+                                                <div class="category">클럽추천</div>
+                                                <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                    최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="item">
+                                            <a href="">
+                                                <div class="thumb">
+                                                    <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
+                                                </div>
+                                                <div class="category">클럽추천</div>
+                                                <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                    최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="t2" role="tabpanel">
+                        <section class="section-club border-0 pt-0">
+                            <div class="subtitle-area border-0">
+                                <div class="subtitle">리뷰</div>
+                            </div>
+                            <div class="social-review">
+                                <div class="social-review-row">
+                                    <div class="subtitle-sub">소셜 지수</div>
+                                    <div class="social-index in" data-event="revealed">
+                                        <div class="bar">
+                                            <div class="step">
+                                                <span>저조</span>
+                                                <span>미흡</span>
+                                                <span>보통</span>
+                                                <span>우수</span>
+                                                <span>최상</span>
+                                                <div class="point" data-point="3.5">
+                                                    <strong><i></i>3.5점</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="desc">각종 SNS 및 골프채널의 리뷰현황을 실시간 집계하여 통계적으로 분석한 지수입니다. <br>지수가 높을 수록 클럽 인지도와 이용률이 높음을 의미합니다.</p>
+                                </div>
+                                <div class="social-review-row">
+                                    <div class="subtitle-sub">소셜 리뷰</div>
+                                    <div class="social-details">
+                                        <ul>
+                                            <li>
+                                                <a href="">
+                                                    <div><strong>남서울cc 라운딩 후기 및 공략</strong><span>NAVER blog</span></div>
+                                                    <p>오랫만에 라운딩을 다녀왔습니다 :) 멀리는 가지를 못했고 집과 근거리에 있는 성남의 남서울cc에 다녀왔는...</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <div><strong>남서울cc 라운딩 후기 및 공략</strong><span>NAVER blog</span></div>
+                                                    <p>오랫만에 라운딩을 다녀왔습니다 :) 멀리는 가지를 못했고 집과 근거리에 있는 성남의 남서울cc에 다녀왔는...</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <div><strong>남서울cc 라운딩 후기 및 공략</strong><span>NAVER blog</span></div>
+                                                    <p>오랫만에 라운딩을 다녀왔습니다 :) 멀리는 가지를 못했고 집과 근거리에 있는 성남의 남서울cc에 다녀왔는...</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section-club">
+                            <div class="review">
+                                <div class="text-right">
+                                    <button class="btn btn-primary btn-text-sm">리뷰작성</button>
+                                </div>
+                                <ul class="review-details">
+                                    <li>
+                                        <div class="user">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="홍길동">
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <a href="#modal-profile" data-toggle="modal" data-role="button" class="name">홍길동</a>
+                                                <div class="rating-star" data-point="1.5">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <p class="date">2020-07-01</p>
+                                            </div>
+                                        </div>
+                                        <div class="txt">
+                                            <p>주말 3인 노캐디로 다녀왔습니다. 커플끼리 편하게 즐기는 팀도 있었고 5인에 캐디를 대동한 팀도 있더군요. 4인+캐디필수라는 관념이 사라진 흥미로운 광경이었습니다. 오직 전진만 가능한 모노레일 카트는 이동의 안정감을 주었고 캐디의 압박감에서 벗어나 플레이에 집중할 수 있는 자유를 만끽했습니다. <span class="text-success">#캐디</span> 의존증 해소 <span class="text-success">#상대적</span>으로 짧은 전장 <span class="text-success">#티박스</span> 선택은 자유롭게 <span class="text-success">#멀리건</span>은 마음대로 <span class="text-success">#팀당</span> 거리측정기 최소 1개 필수!</p>
+                                        </div>
+                                        <div class="photo">
+                                            <span class="thumb"><img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="review1" ></span>
+                                            <span class="thumb"><img src="../../resources/images/001_oakvalley_cc_01_main.png" alt="review2"></span>
+                                            <span class="thumb"><img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="review3"></span>
+                                            <div class="detail">
+                                                <div class="thumb">
+                                                    <img src="" alt="">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="more-toggle">
+                                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                            <ul>
+                                                <li><a href="javascript:;">수정하기</a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">삭제하기</a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">신고하기</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="sympathy">
+                                            <button role="button" class="good"><span>1</span></button>
+                                            <button role="button" class="bad"><span>1</span></button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="user">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="홍길동">
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <a href="#modal-profile" data-toggle="modal" data-role="button" class="name">홍길동</a>
+                                                <div class="rating-star" data-point="4.5">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <p class="date">2020-07-01</p>
+                                            </div>
+                                        </div>
+                                        <div class="txt">
+                                            <p>주말 3인 노캐디로 다녀왔습니다. 커플끼리 편하게 즐기는 팀도 있었고 5인에 캐디를 대동한 팀도 있더군요. 4인+캐디필수라는 관념이 사라진 흥미로운 광경이었습니다. 오직 전진만 가능한 모노레일 카트는 이동의 안정감을 주었고 캐디의 압박감에서 벗어나 플레이에 집중할 수 있는 자유를 만끽했습니다. <span class="text-success">#캐디</span> 의존증 해소 <span class="text-success">#상대적</span>으로 짧은 전장 <span class="text-success">#티박스</span> 선택은 자유롭게 <span class="text-success">#멀리건</span>은 마음대로 <span class="text-success">#팀당</span> 거리측정기 최소 1개 필수!</p>
+                                        </div>
+                                        <div class="more-toggle">
+                                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                            <ul>
+                                                <li><a href="javascript:;">수정하기</a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">삭제하기</a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">신고하기</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="sympathy">
+                                            <button role="button" class="good active"><span>1</span></button>
+                                            <button role="button" class="bad"><span>1</span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <div id="footer">
+
+        </div>
+        <div class="dim"></div>
+    </div>
+</div>
+
+<!-- modal : 갤러리 -->
+<div class="modal modal-gallery" tabindex="-1" id="modal-gallery">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+            <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="gallery-top">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail1.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail2.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail3.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail4.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail5.png)"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white swiper-button-next-gallery"></div>
+                    <div class="swiper-button-prev swiper-button-white swiper-button-prev-gallery"></div>
+                </div>
+                <div class="gallery-thumbs">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" >
+                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail1.png)"></div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail2.png)"></div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail3.png)"></div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail4.png)"></div>
+                            </div>
+                            <div class="swiper-slide" >
+                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail5.png)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- alert : 리뷰 삭제 확인 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-review-delete-confirm-page">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p>리뷰를 <span class="text-danger">삭제</span>하시겠습니까?</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-review-delete-y">예</button>
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+        //init
+        var init = function(){
+            //소셜 지수 그래프 세팅
+            $('.social-index .point').css('left',$('.social-index .point').data('point')*20 + '%');
+            //상세코스 화살표 위치 세팅
+            $('.course-detail .arr').css('left',$('.tab-course-detail .active').position().left + ($('.tab-course-detail .active').outerWidth() / 2));
+        }
+
+        //수상실적 더보기
+        $('#btn-more-awards').on('click',function(e){
+            e.preventDefault();
+            $(this).prev('.awards').removeClass('fold');
+        });
+
+        //골프장 설명 더보기
+        $('#btn-more-intro').on('click',function(e){
+            e.preventDefault();
+            $(this).closest('.introduction').addClass('active');
+        });
+
+        var galleryThumbs;
+        var galleryTop;
+        var gallerIndex;
+        $('.gallery .thumb').on('click',function(){
+            gallerIndex = $(this).parent().index();
+        });
+
+        //갤러리 모달 열릴때
+        $('#modal-gallery').on('shown.bs.modal', function (e) {
+            var idx = $(event.relatedTarget).data('idx');
+            //최초 실행
+            if(galleryThumbs === undefined){
+                galleryThumbs = new Swiper('.gallery-thumbs .swiper-container', {
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                    allowTouchMove: false
+                });
+                galleryTop = new Swiper('.gallery-top .swiper-container', {
+                    effect: 'fade',
+                    initialSlide: gallerIndex,
+                    navigation: {
+                        nextEl: '.swiper-button-next-gallery',
+                        prevEl: '.swiper-button-prev-gallery',
+                    },
+                    thumbs: {
+                        swiper: galleryThumbs,
+                    },
+                });
+            }
+            //최초 이후
+            else{
+                galleryTop.slideTo(gallerIndex);
+            }
+        });
+        //갤러리 모달 닫힐때
+        $('#modal-gallery').on('hidden.bs.modal', function (e) {
+        });
+
+        //상세코스 탭 클리시 화살표 위치 이동
+        $('.tab-course-detail [data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var t = e.target;
+            var left = $(t).position().left + ($(t).outerWidth() / 2);
+            $('.course-detail .arr').css('left',left);
+        });
+
+        //상세코스 대회이력 popover
+        $("#btn-history").popover({
+            sanitize: false,
+            html : true,
+            content: function() {
+                return $('#history-popover-content .popover-body').html();
+            },
+            title: function() {
+                return $('#history-popover-content .popover-heading').text();
+            }
+        });
+
+        //리뷰(in tab) 삭제하시겠습니까?
+        $('.review-details [data-id=btn-review-delete]').on('click',function(){
+            $('#modal-review-delete-confirm-page').modal('show');
+        });
+        //리뷰(in tab) 삭제 - 예
+        $('[data-id=btn-review-delete-y]').on('click',function(){
+             //$('#modal-review-delete-ok').modal('show');
+        });
+
+        init();
+	});
+</script>
+
+</body>
+</html>

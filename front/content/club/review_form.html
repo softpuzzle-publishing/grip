@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="title-area">
+                    <div class="title"><span class="text-primary">엘리시안 강촌 나인플러스 골프클럽</span>에 대한 생생한 방문후기를 남겨주세요</div>
+                </div>
+
+                <div class="review-form">
+                    <div class="rating-check">
+                        <span class="rating-05" data-value="0.5"></span>
+                        <span class="rating-10" data-value="1.0"></span>
+                        <span class="rating-15" data-value="1.5"></span>
+                        <span class="rating-20" data-value="2.0"></span>
+                        <span class="rating-25" data-value="2.5"></span>
+                        <span class="rating-30" data-value="3.0"></span>
+                        <span class="rating-35" data-value="3.5"></span>
+                        <span class="rating-40" data-value="4.0"></span>
+                        <span class="rating-45" data-value="4.5"></span>
+                        <span class="rating-50" data-value="5.0"></span>
+                    </div>
+                    <div class="editor">
+                        <textarea name="" id="content"></textarea>
+                        <div class="length">0/5000</div>
+                    </div>
+                    <div class="photos">
+                        <ul id="photo">
+                            <li>
+                                <input type="file" name="uploadFile" accept="image/gif,image/jpeg,image/png" id="uploadFile0">
+                                <a href="javascript:;" id="aTag">
+                                    <span class="sr-only">파일첨부</span>
+                                    <span class="thumb">
+                                        <img class="fileImg" name="fileImg" src="../../resources/images/001_oakvalley_cc_05_detail2.png">
+                                    </span>
+                                </a>
+                                <button class="btn-remove"><span class="sr-only">이미지 삭제</span></button>
+                            </li>
+                            <li>
+                                <input type="file" name="uploadFile" accept="image/gif,image/jpeg,image/png" id="uploadFile1">
+                                <a href="javascript:;" id="aTag">
+                                    <span class="sr-only">파일첨부</span>
+                                    <span class="thumb">
+                                        <img class="fileImg" name="fileImg" src="">
+                                    </span>
+                                </a>
+                                <button class="btn-remove"><span class="sr-only">이미지 삭제</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light min-width-150">취소</button>
+                    <button type="button" class="btn btn-primary min-width-150">완료</button>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <div id="footer">
+
+        </div>
+        <div class="dim"></div>
+    </div>
+</div>
+
+<script>
+	$(document).ready(function(){
+        //init
+        var init = function(){
+
+        }
+
+        //사진 첨부
+        $(document).on('click','.review-form .photos li > a',function(e){
+    		e.preventDefault();
+    		$(this).siblings('input').trigger('click');
+        });
+        //썸네일의 이미지 사이즈 체크하여 'horizontal' or 'vertical' 넣어야 함!
+        setDirection($('[name=fileImg]')[0]);
+
+        //별점
+        $('.rating-check span').on('mouseover',function(){
+            $('.rating-check').attr('data-hover',$(this).data('value'));
+        });
+        $('.rating-check').on('mouseout', function(){
+            $('.rating-check').attr('data-hover',0.0);
+        });
+        $('.rating-check span').on('click',function(){
+            $('.rating-check').attr('data-checked',$(this).data('value'));
+            console.log($(this).data('value'));
+        });
+
+        init();
+	});
+
+
+</script>
+
+</body>
+</html>

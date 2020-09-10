@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-center no-menu"> <!-- 헤더 메뉴 없음 -->
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="center-block">
+        <div class="container">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area">
+								<div class="title">회원가입</div>
+								<p class="desc">본인의 정보를 정확히 입력해주세요</p>
+							</div>
+							<div class="form-wrap">
+								<div class="form-row-line">
+									<div class="row">
+										<div class="col-12">
+											<input type="text" class="form-control" placeholder="이름">
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<div class="row">
+										<div class="col-12">
+											<input type="email" class="form-control" placeholder="이메일 주소 (추후 변경 불가)">
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<div class="row">
+										<div class="col-12">
+											<input type="password" class="form-control" placeholder="비밀번호 ( 예: 영문, 숫자 포함 6자리 이상)">
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<div class="row">
+										<div class="col-12">
+											<input type="password" class="form-control" placeholder="비밀번호 확인">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="agree-wrap">
+								<strong>이용약관 동의</strong>
+								<div class="agree-all">
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="form0">
+										<label class="custom-control-label" for="form0">전체동의</label>
+									</div>
+								</div>
+								<div class="agree-sub">
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="form1">
+										<label class="custom-control-label" for="form1">서비스이용약관 (필수)</label>
+									</div>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="form2">
+										<label class="custom-control-label" for="form2">개인정보취급방침 (필수)</label>
+									</div>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="form3">
+										<label class="custom-control-label" for="form3">3자 제공동의 (필수)</label>
+									</div>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="form4">
+										<label class="custom-control-label" for="form4">위치기반서비스이용약관 (필수)</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area">
+								<div class="title">홍길동님의 프로필</div>
+								<p class="desc">그립의 색다른 맞춤형 추천을 위해 프로필을 완성해주세요</p>
+							</div>
+							<div class="form-wrap">
+								<div class="gender-select">
+									<label for="male">
+										<input type="radio" name="formGender" id="male">
+										<div class="profile">
+											<span>
+												<img src="../../resources/images/icon-male.png" alt="남자">
+											</span>
+										</div>
+										<strong>남자</strong>
+									</label>
+									<label for="female">
+										<input type="radio" name="formGender" id="female">
+										<div class="profile">
+											<span>
+												<img src="../../resources/images/icon-female.png" alt="여자">
+											</span>
+										</div>
+										<strong>여자</strong>
+									</label>
+								</div>
+								<div class="form-row-line">
+									<div class="row">
+										<div class="col-12">
+											<input type="tel" class="form-control" placeholder="생년월일 (예: 19800102)">
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<div class="row address-gutter">
+										<div class="col-6">
+											<select name="" id="">
+												<option value="">시/도</option>
+												<option value="">강원도</option>
+											</select>
+										</div>
+										<div class="col-6">
+											<select name="" id="">
+												<option value="">시/군/구</option>
+												<option value="">강릉시</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area">
+								<div class="title">홍길동님의 골프이력 및 핸디캡</div>
+								<p class="desc">그립의 색다른 맞춤형 추천을 위해 프로필을 완성해주세요</p>
+							</div>
+							<div class="gender-select sm">
+								<label data-selected="male" class="on">
+									<div class="profile">
+										<span>
+											<img src="../../resources/images/icon-male.png" alt="남자">
+										</span>
+									</div>
+								</label>
+								<label data-selected="female">
+									<div class="profile">
+										<span>
+											<img src="../../resources/images/icon-female.png" alt="여자">
+										</span>
+									</div>
+								</label>
+							</div>
+							<div class="form-wrap">
+								<div class="form-row-line">
+									<label for="handi1" class="text-primary">골프를 시작한지 얼마나 되셨나요?</label>
+									<div class="row">
+										<div class="col-12">
+											<select name="" id="handi1">
+												<option value="">1~3년</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<label for="handi2" class="text-primary">핸디캡이 어떻게 되시나요?</label>
+									<div class="row">
+										<div class="col-12">
+											<select name="" id="handi2">
+												<option value="">No handicap</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<label for="handi3" class="text-primary">1년에 라운드는 얼마나 자주 나가시나요?</label>
+									<div class="row">
+										<div class="col-12">
+											<select name="" id="handi3">
+												<option value="">1~3회</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area">
+								<div class="title">홍길동님의 본인확인</div>
+								<p class="desc">회원가입 완료를 위해 휴대폰 인증을 완료해주세요</p>
+							</div>
+							<div class="form-wrap">
+								<div class="form-row-line">
+									<div class="row row-10 align-items-center">
+										<div class="col">
+											<input type="tel" class="form-control" placeholder="휴대폰번호">
+										</div>
+										<div class="col-auto">
+											<button class="btn btn-secondary  btn-text-sm" disabled>인증</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<div class="row row-10 align-items-center">
+										<div class="col">
+											<input type="tel" class="form-control" placeholder="인증번호">
+										</div>
+										<div class="col-auto">
+											<span class="text-secondary">03:59</span>
+										</div>
+										<div class="col-auto">
+											<button class="btn btn-secondary  btn-text-sm">확인</button>
+										</div>
+									</div>
+								</div>
+								<p class="text-valid text-right">
+									<span class="text-primary">인증되었습니다!</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area mb-0">
+								<div class="title">회원가입 완료</div>
+								<p class="desc">이제 렛츠그립과 함께, 새롭고 놀라운 나만의 골프여정과 문화를 만들어가세요</p>
+							</div>
+							<div>
+								<img src="../../resources/images/illust_02.svg" alt="">
+							</div>
+							<div class="btn-area btn-area-join">
+								<a href="" class="btn btn-primary min-width-186">확인</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-step-area" data-step="0">
+				<div class="row justify-content-end">
+					<div class="col-auto">
+						<a href="1" class="btn-next"><span>다음</span></a>
+					</div>
+				</div>
+				<div class="row justify-content-between">
+					<div class="col-auto">
+						<a href="0" class="btn-prev"><span>이전</span></a>
+					</div>
+					<div class="col-auto">
+						<a href="2" class="btn-next"><span>다음</span></a>
+					</div>
+				</div>
+				<div class="row justify-content-between">
+					<div class="col-auto">
+						<a href="1" class="btn-prev"><span>이전</span></a>
+					</div>
+					<div class="col-auto">
+						<a href="3" class="btn-next"><span>다음</span></a>
+					</div>
+				</div>
+				<div class="row justify-content-between">
+					<div class="col-auto">
+						<a href="2" class="btn-prev"><span>이전</span></a>
+					</div>
+					<div class="col-auto">
+						<a href="4" class="btn-next"><span>다음</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		var swiperStep = new Swiper('.swiper-container', {
+			speed: 400,
+			spaceBetween: 0,
+			autoHeight: true,
+			allowTouchMove: false,
+			on: {
+				init: function () {
+
+				},
+				slideChange: function () {
+					console.log("active : " + swiperStep.activeIndex);
+					$('.btn-step-area').attr('data-step',swiperStep.activeIndex);
+				}
+			}
+		});
+
+		//이전&다음 버튼 클릭
+		$('.btn-step-area a').on('click',function(e){
+			e.preventDefault();
+			console.log("target : " + $(this).attr('href'));
+			//이전
+			if($(this).hasClass('btn-prev')){
+				swiperStep.slideTo(swiperStep.activeIndex-1);
+			}
+			//다음
+			else if($(this).hasClass('btn-next')){
+				swiperStep.slideTo(swiperStep.activeIndex+1);
+			}
+		});
+
+		//성별 선택시 다음단계 썸네일 변경
+		$('[name="formGender"]').on('click',function(e){
+			var selected = $('[name="formGender"]:checked').attr('id');
+			$('[data-selected="' + selected + '"]').addClass('on');
+			$('[data-selected="' + selected + '"]').siblings().removeClass('on');
+		});
+	});
+
+</script>
+
+</body>
+</html>

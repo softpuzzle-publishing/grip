@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="title-area">
+                    <div class="title"><span class="text-primary">6월 25일</span> 라운딩하실 <br>클럽의 상세조건을 설정해주세요</div>
+                    <p class="desc">원하시는 조건을 설정하시면 그립이 맞춤형 클럽을 추천합니다</p>
+                </div>
+                <div class="condition">
+                    <div class="form-wrap table-style">
+                        <div class="form-row-line border-bottom-0">
+                            <div class="row align-items-center">
+                                <div class="col-auto col-md-2">
+                                    <label class="label-th">날짜 선택</label>
+                                </div>
+                                <div class="col col-md-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto col-md-auto">
+                                            <div class="min-width-150">
+                                                <select name="" id="">
+                                                    <option value="">08월</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto col-md-auto">
+                                            <div class="min-width-150">
+                                                <select name="" id="">
+                                                    <option value="">25일</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row-wrap">
+                            <div class="form-row-line border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">클럽 위치</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <div class="tab mb-0">
+                                            <ul class="nav nav-pills" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">전국</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">인접지역</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-controls="t3" aria-selected="false">상세지역</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="t1" role="tabpanel">
+
+                                </div>
+                                <div class="tab-pane fade" id="t2" role="tabpanel">
+                                    <div class="form-row-line border-0">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto col-md-2">
+                                                <label class="label-th">출발지(목적지)</label>
+                                            </div>
+                                            <div class="col col-md-10">
+                                                <input type="text" class="form-control has-border" placeholder="주소를 검색하세요">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row-line border-0">
+                                        <div class="row align-items-center">
+                                            <div class="col-12 col-md-2">
+                                                <label class="label-th">출발지(목적지)로 부터</label>
+                                            </div>
+                                            <div class="col-12 col-md-10">
+                                                <div class="slider-area">
+                                                    <div id="slider-distance"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="t3" role="tabpanel">
+                                    <div class="form-row-line">
+                                        <div class="row align-items-center pb-0">
+                                            <div class="col-12 d-md-none mt-2">
+                                                <label class="label-th">상세지역 선택</label>
+                                            </div>
+                                            <div class="col-12 col-md-10 offset-md-2">
+                                                <div class="location-area">
+                                                    <label class="radio-pill">
+                                                        <input type="radio" name="radios" checked="checked">
+                                                        <span>수도권</span>
+                                                    </label>
+                                                    <label class="radio-pill">
+                                                        <input type="radio" name="radios">
+                                                        <span>강원</span>
+                                                    </label>
+                                                    <label class="radio-pill">
+                                                        <input type="radio" name="radios">
+                                                        <span>충청</span>
+                                                    </label>
+                                                    <label class="radio-pill">
+                                                        <input type="radio" name="radios">
+                                                        <span>경상</span>
+                                                    </label>
+                                                    <label class="radio-pill">
+                                                        <input type="radio" name="radios">
+                                                        <span>전라</span>
+                                                    </label>
+                                                    <label class="radio-pill">
+                                                        <input type="radio" name="radios">
+                                                        <span>제주</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center p-0 min-height-0">
+                                            <div class="d-none d-md-block col-md-2">
+                                                <label class="label-th">상세지역 선택</label>
+                                            </div>
+                                            <div class="col-12 col-md-10">
+                                                <select name="" id="zone-details" class="select-box-style">
+                                                    <option value="">지역을 선택하세요</option>
+                                                    <option value="ZONE1">수도권 전체</option>
+                                                    <option value="addrs-01">파주/고양/김포</option>
+                                                    <option value="addrs-02">인천/안산/시흥</option>
+                                                    <option value="addrs-03">남양주/하남/구리</option>
+                                                    <option value="addrs-04">광주/성남</option>
+                                                    <option value="addrs-05">용인/수원/화성</option>
+                                                    <option value="addrs-06">오산/평택/안성</option>
+                                                    <option value="addrs-07">포천/동두천/양주</option>
+                                                    <option value="addrs-08">여주/이천/양평</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-0 min-height-0">
+                                            <div class="col-12 col-md-10 offset-md-2">
+                                                <div class="selected-location"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collpase-more-setting">
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">운영방식</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>멤버십클럽</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>퍼블릭클럽</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>Par3클럽</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">코스설정</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>9홀 이하</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>10홀~18홀</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>19홀~27홀</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">선택사항</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>캐디동반</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>노캐디</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>야간라운딩</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">부대시설</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>드라이빙레인지</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>퍼팅그린</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>락커룸/사우나</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>숙박시설</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">잔디 유형</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>한국(조선)잔디</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>양잔디</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">최소인원</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>2인</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>3인</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>4인</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row-line">
+                                <div class="row align-items-center">
+                                    <div class="col-auto col-md-2">
+                                        <label class="label-th">1인 그린피</label>
+                                    </div>
+                                    <div class="col col-md-10">
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>전체</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>5만원 미만</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>5-10만원</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>11-15만원</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>16-20만원</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>21-25만원</span>
+                                        </label>
+                                        <label class="checkbox-pill">
+                                            <input type="checkbox">
+                                            <span>25만원 초과</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-setting">
+                            <a href="#collpase-more-setting" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collpase-more-setting"><span>라운드 상세조건 설정</span> <i class="icon-arr-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-top has-border">
+                    <div class="row justify-content-between align-items-end">
+                        <div class="col-auto">
+                            <div class="result-title mb-0">
+                                클럽개수 <span class="text-secondary">5</span>
+                            </div>
+                        </div>
+                        <div class="col-auto text-right">
+                            <ul class="sort" data-sorting="asc">
+                                <li><a href="javascript:;" class="active">거리순</a></li>
+                                <li><a href="javascript:;">가격순</a></li>
+                                <li><a href="javascript:;">평점순</a></li>
+                                <li><a href="javascript:;">난이도순</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="club-list">
+                    <ul>
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <a href="../club/detail.html" class="thumb">
+                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt=""
+                                            onload="setDirection(this)">
+                                    </a>
+                                </div>
+                                <div class="summary">
+                                    <div class="location">강원도 홍천군</div>
+                                    <div class="name">
+                                        <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽</a>
+                                        <i class="distance">50km</i>
+                                        <div class="time">
+                                            <span>00:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="type">멤버십클럽 (회원용) / 퍼블릭코스 (18H)</div>
+                                    <div class="point">
+                                        <div class="rating">
+                                            <span>평점</span>
+                                            <i data-point="3.5">3.5</i>
+                                        </div>
+                                        <div class="level">
+                                            <span>난이도</span>
+                                            <i data-point="2.5">2.5</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="util">
+                                    <div class="buttons">
+                                        <button type="button" class="like"><span class="sr-only">가고싶다</span></button>
+                                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                                    </div>
+                                    <div class="price">
+                                        <p>1인 그린피</p>
+                                        <strong>₩12,000 ~</strong>
+                                    </div>
+                                    <div class="reserv">
+                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reservation">예약하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <div id="footer">
+
+        </div>
+        <div class="dim"></div>
+    </div>
+</div>
+
+<!-- 슬라이더 plugin -->
+<script src="../../resources/plugin/jQuery-ui-Slider-Pips/jquery-ui-slider-pips.min.js"></script>
+<link rel="stylesheet" href="../../resources/plugin/jQuery-ui-Slider-Pips/jquery-ui-slider-pips.css">
+<script>
+	$(document).ready(function(){
+        //init
+        var init = function(){
+            //출발지로부터 셋팅
+            $('#slider-distance').slider({
+                range: "min",
+                value: 60,
+                min: 20,
+                max: 100,
+                step: 20,
+                slide: function( event, ui ) {
+                    //console.log(ui.value);
+                },
+                change: function( event, ui ) {
+                    console.log(ui.value);
+                }
+            }).slider("pips", {
+                rest: "label",
+                suffix: "km"
+            });
+        }
+
+        //라운드 상세조건 토글
+        $('#collpase-more-setting').on('shown.bs.collapse', function () {
+            $('.more-setting').addClass('active');
+            $('.more-setting a span').text('설정 닫기');
+        }).on('hide.bs.collapse', function () {
+            $('.more-setting').removeClass('active');
+            $('.more-setting a span').text('라운드 상세조건 설정');
+        });
+
+        //상세지역 다중선택
+        $('#zone-details').selectmenu({
+            change: function( event, ui ) {
+                //선택된 아이템을 badge로 생성
+                var label = ui.item.label;
+                var value = ui.item.value;
+                var html = '<button class="btn-badge" data-val="' + value + '">' + label + '</button>';
+                $('.selected-location').append(html);
+
+                //선택된 아이템 비활성화
+                $('#zone-details option:selected').prop('disabled',true);
+                $('#zone-details').selectmenu('refresh');
+            }
+        });
+        //상세지역 삭제
+        $(document).on('click','.btn-badge',function(){
+            var target = $(this).data('val');
+            $(this).remove();
+
+            //삭제된 아이템 활성화
+            $('option[value=' + target + ']').prop('disabled',false);
+            $('#zone-details').val('');
+            $('#zone-details').selectmenu('refresh');
+        });
+
+        init();
+	});
+
+
+</script>
+
+</body>
+</html>

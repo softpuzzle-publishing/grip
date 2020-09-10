@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="title-area tab-is-next">
+                    <div class="title"><span class="text-primary">홍길동</span>님의 클럽관리</div>
+                    <p class="desc">가고 싶은 클럽과 리뷰를 작성하여 나만의 클럽으로 관리하세요</p>
+                    <div class="tab">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="tab1" aria-selected="true">가고 싶은 클럽</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="tab2" aria-selected="false">클럽리뷰</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="t1" role="tabpanel">
+                        <div class="map-content">
+                            <div id="map"></div>
+                        </div>
+                        <div class="result-top has-border">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    <div class="result-title mb-0">
+                                        가고 싶은 클럽 <span class="text-secondary">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="club-list">
+                            <ul>
+                                <li>
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../club/detail.html" class="thumb">
+                                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt=""
+                                                    onload="setDirection(this)">
+                                            </a>
+                                        </div>
+                                        <div class="summary">
+                                            <div class="location">강원도 홍천군</div>
+                                            <div class="name">
+                                                <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽</a>
+                                                <i class="distance">50km</i>
+                                                <div class="time">
+                                                    <span>00:00</span>
+                                                </div>
+                                            </div>
+                                            <div class="type">멤버십클럽 (회원용) / 퍼블릭코스 (18H)</div>
+                                            <div class="point">
+                                                <div class="rating">
+                                                    <span>평점</span>
+                                                    <i data-point="3.5">3.5</i>
+                                                </div>
+                                                <div class="level">
+                                                    <span>난이도</span>
+                                                    <i data-point="2.5">2.5</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="util">
+                                            <div class="buttons">
+                                                <button type="button" class="like"><span class="sr-only">가고싶다</span></button>
+                                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                                            </div>
+                                            <div class="price">
+                                                <p>1인 그린피</p>
+                                                <strong>₩12,000 ~</strong>
+                                            </div>
+                                            <div class="reserv">
+                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reservation">예약하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="t2" role="tabpanel">
+                        <div class="my-spec">
+                            <dl>
+                                <dt>핸디캡</dt>
+                                <dd>+16 ~ +20</dd>
+                            </dl>
+                            <dl>
+                                <dt>구력</dt>
+                                <dd>10년 이상</dd>
+                            </dl>
+                            <dl>
+                                <dt>1년 평균 라운딩 횟수</dt>
+                                <dd>10~20회</dd>
+                            </dl>
+                        </div>
+                        <div class="text-right">
+                            <ul class="sort no-direction">
+                                <li><a href="javascript:;" class="active">최신순</a></li>
+                                <li><a href="javascript:;">과거순</a></li>
+                                <li><a href="javascript:;">공감수</a></li>
+                            </ul>
+                        </div>
+                        <ul class="review-in-profile">
+                            <li>
+                                <div class="club">
+                                    <div class="img">
+                                        <a href="../club/detail.html" class="thumb">
+                                            <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="엘리시안 강촌 나인플러스 골프클럽" onload="setDirection(this)">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="../club/detail.html" class="name">엘리시안 강촌 나인플러스 골프클럽</a>
+                                        <p class="date">2020-07-01</p>
+                                        <div class="rating-star" data-point="3.5">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <p>주말 3인 노캐디로 다녀왔습니다. 커플끼리 편하게 즐기는 팀도 있었고 5인에 캐디를 대동한 팀도 있더군요. 4인+캐디필수라는 관념이 사라진 흥미로운 광경이었습니다. 오직 전진만 가능한 모노레일 카트는 이동의 안정감을 주었고 캐디의 압박감에서 벗어나 플레이에 집중할 수 있는 자유를 만끽했습니다. <span class="text-success">#캐디</span> 의존증 해소 <span class="text-success">#상대적</span>으로 짧은 전장 <span class="text-success">#티박스</span> 선택은 자유롭게 <span class="text-success">#멀리건</span>은 마음대로 <span class="text-success">#팀당</span> 거리측정기 최소 1개 필수!</p>
+                                </div>
+                                <div class="photo">
+                                    <span class="thumb"><img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="review1" ></span>
+                                    <span class="thumb"><img src="../../resources/images/001_oakvalley_cc_01_main.png" alt="review2"></span>
+                                    <span class="thumb"><img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="review3"></span>
+                                    <div class="detail">
+                                        <div class="thumb">
+                                            <img src="" alt="">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="icon-close"><span class="sr-only">닫기</span></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sympathy">
+                                    <button role="button" class="good"><span>1</span></button>
+                                    <button role="button" class="bad"><span>1</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="club">
+                                    <div class="img">
+                                        <a href="../club/detail.html" class="thumb">
+                                            <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="엘리시안 강촌 나인플러스 골프클럽" onload="setDirection(this)">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="../club/detail.html" class="name">사우스스프링스 컨트리클럽</a>
+                                        <p class="date">2020-07-01</p>
+                                        <div class="rating-star" data-point="1">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt">
+                                    <p>주말 3인 노캐디로 다녀왔습니다. 커플끼리 편하게 즐기는 팀도 있었고 5인에 캐디를 대동한 팀도 있더군요. 4인+캐디필수라는 관념이 사라진 흥미로운 광경이었습니다. 오직 전진만 가능한 모노레일 카트는 이동의 안정감을 주었고 캐디의 압박감에서 벗어나 플레이에 집중할 수 있는 자유를 만끽했습니다. <span class="text-success">#캐디</span> 의존증 해소 <span class="text-success">#상대적</span>으로 짧은 전장 <span class="text-success">#티박스</span> 선택은 자유롭게 <span class="text-success">#멀리건</span>은 마음대로 <span class="text-success">#팀당</span> 거리측정기 최소 1개 필수!</p>
+                                </div>
+                                <div class="more-toggle">
+                                    <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                    <ul>
+                                        <li><a href="javascript:;">수정하기</a></li>
+                                        <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">삭제하기</a></li>
+                                        <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-delete">신고하기</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sympathy">
+                                    <button role="button" class="good"><span>1</span></button>
+                                    <button role="button" class="bad"><span>1</span></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <div id="footer">
+
+        </div>
+        <div class="dim"></div>
+    </div>
+</div>
+
+<script>
+	$(document).ready(function(){
+        //init
+        var init = function(){
+
+        }
+
+        init();
+	});
+
+
+</script>
+
+</body>
+</html>

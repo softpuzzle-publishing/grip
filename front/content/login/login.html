@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-center no-menu"> <!-- 헤더 메뉴 없음 -->
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="center-block">
+        <div class="container">
+			<div class="title-area">
+				<div class="title">로그인</div>
+				<p class="desc">이메일과 비밀번호를 입력해주세요</p>
+			</div>
+			<div class="form-wrap">
+				<div class="form-row-line">
+					<div class="row">
+						<div class="col-12">
+							<input type="email" class="form-control" placeholder="이메일">
+						</div>
+					</div>
+				</div>
+				<div class="form-row-line">
+					<div class="row">
+						<div class="col-12">
+							<input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="login-check">
+				<div class="custom-control custom-checkbox custom-control-inline">
+					<input type="checkbox" class="custom-control-input" id="lg1">
+					<label class="custom-control-label text-light font-weight-bold" for="lg1">로그인상태 유지</label>
+				</div>
+			</div>
+			<div class="btn-area">
+				<button class="btn btn-primary min-width-186">로그인</button>
+			</div>
+			<ul class="login-menu">
+				<li><a href="#modal-id" data-role="button" data-toggle="modal">아이디 찾기</a></li>
+				<li><a href="#modal-password" data-role="button" data-toggle="modal">비밀번호 찾기</a></li>
+				<li><a href="../join/join.html">회원가입</a></li>
+			</ul>
+		</div>
+    </div>
+</div>
+
+<!-- modal : 아이디 찾기 -->
+<div class="modal" tabindex="-1" id="modal-id">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">아이디 찾기</h5>
+				<p class="modal-desc">휴대폰 인증 후 아이디 찾기 버튼을 눌러주세요</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-wrap margin-sm">
+					<div class="form-row-line">
+						<div class="row row-10 align-items-center">
+							<div class="col">
+								<input type="text" class="form-control" placeholder="이름">
+							</div>
+							<div class="col-auto">
+								<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+									<input type="radio" class="custom-control-input" name="formGender" id="male">
+									<label class="custom-control-label" for="male">남</label>
+								</div>
+								<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+									<input type="radio" class="custom-control-input" name="formGender" id="female">
+									<label class="custom-control-label" for="female">여</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-row-line">
+						<div class="row row-10 align-items-center">
+							<div class="col">
+								<input type="tel" class="form-control" placeholder="생년월일 (예: 19800102)">
+							</div>
+						</div>
+					</div>
+					<div class="form-row-line">
+						<div class="row row-10 align-items-center">
+							<div class="col">
+								<input type="tel" class="form-control" placeholder="휴대폰번호">
+							</div>
+							<div class="col-auto">
+								<button type="button" class="btn btn-secondary btn-text-sm" disabled>인증</button>
+							</div>
+						</div>
+					</div>
+					<div class="form-row-line">
+						<div class="row row-10 align-items-center">
+							<div class="col">
+								<input type="tel" class="form-control" placeholder="인증번호">
+							</div>
+							<div class="col-auto">
+								<span class="text-secondary">03:59</span>
+							</div>
+							<div class="col-auto">
+								<button type="button" class="btn btn-secondary btn-text-sm">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-bottom-right">
+					<button type="button" class="btn btn-primary min-width-150" id="btn-find-id">아이디 찾기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal : 아이디 찾기 결과 -->
+<div class="modal" tabindex="-1" id="modal-id-result">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">아이디 찾기</h5>
+				<p class="modal-desc">휴대폰 인증 후 아이디 찾기 버튼을 눌러주세요</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="id-result">
+					<div>thkim@mytutto.com</div>
+				</div>
+				<div class="btn-bottom-right">
+					<button type="button" class="btn btn-primary min-width-150">비밀번호 찾기</button>
+					<button type="button" class="btn btn-primary min-width-150">로그인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function(){
+		var swiperStep = new Swiper('.swiper-container', {
+			speed: 400,
+			spaceBetween: 0,
+			autoHeight: true,
+			allowTouchMove: false,
+			on: {
+				init: function () {
+
+				},
+				slideChange: function () {
+					console.log("active : " + swiperStep.activeIndex);
+					$('.btn-step-area').attr('data-step',swiperStep.activeIndex);
+				}
+			}
+		});
+
+		//이전&다음 버튼 클릭
+		$('.btn-step-area a').on('click',function(e){
+			e.preventDefault();
+			console.log("target : " + $(this).attr('href'));
+			//이전
+			if($(this).hasClass('btn-prev')){
+				swiperStep.slideTo(swiperStep.activeIndex-1);
+			}
+			//다음
+			else if($(this).hasClass('btn-next')){
+				swiperStep.slideTo(swiperStep.activeIndex+1);
+			}
+		});
+
+		//성별 선택시 다음단계 썸네일 변경
+		$('[name="formGender"]').on('click',function(e){
+			var selected = $('[name="formGender"]:checked').attr('id');
+			$('[data-selected="' + selected + '"]').addClass('on');
+			$('[data-selected="' + selected + '"]').siblings().removeClass('on');
+		});
+
+		//아이디찾기 결과 show
+		$('#btn-find-id').on('click',function(e){
+			e.preventDefault();
+			$('#modal-id').modal('hide');
+			$('#modal-id-result').modal('show');
+		});
+	});
+
+</script>
+
+</body>
+</html>

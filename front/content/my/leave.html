@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="title-area">
+                    <div class="title"><span class="text-primary">홍길동</span>님의 회원정보 관리</div>
+                    <p class="desc">다녀온 클럽과 가고 싶은 클럽을 추가하여 나만의 클럽지도를 만들어보세요.</p>
+				</div>
+				<div class="subtitle-area">
+					<div class="subtitle">탈퇴하기</div>
+				</div>
+				<div class="important-text">
+					<p class="text-danger">*회원 탈퇴를 신청하시면 해당 아이디는 즉시 탈퇴 처리됩니다.</p>
+					<p class="text-danger">*예약중인 내역은 모두 취소됩니다.</p>
+					<p class="text-danger">*재가입시 기존 아이디로 저장된 다녀온 클럽, 가고싶은클럽 목록은 모두 초기화됩니다.</p>
+				</div>
+                <div class="form-wrap table-style">
+					<div class="form-row-line">
+                        <div class="row align-items-center">
+                            <div class="col-3 col-md-2">
+								<label class="label-th">아이디</label>
+							</div>
+                            <div class="col">
+								<input type="text" class="form-control" placeholder="아이디 입력">
+							</div>
+						</div>
+					</div>
+					<div class="form-row-line">
+                        <div class="row align-items-center">
+							<div class="col-3 col-md-2">
+								<label class="label-th">비밀번호</label>
+							</div>
+                            <div class="col">
+								<input type="password" class="form-control" placeholder="비밀번호 입력">
+                            </div>
+                        </div>
+					</div>
+                </div>
+                <div class="btn-area">
+                    <button class="btn btn-outline-light min-width-150">취소</button>
+                    <button class="btn btn-primary min-width-150" onclick="document.location.href='leave_ok.html'">완료</button>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <div id="footer">
+
+        </div>
+        <div class="dim"></div>
+    </div>
+</div>
+
+<script>
+	$(document).ready(function(){
+	});
+
+</script>
+
+</body>
+</html>

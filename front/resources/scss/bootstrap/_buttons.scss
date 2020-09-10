@@ -1,0 +1,191 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  @include hover {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn{
+  height: 35px;font-size: 19px;padding: 5px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.3px;
+}
+.btn-sm{
+  height: 25px;font-size: 16px;padding: 0 18px;
+}
+.btn-text-sm{
+  font-size: 16px;padding-left: 17px;padding-right: 17px;padding-top: 6px;
+}
+.btn-sm.btn-text-sm{
+  font-size: 14px;padding: 2px 12px 0;
+}
+.width-74{width:74px;}
+.min-width-100{min-width:100px;}
+.min-width-130{min-width:130px;}
+.min-width-150{min-width:150px;}
+.min-width-186{min-width:186px;}
+.min-width-220{min-width:220px;}
+
+.btn-outline-light{color: rgba(161, 161, 161, .6);}
+@include media-breakpoint-down(md) {
+  .btn{
+    height: 31px;font-size: 16px;padding: 5px 18px;
+  }
+  .btn-sm{
+    height: 22px;font-size: 12px;padding: 0 10px 0;
+  }
+  .btn-text-sm{
+    font-size: 13px;padding-left: 15px;padding-right: 15px;padding-top: 7px;
+  }
+  .btn-sm.btn-text-sm{
+    font-size: 12px;padding: 0 10px 0;
+  }
+
+  .width-74{width:60px;}
+  .min-width-74{min-width:65px;}
+  .min-width-100{min-width:80px;}
+  .min-width-130{min-width:100px;}
+  .min-width-150{min-width:120px;}
+  .min-width-186{min-width:150px;}
+  .min-width-220{min-width:auto;}
+}
+
+.btn-bottom-right{
+  display: flex;justify-content: flex-end;align-items: center;margin-top: 35px;
+  > * + *{margin-left: 25px;}
+}
+@include media-breakpoint-down(md) {
+  .btn-bottom-right{
+    margin-top: 20px;
+    > * + *{margin-left: 10px;}
+  }
+}
