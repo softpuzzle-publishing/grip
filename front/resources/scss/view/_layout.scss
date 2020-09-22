@@ -10,11 +10,12 @@ html,body{
 .dim{position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 998;background: rgba(0, 0, 0, 0.65);visibility: hidden;opacity: 0;-webkit-transition: opacity 0.3s, visibility 0.3s;transition: opacity 0.3s, visibility 0.3s;}
 
 #container-block{
-    padding-bottom: 170px;
+    padding-bottom: 170px;padding-top: 28px;
 }
 .content{max-width: 920px;margin: 0 auto;}
 
 #center-block{
+    padding-top: 28px;
     .container{max-width: 570px;}
 }
 @include media-breakpoint-down(lg) {
@@ -45,16 +46,16 @@ html,body{
 
 
 #header{
-    height: 128px;position: relative;
+    height: 100px;position: relative;
     .container{display: flex;height: 100%;justify-content: space-between;padding-top: 22px;}
     .search{
-        width: 294px;height: 30px;position: absolute;left: 50%;top: 34px;margin-left: -147px;
+        width: 294px;height: 30px;position: absolute;left: 50%;top: 37px;margin-left: -147px;
         a {width: 100%;height: 100%;display: block;color: #d3d3d3;letter-spacing: -0.6px;background: #f9f9f9; border: 1px solid #e4e4e4; border-radius: 30px; text-align: center;text-decoration: none;}
         span{display: inline-block;vertical-align: top;line-height: 25px;height: 100%;;}
         span:before{content: '';display: inline-block;vertical-align: middle;width: 14px;height: 14px;background: url("../images/search.svg") no-repeat 0 0;margin-right: 9px;margin-top: -1px;}
     }
     .menu{
-        ul{display: flex;align-items: center;padding-top: 16px;}
+        ul{display: flex;align-items: center;padding-top:19px;}
         li{
             position: relative;display: flex;align-items: center;
             a{font-size: 13px;font-weight: 400;letter-spacing: -0.23px;color: #979797;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);vertical-align: middle;}
@@ -97,6 +98,14 @@ html,body{
     }
 }
 body.no-menu #header .menu{display: none !important;}
+@include media-breakpoint-down(md) {
+    body.no-menu{
+        #header{
+            .search,
+            .menu-mobile{display: none !important;}
+        }
+    }
+}
 
 .icon-hamburger {
     display: block;width: 21px;height: 20px;z-index: 1000;
@@ -105,7 +114,7 @@ body.no-menu #header .menu{display: none !important;}
     }
 }
 html.open-mobile-menu{
-    body{overflow: hidden;}
+    body{overflow: hidden !important;}
     .dim{opacity: 1;visibility: visible;}
     .icon-hamburger{
         span{background-color: #333;}
@@ -116,6 +125,54 @@ html.open-mobile-menu{
     #header{
         .menu{
             transform: translate(0);
+        }
+    }
+}
+
+#footer{
+    background: #f4f4f4;height: 697px;padding-top: 158px;display: none;
+    .footer-logo{
+        .logo{background: url('../images/logo-black.svg') no-repeat 50% 50%;background-size: contain;width: 79px;height: 48px;margin: 0 auto;}
+        .sns{
+            display: flex;justify-content: center;margin-top: 25px;
+            [class^=icon-]{display: block;width: 26px;height: 26px;background-repeat: no-repeat;background-position: center;background-size: contain;}
+            .icon-kakao{background-image: url('../images/sns-kakao-000.png');}
+            .icon-blog{background-image: url('../images/sns-blog-000.png');}
+            .icon-instagram{background-image: url('../images/sns-insta-000.png');}
+            .icon-facebook{background-image: url('../images/sns-facebook-000.png');}
+            li{margin: 0 10px;}
+        }
+    }
+    .footer-menu{
+        li{width: 212px;margin-bottom: 25px;display: inline-block;}
+        a{color: #808080;}
+    }
+    .copyright{
+        color: #808080;margin-top: 25px;
+        p{margin-bottom: 7px;}
+    }
+    body.body-main &{display: block;}
+}
+@include media-breakpoint-down(md) {
+    #footer{
+        height: auto;padding-top: 0;
+        .row{justify-content: center;flex-direction: column;}
+        .footer-logo{
+            margin-right: 0;
+            .sns{
+                .icon-kakao{background-image: url('../images/sns-kakao-000@3x.png');}
+                .icon-blog{background-image: url('../images/sns-blog-000@3x.png');}
+                .icon-instagram{background-image: url('../images/sns-insta-000@3x.png');}
+                .icon-facebook{background-image: url('../images/sns-facebook-000@3x.png');}
+            }
+        }
+        .footer-menu{
+            padding: 0 35px;margin-top: 25px;overflow: hidden;
+            li{float: left;width: 50%;margin-bottom: 20px;}
+        }
+        .copyright{
+            padding: 0 18px;line-height: 1.45;
+            span{display: inline-block;vertical-align: middle;margin-right: 5px;}
         }
     }
 }

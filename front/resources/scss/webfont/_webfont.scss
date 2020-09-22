@@ -47,3 +47,12 @@
 		  url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.woff) format('woff'),
 		  url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Black.ttf) format('truetype');
 }
+
+@font-face {
+	font-family: 'Gotham';
+	font-weight: 100;
+	src: url(../fonts/Gotham/Gotham-Thin.eot);
+	src: url(../fonts/Gotham/Gotham-Thin.eot?#iefix) format('embedded-opentype'),
+		  url(../fonts/Gotham/Gotham-Thin.woff) format('woff'),
+		  url(../fonts/Gotham/Gotham-Thin.ttf) format('truetype');
+}

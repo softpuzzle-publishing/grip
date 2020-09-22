@@ -229,30 +229,50 @@
         .check{display: none;}
     }
 }
-.modal:not([data-status=ing]),
-.modal:not([data-status=complete]){
-    [data-id=btn-reserv-cancel]{display: block !important;}
+.modal[data-status=ing] [data-id=btn-reserv-cancel]{display: block !important;}
+.modal[data-status=complete] [data-id=btn-reserv-cancel]{display: block !important;}
+
+.group .message{display: none;}
+
+.modal[data-status=cancel],
+.modal[data-status=disabled]{
+    .group{
+        position: relative;
+        &::before{content: '';display: block;width: 100%;height: 100%;position: absolute;left: 0;top: 0;z-index: 2;background-color: rgba(255,255,255,0.7);}
+        .message{display: inline-block;border-radius: 20.5px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12);color: #fff;font-weight: 500;letter-spacing: -0.09px;text-align: center;line-height: 34px;height: 34px;padding: 0 30px;background-color: rgba(126, 126, 126, 0.76);position: absolute;left: 50%;top: 50%;z-index: 3;transform: translate(-50%,-50%);}
+    }
 }
 
 .club-list{
     li + li{margin-top: 15px;}
     .box{border: 1px solid $border-color;border-radius: 9px;display: flex;align-items:stretch;min-height:150px;}
     .img{
-        flex: 0 0 auto;width: 205px;border-radius: 9px 0 0 9px;overflow: hidden;
+        flex: 0 0 auto;width: 205px;border-radius: 9px 0 0 9px;overflow: hidden;position: relative;
         img{border-radius: 9px 0 0 9px;}
+        .deadline{
+            display: inline-block;color: $primary;font-size: 9px;font-weight: 500;position: absolute;left: 0;bottom: 0;z-index: 1;
+             padding: 6px 15px 6px 30px;margin: 0 -15px;
+             &::before{
+                 content: '';position: absolute;top: 0; right: 0; bottom: 0; left: 0;z-index: -1;border-bottom: none;border-radius: 0 .5em 0 0;background: #fff;transform: scale(1.2, 1.3) perspective(.5em) rotateX(5deg);
+             }
+         }
     }
     .summary{
         flex: 1 1 auto;padding: 10px 20px;display: flex;flex-direction: column;justify-content: center;
         .location{font-size: 12px;color: #b0b0b0;font-weight: 700;margin-bottom: 5px;}
+        .recommendation{font-size: 12px;color: $primary;font-weight: 700;margin-bottom: 5px;}
         .name{
-            margin-bottom: 23px;
-            .club{font-size: 19px;color: #4f4f4f;font-weight: 300;margin-right: 5px;}
+            .club{font-size: 19px;color: #4f4f4f;font-weight: 300;margin-right: 5px;line-height: 1.45;}
             .distance{font-size: 12px;color: $danger;margin-right: 5px;}
             .time{
                 display: inline;
             }
+            i{transform: translateY(7px);width: 15px;flex: 0 0 15px;}
         }
-        .type{font-size: 14px;font-weight: 300;color: #4f4f4f;margin-bottom: 5px;}
+        .period{margin-left: 15px;margin-top: 18px;font-size: 14px;font-weight: 300;color: #4f4f4f;}
+        .hash{color: #0091ff;font-size: 14px;font-weight: 300;letter-spacing: -0.35px;margin-top: 5px;}
+        .desc{font-size: 14px;font-weight: 300;letter-spacing: -0.35px;color: #4f4f4f;margin-top: 24px;}
+        .type{font-size: 14px;font-weight: 300;color: #4f4f4f;margin-bottom: 5px;margin-top: 23px;}
         .point{
             display: flex;
             .level{margin-left: 23px;}
@@ -261,6 +281,7 @@
     .util{
         flex: 0 0 auto;padding: 0 20px 0 0;display: flex;flex-direction: column;justify-content: center;
         .buttons{
+            text-align: center;
             button{vertical-align: top;}
             button + button{margin-left: 3px;}
         }
@@ -272,8 +293,15 @@
         .price{
             p{font-size: 12px;margin-top: 8px;margin-bottom: 2px;padding-left: 13px;}
             strong{display: block;font-size: 19px;font-weight: 500;}
+            .discount{
+                em{display: block;color: $primary;font-size: 9px;}
+                del{font-size: 12px;display: block;color: #c6c6c6;}
+            }
+            .total{text-align: right;font-size: 19px;font-weight: 500;color: #767676;margin-top: 2px;}
         }
         .reserv{margin-top: 8px;}
+        .hit{font-size: 10px;color: #b0b0b0;margin-top: 5px;}
+        &.justify-content-start{padding-top: 15px;}
     }
     &.in-receipt{
         .img{width: 162px;}
@@ -291,16 +319,20 @@
         .summary{
             padding: 6px;
             .location{font-size: 9px;margin-bottom: 2px;}
+            .recommendation{font-size: 9px;margin-bottom: 2px;}
             .name{
-                margin-bottom: 10px;
                 .club{font-size: 12px;margin-right: 3px;}
                 .distance{font-size: 9px;}
                 .time{
                     &::before{width: 12px;height: 12px;}
                     span{font-size:9px;}
                 }
+                i{transform: translateY(3px);}
             }
-            .type{margin-bottom: 5px;font-size: 9px;}
+            .period{font-size: 10px;margin-top: 10px;}
+            .hash{font-size: 12px;margin-top: 33px;}
+            .desc{font-size: 12px;display: none;}
+            .type{margin-bottom: 5px;font-size: 9px;margin-top: 10px;}
             .point{
                 display: flex;
                 .level{margin-left: 9px;}
@@ -319,7 +351,14 @@
             .price{
                 p{font-size: 9px;margin-top: 4px;margin-bottom: 6px;padding-left: 0;}
                 strong{font-size: 13px;margin-top: 3px;}
+                .discount{
+                    text-align: left;
+                    del{font-size: 10px;}
+                }
+                .total{font-size: 13px;}
             }
+            .hit{margin-top: 0;}
+            &.justify-content-start{padding-top: 6px;}
         }
         &.in-receipt{
             .img{width: 90px;}
@@ -342,8 +381,8 @@
         }
         .category{font-size: 13px;color: $primary;margin-bottom: 5px;margin-top: 12px;}
         .subject{font-size: 19px;font-weight: 500;margin-bottom: 5px;letter-spacing: -0.5px;@include text-truncate();}
-        .txt{font-size: 16px;@include text-truncate-multi(16px, 1.4, 2);}
-        .date{font-size: 16px;line-height: 1.38;}
+        .txt{@include text-truncate-multi(16px, 1.4, 2);}
+        .date{line-height: 1.38;}
     }
     .swiper-slide{width: 232px;}
 
@@ -356,14 +395,19 @@
         }
     }
 }
+.card-list-play{
+    .item{
+        .subject{@include text-truncate-multi(19px, 1.26, 2);}
+    }
+}
 @include media-breakpoint-down(md) {
     .card-list{
-        margin: 0 -1rem;padding: 0;
+        margin: 0 -15px;padding: 0;
         .item{
             .thumb{
                 height: 82px;
                 .layer{padding: 5px;
-                    .badge-white{margin-bottom: 4px;}
+                    .badge-white{margin-bottom: 4px;padding: 5px 15px;font-size: 12px;}
                     .tit{font-size: 14px;}
                 }
             }
@@ -379,13 +423,13 @@
 
         &.p-0{margin: 0;padding: 0 1rem;}
     }
-}
-
-.card-list-play{
-    .item{
-        .subject{@include text-truncate-multi(16px, 1.26, 2);}
+    .card-list-play{
+        .item{
+            .subject{@include text-truncate-multi(16px, 1.26, 2);}
+        }
     }
 }
+
 
 .club-top{
     margin-bottom:35px;
@@ -566,7 +610,7 @@
 }
 @include media-breakpoint-down(md) {
     .course-detail{
-        padding: 2rem 1rem;border: 0;border-radius: 0;box-shadow: none;margin: 0 -1rem;
+        padding: 2rem 1rem;border: 0;border-radius: 0;box-shadow: none;margin: 0 -1em;
         .history{right:1rem;top:1rem;}
         .arr{display: none;}
     }

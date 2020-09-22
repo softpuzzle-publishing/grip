@@ -18,6 +18,8 @@ var Init = {
 			$('html').removeClass('is-mobile');
 			$('html').addClass('is-desktop');
 		}
+
+		//setDirection($('.thumb img')[0]);
 	},
 	getBrowserSize : function(){
 		this.bodyHeight = Math.max(
@@ -86,9 +88,10 @@ var Header = {
 		});
 	},
 	search : function(){
-		$('#header .search a').on('click',function(e){
+		$('.search a').on('click',function(e){
 			e.preventDefault();
 			$('html').addClass('open-search');
+			$('#input-search-all').focus();
 		});
 		$('.search-area .close').on('click',function(e){
 			e.preventDefault();
@@ -100,10 +103,42 @@ var Header = {
 var Main = {
 	init : function(){
 		this.revealed();
+		this.full();
 	},
-	grid : function(){
+	full : function(){
+		if($('body').hasClass('body-main'))
+		var fullpageApi = $('#fullpage').fullpage({
+			menu: '#nav',
+			anchors: ['main-section1', 'main-section2', 'main-section3', 'main-section4', 'main-section5', 'main-section6', 'main-section7'],
+			sectionsColor : ['', '#fbfbfb','', '#fbfbfb','', '#fbfbfb', '#f4f4f4'],
+			autoScrolling: true,
+			showActiveTooltip: true,
+			fitToSection: false,
+			slidesNavigation: true,
+			navigation: false,
+			responsiveWidth: 992,
+			/* afterLoad: function(isResponsive){
+				$('#main-block').removeAttr('style');
+			}, */
+			afterResponsive: function(isResponsive){
+				console.log('afterResponsive');
+			},
+			onLeave: function(origin, destination, direction){
+				if(destination > 1){
+					$('html').addClass('is-header-hidden');
+				}else{
+					$('html').removeClass('is-header-hidden');
+				}
+				var top = $('#nav li').eq(destination-1).position().top;
+				$('#nav .bar').css('top',top);
 
-
+				if(destination == 7){
+					$('#nav').addClass('is-last');
+				}else{
+					$('#nav').removeClass('is-last');
+				}
+			}
+		});
 	},
 	revealed : function(){
 		$('[data-event="revealed"]').each(function (i) {
@@ -123,6 +158,10 @@ var Main = {
 
 var common = {
 	init : function(){
+		//modal 열릴때 이미지 사이즈 체크
+		$('.modal').on('shown.bs.modal', function () {
+			setDirection($(this).find('.thumb img')[0]);
+		});
 		//select
 		$('select').selectmenu();
 		$(document).on('click','.ui-selectmenu-menu .ui-menu-item-wrapper',function(){
@@ -228,8 +267,8 @@ function setDirection(element) {
 /* 준비 */
 $(function() {
 
-
 	$('#header-block').load('../_include/header.html');
+	$('#footer-block').load('../_include/footer.html');
 
 	Init.defaults();
 

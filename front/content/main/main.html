@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/plugin/fullpage/fullpage.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/plugin/fullpage/fullpage.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-main">
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="main-block">
+        <div id="main">
+            <nav id="nav">
+                <ul>
+                    <li data-menuanchor="main-section1" class="active"><a href="#main-section1">검색</a></li>
+                    <li data-menuanchor="main-section2"><a href="#main-section2">예약</a></li>
+                    <li data-menuanchor="main-section3"><a href="#main-section3">조인</a></li>
+                    <li data-menuanchor="main-section4"><a href="#main-section4">특가</a></li>
+                    <li data-menuanchor="main-section5"><a href="#main-section5">지역</a></li>
+                    <li data-menuanchor="main-section6"><a href="#main-section6">기획</a></li>
+                    <li data-menuanchor="main-section7"><a href="#main-section7">푸터</a></li>
+                </ul>
+                <i class="bar"></i>
+            </nav>
+            <div id="fullpage">
+                <div class="section" id="section1" data-event="revealed">
+                    <div class="container">
+                        <div class="main-heading">
+                            <strong>골프장 검색과 예약을 <br class="d-block d-lg-none">편하고 여유롭게, 한번에!</strong>
+                            <span>Let’s grip!</span>
+                        </div>
+                        <div class="search">
+                            <a href="javascript:;" data-role="button"><span>명칭 또는 라운드 조건을 입력하세요</span></a>
+                        </div>
+                        <div class="main-img">
+                            <img src="../../resources/images/main-img.png" alt="" class="d-none d-lg-inline">
+                            <img src="../../resources/images/main-img@3x.png" alt="" class="d-lg-none">
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="section2" data-event="revealed">
+                    <div class="container">
+                        <div class="main-title">언제 라운딩을 계획하고 <br class="d-block d-lg-none">계신가요?</div>
+                        <div class="main-desc">원하는 일정을 선택하시고 <br class="d-block d-lg-none">라운딩 상세 조건을 설정하세요</div>
+                        <div class="datepicker-area two">
+                            <div class="load"></div>
+                        </div>
+                        <div class="calendar-btn">
+                            <button type="button" class="btn btn-primary min-width-150" disabled>클럽보기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="section3" data-event="revealed">
+                    <div class="container">
+                        <div class="main-title">지금 그립 앤드 플레이에 <br class="d-block d-lg-none">조인하세요</div>
+                        <div class="main-desc">원하는 일정에 멤버의 핸디캡과 <br class="d-block d-lg-none">구력을 확인하고 팀에 조인하세요</div>
+                        <div class="tab">
+                            <ul class="nav nav-pills" role="tablist">
+                                <li class="nav-item active role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" href="#t-play1" role="tab" aria-controls="tab1" aria-selected="true">라운드</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" href="#t-play2" role="tab" aria-controls="tab2" aria-selected="false">레슨 및 트레이닝</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" href="#t-play3" role="tab" aria-controls="tab2" aria-selected="false">여행</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" href="#t-play4" role="tab" aria-controls="tab2" aria-selected="false">친목 및 커뮤니티</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="play-list">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <div class="d-day">D-5day</div>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="subject"><a href="">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                                                <div class="club">엘리시안 강촌 나인플러스클럽</div>
+                                                <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                                                <div class="date">
+                                                    <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                                                    <i class="icon-personnel"></i> <span>4인</span>
+                                                </div>
+                                                <div class="host">
+                                                    <p>호스트</p>
+                                                    <div class="member">
+                                                        <div class="profile">
+                                                            <span>
+                                                                <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                                            </span>
+                                                        </div>
+                                                        <div class="plus">
+                                                            <span>+1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="price">
+                                                    <span>1인 참가비</span>
+                                                    <strong>₩45,000</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item recommend"> <!-- 그립추천 .recommend -->
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <div class="d-day">D-5day</div>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="subject"><a href="">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                                                <div class="club">엘리시안 강촌 나인플러스클럽</div>
+                                                <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                                                <div class="date">
+                                                    <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                                                    <i class="icon-personnel"></i> <span>4인</span>
+                                                </div>
+                                                <div class="host">
+                                                    <p>호스트</p>
+                                                    <div class="member">
+                                                        <div class="profile">
+                                                            <span>
+                                                                <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                                            </span>
+                                                        </div>
+                                                        <div class="plus">
+                                                            <span>+1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="price">
+                                                    <span>1인 참가비</span>
+                                                    <strong>₩45,000</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <div class="d-day">D-5day</div>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="subject"><a href="">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                                                <div class="club">엘리시안 강촌 나인플러스클럽</div>
+                                                <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                                                <div class="date">
+                                                    <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                                                    <i class="icon-personnel"></i> <span>4인</span>
+                                                </div>
+                                                <div class="host">
+                                                    <p>호스트</p>
+                                                    <div class="member">
+                                                        <div class="profile">
+                                                            <span>
+                                                                <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                                            </span>
+                                                        </div>
+                                                        <div class="plus">
+                                                            <span>+1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="price">
+                                                    <span>1인 참가비</span>
+                                                    <strong>₩45,000</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <div class="d-day">D-5day</div>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="subject"><a href="">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                                                <div class="club">엘리시안 강촌 나인플러스클럽</div>
+                                                <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                                                <div class="date">
+                                                    <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                                                    <i class="icon-personnel"></i> <span>4인</span>
+                                                </div>
+                                                <div class="host">
+                                                    <p>호스트</p>
+                                                    <div class="member">
+                                                        <div class="profile">
+                                                            <span>
+                                                                <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                                            </span>
+                                                        </div>
+                                                        <div class="plus">
+                                                            <span>+1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="price">
+                                                    <span>1인 참가비</span>
+                                                    <strong>₩45,000</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev swiper-button-prev-play"></div>
+                            <div class="swiper-button-next swiper-button-next-play"></div>
+                        </div>
+                        <div class="main-more">
+                            <a href="">전체보기 <i class="icon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="section4" data-event="revealed">
+                    <div class="container">
+                        <div class="main-title">그립이 준비했습니다! <br class="d-block d-lg-none">지금이 기회에요!</div>
+                        <div class="main-desc">오직 그립에서만 만나볼 수 있는 <br class="d-block d-lg-none">특별한 상품</div>
+                        <div class="tab">
+                            <ul class="nav nav-pills justify-content-center" role="tablist">
+                                <li class="nav-item active" role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" href="#t-product1" role="tab" aria-controls="tab1" aria-selected="true">그립 굿즈</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" href="#t-product2" role="tab" aria-controls="tab2" aria-selected="false">그립 패키지</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-list">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <strong class="deadline">특가마감 24:05:09</strong>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="location">강원도 홍천군</div>
+                                                <div class="subject">
+                                                    <i class="icon-lightning"></i>
+                                                    <a href="">[엘리시안 강촌 나인플러스 골프클럽] 4인 그린피 50% 타임딜 특가</a></div>
+                                                <div class="period">100팀 한정</div>
+                                                <div class="price">
+                                                    <div class="discount">
+                                                        <em><span>99%</span> <i class="icon-discount"></i></em>
+                                                        <del>12,000</del>
+                                                    </div>
+                                                    <div class="total">₩928,000</div>
+                                                    <div class="button">
+                                                        <a href="" class="btn btn-primary btn-text-sm">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <strong class="deadline">특가마감 24:05:09</strong>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="location">강원도 홍천군</div>
+                                                <div class="subject">
+                                                    <i class="icon-lightning"></i>
+                                                    <a href="">[엘리시안 강촌 나인플러스 골프클럽] 4인 그린피 50% 타임딜 특가</a></div>
+                                                <div class="period">100팀 한정</div>
+                                                <div class="price">
+                                                    <div class="discount">
+                                                        <em><span>99%</span> <i class="icon-discount"></i></em>
+                                                        <del>12,000</del>
+                                                    </div>
+                                                    <div class="total">₩928,000</div>
+                                                    <div class="button">
+                                                        <a href="" class="btn btn-primary btn-text-sm">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <strong class="deadline">특가마감 24:05:09</strong>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="location">강원도 홍천군</div>
+                                                <div class="subject">
+                                                    <i class="icon-lightning"></i>
+                                                    <a href="">[엘리시안 강촌 나인플러스 골프클럽] 4인 그린피 50% 타임딜 특가</a></div>
+                                                <div class="period">100팀 한정</div>
+                                                <div class="price">
+                                                    <div class="discount">
+                                                        <em><span>99%</span> <i class="icon-discount"></i></em>
+                                                        <del>12,000</del>
+                                                    </div>
+                                                    <div class="total">₩928,000</div>
+                                                    <div class="button">
+                                                        <a href="" class="btn btn-primary btn-text-sm">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img">
+                                                <a href="" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                                <strong class="deadline">특가마감 24:05:09</strong>
+                                                <div class="share-area">
+                                                    <button type="button" class="share"><span class="sr-only">공유</span></button>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="location">강원도 홍천군</div>
+                                                <div class="subject">
+                                                    <i class="icon-lightning"></i>
+                                                    <a href="">[엘리시안 강촌 나인플러스 골프클럽] 4인 그린피 50% 타임딜 특가</a></div>
+                                                <div class="period">100팀 한정</div>
+                                                <div class="price">
+                                                    <div class="discount">
+                                                        <em><span>99%</span> <i class="icon-discount"></i></em>
+                                                        <del>12,000</del>
+                                                    </div>
+                                                    <div class="total">₩928,000</div>
+                                                    <div class="button">
+                                                        <a href="" class="btn btn-primary btn-text-sm">자세히 보기</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev swiper-button-prev-product"></div>
+                            <div class="swiper-button-next swiper-button-next-product"></div>
+                        </div>
+                        <div class="main-more">
+                            <a href="product.html">전체보기 <i class="icon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="section5" data-event="revealed">
+                    <div class="container">
+                        <div class="main-title">지역별 <br class="d-block d-lg-none">테마가 있는 클럽</div>
+                        <div class="main-desc">원하는 지역 모두 <br class="d-block d-lg-none">즐거운 테마가 있다</div>
+                        <div class="row region-wrap">
+                            <div class="col-12 col-lg-auto">
+                                <div class="swiper-container region-nav">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide active"><a href="javascript:;">수도권</a></div>
+                                        <div class="swiper-slide"><a href="javascript:;">강원도</a></div>
+                                        <div class="swiper-slide"><a href="javascript:;">충청도</a></div>
+                                        <div class="swiper-slide"><a href="javascript:;">전라도</a></div>
+                                        <div class="swiper-slide"><a href="javascript:;">경상도</a></div>
+                                        <div class="swiper-slide"><a href="javascript:;">제주도</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg">
+                                <div class="region-list">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a href="" class="thumb large">
+                                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                            </a>
+                                                            <div class="description">
+                                                                <strong>푸른 바다와 함께 시원하게 이글!</strong>
+                                                                <p>제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. <br>이덕분에 세계 골프 대회가 많이 열린다죠~?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a href="" class="thumb large">
+                                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                            </a>
+                                                            <div class="description">
+                                                                <strong>푸른 바다와 함께 시원하게 이글!</strong>
+                                                                <p>제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. <br>이덕분에 세계 골프 대회가 많이 열린다죠~?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a href="" class="thumb large">
+                                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                            </a>
+                                                            <div class="description">
+                                                                <strong>푸른 바다와 함께 시원하게 이글!</strong>
+                                                                <p>제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. <br>이덕분에 세계 골프 대회가 많이 열린다죠~?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a href="" class="thumb large">
+                                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                            </a>
+                                                            <div class="description">
+                                                                <strong>푸른 바다와 함께 시원하게 이글!</strong>
+                                                                <p>제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. <br>이덕분에 세계 골프 대회가 많이 열린다죠~?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a href="" class="thumb large">
+                                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                            </a>
+                                                            <div class="description">
+                                                                <strong>푸른 바다와 함께 시원하게 이글!</strong>
+                                                                <p>제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. <br>이덕분에 세계 골프 대회가 많이 열린다죠~?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <a href="" class="thumb large">
+                                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                            </a>
+                                                            <div class="description">
+                                                                <strong>푸른 바다와 함께 시원하게 이글!</strong>
+                                                                <p>제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. <br>이덕분에 세계 골프 대회가 많이 열린다죠~?</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="thumb">
+                                                                        <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                                                        <span class="theme">사계절 푸른 클럽 <br>BEST 5</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-more">
+                            <a href="region.html">전체보기 <i class="icon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="section6" data-event="revealed">
+                    <div class="container">
+                        <div class="main-title">이 클럽은 <br class="d-block d-lg-none">당장 가봐야 해요</div>
+                        <div class="main-desc">당신만을 위한 클럽을 모아 모아서 <br class="d-block d-lg-none">한자리에 딱!</div>
+                        <div class="plan-list">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="row">
+                                        <div class="col-8 d-none d-lg-block">
+                                            <div class="item">
+                                                <a href="">
+                                                    <div class="thumb">
+                                                        <img src="../../resources/images/@img1.png" alt="여름 시즌을 위하여! 지금 핫한 그 클럽을 지금 모두 만나보세요. 어제보다 오늘이 더 풍성!" onload="setDirection(this)" class="vertical">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="item">
+                                                <a href="">
+                                                    <div class="thumb">
+                                                        <img src="../../resources/images/@thumb-event.png" alt="캐디가 부담스러운 사람?" onload="setDirection(this)" class="vertical">
+                                                    </div>
+                                                    <div class="category">클럽추천</div>
+                                                    <div class="subject">캐디가 부담스러운 사람?</div>
+                                                    <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                        최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="item">
+                                                <a href="">
+                                                    <div class="thumb">
+                                                        <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)" class="vertical">
+                                                    </div>
+                                                    <div class="category">클럽추천</div>
+                                                    <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                    <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                        최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="item">
+                                                <a href="">
+                                                    <div class="thumb">
+                                                        <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)" class="vertical">
+                                                    </div>
+                                                    <div class="category">클럽추천</div>
+                                                    <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                    <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                        최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-4">
+                                            <div class="item">
+                                                <a href="">
+                                                    <div class="thumb">
+                                                        <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)" class="vertical">
+                                                    </div>
+                                                    <div class="category">클럽추천</div>
+                                                    <div class="subject">셋이 모여 갈 수 있는 곳?</div>
+                                                    <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
+                                                        최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="row">
+                                        <div class="col-6 col-lg-12">
+                                            <div class="item large">
+                                                <a href="">
+                                                    <div class="thumb">
+                                                        <img src="../../resources/images/@thumb-event.png" alt="하루만에 끝내기 아쉬운데.." onload="setDirection(this)" class="vertical">
+                                                    </div>
+                                                    <div class="category">숙박이벤트</div>
+                                                    <div class="subject">하루만에 끝내기 아쉬운데..</div>
+                                                    <div class="txt">오랜만에 시간 내 온 곳인데 하루 반짝은 너무 아쉽죠! 패키지로 더욱 저렴하게! 저녁부터 다음날 새벽까지 원하는 만큼! 라운딩하세요~ 오직 그립에서만 추천드립니다!</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-more">
+                            <a href="recommend.html">전체보기 <i class="icon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section fp-auto-height" id="section7" data-event="revealed">
+                    <div id="footer-block">
+                        <!-- footer include -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+</div>
+
+<script>
+    const breakpoint = window.matchMedia( '(min-width:992px)' );
+    let swiperTab;
+    const breakpointChecker = function() {
+        if ( breakpoint.matches === true ) {
+            if ( swiperTab !== undefined ) swiperTab.destroy( true, true );
+            return;
+        } else if ( breakpoint.matches === false ) {
+            return enableSwiper();
+        }
+    }
+    const enableSwiper = function() {
+        //모바일에서 탭->스와이퍼
+        swiperTab = new Swiper('#section3 .tab', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            wrapperClass: 'nav',
+            slideClass: 'nav-item',
+            breakpoints: {
+                // when window width is >= 320px
+                992: {
+
+                }
+            },
+        });
+    }
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+
+
+    //지금 그립 앤드 플레이에 조인하세요
+    var swiperPlay = new Swiper('.play-list .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        slidesOffsetBefore: 15,
+        slidesOffsetAfter: 15,
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            },
+            1080: {
+                slidesPerView: 3,
+                spaceBetween: 43,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-play',
+            prevEl: '.swiper-button-prev-play',
+        },
+    });
+
+    //그립이 준비했습니다! 지금이 기회에요!
+    var swiperProduct = new Swiper('.product-list .swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        slidesOffsetBefore: 15,
+        slidesOffsetAfter: 15,
+        breakpoints: {
+            992: {
+                spaceBetween: 20,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-product',
+            prevEl: '.swiper-button-prev-product',
+        },
+    });
+
+    //지역별 테마가 있는 클럽
+    var swiperRegionNav = new Swiper('.region-nav', {
+        slidesPerView: 'auto',
+        direction: 'horizontal',
+        centeredSlides: true,
+        breakpoints: {
+            992: {
+                direction: 'vertical',
+                spaceBetween: 25,
+                allowTouchMove: false,
+                centeredSlides: false,
+            }
+        },
+    });
+    var swiperRegion = new Swiper('.region-list .swiper-container', {
+        direction: 'vertical',
+        spaceBetween: 25,
+        autoHeight: true
+    });
+
+    $(document).ready(function(){
+        $('.tab a').on('click',function(e){
+            e.preventDefault();
+            $(this).parent().siblings().removeClass('active');
+            $(this).parent().addClass('active');
+        });
+        $('.region-nav a').on('click',function(e){
+            e.preventDefault();
+            $(this).parent().siblings().removeClass('active');
+            $(this).parent().addClass('active');
+            swiperRegion.slideTo($(this).parent().index());
+        });
+    });
+</script>
+
+</body>
+</html>

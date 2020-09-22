@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/plugin/fullpage/fullpage.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/plugin/fullpage/fullpage.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="full-title-area region">
+            <div class="container">
+                <div class="content">
+                    <div class="title-area">
+                        <div class="title">지역별 테마가 있는 클럽</div>
+                        <p class="desc">원하는 지역 모두 즐거운 테마가 있다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="content">
+                <div class="tab d-none d-lg-block">
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item active" role="presentation">
+                            <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-selected="true">전국</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-selected="false">수도권</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-selected="false">강원도</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#t4" role="tab" aria-selected="false">충청도</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#t5" role="tab" aria-selected="false">전라도</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#t6" role="tab" aria-selected="false">경상도</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#t7" role="tab" aria-selected="false">제주도</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="result-top">
+                    <div class="row justify-content-end align-items-end">
+                        <div class="col-auto text-right">
+                            <ul class="sort" data-sorting="asc">
+                                <li><a href="javascript:;" class="active">일정순</a></li>
+                                <li><a href="javascript:;">등록순</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="club-list">
+                    <ul>
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <a href="" class="thumb">
+                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)">
+                                    </a>
+                                </div>
+                                <div class="summary">
+                                    <div class="location">강원도 홍천군</div>
+                                    <div class="name">
+                                        <a href="" class="club">사계절 푸른 클럽 BEST 5</a>
+                                    </div>
+                                    <div class="hash">#3인클럽 #3인 #친구끼리</div>
+                                    <div class="desc">제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. 이덕분에 세계 골프 대회가 많이 열린다죠~? </div>
+                                </div>
+                                <div class="util justify-content-start">
+                                    <div class="buttons">
+                                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                                    </div>
+                                    <div class="hit">조회수 285</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <div class="img">
+                                    <a href="" class="thumb">
+                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)">
+                                    </a>
+                                </div>
+                                <div class="summary">
+                                    <div class="location">강원도 홍천군</div>
+                                    <div class="name">
+                                        <a href="" class="club">사계절 푸른 클럽 BEST 5</a>
+                                    </div>
+                                    <div class="hash">#3인클럽 #3인 #친구끼리</div>
+                                    <div class="desc">제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. 이덕분에 세계 골프 대회가 많이 열린다죠~? </div>
+                                </div>
+                                <div class="util justify-content-start">
+                                    <div class="buttons">
+                                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                                    </div>
+                                    <div class="hit">조회수 285</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more">
+                    <a href="javascript:;"><span>더보기</span></a>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <!-- footer include -->
+    </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

@@ -28,7 +28,7 @@
     </div>
     <div id="center-block">
         <div class="container">
-			<div class="swiper-container">
+			<div class="swiper-container" id="swiper-join">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div class="slide-min-height">
@@ -292,8 +292,57 @@
 </div>
 
 <script>
+	var Join = {
+		/** 초기 로딩시 실행 */
+		init : function (){
+
+			swiperStep = new Swiper('#swiper-join', {
+				speed: 400,
+				spaceBetween: 0,
+				autoHeight: true,
+				allowTouchMove: false,
+				on: {
+					init: function () {
+
+					},
+					slideChange: function () {
+						$('.btn-step-area').attr('data-step',swiperStep.activeIndex);
+					}
+				}
+			});
+			/** 이벤트 */
+			Join.event();
+		},
+
+		/** 이벤트 */
+		event: function() {
+			//이전&다음 버튼 클릭
+			$('.btn-step-area a').on('click',function(e){
+				e.preventDefault();
+				//이전
+				if($(this).hasClass('btn-prev')){
+					swiperStep.slideTo(swiperStep.activeIndex-1);
+				}
+				//다음
+				else if($(this).hasClass('btn-next')){
+					swiperStep.slideTo(swiperStep.activeIndex+1);
+				}
+			});
+
+			//성별 선택시 다음단계 썸네일 변경
+			$('[name="formGender"]').on('click',function(e){
+				var selected = $('[name="formGender"]:checked').attr('id');
+				$('[data-selected="' + selected + '"]').addClass('on');
+				$('[data-selected="' + selected + '"]').siblings().removeClass('on');
+			});
+
+		},
+	}
+
 	$(document).ready(function(){
-		var swiperStep = new Swiper('.swiper-container', {
+		Join.init();
+		/* var swiperStep;
+		swiperStep = new Swiper('.swiper-container', {
 			speed: 400,
 			spaceBetween: 0,
 			autoHeight: true,
@@ -319,6 +368,7 @@
 			}
 			//다음
 			else if($(this).hasClass('btn-next')){
+				console.log(typeof(swiperStep));
 				swiperStep.slideTo(swiperStep.activeIndex+1);
 			}
 		});
@@ -329,7 +379,9 @@
 			$('[data-selected="' + selected + '"]').addClass('on');
 			$('[data-selected="' + selected + '"]').siblings().removeClass('on');
 		});
+		 */
 	});
+
 
 </script>
 

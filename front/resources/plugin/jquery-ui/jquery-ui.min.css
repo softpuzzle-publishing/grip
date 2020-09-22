@@ -389,7 +389,6 @@ button.ui-button::-moz-focus-inner {
     width: 100%;
     font-size: .9em;
     border-collapse: collapse;
-    margin: 0 0 .4em
 }
 
 .ui-datepicker th {
@@ -443,8 +442,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-datepicker-multi .ui-datepicker-group table {
-    width: 95%;
-    margin: 0 auto .4em
+    table-layout: fixed;
 }
 
 .ui-datepicker-multi-2 .ui-datepicker-group {
