@@ -7,10 +7,11 @@
         <div class="menu">
             <ul>
                 <li class="user">
-                    <div class="profile">
+                    <div class="profile cursor-pointer" onclick="document.location.href='../my/notice.html'">
                         <span>
                             <img src="../../resources/images/icon-male.png" alt="홍길동님">
                         </span>
+                        <i class="badge badge-pill badge-danger">9+</i>
                     </div>
                     <a href="../my/myInfo.html">홍길동님</a>
                 </li>
@@ -145,7 +146,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">셋이 모여 갈 수 있는 곳?</div>
                                                     <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
                                                         최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
@@ -158,7 +158,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">셋이 모여 갈 수 있는 곳?</div>
                                                     <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
                                                         최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
@@ -171,7 +170,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">셋이 모여 갈 수 있는 곳?</div>
                                                     <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
                                                         최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
@@ -184,7 +182,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="셋이 모여 갈 수 있는 곳?" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">셋이 모여 갈 수 있는 곳?</div>
                                                     <div class="txt">우리 모임은 세명인데,.. 최소 인원이 4명이라구요? 걱정마세요! 셋, 혹은 두명부터가 예약
                                                         최소 인원인 클럽이 있습니다 지금부터 그립이 알려드릴게요!</div>
@@ -212,7 +209,6 @@
                                                             <span class="tit">수도권 퇴근후 친목회 모집</span>
                                                         </div>
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">인천 수도권 야간 모집해요. 연습 겸 친목다져요</div>
                                                     <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
                                                 </a>
@@ -224,7 +220,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="하반기 아마추어 대회 연습 및 스터디" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">하반기 아마추어 대회 연습 및 스터디</div>
                                                     <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
                                                 </a>
@@ -236,7 +231,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="하반기 아마추어 대회 연습 및 스터디" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">하반기 아마추어 대회 연습 및 스터디</div>
                                                     <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
                                                 </a>
@@ -248,7 +242,6 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="하반기 아마추어 대회 연습 및 스터디" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="category">클럽추천</div>
                                                     <div class="subject">하반기 아마추어 대회 연습 및 스터디</div>
                                                     <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
                                                 </a>
@@ -317,9 +310,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-row-line">
+                                <div class="form-row-line overflow-hidden">
                                     <label class="tit">인원</label>
-                                    <div class="count">
+                                    <div class="count float-right" style="width:174px">
                                         <a id="carb-decrement" href="javascript:;"></a>
                                         <div class="count-people"><input type="text" id="carb-count" value="4" class="count-number" readonly=""><span>인</span></div>
                                         <a id="carb-increment" href="javascript:;" class="disabled"></a>

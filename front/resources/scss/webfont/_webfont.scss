@@ -9,6 +9,14 @@
 }
 @font-face {
       font-family: 'Noto Sans KR';
+      font-weight: 200;
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.eot);
+      src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.eot?#iefix) format('embedded-opentype'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.woff) format('woff'),
+            url(../fonts/NotoSansCJKkr/NotoSansCJKkr-Light.ttf) format('truetype');
+}
+@font-face {
+      font-family: 'Noto Sans KR';
       font-weight: 300;
       src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot);
       src: url(../fonts/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot?#iefix) format('embedded-opentype'),

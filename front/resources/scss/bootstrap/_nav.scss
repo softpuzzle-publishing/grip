@@ -85,10 +85,10 @@
 .nav-pills {
   .nav-link {
     @include border-radius($nav-pills-border-radius);
-    padding: 6px 20px 6px;
+    padding: 8px 25px 8px;
     color: #a1a1a1;
     font-size: 19px;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
   }
 
@@ -97,6 +97,7 @@
     color: $nav-pills-link-active-color;
     background-color: $nav-pills-link-active-bg;
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12);
+    font-weight: 500;
   }
 }
 

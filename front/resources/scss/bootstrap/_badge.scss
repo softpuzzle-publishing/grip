@@ -52,3 +52,11 @@
     @include badge-variant($value);
   }
 }
+
+.badge-grass{
+  font-size: 15px; @include background-opacity($primary, 0.09);border: 1px solid $primary;font-weight: 400;height: 35px;padding: 9px 13px;margin-right: 7px;
+}
+.badge-outline-primary{
+  font-size: 15px;@include background-opacity($primary, 0.09)border: 1px solid $primary;font-weight: 400;height: 35px;padding: 9px 23px;margin-right: 7px;color: $primary;
+  i{color: $gray;margin-left: 3px;}
+}

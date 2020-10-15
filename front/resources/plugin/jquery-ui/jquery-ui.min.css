@@ -762,7 +762,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-selectmenu-menu .ui-menu-item > div{
     padding: 7px 1rem 8px;
-    font-weight: 300;
+    font-weight: 200;
     color: #767676;
 }
 .ui-selectmenu-menu .ui-menu .ui-state-active{
@@ -1083,7 +1083,7 @@ html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
     border: 1px solid #e2e2e2;
     background: #fff;
-    font-weight: normal;
+    font-weight: 300;
     color: #454545
 }
 

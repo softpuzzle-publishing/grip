@@ -147,11 +147,11 @@
 .modal-title {
   margin-bottom: 0;
   line-height: $modal-title-line-height;
-  font-size: 19px;letter-spacing: -0.3px;color: #4f4f4f;font-weight: 500;
+  font-size: 19px;letter-spacing: -0.3px;color: $gray-dark;font-weight: 400;
 }
 
 .modal-desc{
-  font-size: 16px;letter-spacing: -0.25px;color: #4f4f4f;margin-top: 10px;
+  font-size: 16px;letter-spacing: -0.25px;color: $gray-dark;margin-top: 10px;
 }
 
 // Modal body

@@ -3,7 +3,7 @@ html,body{
 }
 @include media-breakpoint-down(md) {
     body{
-        font-size: 14px;
+        font-size: 14px;min-width:350px;
     }
 }
 
@@ -17,6 +17,8 @@ html,body{
 #center-block{
     padding-top: 28px;
     .container{max-width: 570px;}
+    .max-width-670{max-width: 670px}
+    .max-width-755{max-width: 755px}
 }
 @include media-breakpoint-down(lg) {
     .container{max-width:100%;}
@@ -98,14 +100,7 @@ html,body{
     }
 }
 body.no-menu #header .menu{display: none !important;}
-@include media-breakpoint-down(md) {
-    body.no-menu{
-        #header{
-            .search,
-            .menu-mobile{display: none !important;}
-        }
-    }
-}
+body.no-search #header .search{display: none !important;}
 
 .icon-hamburger {
     display: block;width: 21px;height: 20px;z-index: 1000;

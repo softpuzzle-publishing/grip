@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+
+    <style>
+        .guide-wrap{padding: 50px;display: flex;flex-wrap:wrap;}
+        section{width: 50%;padding: 20px;}
+
+        @media (max-width: 919.98px){
+            .guide-wrap{padding: 0;}
+            section{width: 100%;}
+        }
+    </style>
+</head>
+
+<body>
+<div class="guide-wrap">
+    <section>
+        <div class="title-area">
+            <div class="title"><span class="text-primary">홍</span>길동님의 프로필</div>
+            <p class="desc">그립의 색다른 맞춤형 추천을 위해 프로필을 완성해주세요</p>
+            <a href="../play/play.html" class="btn btn-outline-primary min-width-150 btn-play-making">타이틀영역버튼</a>
+        </div>
+    </section>
+
+    <section>
+        <div id="center-block">
+            <div class="title-area">
+                <div class="title">회원가입</div>
+                <p class="desc">본인의 정보를 정확히 입력해주세요</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="subtitle-area">
+            <div class="subtitle">플레이어</div>
+            <p class="desc desc-sm">*프로필 이미지를 클릭하여 다른 플레이어의 정보를 확인할 수 있습니다</p>
+        </div>
+
+        <div class="result-top has-border">
+            <div class="row justify-content-between align-items-end">
+                <div class="col-auto">
+                    <div class="result-title mb-0">
+                        클럽개수 <span class="text-secondary">5</span>
+                    </div>
+                </div>
+                <div class="col-auto text-right">
+                    <ul class="sort" data-sorting="asc">
+                        <li><a href="javascript:;" class="active">거리순</a></li>
+                        <li><a href="javascript:;">가격순</a></li>
+                        <li><a href="javascript:;">평점순</a></li>
+                        <li><a href="javascript:;">난이도순</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right">
+            <ul class="sort no-direction">
+                <li><a href="javascript:;" class="active">최신순</a></li>
+                <li><a href="javascript:;">과거순</a></li>
+                <li><a href="javascript:;">공감수</a></li>
+            </ul>
+        </div>
+
+        <div class="more">
+            <a href="javascript:;"><span>더보기</span></a>
+        </div>
+
+        <div class="btn-step-area" data-step="0">
+            <div class="row justify-content-between">
+                <div class="col-auto">
+                    <a href="javascript:;" class="btn-prev"><span>이전</span></a>
+                </div>
+                <div class="col-auto">
+                    <a href="javascript:;" class="btn-next"><span>다음</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="form-wrap">
+            <div class="form-row-line">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="이름">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="tel" class="form-control" placeholder="인증번호">
+                    </div>
+                    <div class="col-auto">
+                        <span class="text-secondary">03:59</span>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-secondary btn-text-sm">확인</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="password" class="form-control" placeholder="비밀번호 ( 예: 영문, 숫자 포함 6자리 이상)">
+                    </div>
+                </div>
+            </div>
+            <p class="text-valid text-right">
+                <span class="text-primary">인증되었습니다!</span>
+            </p>
+        </div>
+
+        <div class="form-wrap margin-sm">
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="지금 사용중인 비밀번호">
+                    </div>
+                    <div class="col-auto">
+                        <span class="text-danger">불일치</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="변경할 비밀번호">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-line">
+                <div class="row row-10 align-items-center">
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="변경할 비밀번호 한번 더 입력">
+                    </div>
+                    <div class="col-auto">
+                        <span class="text-primary">일치</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <div class="reservation">
+                <div class="form-wrap">
+                    <div class="form-row-line">
+                        <label class="tit sup">시간</label>
+                        <div class="row row-15">
+                            <div class="col-auto time-first">
+                                <select name="">
+                                    <option value="">1부</option>
+                                    <option value="">2부</option>
+                                    <option value="">야간</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select name="">
+                                    <option value="">06:00~07:00</option>
+                                    <option value="">06:00~07:00</option>
+                                    <option value="">06:00~07:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row-line">
+                        <label class="tit">인원</label>
+                        <div class="count">
+                            <a id="carb-decrement" href="javascript:;"></a>
+                            <div class="count-people"><input type="text" id="carb-count" value="4" class="count-number" readonly=""><span>인</span></div>
+                            <a id="carb-increment" href="javascript:;" class="disabled"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="address-form mt-2" max-length="5">
+            <div class="row row-10 align-items-center">
+                <div class="col">
+                    <div class="form-fake">
+                        <input type="text" class="form-control" placeholder="주소창을 클릭해 주소를 검색하세요">
+                        <button type="button" class="btn btn-secondary btn-text-sm disabled" data-class="btn-select">대표장소</button>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <a href="" class="btn-control btn-plus"><i class="icon-plus"></i></a>
+                    <a href="" class="btn-control btn-minus"><i class="icon-minus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row row-20 align-items-center mt-2">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="상호명 검색">
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-secondary btn-text-sm">검색</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="profile">
+            <span>
+                <img src="../../resources/images/icon-female.png" alt="여자">
+            </span>
+        </div>
+        <div class="profile">
+            <span>
+                <img src="../../resources/images/icon-male.png" alt="남자">
+            </span>
+        </div>
+    </section>
+
+    <section>
+        체크박스 :
+        <div class="custom-control custom-checkbox custom-checkbox-square">
+            <input type="checkbox" class="custom-control-input" id="form0">
+            <label class="custom-control-label" for="form0">로그인상태 유지</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="form1">
+            <label class="custom-control-label" for="form1">서비스이용약관 (필수)</label>
+        </div>
+        <div>
+            라디오 :
+            <div class="hole">
+                <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="radioHole" id="rc1">
+                    <label class="custom-control-label" for="rc1">9H</label>
+                </div>
+                <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="radioHole" id="rc2">
+                    <label class="custom-control-label" for="rc2">18H</label>
+                </div>
+                <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                    <input type="radio" class="custom-control-input" name="radioHole" id="rc3">
+                    <label class="custom-control-label" for="rc3">27H</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" name="agree" id="agreeY">
+                <label class="custom-control-label" for="agreeY">동의</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" name="agree" id="agreeN">
+                <label class="custom-control-label" for="agreeN">동의하지 않음</label>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row address-gutter">
+            <div class="col-6">
+                <select name="" id="">
+                    <option value="">시/도</option>
+                    <option value="">강원도</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <select name="" id="">
+                    <option value="">시/군/구</option>
+                    <option value="">강릉시</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <select name="" id="zone-details" class="select-box-style">
+                <option value="">지역을 선택하세요</option>
+                <option value="ZONE1">수도권 전체</option>
+                <option value="addrs-01">파주/고양/김포</option>
+                <option value="addrs-02">인천/안산/시흥</option>
+                <option value="addrs-03">남양주/하남/구리</option>
+                <option value="addrs-04">광주/성남</option>
+                <option value="addrs-05">용인/수원/화성</option>
+                <option value="addrs-06">오산/평택/안성</option>
+                <option value="addrs-07">포천/동두천/양주</option>
+                <option value="addrs-08">여주/이천/양평</option>
+            </select>
+        </div>
+
+        <div class="sympathy">
+            <button role="button" class="good"><span>1</span></button>
+            <button role="button" class="bad"><span>1</span></button>
+        </div>
+
+        <div>
+            <button type="button" class="like"><span class="sr-only">가고싶음</span></button>
+            <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+        </div>
+    </section>
+
+    <section>
+        <div class="rating">
+            <span>평점</span>
+            <i data-point="3.5">3.5</i>
+        </div>
+        <div class="level">
+            <span>난이도</span>
+            <i data-point="2.5">2.5</i>
+        </div>
+        <div class="rating-star" data-point="4.5">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="time">
+            <span>00:00</span>
+        </div>
+    </section>
+
+    <section>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">클럽소개 프로그램</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">클럽리뷰</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="card-list card-list-play">
+            <div class="item" style="width:232px">
+                <a href="">
+                    <div class="thumb">
+                        <img src="../../resources/images/@thumb-event.png" alt="하반기 아마추어 대회 연습 및 스터디" onload="setDirection(this)" class="vertical">
+                    </div>
+                    <div class="subject">하반기 아마추어 대회 연습 및 스터디</div>
+                    <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="tab d-none d-lg-block">
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item active" role="presentation">
+                    <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-selected="true">라운드</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-selected="false">레슨 및 트레이닝</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-selected="false">여행</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#t4" role="tab" aria-selected="false">친목 및 커뮤니티</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab tab-course-detail">
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">록키</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">알프스</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">몽블랑</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <span class="badge badge-grass">조선잔디</span>
+            <span class="badge badge-outline-primary">핸디캡 -<i>+5~+10</i></span>
+        </div>
+
+        <div class="btn-area btn-area-join">
+            <a href="" class="btn btn-primary min-width-186">확인</a>
+            <a href="" class="btn btn-outline-light min-width-186">플레이 취소하기</a>
+        </div>
+
+        <div>
+            <a href="" class="btn btn-primary min-width-150">메인으로</a>
+
+            <button class="btn btn-primary">예약하기</button>
+
+            <button class="btn btn-primary" disabled="disabled">예약하기</button>
+        </div>
+        <div>
+            <button class="btn btn-primary btn-sm">예약하기</button>
+
+            <button class="btn btn-secondary btn-text-sm" disabled="disabled">인증</button>
+
+            <button class="btn btn-secondary btn-text-sm">확인</button>
+
+            <a href="" class="btn btn-primary btn-text-sm">리뷰작성</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="club-list">
+            <ul>
+                <li>
+                    <div class="box">
+                        <div class="img">
+                            <a href="../club/detail.html" class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)" class="horizontal">
+                            </a>
+                        </div>
+                        <div class="summary">
+                            <div class="location">강원도 홍천군</div>
+                            <div class="name">
+                                <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽</a>
+                                <i class="distance">50km</i>
+                                <div class="time">
+                                    <span>00:00</span>
+                                </div>
+                            </div>
+                            <div class="type">멤버십클럽 (회원용) / 퍼블릭코스 (18H)</div>
+                            <div class="point">
+                                <div class="rating">
+                                    <span>평점</span>
+                                    <i data-point="3.5">3.5</i>
+                                </div>
+                                <div class="level">
+                                    <span>난이도</span>
+                                    <i data-point="2.5">2.5</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="util">
+                            <div class="buttons">
+                                <button type="button" class="like"><span class="sr-only">가고싶다</span></button>
+                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                            </div>
+                            <div class="price">
+                                <p>1인 그린피</p>
+                                <strong>₩12,000 ~</strong>
+                            </div>
+                            <div class="reserv">
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reservation">예약하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="img">
+                            <a href="" class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)" class="horizontal">
+                            </a>
+                        </div>
+                        <div class="summary">
+                            <div class="location">강원도 홍천군</div>
+                            <div class="name">
+                                <a href="" class="club">사계절 푸른 클럽 BEST 5</a>
+                            </div>
+                            <div class="hash">#3인클럽 #3인 #친구끼리</div>
+                            <div class="desc">제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. 이덕분에 세계 골프 대회가 많이 열린다죠~? </div>
+                        </div>
+                        <div class="util justify-content-start">
+                            <div class="buttons">
+                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                            </div>
+                            <div class="hit">조회수 285</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="img">
+                            <a href="" class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)">
+                            </a>
+                            <strong class="deadline"><span class="d-none d-md-inline">특가마감</span> 24:05:09</strong>
+                        </div>
+                        <div class="summary">
+                            <div class="location">강원도 홍천군</div>
+                            <div class="name d-flex">
+                                <i class="icon-lightning"></i>
+                                <a href="" class="club">[엘리시안 강촌 나인플러스 골프클럽] <br class="d-none d-md-block">4인 그린피 50% 타임딜 특가</a>
+                            </div>
+                            <div class="period">100팀 한정</div>
+                        </div>
+                        <div class="util">
+                            <div class="buttons">
+                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                            </div>
+                            <div class="price">
+                                <div class="discount">
+                                    <em><span>99%</span> <i class="icon-discount"></i></em>
+                                    <del>₩1,112,000</del>
+                                </div>
+                                <div class="total">₩928,000</div>
+                                <div class="reserv">
+                                    <a href="" class="btn btn-primary btn-sm">자세히 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="img">
+                            <a href="" class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)" class="horizontal">
+                            </a>
+                        </div>
+                        <div class="summary">
+                            <div class="name">
+                                <a href="" class="club">셋이 모여 갈 수 있는 곳?</a>
+                            </div>
+                            <div class="hash">#3인클럽 #3인 #친구끼리</div>
+                            <div class="desc">제주는 사시사철 푸르른 라운딩을 즐길 수 있습니다. 이덕분에 세계 골프 대회가 많이 열린다죠~? </div>
+                        </div>
+                        <div class="util justify-content-start">
+                            <div class="buttons">
+                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                            </div>
+                            <div class="hit">조회수 285</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="recommendation">
+                    <div class="box">
+                        <div class="img">
+                            <a href="" class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)">
+                                <span class="d-day">D-5day</span>
+                            </a>
+                        </div>
+                        <div class="summary">
+                            <div class="info">
+                                <div class="name">
+                                    <a href="" class="subject">싱글 플레이어! 베어크리크 춘천에서 모이자!</a>
+                                </div>
+                                <div class="place">
+                                    <span class="club">베어크리크 춘천 컨트리클럽</span>
+                                    <span class="distance">55km</span>
+                                </div>
+                                <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                                <div class="date">
+                                    <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                                    <i class="icon-personnel"></i> <span>4인</span>
+                                    <div class="host">
+                                        <div class="member">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                                </span>
+                                            </div>
+                                            <div class="plus">
+                                                <span>+1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="util">
+                            <div class="buttons">
+                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                            </div>
+                            <div class="price">
+                                <p>1인 참가비</p>
+                                <strong>₩45,000</strong>
+                            </div>
+                            <div class="reserv">
+                                <a href="" class="btn btn-primary btn-sm">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="img horizontal">
+                            <a href="../club/detail.html" class="thumb">
+                                <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)" class="horizontal">
+                            </a>
+                        </div>
+                        <div class="summary">
+                            <div class="location">강원도 홍천군</div>
+                            <div class="name">
+                                <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽</a>
+                                <i class="distance">50km</i>
+                            </div>
+                            <div class="type">멤버십클럽 (회원용) / 퍼블릭코스 (18H)</div>
+                            <div class="point">
+                                <div class="rating">
+                                    <span>평점</span>
+                                    <i data-point="3.5">3.5</i>
+                                </div>
+                                <div class="level">
+                                    <span>난이도</span>
+                                    <i data-point="2.5">2.5</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="util pt-0">
+                            <div class="price-extra">
+                                <p>예상 부대요금</p>
+                                <div>카트 100,000원</div>
+                                <div>캐디 120,000원</div>
+                            </div>
+                            <div class="price">
+                                <p>1인 그린피</p>
+                                <strong>₩120,000 ~</strong>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<section>
+    <div class="go-top">
+        <a href="javascript:;">
+            <span>TOP</span>
+        </a>
+    </div>
+</section>
+
+
+<div class="feedback" data-flag="on">
+    <article><i></i><span>가고싶음!</span></article>
+</div>
+
+<script>
+	$(document).ready(function(){
+	});
+
+</script>
+
+</body>
+</html>

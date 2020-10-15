@@ -46,7 +46,7 @@ $teal:    #20c997 !default;
 $cyan:    #0eabbd !default;
 $brown:   #a68a76 !default;
 $gray:    #767676 !default;
-$gray-dark:    #767676 !default;
+$gray-dark:    #4f4f4f !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -295,8 +295,8 @@ $font-weight-medium:          500 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
-$font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.25 !default;
+$font-weight-base:            $font-weight-light !default;
+$line-height-base:            1.4 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
@@ -686,11 +686,11 @@ $form-validation-states: map-merge(
 // of components dependent on the z-axis and are designed to all work together.
 
 $zindex-dropdown:                   1000 !default;
+$zindex-popover:                    1010 !default;
 $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
 $zindex-modal-backdrop:             1040 !default;
 $zindex-modal:                      1050 !default;
-$zindex-popover:                    1060 !default;
 $zindex-tooltip:                    1070 !default;
 
 

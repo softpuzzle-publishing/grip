@@ -17,6 +17,7 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05);
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @include border-radius($input-border-radius, 0);
@@ -188,6 +189,7 @@ textarea.form-control {
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05);
   padding: 1rem;
   line-height: 1.4;
+  resize: none;
 }
 
 // Form groups
@@ -358,11 +360,14 @@ textarea.form-control {
 }
 
 .form-control{
-  padding: 14px 0;height: 48px;
+  padding: 14px 30px;height: 48px;
+}
+.form-control.has-border:focus{
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
 @include media-breakpoint-down(md) {
   .form-control{
-    padding: 11px 0;height: 40px;font-size: 14px;
+    padding: 11px 10px;height: 40px;font-size: 14px;
   }
 }

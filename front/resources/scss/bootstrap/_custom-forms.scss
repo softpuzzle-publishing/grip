@@ -74,6 +74,7 @@
   position: relative;
   margin-bottom: 0;
   vertical-align: top;
+  line-height: 1.4;
 
   // Background-color and (when enabled) gradient
   &::before {
@@ -108,7 +109,7 @@
   .custom-control-label {
     &::before,
     &::after {
-      width: 22px;height: 22px;left: -29px;top: -4px;
+      width: 22px;height: 22px;left: -29px;top: -2px;
     }
   }
 }
@@ -119,7 +120,7 @@
 // Tweak just a few things for checkboxes.
 
 .custom-checkbox {
-  min-height: 1.875rem;padding-top: 5px;
+  min-height: 1.875rem;
   .custom-control-label::before {
     @include border-radius($custom-checkbox-indicator-border-radius);
     background-image: url('../images/check-off.svg');
@@ -191,7 +192,7 @@
       width: 5px;height: 5px;border-radius: 50%;border: 0;top: 7px;left: -22px;background: none;box-shadow: none;transition: none;
     }
     .custom-control-label::after{
-      width: 19px;height: 19px;left: -29px;top: 0;border: 1px solid #ddd;border-radius: 50%;background: transparent !important;
+      width: 19px;height: 19px;left: -29px;top: 1px;border: 1px solid #ddd;border-radius: 50%;background: transparent !important;
     }
     .custom-control-input:checked ~ .custom-control-label {
       &::before {
@@ -566,4 +567,25 @@
 .custom-file-label,
 .custom-select {
   @include transition($custom-forms-transition);
+}
+
+.custom-checkbox-square{
+  padding-left: 29px;padding-top: 0;padding-bottom: 0;min-height: 24px;
+  .custom-control-label{
+    font-weight: 500;color: #d4d4d4;
+    &::before,
+    &::after{
+      width: 20px;height: 20px;border-radius: 2px;left: -29px;top: 0;
+    }
+    &::before{
+      background: none;
+    }
+  }
+  .custom-control-input:checked ~{
+    .custom-control-label{
+      &::before{
+        background: #fff url('../images/check-on-green.svg') no-repeat 50% 50%;background-size: 13px auto;border-color: #dfdfdf;
+      }
+    }
+  }
 }
