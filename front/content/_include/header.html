@@ -19,7 +19,7 @@
                 <li><a href="../join/join.html"><span>회원가입</span></a></li>
                 <li><a href="../management_reservation/management_reservation.html"><span>예약관리</span></a></li>
                 <li><a href="../management_club/management_club.html"><span>클럽관리</span></a></li>
-                <li><a href="../my/myPlay.html"><span>플레이 관리</span></a></li>
+                <li><a href="../management_play/management_play.html"><span>플레이 관리</span></a></li>
                 <li><a href=""><span>로그아웃</span></a></li>
             </ul>
         </div>
@@ -368,7 +368,7 @@
                     <p class="">직접 예약하시겠어요?</p>
                     <button type="button" class="btn btn-primary min-width-150">홈페이지 바로가기</button>
                 </div>
-			</div>
+            </div>
 		</div>
 	</div>
 </div>
@@ -407,6 +407,10 @@
                         <dd>10</dd>
                     </dl>
                 </div>
+                <div class="data-empty">
+                    <p>작성된 리뷰가 없습니다</p>
+                </div>
+                <!--
                 <div class="text-right">
                     <ul class="sort no-direction">
                         <li><a href="javascript:;" class="active">최신순</a></li>
@@ -477,43 +481,16 @@
                             <button role="button" class="bad"><span>1</span></button>
                         </div>
                     </li>
-                    <li>
-                        <div class="club">
-                            <div class="img">
-                                <div class="thumb">
-                                    <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="사우스스프링스 컨트리클럽" onload="setDirection(this)">
-                                </div>
-                            </div>
-                            <div class="info">
-                                <a href="" class="name">사우스스프링스 컨트리클럽</a>
-                                <p class="date">2020-07-01</p>
-                                <div class="rating-star" data-point="4">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="txt">
-                            <p>주말 3인 노캐디로 다녀왔습니다. 커플끼리 편하게 즐기는 팀도 있었고 5인에 캐디를 대동한 팀도 있더군요. 4인+캐디필수라는 관념이 사라진 흥미로운 광경이었습니다. 오직 전진만 가능한 모노레일 카트는 이동의 안정감을 주었고 캐디의 압박감에서 벗어나 플레이에 집중할 수 있는 자유를 만끽했습니다. <span class="text-success">#캐디</span> 의존증 해소 <span class="text-success">#상대적</span>으로 짧은 전장 <span class="text-success">#티박스</span> 선택은 자유롭게 <span class="text-success">#멀리건</span>은 마음대로 <span class="text-success">#팀당</span> 거리측정기 최소 1개 필수!</p>
-                        </div>
-                        <div class="more-toggle">
-                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                            <ul>
-                                <li><a href="javascript:;">수정하기</a></li>
-                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">삭제하기</a></li>
-                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">신고하기</a></li>
-                            </ul>
-                        </div>
-                        <div class="sympathy">
-                            <button role="button" class="good"><span>1</span></button>
-                            <button role="button" class="bad"><span>1</span></button>
-                        </div>
-                    </li>
                 </ul>
-			</div>
+                -->
+            </div>
+            <div class="modal-footer">
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary min-width-186">게스트 추가하기</button>
+                    <button type="button" class="btn btn-outline-light min-width-150" id="btn-join-out">조인아웃</button>
+                    <button type="button" class="btn btn-primary min-width-150" data-dismiss="modal">확인</button>
+                </div>
+            </div>
 		</div>
 	</div>
 </div>
@@ -607,6 +584,28 @@
 	</div>
 </div>
 
+<!-- alert : 조인아웃 확인 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-join-our-confirm">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p><em>홍길동</em>님을 플레이에서 <br><span class="text-danger">조인 아웃</span>하시겠습니까?</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">예</button>
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
     $(document).ready(function () {
         //리뷰(in profile) 삭제하시겠습니까?
@@ -621,6 +620,12 @@
                 $('#modal-review-delete-ok').modal('show');
             },10);
 
+        });
+
+         //조인아웃
+         $(document).on('click','#btn-join-out',function(){
+            $('#modal-profile').modal('hide');
+            $('#modal-join-our-confirm').modal('show');
         });
 
         $('#btn-teeoff').on('click',function(){

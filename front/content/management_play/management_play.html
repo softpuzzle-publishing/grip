@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="title-area tab-is-next">
+                    <div class="title"><span class="text-primary">홍길동</span>님의 플레이 관리</div>
+                    <p class="desc">생성한 플레이와 참여했던 플레이를 한번에 관리하세요</p>
+                    <div class="tab">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="tab1" aria-selected="true">플레이 호스트</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="tab2" aria-selected="false">플레이 게스트</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="t1" role="tabpanel">
+                        <div class="result-top has-border">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    <div class="result-title mb-0">
+                                        플레이 참여내역 <span class="text-secondary">3</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="card-edit">
+                                        <a href="javascript:;" class="edit" data-id="btn-edit"><span>편집</span></a>
+                                        <a href="javascript:;" class="selected-del hide" data-id="btn-delete"><span>선택삭제</span></a>
+                                        <a href="javascript:;" class="edit hide" data-id="btn-edit-cancel"><span>취소</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="club-card-list">
+                            <ul>
+                                <li data-status="ing">
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="info-wrap">
+                                                    <span class="where">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                    <span class="info">
+                                                        <span class="date">2020.05.05 06:00</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="dim">
+                                            <div class="message">
+                                                <p class="finished">잘 다녀왔습니다~!</p>
+                                                <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                <p class="canceld-my">내가 취소한 플레이</p>
+                                            </div>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel1">
+                                                <label class="custom-control-label" for="chkDel1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="cancel-my"><!-- 내가 취소 -->
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="info-wrap">
+                                                    <span class="where">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                    <span class="info">
+                                                        <span class="date">2020.05.05 06:00</span>
+                                                    </span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="finished">잘 다녀왔습니다~!</p>
+                                                        <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                        <p class="canceld-my">내가 취소한 플레이</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel2">
+                                                <label class="custom-control-label" for="chkDel2"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="end"><!-- 다녀옴 -->
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="info-wrap">
+                                                    <span class="where">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                    <span class="info">
+                                                        <span class="date">2020.05.05 06:00</span>
+                                                    </span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="finished">잘 다녀왔습니다~!</p>
+                                                        <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                        <p class="canceld-my">내가 취소한 플레이</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel3">
+                                                <label class="custom-control-label" for="chkDel3"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="t2" role="tabpanel">
+                        <div class="result-top has-border">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    <div class="result-title mb-0">
+                                        플레이 참여내역 <span class="text-secondary">4</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="card-edit">
+                                        <a href="javascript:;" class="edit" data-id="btn-edit"><span>편집</span></a>
+                                        <a href="javascript:;" class="selected-del hide" data-id="btn-delete"><span>선택삭제</span></a>
+                                        <a href="javascript:;" class="edit hide" data-id="btn-edit-cancel"><span>취소</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="club-card-list">
+                            <ul>
+                                <li>
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="info-wrap">
+                                                    <span class="where">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                    <span class="info">
+                                                        <span class="date">2020.05.05 06:00</span>
+                                                    </span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="finished">잘 다녀왔습니다~!</p>
+                                                        <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                        <p class="canceld-my">내가 취소한 플레이</p>
+                                                        <p class="canceld-admin">관리자에 의해 정지된 플레이</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel4">
+                                                <label class="custom-control-label" for="chkDel4"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="cancel-my"><!-- 내가 취소 -->
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="info-wrap">
+                                                    <span class="where">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                    <span class="info">
+                                                        <span class="date">2020.05.05 06:00</span>
+                                                    </span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="finished">잘 다녀왔습니다~!</p>
+                                                        <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                        <p class="canceld-my">내가 취소한 플레이</p>
+                                                        <p class="canceld-admin">관리자에 의해 정지된 플레이</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel5">
+                                                <label class="custom-control-label" for="chkDel5"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="cancel-host"><!-- 호스트가 취소 -->
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="name">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                <span class="info">
+                                                    <span class="date">2020.05.05 06:00</span>
+                                                    <span class="hole">18H</span>
+                                                    <span class="personnel">4인</span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="finished">잘 다녀왔습니다~!</p>
+                                                        <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                        <p class="canceld-my">내가 취소한 플레이</p>
+                                                        <p class="canceld-admin">관리자에 의해 정지된 플레이</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel7">
+                                                <label class="custom-control-label" for="chkDel7"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="cancel-admin"><!-- 관리자가 취소 -->
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="name">엘리시안 강촌 나인플러스 골프클럽</span>
+                                                <span class="info">
+                                                    <span class="date">2020.05.05 06:00</span>
+                                                    <span class="hole">18H</span>
+                                                    <span class="personnel">4인</span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="finished">잘 다녀왔습니다~!</p>
+                                                        <p class="canceld-host">호스트가 취소한 플레이</p>
+                                                        <p class="canceld-my">내가 취소한 플레이</p>
+                                                        <p class="canceld-admin">관리자에 의해 정지된 플레이</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel7">
+                                                <label class="custom-control-label" for="chkDel7"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <!-- footer include -->
+    </div>
+</div>
+
+
+<script>
+	$(document).ready(function(){
+        //init
+        var init = function(){
+
+        }
+
+        //편집
+        $('[data-id=btn-edit]').on('click',function(){
+            $(this).closest('.tab-pane').addClass('editing');
+        });
+        //취소
+        $('[data-id=btn-edit-cancel]').on('click',function(){
+            $(this).closest('.tab-pane').removeClass('editing');
+        });
+        //탭 활성화 될때
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            $('.tab-pane').removeClass('editing');
+        });
+
+        init();
+	});
+
+
+</script>
+
+</body>
+</html>

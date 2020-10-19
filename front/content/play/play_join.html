@@ -32,16 +32,16 @@
         <div class="play-join-top">
             <div class="container">
                 <div class="content">
-                    <div>
+                    <div class="info">
                         <span class="d-day">D-5day</span>
-                        <span class="text-primary">골프레슨 -</span>
-                        <span class="text-gray">드라이빙레인지, 필드레슨(9H)</span>
                     </div>
                     <h2 class="subject">싱글 플레이어!베어크리크 춘천에서 모이자!</h2>
-                    <div ckass="hash">#싱글 #춘천 #18H #싱글플레이어 #베어크리크</div>
-                    <div class="d-flex">
-                        <button class="btn btn-primary">신청하기</button>
-                        <div class="host d-none d-sm-block"><!-- 주최자 pc용 -->
+                    <div class="hash">#싱글 #춘천 #18H #싱글플레이어 #베어크리크</div>
+                    <div class="application">
+                        <button type="button" class="btn btn-outline-primary min-width-186">참여 취소</button>
+                        <button type="button" class="btn btn-primary min-width-186" data-id="btn-play">신청하기</button>
+                        <button type="button" class="btn btn-primary min-width-186" disabled>참여 불가</button>
+                        <div class="host">
                             <div class="member">
                                 <div class="profile">
                                     <span>
@@ -54,6 +54,7 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" class="share"><span class="sr-only">공유하기</span></button>
                 </div>
             </div>
         </div>
@@ -125,7 +126,7 @@
                 <section class="section-play-join">
                     <div class="subtitle-area">
                         <div class="subtitle">플레이어</div>
-                        <p class="desc desc-sm">*프로필 이미지를 클릭하여 다른 플레이어의 정보를 확인할 수 있습니다</p>
+                        <p class="desc desc-sm">*프로필 이미지를 클릭하여 <br class="d-md-none">다른 플레이어의 정보를 확인할 수 있습니다</p>
                     </div>
                     <div class="player player-ing">
                         <ul player-max="4" player-ing="2" style="display:none">
@@ -154,7 +155,7 @@
                 <section class="section-play-join">
                     <div class="subtitle-area">
                         <div class="subtitle">신청현황</div>
-                        <p class="desc desc-sm">*프로필 이미지를 클릭하여 다른 플레이어의 정보를 확인할 수 있습니다</p>
+                        <p class="desc desc-sm">*프로필 이미지를 클릭하여 <br class="d-md-none">다른 플레이어의 정보를 확인할 수 있습니다</p>
                     </div>
                     <div class="player">
                         <ul>
@@ -191,9 +192,10 @@
                                         </div>
                                         <div class="name">홍길동</div>
                                     </div>
-                                    <div class="d-flex">
-                                        <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?</div>
+                                    <div class="msg">
+                                        <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요? 노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?</div>
                                         <div class="date">2019.03.08 12:02</div>
+                                        <a href="javascript:;" class="go">답글달기</a>
                                     </div>
                                     <div class="more-toggle">
                                         <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
@@ -204,12 +206,12 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="reply-form-frame">
-                                    <textarea name="" id="" cols="" rows="" placeholder="자유롭게 작성해주세요" class="form-control" data-byte-target="#textarea-check"></textarea>
-                                    <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                </div>
-                                <div class="a">
+                                <div class="a show"> <!-- 답변 있을때 .show -->
                                     <div class="bg">
+                                        <div class="reply-form-frame">
+                                            <input type="text" placeholder="답글을 달아보세요!" class="form-control"></input>
+                                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                        </div>
                                         <div class="re">
                                             <div class="user">
                                                 <div class="profile">
@@ -219,7 +221,7 @@
                                                 </div>
                                                 <div class="name">홍길동</div>
                                             </div>
-                                            <div class="d-flex">
+                                            <div class="msg">
                                                 <div class="text">모노레일로 이동합니다</div>
                                                 <div class="date">2019.03.08 12:02</div>
                                             </div>
@@ -241,7 +243,7 @@
                                                 </div>
                                                 <div class="name">홍길동</div>
                                             </div>
-                                            <div class="d-flex">
+                                            <div class="msg">
                                                 <div class="text">답변을 두번 달수 있나요</div>
                                                 <div class="date">2019.03.08 12:02</div>
                                             </div>
@@ -267,13 +269,18 @@
                                         </div>
                                         <div class="name">홍길동</div>
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="msg">
                                         <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?</div>
                                         <div class="date">2019.03.08 12:02</div>
+                                        <a href="javascript:;" class="go">답글달기</a>
                                     </div>
-                                    <div class="reply-form-frame">
-                                        <textarea name="" id="" cols="" rows="" placeholder="자유롭게 작성해주세요" class="form-control" data-byte-target="#textarea-check"></textarea>
-                                        <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                </div>
+                                <div class="a">
+                                    <div class="bg">
+                                        <div class="reply-form-frame">
+                                            <input type="text" placeholder="답글을 달아보세요!" class="form-control"></input>
+                                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -281,7 +288,7 @@
                     </div>
                     <div class="reply-form">
                         <div class="reply-form-frame">
-                            <textarea name="" id="" cols="" rows="" placeholder="자유롭게 작성해주세요" class="form-control" data-byte-target="#textarea-check"></textarea>
+                            <textarea name="" id="" cols="" rows="" placeholder="궁금한 내용을 호스트에게 문의해보세요!" class="form-control" data-byte-target="#textarea-check"></textarea>
                             <button type="button" class="btn btn-primary btn-text-sm">등록</button>
                         </div>
                         <div class="agree">
@@ -293,6 +300,10 @@
                         </div>
                     </div>
                 </section>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light min-width-220" data-toggle="modal" data-target="#modal-play-cancel-confirm">플레이 취소하기</button>
+                    <button type="button" class="btn btn-primary min-width-220" onclick="document.location.href='../management_play/management_play.html'">플레이 관리로 돌아가기</button>
+                </div>
             </div>
 		</div>
     </div>
@@ -301,11 +312,153 @@
     </div>
 </div>
 
+<!-- modal : 플레이 참여하기 -->
+<div class="modal" tabindex="-1" id="modal-play-join">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">플레이 참여하기</h5>
+				<p class="modal-desc modal-desc-join"><span class="text-primary">홍길동</span>님의 플레이에 <br class="d-sm-none">조인하시겠습니까?</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="play-details-wrap">
+                    <div class="play-details">
+                        <div class="d-flex">
+                            <div class="label">장소</div>
+                            <div class="cnt"><span>엘리시안 강촌 나인플러스 골프클럽</span><i>50km</i></div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="label">내용</div>
+                            <div class="cnt"><span>필드레슨 (18H)</span></div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="label">시작일정</div>
+                            <div class="cnt"><span>2020.06.23. 12:20</span><i>D-3day</i></div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="label">종료일정</div>
+                            <div class="cnt"><span>2020.06.23. 12:20</span></div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="label">참가비용</div>
+                            <div class="cnt"><span>[1인] ₩200,000</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="play-noti">
+                    <p><span>※</span>호스트가 수락한 후에 플레이에 참여하실 수 있습니다</p>
+                    <p><span>※</span>플레이의 참여가 확정되기 전까지는 어떠한 경우에도 회원님의 개인정보가 호스트에게 공유되지 않습니다</p>
+                </div>
+                <div class="btn-area m-t-20">
+                    <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal">아니오</button>
+                    <button type="button" class="btn btn-primary min-width-150" data-id="btn-play-yes">예</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- modal : 플레이 참여하기 약관 동의 -->
+<div class="modal" tabindex="-1" id="modal-play-agree">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">그립 앤드 플레이 이용약관 (필수) </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="agree-check-wrap">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree1">
+                        <label class="custom-control-label" for="agree1">그립 앤드 플레이는 게스트의 직접 참여를 원칙으로 합니다</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree2">
+                        <label class="custom-control-label" for="agree2">금전적 거래는 상호간 책임 하에 진행하며, 필수적인 경우로 제한합니다</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree3">
+                        <label class="custom-control-label" for="agree3">플레이 참여는 신청 후 호스트의 승낙으로 확정됩니다</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree4">
+                        <label class="custom-control-label" for="agree4">보다 즐거운 플레이를 위해 게스트는 호스트에게 프로그램의 구체적인 <br class="d-none d-md-block">내용을 문의할 수 있습니다</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree5">
+                        <label class="custom-control-label" for="agree5">플레이 참여 확정 후, 무차별적인 취소는 제한되며, 호스트와의 합의 하에 결정되어야 합니다</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree6">
+                        <label class="custom-control-label" for="agree6">어떠한 경우에도 렛츠그립은 고객의 개인정보를 노출/공개, 제공하지 않으며 호스트와 <br class="d-none d-md-block">게스트간 상호 동의  및 책임 하에 정보를 공유해야 합니다</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="agree7">
+                        <label class="custom-control-label" for="agree7">올바른 골프문화를 형성하기 위해 상호간 비방 및 욕설, 폭언은 금지합니다</label>
+                    </div>
+                </div>
+                <div class="btn-area m-t-20">
+                    <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary min-width-150" data-id="btn-play-agree">전체동의</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- alert : 조인 신청 완료 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-play-complete">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <strong>조인 신청 완료</strong>
+                    <p>호스트의 응답을 기다려주세요</p>
+                </div>
+                <div class="btn-area">
+                    <a href="../management_play/management_play.html" class="btn btn-primary btn-text-sm min-width-150">플레이 관리 이동</a>
+                    <a href="../main/main.html" class="btn btn-primary btn-text-sm min-width-150">메인으로</a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- alert : 플레이 취소 확인 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-play-cancel-confirm">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p><span class="text-primary">플레이</span>를 취소하시겠습니까? <br>삭제된 플레이는 복원이 불가합니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">예</button>
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
     $(document).ready(function(){
         var $playerWrap = $('.player-ing ul');
         var max = $playerWrap.attr('player-max');
-
         var itemHtml = '';
 
         itemHtml += '<li>';
@@ -321,6 +474,48 @@
             $playerWrap.append(itemHtml);
         }
         $playerWrap.show();
+
+        //답글달기 toggle
+        $(document).on('click','.reply .go',function(){
+            var $a = $(this).closest('li').find('.a');
+            var $form = $a.find('.reply-form-frame');
+
+            if(!$a.hasClass('show')){ //답변 영역 닫혀 있을때
+                if(!$form.hasClass('active')){
+                    $a.addClass('show');
+                    $form.addClass('active');
+                }
+            }else{ //답변 영역 열려 있을때
+                if(!$form.hasClass('active')){
+                    $form.addClass('active');
+                }else{
+                    if($a.find('.re').length == 0){
+                        $a.removeClass('show');
+                        $form.removeClass('active');
+                    }
+                    else{
+                        $form.removeClass('active');
+                    }
+                }
+            }
+        });
+
+        //신청하기
+        $(document).on('click','[data-id="btn-play"]',function(){
+            $('#modal-play-join').modal('show');
+        });
+
+        //신청하기 - 예
+        $(document).on('click','[data-id="btn-play-yes"]',function(){
+            $('#modal-play-join').modal('hide');
+            $('#modal-play-agree').modal('show');
+        });
+
+        //신청하기 - 약관동의
+        $(document).on('click','[data-id="btn-play-agree"]',function(){
+            $('#modal-play-agree').modal('hide');
+            $('#modal-play-complete').modal('show');
+        });
     });
 </script>
 

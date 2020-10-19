@@ -94,6 +94,31 @@ html.open-search{
     }
 }
 
+#section4{
+    .tab-content{min-height:382px}
+}
+.goods-list{
+    position: relative;
+    .thumb{height: 367px;border-radius: 10px;overflow: hidden;}
+    .swiper-container{border-radius: 10px;overflow: hidden;}
+    .swiper-button-prev{left: -92px;}
+    .swiper-button-next{right: -92px;}
+    .swiper-pagination{bottom: 20px;}
+    .swiper-pagination-bullet{width: 10px;height: 10px;opacity: 0.4;}
+    .swiper-pagination-bullet-active{opacity: 1;}
+}
+@include media-breakpoint-down(md) {
+    #section4{
+        .tab-content{min-height:376px}
+    }
+    .goods-list{
+        margin: 0 -15px;padding: 0 15px;
+        .thumb{height: 361px;}
+        .swiper-button-prev,
+        .swiper-button-next{display: none;}
+    }
+}
+
 .product-list{
     position: relative;
     .swiper-slide{width: 280px !important;padding-bottom: 14px;}

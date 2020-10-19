@@ -159,13 +159,13 @@ input[type="button"] {
 .btn-outline-light{color: rgba(161, 161, 161, .6);}
 @include media-breakpoint-down(md) {
   .btn{
-    height: 31px;font-size: 16px;padding: 5px 18px;
+    height: 31px;font-size: 16px;padding: 4px 18px;
   }
   .btn-sm{
     height: 22px;font-size: 12px;padding: 0 10px 0;
   }
   .btn-text-sm{
-    font-size: 13px;padding-left: 15px;padding-right: 15px;padding-top: 7px;
+    font-size: 13px;padding-left: 15px;padding-right: 15px;padding-top: 6px;
   }
   .btn-sm.btn-text-sm{
     font-size: 12px;padding: 0 10px 0;

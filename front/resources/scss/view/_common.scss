@@ -135,18 +135,27 @@
 
 .subtitle-area{
     display: flex;justify-content: space-between;align-items: flex-end;border-bottom: 1px solid #e7e7e7;padding-bottom: 20px;
-    .subtitle{font-size: 19px;font-weight: 400;line-height: normal;letter-spacing: -0.3px;color: $gray-dark;}
-    .desc{font-size: 12px;font-weight: 200;color: $secondary;}
+    .subtitle{font-size: 19px;font-weight: 400;line-height: normal;letter-spacing: -0.3px;color: $gray-dark;flex: 0 0 auto;}
+    .desc{font-size: 12px;font-weight: 200;color: $secondary;text-align: right;}
 }
 .subtitle-sub{font-size: 17px;font-weight: 400;}
 @include media-breakpoint-down(md) {
     .subtitle-area{
         .subtitle{font-size: 16px;}
+        .desc{font-size: 10px;line-height: 1.4;}
     }
     .subtitle-sub{font-size: 15px;}
 }
+@include media-breakpoint-down(sm) {
+    .subtitle-area{
+        .desc{}
+    }
+}
 
-.tab{margin-bottom: 38px;}
+.tab{
+    margin-bottom: 38px;
+    .nav-pills .nav-link{font-size: 17px;font-weight: 400;}
+}
 @include media-breakpoint-down(md) {
     .tab{margin-bottom: 25px;}
 }
@@ -496,7 +505,7 @@
 }
 
 .d-day{
-    height: 26px;border-radius: 20.5px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12);background-color: #ffffff;padding: 0 19px;font-size: 14px;color: #a1a1a1;line-height: 26px;font-weight: 500;white-space: nowrap;
+    display: inline-block;height: 26px;border-radius: 20.5px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12);background-color: #ffffff;padding: 0 19px;font-size: 14px;color: #a1a1a1;line-height: 26px;font-weight: 500;white-space: nowrap;
 }
 
 .swiper-button-next,
@@ -540,6 +549,27 @@
 @include media-breakpoint-down(md) {
 }
 
+
+.btn-area{
+    margin-top: 50px;display: flex;justify-content: center;
+    .btn{margin: 0 12px;}
+    &.btn-area-join{
+        margin-top: 73px;padding-bottom: 5px;
+    }
+    &.justify-content-end{
+        .btn{margin: 0 0 0 24px;}
+    }
+}
+@include media-breakpoint-down(md) {
+    .btn-area{
+        flex-direction: column;align-items: center;margin-top: 30px;
+        .btn{width: 236px;height: 55px;padding-top: 14px;padding-bottom: 14px;font-size: 19px;}
+        .btn + .btn{margin-top: 25px;}
+        &.btn-area-join{
+            margin-top: 65px;
+        }
+    }
+}
 
 .count {
     text-align: right; color: #4a4a4a;display: flex;justify-content: space-between;align-items:center;
@@ -838,4 +868,9 @@ html.open-search {
         .a{padding: 15px;}
         .viewarea {font-size: 13px}
     }
+}
+
+.data-empty{
+    padding: 100px 0;text-align: center;
+    p{color: #d4d4d4;font-size: 14px}
 }

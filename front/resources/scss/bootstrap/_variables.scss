@@ -338,7 +338,7 @@ $hr-border-width:             $border-width !default;
 
 $mark-padding:                .2em !default;
 
-$dt-font-weight:              $font-weight-bold !default;
+$dt-font-weight:              $font-weight-medium !default;
 
 $kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
 $nested-kbd-font-weight:      $font-weight-bold !default;
@@ -940,7 +940,7 @@ $badge-pill-border-radius:          10rem !default;
 $modal-inner-padding:               1rem !default;
 
 $modal-dialog-margin:               .5rem !default;
-$modal-dialog-margin-y-sm-up:       1.75rem !default;
+$modal-dialog-margin-y-sm-up:       2rem !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
