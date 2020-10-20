@@ -595,11 +595,39 @@
 			</div>
 			<div class="modal-body">
                 <div class="modal-alert-msg">
-                    <p><em>홍길동</em>님을 플레이에서 <br><span class="text-danger">조인 아웃</span>하시겠습니까?</p>
+                    <p><strong>홍길동</strong>님을 플레이에서 <br><span class="text-danger">조인 아웃</span>하시겠습니까?</p>
                 </div>
                 <div class="btn-area">
                     <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">예</button>
                     <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal : 공유하기 -->
+<div class="modal modal-share" tabindex="-1" id="modal-share">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="share-wrap">
+                    <p>마음에 드셨나요?<br>단숨에 공유할 수 있습니다</p>
+                    <div class="toolbox">
+                        <a href="javascript:;" class="facebook"><span class="sr-only">페이스북</span></a>
+                        <a href="javascript:;" class="twitter"><span class="sr-only">트위터</span></a>
+                        <a href="javascript:;" class="kakao"><span class="sr-only">카카오톡</span></a>
+                        <a href="javascript:;" class="line"><span class="sr-only">네이버라인</span></a>
+                    </div>
+                    <div class="copy">
+                        <input type="text" readonly="">
+                        <button type="button" class="btn-copy">URL 복사</button>
+                    </div>
                 </div>
 			</div>
 		</div>
@@ -682,7 +710,7 @@
         if($(this).closest('.datepicker-area').hasClass('two')){
             //달력 2개
             suffix = "";
-            if(!$('html').hasClass('is-mobile')){
+            if(window.matchMedia('(min-width:992px)').matches){
                 numMonth = 2;
             }
         }else{

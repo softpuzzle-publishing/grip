@@ -306,6 +306,11 @@ var common = {
 				}
 			}
 		});
+
+		//공유하기 modal 호출
+		$(document).on('click','.share',function(e){
+            $('#modal-share').modal('show');
+		});
 	}
 };
 

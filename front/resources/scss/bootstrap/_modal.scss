@@ -273,7 +273,8 @@
   .modal-body{padding-left: 10px;padding-right: 10px;}
   .modal-alert-msg{
     text-align: center;line-height: 1.45;
-    strong{font-weight: 400;display: block;margin-bottom: 8px;}
+    strong{font-weight: 400;margin-bottom: 8px;}
+    em{font-weight: 400;}
   }
   .close{
     top: 21px;right: 21px;
