@@ -14,6 +14,7 @@
 .icon-nocaddy{background-image: url('../images/group-15.svg');width: 19px;height: 19px;}
 .icon-night{background-image: url('../images/night.svg');width: 15px;height: 16px;}
 .icon-calendar{background-image: url('../images/date-01.svg');width: 12px;height: 13px;vertical-align: middle;}
+.icon-calendar::before{display: none;}
 .icon-personnel{background-image: url('../images/men-3.svg');width: 11px;height: 14px;vertical-align: middle;}
 .icon-lightning{background-image: url('../images/tg.svg');width: 7px;height: 14px;}
 .icon-bag{background-image: url('../images/bag.svg');width: 11px;height: 10px;}
@@ -23,6 +24,62 @@
 
 .min-height-0{min-height: 0 !important;}
 
+
+.btn{
+    height: 35px;font-size: 19px;padding: 4px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.6px;    border-radius: 50rem;
+  }
+  .btn-sm{
+    height: 25px;font-size: 16px;padding: 0 18px;
+  }
+  .btn-text-sm{
+    font-size: 16px;padding-left: 17px;padding-right: 17px;padding-top: 5px;
+  }
+  .btn-sm.btn-text-sm{
+    font-size: 14px;padding: 2px 12px 0;
+  }
+  .width-74{width:74px;}
+  .min-width-100{min-width:100px;}
+  .min-width-130{min-width:130px;}
+  .min-width-150{min-width:150px;}
+  .min-width-186{min-width:186px;}
+  .min-width-192{min-width:192px;}
+  .min-width-220{min-width:220px;}
+  
+  .btn-outline-light{color: rgba(161, 161, 161, .6);}
+  @include media-breakpoint-down(md) {
+    .btn{
+      height: 31px;font-size: 16px;padding: 4px 18px;
+    }
+    .btn-sm{
+      height: 22px;font-size: 12px;padding: 0 10px 0;
+    }
+    .btn-text-sm{
+      font-size: 13px;padding-left: 15px;padding-right: 15px;padding-top: 6px;
+    }
+    .btn-sm.btn-text-sm{
+      font-size: 12px;padding: 0 10px 0;
+    }
+  
+    .width-74{width:60px;}
+    .min-width-74{min-width:65px;}
+    .min-width-100{min-width:80px;}
+    .min-width-130{min-width:100px;}
+    .min-width-150{min-width:120px;}
+    .min-width-186{min-width:150px;}
+    .min-width-220{min-width:auto;}
+  }
+  
+  .btn-bottom-right{
+    display: flex;justify-content: flex-end;align-items: center;margin-top: 35px;
+    > * + *{margin-left: 25px;}
+  }
+  @include media-breakpoint-down(md) {
+    .btn-bottom-right{
+      margin-top: 20px;
+      > * + *{margin-left: 10px;}
+    }
+  }
+
 .loading{
     display: none;overflow: hidden;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1110;-webkit-overflow-scrolling: touch;outline: 0;background-color: rgba(0,0,0,0.5);
     .cs-loader {position: absolute;top: 0;left: 0;height: 100%;width: 100%;}
@@ -31,8 +88,6 @@
         label {font-size: 20px;opacity: 0;display:inline-block;}
     }
 }
-
-
 @keyframes lol {
   0% {
     opacity: 0;transform: translateX(-300px);
@@ -290,12 +345,12 @@
 
 
 .like{
-    display: inline-block;background: url('../images/like-off.svg') no-repeat 50% 50%;background-size: contain;width: 39px;height: 38px;position: relative;
+    display: inline-block;background: url('../images/like-off.svg') no-repeat 50% 50%;background-size: contain;width: 39px;height: 38px;position: relative;border:0;
     span{font-size: 12px;font-weight: 400;color: $primary;letter-spacing: -0.07px;position: absolute;bottom: -20px;width: 50px;left: 50%;margin-left: -25px;text-align: center;}
     &.active{background-image: url('../images/like-on.svg');}
 }
 .share{
-    display: inline-block;background: url('../images/share-on.svg') no-repeat 50% 50%;background-size: contain;width: 39px;height: 38px;position: relative;
+    display: inline-block;background: url('../images/share-on.svg') no-repeat 50% 50%;background-size: contain;width: 39px;height: 38px;position: relative;border:0;
     span{font-size: 12px;font-weight: 400;color: $primary;letter-spacing: -0.07px;position: absolute;bottom: -20px;width: 50px;left: 50%;margin-left: -25px;text-align: center;}
 }
 .util-btns{
@@ -398,7 +453,7 @@
 }
 .rating{
     span{font-size: 14px;color: $gray-dark;font-weight: 200;letter-spacing: -0.3px;margin-right: 1px;}
-    i{font-size: 12px;font-weight: 400;color: $gray-dark;
+    i{font-size: 12px;font-weight: 400;color: $gray-dark;font-style: normal;
         &::before{content: '';display: inline-block;margin-right: 4px;width: 12px;height: 12px;background: url('../images/star-on-1.svg') no-repeat 50% 50%;background-size: contain;transform: translateY(1px);}
         &[data-point='1.5'],
         &[data-point='2.0']{
@@ -421,7 +476,7 @@
 .level{
     span{font-size: 14px;color: $gray-dark;font-weight: 200;letter-spacing: -0.3px;margin-right: 1px;}
     i{
-        font-size: 12px;font-weight: 400;color: $gray-dark;
+        font-size: 12px;font-weight: 400;color: $gray-dark;font-style: normal;
         &::before{content: '';display: inline-block;margin-right: 4px;width: 11px;height: 11px;border-radius: 50%;background: #ffc945;transform: translateY(1px);}
         &[data-point='2.0'],
         &[data-point='2.5']{

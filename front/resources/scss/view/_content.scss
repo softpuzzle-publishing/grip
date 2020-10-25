@@ -155,7 +155,7 @@
 
 .club-card-list{
     ul{
-        margin: -7.5px;display: flex;flex-wrap: wrap;
+        margin: -7.5px;display: flex;flex-wrap: wrap;list-style: none;
     }
     li{
         padding: 7.5px;max-width:33.33333%;flex: 1 1 33.33333%;
@@ -272,6 +272,7 @@
 }
 
 .club-list{
+    ul{list-style: none;padding: 0;}
     li + li{margin-top: 15px;}
     .box{border: 1px solid $border-color;border-radius: 9px;display: flex;align-items:stretch;min-height:150px;}
     .img{
@@ -316,6 +317,7 @@
         .date{
             display: flex;align-items: center;font-size: 14px;margin-top: 4px;color: $gray-dark;
             > span{margin-right: 15px;}
+            em{font-style: normal;}
             > i{margin-right: 5px;}
             .icon-calendar{transform: translateY(-1px);}
         }
