@@ -44,7 +44,7 @@
   .min-width-186{min-width:186px;}
   .min-width-192{min-width:192px;}
   .min-width-220{min-width:220px;}
-  
+
   .btn-outline-light{color: rgba(161, 161, 161, .6);}
   @include media-breakpoint-down(md) {
     .btn{
@@ -59,7 +59,7 @@
     .btn-sm.btn-text-sm{
       font-size: 12px;padding: 0 10px 0;
     }
-  
+
     .width-74{width:60px;}
     .min-width-74{min-width:65px;}
     .min-width-100{min-width:80px;}
@@ -68,7 +68,7 @@
     .min-width-186{min-width:150px;}
     .min-width-220{min-width:auto;}
   }
-  
+
   .btn-bottom-right{
     display: flex;justify-content: flex-end;align-items: center;margin-top: 35px;
     > * + *{margin-left: 25px;}
@@ -259,7 +259,7 @@
         .label-th{font-weight: 500;color: $secondary;}
         .form-row-line{
             > .row{min-height: 83px;padding: 20px 0;}
-            input.form-control.has-border{height: 40px;}
+            input.form-control.has-border{height: 40px;padding-left: 5px;padding-right: 5px;}
         }
         .form-row-line + .form-row-line{margin-top: 0;}
     }

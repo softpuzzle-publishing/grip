@@ -1,7 +1,5 @@
 @charset "UTF-8";
-/*
-    컨텐츠 css
-*/
+/* 컨텐츠 css */
 *:focus, *:focus::before, *:focus::after { outline: none !important; box-shadow: none !important; }
 
 #skip_navi { position: fixed; left: 0; top: -999px; display: block; padding: 10px 20px; font-size: 16px; color: #000; background: #f55454; }
@@ -232,7 +230,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .form-wrap.table-style .form-row-line > .row { min-height: 83px; padding: 20px 0; }
 
-.form-wrap.table-style .form-row-line input.form-control.has-border { height: 40px; }
+.form-wrap.table-style .form-row-line input.form-control.has-border { height: 40px; padding-left: 5px; padding-right: 5px; }
 
 .form-wrap.table-style .form-row-line + .form-row-line { margin-top: 0; }
 

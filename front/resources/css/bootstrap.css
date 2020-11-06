@@ -89,10 +89,7 @@ label { display: inline-block; }
 
 button { border-radius: 0; border: 0; padding: 0; margin: 0; background: transparent; }
 
-/* button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-} */
+/* button:focus { outline: 1px dotted; outline: 5px auto -webkit-focus-ring-color; } */
 input, button, select, optgroup, textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; }
 
 button, input { overflow: visible; }
@@ -563,9 +560,7 @@ i, em { font-style: normal; }
 
 .row-100 > [class^=col] { padding-left: 50px; padding-right: 50px; }
 
-/**
-  px값 List를 만들어주는 함수입니다.
-*/
+/** px값 List를 만들어주는 함수입니다. */
 /**
 값이 0일때는 0으로, 그 외에는 'px'을 붙여줍니다.
 ex) 0 => 0, 10 => 10px

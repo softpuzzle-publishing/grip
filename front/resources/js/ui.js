@@ -106,10 +106,22 @@ var Header = {
 			e.preventDefault();
 			$('html').addClass('open-search');
 			$('#input-search-all').focus();
+			if($('body').hasClass('body-main')){
+				$.fn.fullpage.setAllowScrolling(false);
+			}
 		});
 		$('.search-area .close').on('click',function(e){
 			e.preventDefault();
 			$('html').removeClass('open-search');
+			if($('body').hasClass('body-main')){
+				$.fn.fullpage.setAllowScrolling(true);
+			}
+		});
+		$('.search-area .go-top').on('click',function(e){
+			e.preventDefault();
+			$('.search-wrapper').stop().animate({
+				scrollTop: 0
+			}, 250);
 		});
 	}
 };
