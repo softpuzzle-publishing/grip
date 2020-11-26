@@ -1213,11 +1213,25 @@ body.body-main #footer { display: block; }
 
 .club-card-list .dim .message .canceld-admin { background-color: #a68a76; }
 
+.club-card-list .dim .message .recruit_close { background-color: #00c784; }
+
+.club-card-list .dim .message .recruit_host_cancel { background-color: rgba(166, 138, 118, 0.86); }
+
+.club-card-list .dim .message .recruit_admin_cancel { background-color: rgba(166, 138, 118, 0.86); }
+
+.club-card-list .dim .message .recruitment_completed { background: #fff; color: #00c784; }
+
+.club-card-list .dim .message .recruit_member_cancel { background-color: rgba(126, 126, 126, 0.86); }
+
+.club-card-list .dim .message .recruit_rejection { background-color: rgba(166, 138, 118, 0.86); }
+
+.club-card-list .dim .message .recruit_approval { background: #fff; color: #00c784; }
+
 .club-card-list .check { z-index: 2; display: none; width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
 
 .club-card-list .check .custom-control { position: absolute; left: 18px; top: 18px; }
 
-.club-card-list [data-status=disabled] .dim, .club-card-list [data-status=cancel] .dim, .club-card-list [data-status=cancel-my] .dim, .club-card-list [data-status=cancel-host] .dim, .club-card-list [data-status=cancel-admin] .dim, .club-card-list [data-status=end] .dim { opacity: 1; visibility: visible; }
+.club-card-list [data-status=disabled] .dim, .club-card-list [data-status=cancel] .dim, .club-card-list [data-status=cancel-my] .dim, .club-card-list [data-status=cancel-host] .dim, .club-card-list [data-status=cancel-admin] .dim, .club-card-list [data-status=end] .dim, .club-card-list [data-status=recruit_close] .dim, .club-card-list [data-status=recruit_host_cancel] .dim, .club-card-list [data-status=recruit_admin_cancel] .dim, .club-card-list [data-status=recruitment_completed] .dim, .club-card-list [data-status=recruit_member_cancel] .dim, .club-card-list [data-status=recruit_rejection] .dim, .club-card-list [data-status=recruit_approval] .dim { opacity: 1; visibility: visible; }
 
 .club-card-list [data-status=disabled] .disabled { display: block !important; }
 
@@ -1242,6 +1256,34 @@ body.body-main #footer { display: block; }
 .club-card-list [data-status=cancel-admin] .canceld-admin { display: block !important; }
 
 .club-card-list [data-status=cancel-admin] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruit_close] .recruit_close { display: block !important; }
+
+.club-card-list [data-status=recruit_close] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruit_host_cancel] .recruit_host_cancel { display: block !important; }
+
+.club-card-list [data-status=recruit_host_cancel] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruit_admin_cancel] .recruit_admin_cancel { display: block !important; }
+
+.club-card-list [data-status=recruit_admin_cancel] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruitment_completed] .recruitment_completed { display: block !important; }
+
+.club-card-list [data-status=recruitment_completed] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruit_member_cancel] .recruit_member_cancel { display: block !important; }
+
+.club-card-list [data-status=recruit_member_cancel] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruit_rejection] .recruit_rejection { display: block !important; }
+
+.club-card-list [data-status=recruit_rejection] .img .d-day { display: none; }
+
+.club-card-list [data-status=recruit_approval] .recruit_approval { display: block !important; }
+
+.club-card-list [data-status=recruit_approval] .img .d-day { display: none; }
 
 @media (max-width: 991.98px) { .club-card-list ul { margin: -.5rem; }
   .club-card-list li { max-width: 100%; flex: 1 1 100%; padding: .5rem 2rem; } }

@@ -203,6 +203,14 @@
             .canceld-my{background-color: $secondary;}
             .canceld-host{background-color: $secondary;}
             .canceld-admin{background-color: $secondary;}
+
+            .recruit_close{background-color: $primary;}
+            .recruit_host_cancel{background-color: rgba(166, 138, 118, 0.86);}
+            .recruit_admin_cancel{background-color: rgba(166, 138, 118, 0.86);}
+            .recruitment_completed{background: #fff;color: $primary;}
+            .recruit_member_cancel{background-color: rgba(126, 126, 126, 0.86);}
+            .recruit_rejection{background-color: rgba(166, 138, 118, 0.86);}
+            .recruit_approval{background: #fff;color: $primary;}
         }
     }
     .check{
@@ -214,7 +222,14 @@
     [data-status=cancel-my],
     [data-status=cancel-host],
     [data-status=cancel-admin],
-    [data-status=end]{
+    [data-status=end],
+    [data-status=recruit_close],
+    [data-status=recruit_host_cancel],
+    [data-status=recruit_admin_cancel],
+    [data-status=recruitment_completed],
+    [data-status=recruit_member_cancel],
+    [data-status=recruit_rejection],
+    [data-status=recruit_approval]{
         .dim{opacity: 1;visibility: visible;}
     }
     [data-status=disabled]{
@@ -239,6 +254,34 @@
     }
     [data-status=cancel-admin]{
         .canceld-admin{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruit_close]{
+        .recruit_close{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruit_host_cancel]{
+        .recruit_host_cancel{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruit_admin_cancel]{
+        .recruit_admin_cancel{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruitment_completed]{
+        .recruitment_completed{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruit_member_cancel]{
+        .recruit_member_cancel{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruit_rejection]{
+        .recruit_rejection{display: block !important;}
+        .img .d-day{display: none;}
+    }
+    [data-status=recruit_approval]{
+        .recruit_approval{display: block !important;}
         .img .d-day{display: none;}
     }
 }

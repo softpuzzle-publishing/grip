@@ -201,11 +201,6 @@
     }
     .subtitle-sub{font-size: 15px;}
 }
-@include media-breakpoint-down(sm) {
-    .subtitle-area{
-        .desc{}
-    }
-}
 
 .tab{
     margin-bottom: 38px;
