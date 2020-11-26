@@ -45,7 +45,8 @@ var clubSummaryOffsetTop;
 var Header = {
 	init : function(){
 		if($('.club-summary').length > 0){
-			clubSummaryOffsetTop = $('#header-block').outerHeight() + parseInt($('#container-block').css('padding-top')) + parseInt($('.club-summary').css('margin-top'));
+			clubSummaryOffsetTop = parseInt($('.club-summary').offset().top);
+			console.log(clubSummaryOffsetTop);
 		}
 
 		this.menu();

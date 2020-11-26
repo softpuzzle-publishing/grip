@@ -164,6 +164,7 @@
     .img{
         position: absolute;left: 0;top: 0;width: 100%;height: 100%;
         a{position: relative;width: 100%;height: 100%;display: block;}
+        a::before{content: '';width: 144px;height: 144px;background-color: rgba(0,0,0,0.47);position: absolute;left: 50%;top: 50%;z-index: 1;margin: -72px 0 0 -72px;border-radius: 50%;}
         a::after{content: '';width: 100%;height: 100%;position: absolute;left: 0;top: 0;
             background: rgb(0,0,0);
             background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%);
@@ -230,6 +231,7 @@
     [data-status=recruit_member_cancel],
     [data-status=recruit_rejection],
     [data-status=recruit_approval]{
+        .img a::before{display: none;}
         .dim{opacity: 1;visibility: visible;}
     }
     [data-status=disabled]{
@@ -556,10 +558,10 @@
 }
 
 .club-summary{
-    padding: 15px 0;margin-top: -15px;margin-bottom: 5px;background: #fff;position: -webkit-sticky; position: sticky;z-index: 1011;top: 0;
-    .location{font-weight: 400;color: #b0b0b0;letter-spacing: -0.6px;margin-bottom: 12px;}
+    padding: 15px 0;background: #fff;position: relative;z-index: 1011;top: 0;height: 128px;line-height: 1.4;
+    .location{font-weight: 400;color: #b0b0b0;letter-spacing: -0.6px;margin-bottom: 2px;}
     .name{
-        margin-bottom: 15px;
+        margin-bottom: 8px;
         .club{font-size: 32px;font-weight: 400;letter-spacing: -1.2px;color: $gray-dark;margin-right: 10px;}
         .type{font-size: 19px;font-weight: 200;letter-spacing: -0.71px;color: $gray-dark;margin-right: 10px;}
         .distance{font-weight: 200;letter-spacing: -0.09px;color: #ff0000;}
@@ -586,24 +588,12 @@
         }
     }
     .button{position: absolute;right:0;top:47px;}
-    @at-root{
-        #container-block::before{
-            content: '';display: block;width: 100%;height: 130px;background: #fff;position: fixed;left: 0;top: -140px;z-index: 1011;opacity: 0;
-        }
-        html.summary-fixed{
-            #container-block::before{top: 0;opacity: 1;box-shadow: 0 3px 15px rgba(0,0,0,0.1);}
-        }
-        html.open-search{
-            #container-block::before{display: none;}
-            .club-summary{position: static;}
-        }
-    }
 }
 @include media-breakpoint-down(md) {
     .club-summary{
-        position: static;
+        position: static;padding-top: 0;height: auto;margin-top: 0;
         .name{
-            .club{font-size: 24px;display: block;margin-bottom: 5px;}
+            .club{font-size: 24px;display: block;margin-bottom: 10px;}
             .type{font-size: 16px;}
         }
         .info{
@@ -623,15 +613,27 @@
             .btn{width: 100%;border-radius: 0;height: 50px;}
         }
     }
-    @at-root{
-        html.summary-fixed{
-            #container-block::before{display: none;}
-        }
+}
+
+html.summary-fixed{
+    #container-block::before{content: '';display: block;width: 100%;height: 128px;background: #fff;position: fixed;left: 0;top: -140px;z-index: 1011;opacity: 0;top: 0;opacity: 1;box-shadow: 0 9px 17px 0 rgba(0, 0, 0, 0.06);}
+    .club-summary{position: fixed;width:920px;margin-top: 0;}
+    .club-top::before{content: '';display: block;height: 128px;width: 100%;}
+}
+html.open-search{
+    #container-block::before{display: none;}
+    .club-summary{position: static;}
+}
+@include media-breakpoint-down(md) {
+    html.summary-fixed{
+        #container-block::before{display: none;}
+        .club-summary{position: static;width: auto;}
+        .club-top::before{display: none;}
     }
 }
 
 .club-top{
-    margin-bottom:35px;
+    margin-bottom:35px;margin-top: 8px;
     .gallery{
         .big{
             border-radius: 9px 9px 0 0;overflow: hidden;height: 335px;
