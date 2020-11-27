@@ -339,7 +339,10 @@
         .name{
             .club{font-size: 19px;color: $gray-dark;font-weight: 200;margin-right: 5px;line-height: 1.45;}
             .subject{font-size: 19px;color: $gray-dark;font-weight: 200;margin-right: 5px;line-height: 1.45;}
-            .distance{font-size: 12px;color: $danger;margin-right: 5px;}
+            .distance{font-size: 12px;color: $danger;margin-right: 5px;
+                &.block{display:block;}
+                &.none-transform{transform: translate(0);}
+            }
             .time{
                 display: inline;
             }
@@ -826,10 +829,11 @@ html.open-search{
         .x{
             display: table;width: 100%;table-layout: fixed;height: 370px;padding-top: 70px;
             .hole{
-                display: table-cell;text-align: center;position: relative;vertical-align: bottom;padding: 0 20%;
+                display: table-cell;text-align: center;position: relative;vertical-align: bottom;padding: 0;
                 i{font-style: normal;color: #767676;font-size: 18px;font-weight: 200;display: block;position: absolute;left:0;bottom: -30px;width: 100%;}
                 em{font-style: normal;color: $secondary;font-size: 15px;font-weight: 500;display: block;position: absolute;left:0;bottom: -53px;width: 100%;}
-                .bar{
+                .bar{width: 100%;height: 100%;position: relative;}
+                .graph{
                     display: block;width: 30px;position: absolute;left:50%;bottom:0;-ms-transform: translate(-50%, 0);-webkit-transform:  translate(-50%, 0);transform:  translate(-50%, 0);background-color: $secondary;transition:all 0.15s;
                     span{display: block;margin-top: -25px;font-size: 15px;color: $secondary;font-weight: 400;letter-spacing: -0.09px;width: 42px;margin-left: -6px;}
                 }
@@ -1402,7 +1406,7 @@ html.open-search{
         }
     }
     li{
-        .d-flex{min-height: 80px;align-items: center;justify-content: space-between;padding: 10px 0;}
+        .d-flex{height:80px;min-height: 80px;align-items: center;justify-content: space-between;padding: 10px 0;}
         .category{flex: 0 0 auto;width: 120px;padding-right: 30px;}
         .title{flex: 1 1 auto;padding-right: 30px;}
         .date{flex: 0 0 auto;font-size: 14px;}

@@ -191,7 +191,10 @@ var common = {
 		});
 
 		//select
-		$('select').selectmenu();
+		
+		$('select').each(function(){
+			$(this).selectmenu();
+		})
 		$(document).on('click','.ui-selectmenu-menu .ui-menu-item-wrapper',function(){
 			$('[aria-owns="' + $(this).closest('.ui-menu').attr('id') + '"]').css('color','#252525');
 			if($(this).text() == '시/군/구' || $(this).text() == '시/도'){
