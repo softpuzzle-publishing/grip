@@ -2560,6 +2560,10 @@ html.open-search .club-summary { position: static; }
 
 .reply .msg { display: flex; flex-wrap: wrap; line-height: 1.5; align-items: center; }
 
+.reply .msg .reply-form-frame { margin-top: 0; }
+
+.reply .msg .reply-form-frame textarea.form-control { height: 60px; }
+
 .reply .name { font-size: 19px; color: #4f4f4f; }
 
 .reply .text { font-size: 14px; color: #4f4f4f; margin-right: 15px; }
@@ -2597,6 +2601,8 @@ html.open-search .club-summary { position: static; }
 .reply .a .re + .re { margin-top: 15px; }
 
 .reply .a .d-flex { flex-wrap: wrap; }
+
+.reply-form { width: 100%; }
 
 .reply-form .reply-form-frame { margin-top: 15px; padding: 15px 23px; display: block !important; }
 
