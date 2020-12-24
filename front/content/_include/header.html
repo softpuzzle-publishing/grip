@@ -350,7 +350,7 @@
                             <div>1인 그린피</div>
                             <strong>₩12,000 ~</strong>
                         </div>
-                        <button type="button" class="btn btn-primary min-width-150" id="btn-teeoff">티오프</button>
+                        <button type="button" class="btn btn-primary min-width-150" id="btn-teeoff" onclick="locationStep();">티오프</button>
                     </div>
                 </div>
 			</div>
@@ -429,7 +429,7 @@
                             <div>1인 그린피</div>
                             <strong>₩12,000 ~</strong>
                         </div>
-                        <button type="button" class="btn btn-primary min-width-150" id="btn-teeoff">티오프</button>
+                        <button type="button" class="btn btn-primary min-width-150" id="btn-teeoff" onclick="locationStep();">티오프</button>
                     </div>
                 </div>
 			</div>
@@ -751,6 +751,10 @@
       </div>
 </div>
 <script>
+    // step-2 이동
+    function locationStep(){
+        document.location.href = '../reservation/step2.html';
+    }
     $(document).ready(function () {
         //리뷰(in profile) 삭제하시겠습니까?
         $('.review-in-profile [data-id=btn-review-delete]').on('click',function(){
@@ -771,10 +775,8 @@
             $('#modal-profile').modal('hide');
             $('#modal-join-our-confirm').modal('show');
         });
-
-        $('#btn-teeoff').on('click',function(){
-            document.location.href = '../reservation/step2.html';
-        });
+        
+        
 
         var swiperSearchEvent = new Swiper('#card-list-event .swiper-container', {
             navigation: {
