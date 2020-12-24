@@ -133,16 +133,17 @@
                         <p>일반캐디 우선</p>
                     </div>
                     
-                    <!-- dim 화면 -->
+                   <!-- dim 화면 -->
                     
                     <!-- <div class="reservation-dim">
                         취소 했을 때
                         <p class="min-width-253 cancel-msg">내가 취소한 예약</p>
+                        예약 및 인원마감
                         <div class="impossible-msg">
                             <p class="min-width-253">해당 일정은 예약이 어렵습니다</p>
                             <span>선호하신 티타임은 풀부킹 되었습니다</span>
 
-                            case
+                            text - case
                             <span>현재는 휴장기간으로 이용이 어렵습니다</span>
                             <span>티 오픈 전으로 조금 더 기다려주세요</span>
                             <span>골프장 사정으로 예약이 어렵습니다</span>
@@ -193,7 +194,7 @@
 			</div>
 			<div class="modal-body">
                 <div class="modal-alert-msg">
-                    <p data-id="msg">예약취소가 <br>접수되었습니다</p>
+                    <p data-id="msg">예약이 <br>취소되었습니다</p>
                 </div>
                 <div class="btn-area">
                     <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
@@ -209,7 +210,11 @@
         });
         //취소 - 예
         $('[data-id=btn-reserv-cancel-y]').on('click',function(){
-             $('#modal-cancel-ok').modal('show');
+             $('#loading').show();
+             setTimeout(function(){
+                $('#loading').hide();
+                $('#modal-cancel-ok').modal('show');
+             },2000)
         });
         //취소 - 예 열릴때
         $('#modal-cancel-ok').on('show.bs.modal', function (e) {

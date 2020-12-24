@@ -150,9 +150,11 @@
                             <li>상기 요금 적용을 위해 현장에서 해당 클럽의 온라인 회원가입이 필요할 수 있습니다</li>
                         </ul>
                     </div>
+
+                    <!-- 취소, 후기 dim -->
                     <div class="reservation-dim">
                         <p class="min-width-253 cancel-msg">내가 취소한 예약</p>
-                        <p class="min-width-253 return-msg">잘 다녀왔습니다~!</p>
+                        <!-- <p class="min-width-253 return-msg">잘 다녀왔습니다~!</p> -->
                     </div>
                 </div>
                 <div class="btn-area m-t-100">
@@ -218,7 +220,7 @@
 			</div>
 			<div class="modal-body">
                 <div class="modal-alert-msg">
-                    <p data-id="msg">예약취소가 <br>접수되었습니다</p>
+                    <p data-id="msg">예약이 <br>취소되었습니다</p>
                 </div>
                 <div class="btn-area">
                     <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
@@ -232,9 +234,13 @@
      $('[data-id=btn-reserv-cancel]').on('click',function(){
             $('#modal-cancel-confirm').modal('show');
         });
-        //취소 - 예
-        $('[data-id=btn-reserv-cancel-y]').on('click',function(){
-             $('#modal-cancel-ok').modal('show');
+         //취소 - 예
+         $('[data-id=btn-reserv-cancel-y]').on('click',function(){
+             $('#loading').show();
+             setTimeout(function(){
+                $('#loading').hide();
+                $('#modal-cancel-ok').modal('show');
+             },2000)
         });
         //취소 - 예 열릴때
         $('#modal-cancel-ok').on('show.bs.modal', function (e) {

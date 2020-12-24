@@ -718,7 +718,38 @@
 		</div>
 	</div>
 </div>
-
+<!-- alert : 취소 완료 -->
+<div class="modal modal-alert show" tabindex="-1" id="modal-cancel-ok" aria-modal="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p data-id="msg">현재 예약 중이므로 <br>예약취소가 어렵습니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="loading" id="loading">
+    <div class="cs-loader">
+        <div class="cs-loader-inner">
+          <label>●</label>
+          <label>●</label>
+          <label>●</label>
+          <label>●</label>
+          <label>●</label>
+          <label>●</label>
+        </div>
+      </div>
+</div>
 <script>
     $(document).ready(function () {
         //리뷰(in profile) 삭제하시겠습니까?

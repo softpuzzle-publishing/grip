@@ -33,16 +33,20 @@
                 <section class="section-reservation-form">
                     <div class="title-area">
                         <div class="title">노캐디 선택</div>
-                        <p class="desc">해당 시간대에 노캐디가 가능한 경우 노캐디로 예약을 진행할까요?</p>
+                        <p class="desc">해당 클럽이 노캐디나 마샬캐디가 가능한 경우 어떻게 예약을 진행할까요?<br>캐디, 노캐디 등이 필수인 경우 클럽의 규정을 우선 적용합니다</p>
                     </div>
                     <div class="select-nocaddy">
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" name="nocaddy" id="nocaddyY">
-                            <label class="custom-control-label" for="nocaddyY">예</label>
+                            <input type="radio" class="custom-control-input" name="normalcaddy" id="normalcaddy">
+                            <label class="custom-control-label" for="normalcaddy">일반캐디</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" class="custom-control-input" name="nocaddy" id="nocaddyN">
-                            <label class="custom-control-label" for="nocaddyN">아니오</label>
+                            <input type="radio" class="custom-control-input" name="marshall" id="marshall">
+                            <label class="custom-control-label" for="marshall">마샬캐디</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" name="nocaddy" id="nocaddy">
+                            <label class="custom-control-label" for="nocaddy">노캐디</label>
                         </div>
                     </div>
                 </section>
@@ -54,34 +58,28 @@
                     <div class="form-wrap table-style">
                         <div class="form-row-line">
                             <div class="row align-items-center">
-    							<div class="col-3 col-md-2">
-    								<label class="label-th">이름</label>
+    							<div class="col-12">
+    								<input type="text" class="form-control step-2" placeholder="이름">
     							</div>
-                                <div class="col-9 col-md-10">
-                                    <span class="data">홍길동</span>
-                                </div>
                             </div>
                         </div>
                         <div class="form-row-line">
                             <div class="row align-items-center">
-    							<div class="col-3 col-md-2">
-    								<label class="label-th">전화번호</label>
+    							<div class="col-12">
+                                    <input type="number" class="form-control step-2" placeholder="휴대폰번호">
     							</div>
-                                <div class="col-9 col-md-10">
-                                    <span class="data">010-2365-6569</span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="section-reservation-form">
+                <!-- <section class="section-reservation-form">
                     <div class="title-area">
                         <div class="title">기타 요청사항</div>
                     </div>
                     <div>
                         <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="예약 시 그립에 요청하고 싶으신 내용이나 의견이 있으시다면 기재해주세요"></textarea>
                     </div>
-                </section>
+                </section> -->
                 <div class="btn-area">
                     <button class="btn btn-primary min-width-150" id="btn-reservation-ok">완료</button>
                 </div>

@@ -1456,7 +1456,7 @@ html.open-search{
             .receipt-summary{
                 padding:0;margin-bottom:25px;
                 dl{
-                    border-left: 1px solid #e7e7e7;font-size: 14px;padding:15px 0;
+                    border-left: 1px solid #e7e7e7;font-size: 12px;padding:15px 0;font-weight:500;letter-spacing: -0.07px;color: #4f4f4f;
                     dt{font-weight: 500;color: #4f4f4f;margin-bottom: 5px;}
                 } 
                 [class^=col]:first-of-type dl{border-left: 0;}
@@ -1464,7 +1464,9 @@ html.open-search{
             }
             .row{
                 .mobile{
-                    dl{padding:15px 0;}
+                    dl{padding:22px 17px; display:flex;
+                        dt{margin-right:15px;}
+                    }
                 }
             }
            .receipt-request{
@@ -2062,4 +2064,13 @@ html.open-search{
         display:block;
         .round{width:194px;height:45px;font-size:16px;font-weight: 500;letter-spacing: -0.25px;display:flex;align-items: center;justify-content: center;margin:25px auto;}
     }
+}
+@include media-breakpoint-down(md){
+    .select-nocaddy{
+        .custom-control-inline + .custom-control-inline{margin-left:30px;}
+    }
+    .step-2{font-size: 16px;font-weight: 500;letter-spacing: -0.28px;color: #616161;
+        &::placeholder{ font-size: 16px;font-weight: 500;letter-spacing: -0.28px;color: #e6e6e6;}
+    }
+
 }
