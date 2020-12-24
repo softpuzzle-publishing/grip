@@ -62,12 +62,12 @@
                 <div class="section" id="section2" data-event="revealed">
                     <div class="container">
                         <div class="main-title">언제 라운딩을 계획하고 <br class="d-block d-lg-none">계신가요?</div>
-                        <div class="main-desc">원하는 일정을 선택하시고 <br class="d-block d-lg-none">라운딩 상세 조건을 설정하세요</div>
+                        <div class="main-desc">딱 맞는 클럽을 찾아 예약해드립니다</div>
                         <div class="datepicker-area two">
                             <div class="load"></div>
                         </div>
                         <div class="calendar-btn">
-                            <button type="button" class="btn btn-primary min-width-150" disabled>클럽보기</button>
+                            <button type="button" data-toggle="modal" data-target="#modal-main-reservation" class="btn btn-primary min-width-150" disabled>클럽찾기</button>
                         </div>
                     </div>
                 </div>
@@ -267,51 +267,16 @@
                         <div class="tab">
                             <ul class="nav nav-pills justify-content-center" role="tabProduct">
                                 <li class="nav-item active" role="presentation">
-                                    <a class="nav-link active" data-toggle="tab" href="#t-product1" role="tab" aria-controls="tab1" aria-selected="true">그립 굿즈</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#t-product1" role="tab" aria-controls="tab1" aria-selected="false">그립 패키지</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" data-toggle="tab" href="#t-product2" role="tab" aria-controls="tab2" aria-selected="false">그립 패키지</a>
+                                    <a class="nav-link" data-toggle="tab" href="#t-product2" role="tab" aria-controls="tab2" aria-selected="true">그립 굿즈</a>
                                 </li>
+                               
                             </ul>
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane show active" id="t-product1" role="tabpanel">
-                                <div class="goods-list">
-                                    <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <a href="../template/template.html" class="thumb">
-                                                    <img src="../../resources/images/001_oakvalley_cc_01_main.png" alt="" onload="setDirection(this)">
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="../template/template.html" class="thumb">
-                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail1.png" alt="" onload="setDirection(this)">
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="../template/template.html" class="thumb">
-                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail2.png" alt="" onload="setDirection(this)">
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="../template/template.html" class="thumb">
-                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail3.png" alt="" onload="setDirection(this)">
-                                                </a>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <a href="../template/template.html" class="thumb">
-                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail4.png" alt="" onload="setDirection(this)">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-pagination swiper-pagination-goods"></div>
-                                    </div>
-                                    <div class="swiper-button-prev swiper-button-prev-goods"></div>
-                                    <div class="swiper-button-next swiper-button-next-goods"></div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="t-product2" role="tabpanel">
                                 <div class="product-list">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
@@ -441,6 +406,43 @@
                                     <div class="swiper-button-next swiper-button-next-product"></div>
                                 </div>
                             </div>
+                            <div class="tab-pane" id="t-product2" role="tabpanel">
+                                <div class="goods-list">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="../template/template.html" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_01_main.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="../template/template.html" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail1.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="../template/template.html" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail2.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="../template/template.html" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail3.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="../template/template.html" class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_05_detail4.png" alt="" onload="setDirection(this)">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination swiper-pagination-goods"></div>
+                                    </div>
+                                    <div class="swiper-button-prev swiper-button-prev-goods"></div>
+                                    <div class="swiper-button-next swiper-button-next-goods"></div>
+                                </div>
+                            </div>
+                       
                         </div>
                         <div class="main-more">
                             <a href="product.html">전체보기 <i class="icon-next"></i></a>

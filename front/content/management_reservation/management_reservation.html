@@ -50,13 +50,13 @@
                             <div class="row justify-content-between align-items-end">
                                 <div class="col-auto">
                                     <div class="result-title mb-0">
-                                        접수내역 <span class="text-secondary">3</span>
+                                        예약진행 <span class="text-secondary">3</span>
                                     </div>
                                 </div>
                                 <div class="col-auto">
                                     <div class="card-edit">
                                         <a href="javascript:;" class="edit" data-id="btn-edit"><span>편집</span></a>
-                                        <a href="javascript:;" class="selected-del hide" data-id="btn-delete"><span>선택삭제</span></a>
+                                        <a href="javascript:;" class="selected-del hide" data-id="btn-delete" data-toggle="modal"><span>선택삭제</span></a>
                                         <a href="javascript:;" class="edit hide" data-id="btn-edit-cancel"><span>취소</span></a>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                                 <li data-status="ing"><!-- 예약 진행중 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-receipt-history" data-toggle="modal" data-role="button" data-status="ing">
+                                            <a href="receipt_details.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -98,7 +98,7 @@
                                 <li data-status="cancel"><!-- 취소함 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-receipt-history" data-toggle="modal" data-role="button" data-status="cancel">
+                                            <a href="receipt_details.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -130,7 +130,7 @@
                                 <li data-status="disabled"><!-- 예약 불가 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-receipt-history" data-toggle="modal" data-role="button" data-status="disabled">
+                                            <a href="receipt_details.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -183,7 +183,7 @@
                                 <li data-status="complete"><!-- 예약 완료 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-complete-history" data-toggle="modal" data-role="button" data-status="complete">
+                                            <a href="reservation_success.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -214,7 +214,7 @@
                                 <li data-status="end"><!-- 다녀옴 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-complete-history" data-toggle="modal" data-role="button" data-status="end">
+                                            <a href="reservation_success.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -245,7 +245,7 @@
                                 <li data-status="end"><!-- 다녀옴 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-complete-history" data-toggle="modal" data-role="button" data-status="end">
+                                            <a href="reservation_success.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -276,7 +276,7 @@
                                 <li data-status="cancel"><!-- 취소함 -->
                                     <div class="box">
                                         <div class="img no-bg-circle">
-                                            <a href="#modal-complete-history" data-toggle="modal" data-role="button" data-status="cancel">
+                                            <a href="reservation_success.html">
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
@@ -572,13 +572,82 @@
 		</div>
 	</div>
 </div>
-
+<!-- alert 선택 삭제 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-delete">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p>선택하신 <strong>예약카드</strong>를 <br><span class="text-danger">삭제</span>하시겠습니까?</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-toggle="modal" data-target="#modal-delete-ok">예</button>
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- alert : 삭제 완료 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-delete-ok">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p data-id="msg">선택하신 예약카드가<br>삭제되었습니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-delete-y">확인</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- alert : 선택 안 함 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-none-select">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p data-id="msg">삭제하실 예약카드를<br>선택해 주세요</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
 	$(document).ready(function(){
         //init
         var init = function(){
 
         }
+        $('[data-id=btn-delete]').on('click',function(){
+            if($('.custom-control-input').is(":checked") == false){
+                $('#modal-none-select').modal('show');
+            }
+
+            $('#modal-delete').modal('show');
+
+        });
+
 
         //편집
         $('[data-id=btn-edit]').on('click',function(){
@@ -620,6 +689,10 @@
                 var msg = '예약취소가 <br>접수되었습니다'
             }
             $('[data-id="msg"]').html(msg);
+        });
+        //삭제 완료 - 예
+        $('[data-id=btn-delete-y]').on('click',function(){
+             $('#modal-delete').modal('hide');
         });
 
 

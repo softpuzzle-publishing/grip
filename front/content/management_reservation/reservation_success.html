@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include -->
+    </div>
+    <div id="container-block">
+        <div class="container">
+			<div class="content">
+                <div class="title-area tab-is-next mb-0">
+                    <div class="title"><span class="text-primary">홍길동</span>님의 예약관리</div>
+                    <p class="desc">예약이 정상적으로 완료되었습니다. 즐거운 라운드 되세요</p>
+                    
+                    <!-- case -->
+                    <!-- <p class="desc">취소된 내역입니다</p> -->
+                    <!-- <p class="desc">예약을 완료하여 다녀온 내역입니다</p> -->
+                </div>
+                
+                <div class="group detail">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="reservation-flow">
+                            <div class="step-1 m-r-10">
+                                <p class="ball">1</p>
+                            </div>
+                            <div class="step-2">
+                                <p class="ball active">2</p>      
+                                <p class="text">예약완료</p>    
+                            </div>
+                        </div>
+                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                    </div>
+                    <p class="day">접수일<span class="times">2020-11-20 14:55:01</span></p>
+                    <div class="receipt-summary">
+                        <div class="row row-0">
+                            <div class="col-xl col-md-4 col-4">
+                                <dl>
+                                    <dt>라운드 일정</dt>
+                                    <dd>2019-11-20 (일)</dd>
+                                </dl>
+                            </div>
+                            <div class="col-xl col-md-4 col-4">
+                                <dl>
+                                    <dt>티오프</dt>
+                                    <dd>08:00~09:00</dd>
+                                </dl>
+                            </div>
+                            <div class="col-xl-2 col-md-2 col-2">
+                                <dl>
+                                    <dt>인원</dt>
+                                    <dd>4명</dd>
+                                </dl>
+                            </div>
+                            <div class="col-xl-2 col-md-2 col-2">
+                                <dl>
+                                    <dt>코스</dt>
+                                    <dd>18H</dd>
+                                </dl>
+                            </div>
+                            <div class="col-xl-3 col-md-12 col-12 mobile">
+                                <dl>
+                                    <dt>예약자</dt>
+                                    <dd>선우홍길동동 (01022225555)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="club-list in-receipt detail">
+                        <ul>
+                            <li>
+                                <div class="box">
+                                    <div class="img">
+                                        <a href="../club/detail.html" class="thumb">
+                                            <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)" class="horizontal">
+                                        </a>
+                                    </div>
+                                    <div class="summary">
+                                        <div class="location">강원도 홍천군</div>
+                                        <div class="name">
+                                            <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽 <i class="distance">50km</i><p class="time d-sm-inline-block"><span>12:44:00</span></p></a>
+                                           
+                                        </div>
+                                        <div class="type">멤버십클럽 (회원용) / 퍼블릭코스 (18H)</div>
+                                        <div class="point">
+                                            <div class="rating">
+                                                <span>평점</span>
+                                                <i data-point="3.5">3.5</i>
+                                            </div>
+                                            <div class="level">
+                                                <span>난이도</span>
+                                                <i data-point="2.5">2.5</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="util pt-0">
+                                        <div class="price">
+                                            <p>1인 그린피</p>
+                                            <strong>₩990,000 ~</strong>
+                                        </div>
+                                        <div class="price-extra">
+                                            <div>캐디 120,000원</div>
+                                            <div>카트 100,000원</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="receipt-request">
+                        <strong>캐디제도</strong>
+                        <p>일반캐디</p>
+                    </div>
+                    <div class="receipt-details">
+                        <strong>그립 취소안내</strong>
+                        <ul>
+                            <li>취소기한 : <span class="text-danger">2019-00-00 00:00</span>까지 취소 가능</li>
+                            <li>취소기한 경과 후 예약 취소는 해당 클럽을 통해서만 가능합니다</li>
+                        </ul>
+                        <strong>클럽 위약안내</strong>
+                        <ul>
+                            <li>취소기한 : <span class="text-danger">2019-00-00</span>까지 취소 가능</li>
+                            <li>취소기한 경과 후 취소 시 클럽 정책에 따라 예약정지 및 위약금이 발생할 수 있습니다</li>
+                            <li>클럽 대표번호 : ○○○ - ○○○ - ○○○○</li>
+                            <li>클럽 홈페이지 : <a href="" target="_blank">클럽 홈페이지 바로가기</a></li>
+                        </ul>
+                        <strong>라운드 유의사항</strong>
+                        <ul>
+                            <li>상기 요금 적용을 위해 현장에서 해당 클럽의 온라인 회원가입이 필요할 수 있습니다</li>
+                        </ul>
+                    </div>
+                    <div class="reservation-dim">
+                        <p class="min-width-253 cancel-msg">내가 취소한 예약</p>
+                        <p class="min-width-253 return-msg">잘 다녀왔습니다~!</p>
+                    </div>
+                </div>
+                <div class="btn-area m-t-100">
+                    <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal" data-id="btn-reserv-cancel" >예약취소</button>
+                    <button type="button" class="btn btn-primary min-width-150" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div id="footer-block">
+        <!-- footer include -->
+    </div>
+</div>
+<!-- alert : 취소 확인 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-cancel-confirm">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p>해당 클럽의 <strong>예약접수</strong>를 <br><span class="text-danger">취소</span>하시겠습니까?</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-reserv-cancel-y">예</button>
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- alert : 취소 기간 임박 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-cancel-time">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg text-center">
+                    <p>그립 취소정책에 따라 임박 취소 건은<br>
+                        회원님께서 <span class="text-danger">클럽에 직접 문의</span>하여야 합니다
+                        골프장 위약정책에 따라<br>
+                        위약금이 부과될 수도 있습니다.</p>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- alert : 취소 완료 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-cancel-ok">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p data-id="msg">예약취소가 <br>접수되었습니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+     //취소하시겠습니까?
+     $('[data-id=btn-reserv-cancel]').on('click',function(){
+            $('#modal-cancel-confirm').modal('show');
+        });
+        //취소 - 예
+        $('[data-id=btn-reserv-cancel-y]').on('click',function(){
+             $('#modal-cancel-ok').modal('show');
+        });
+        //취소 - 예 열릴때
+        $('#modal-cancel-ok').on('show.bs.modal', function (e) {
+            if(status == 'ing'){
+                var msg = '현재 예약 중이므로 <br>예약취소가 어렵습니다';
+            }else{
+                var msg = '예약취소가 <br>접수되었습니다'
+            }
+            $('[data-id="msg"]').html(msg);
+        });
+</script>
+</body>
+</html>

@@ -74,9 +74,9 @@
                                 </div>
                                 <div class="col-12 col-sm-auto text-right">
                                     <ul class="sort" data-sorting="asc">
-                                        <li><a href="javascript:;" class="active">거리순</a></li>
-                                        <li><a href="javascript:;">가격순</a></li>
+                                        <li><a href="javascript:;" class="active">가격순</a></li>
                                         <li><a href="javascript:;">평점순</a></li>
+                                        <li><a href="javascript:;">거리순</a></li>
                                         <li><a href="javascript:;">난이도순</a></li>
                                     </ul>
                                 </div>
@@ -135,7 +135,7 @@
                         </div>
                         <div class="search-result-event">
                             <div class="subtitle-area border-0">
-                                <div class="subtitle"><span>“000”</span> 검색과 관련된 기획전 프로필</div>
+                                <div class="subtitle"><span>“000” </span> 검색과 관련된 리스트</div>
                             </div>
                             <div class="card-list" id="card-list-event">
                                 <div class="swiper-container">
@@ -296,6 +296,7 @@
                                     <div class="row row-15">
                                         <div class="col-auto time-first">
                                             <select name="">
+                                                <option value="" selected disabled>선택</option>
                                                 <option value="">1부</option>
                                                 <option value="">2부</option>
                                                 <option value="">야간</option>
@@ -303,6 +304,7 @@
                                         </div>
                                         <div class="col">
                                             <select name="">
+                                                <option value="" selected disabled>선호 티타임</option>
                                                 <option value="">06:00~07:00</option>
                                                 <option value="">06:00~07:00</option>
                                                 <option value="">06:00~07:00</option>
@@ -312,15 +314,24 @@
                                 </div>
                                 <div class="form-row-line overflow-hidden">
                                     <label class="tit">인원</label>
-                                    <div class="count float-right" style="width:174px">
-                                        <a id="carb-decrement" href="javascript:;"></a>
-                                        <div class="count-people"><input type="text" id="carb-count" value="4" class="count-number" readonly=""><span>인</span></div>
-                                        <a id="carb-increment" href="javascript:;" class="disabled"></a>
+                                    <div class="people">
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioPeople" id="people1">
+                                            <label class="custom-control-label" for="people1"> 2인</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioPeople" id="people2">
+                                            <label class="custom-control-label" for="people2"> 3인</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioPeople" id="people3">
+                                            <label class="custom-control-label" for="people3"> 4인</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row-line">
                                     <label class="tit">Hole</label>
-                                    <div class="hole">
+                                    <div class="hole justify-content-start">
                                         <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="radioHole" id="rc1">
                                             <label class="custom-control-label" for="rc1">9H</label>
@@ -328,10 +339,6 @@
                                         <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="radioHole" id="rc2">
                                             <label class="custom-control-label" for="rc2">18H</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="radioHole" id="rc3">
-                                            <label class="custom-control-label" for="rc3">27H</label>
                                         </div>
                                     </div>
                                 </div>
@@ -350,7 +357,85 @@
 		</div>
 	</div>
 </div>
-
+<!-- modal : 메인 예약 -->
+<div class="modal" tabindex="-1" id="modal-main-reservation">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">라운드 조건 선택</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="reservation">
+                    <div class="row row-60">
+                        <div class="col-12 col-lg-6">
+                            <label class="tit date">날짜</label>
+                            <div class="datepicker-area">
+                                <div class="load"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="form-wrap">
+                                <div class="form-row-line">
+                                    <label class="tit">시간</label>
+                                    <div class="times">
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioTime" id="time1">
+                                            <label class="custom-control-label" for="time1">주간</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioTime" id="time2">
+                                            <label class="custom-control-label" for="time2">야간</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row-line overflow-hidden">
+                                    <label class="tit">인원</label>
+                                    <div class="people">
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioPeople" id="people1">
+                                            <label class="custom-control-label" for="people1"> 2인</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioPeople" id="people2">
+                                            <label class="custom-control-label" for="people2"> 3인</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioPeople" id="people3">
+                                            <label class="custom-control-label" for="people3"> 4인</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row-line">
+                                    <label class="tit">Hole</label>
+                                    <div class="hole justify-content-start">
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioHole" id="rc1">
+                                            <label class="custom-control-label" for="rc1">9H</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="radioHole" id="rc2">
+                                            <label class="custom-control-label" for="rc2">18H</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-bottom-right">
+                        <div class="greenfee">
+                            <div>1인 그린피</div>
+                            <strong>₩12,000 ~</strong>
+                        </div>
+                        <button type="button" class="btn btn-primary min-width-150" id="btn-teeoff">티오프</button>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- modal : 예약 일정 -->
 <div class="modal" tabindex="-1" id="modal-reservation-disabled">
 	<div class="modal-dialog modal-dialog-centered">
