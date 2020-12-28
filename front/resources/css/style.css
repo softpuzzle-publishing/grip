@@ -1,7 +1,5 @@
 @charset "UTF-8";
-/*
-    컨텐츠 css
-*/
+/* 컨텐츠 css */
 *:focus, *:focus::before, *:focus::after { outline: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; }
 
 #skip_navi { position: fixed; left: 0; top: -999px; display: block; padding: 10px 20px; font-size: 16px; color: #000; background: #f55454; }
@@ -594,6 +592,8 @@ html.is-scrolled .go-top { bottom: 30px; }
 .count a:nth-of-type(2) { background: url(../images/plus.svg) no-repeat 0 0; background-size: contain; right: 0; }
 
 .count a.disabled { opacity: 0.4; cursor: default; }
+
+.r-disabled:disabled ~ .custom-control-label { color: #d4d4d4; }
 
 @media (max-width: 991.98px) { .count .count-people { font-size: 15px; }
   .count .count-people .count-number { font-size: 15px; }
