@@ -593,11 +593,11 @@
 /* datepicker */
 .ui-datepicker{
     padding: 15px;
-    .ui-datepicker-header{letter-spacing: -0.3px;font-weight: 300;padding-bottom: 0;height: 43px;padding-left: 45px;background: #fff;border: 0;border-bottom: 1px solid #e7e7e7;border-radius: 0}
+    .ui-datepicker-header{letter-spacing: -0.3px;font-weight: 300;padding-bottom: 0;height: 43px;padding-left: 0;background: #fff;border: 0;border-bottom: 1px solid #e7e7e7;border-radius: 0}
     .ui-datepicker-title{font-size: 17px;}
     .ui-datepicker-prev,
     .ui-datepicker-next{width: 30px;height: 30px;margin: 0;border: 0 !important;background: transparent !important;}
-    .ui-datepicker-prev{left: 45px;}
+    .ui-datepicker-prev{left: 0;}
     .ui-datepicker-prev .ui-icon{background: url(../images/on-arr-left.svg) 50% 50% no-repeat;background-size: contain;width: 30px;height: 30px;margin: 0;position: static;}
     .ui-datepicker-next .ui-icon{background: url(../images/on-arr-right.svg) 50% 50% no-repeat;background-size: contain;width: 30px;height: 30px;margin: 0;position: static;}
     .ui-state-default{background: transparent;border: 0;text-align: center;font-weight: 200;margin: 0;}
@@ -735,6 +735,9 @@ html.open-search {
             padding-left: 15px;font-weight: 400;font-size: 19px;color: #a1a1a1;
         }
     }
+}
+.ui-selectmenu-text{
+    color:#767676;
 }
 @include media-breakpoint-down(md) {
     .select-box-style + {
