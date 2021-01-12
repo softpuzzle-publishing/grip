@@ -72,6 +72,8 @@
 
 .btn-outline-light { color: rgba(161, 161, 161, 0.6); }
 
+.btn-gray-light { color: #fff; background-color: #c9c9c9; border-color: #c9c9c9; }
+
 @media (max-width: 991.98px) { .btn { height: 31px; font-size: 16px; padding: 4px 18px; }
   .btn-sm { height: 22px; font-size: 12px; padding: 0 10px 0; }
   .btn-text-sm { font-size: 13px; padding-left: 15px; padding-right: 15px; padding-top: 6px; }

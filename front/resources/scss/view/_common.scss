@@ -49,6 +49,8 @@
   .min-width-253{min-width:253px;}
 
   .btn-outline-light{color: rgba(161, 161, 161, .6);}
+  .btn-gray-light{color: #fff;background-color: #c9c9c9;border-color: #c9c9c9;}
+
   @include media-breakpoint-down(md) {
     .btn{
       height: 31px;font-size: 16px;padding: 4px 18px;
