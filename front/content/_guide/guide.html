@@ -140,7 +140,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="text-valid text-right">
+                <p class="text-valid text-left">
                     <span class="text-primary">인증되었습니다!</span>
                 </p>
             </div>
@@ -449,7 +449,7 @@
             </div>
             <div>
                 <button class="btn btn-primary btn-sm">예약하기</button>
-
+                <button class="btn btn-gray-light btn-sm">예약하기</button>
                 <button class="btn btn-secondary btn-text-sm" disabled="disabled">인증</button>
 
                 <button class="btn btn-secondary btn-text-sm">확인</button>
@@ -812,10 +812,122 @@
         </section>
     </div>
     <section>
-        <div class="go-top">
-            <a href="javascript:;">
-                <span>TOP</span>
-            </a>
+        <!-- play-list에 있는 style 삭제 -->
+        <div class="play-list" style="width:900px; display:flex;">
+            <div class="item">
+                <div class="img">
+                    <a href="../play/play_join.html" class="thumb">
+                        <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                    </a>
+                    <div>
+                        <div class="d-day"><span class="on-air"></span>D-5day</div>
+                        <p class="live-time">06:59:25</p>
+                    </div>
+                    <div class="host">
+                        <div class="member">
+                            <div class="profile">
+                                <span>
+                                    <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                </span>
+                            </div>
+                            <div class="plus">
+                                <span>+1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="subject"><a href="../play/play_join.html">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                    <div class="club">엘리시안 강촌 나인플러스클럽<span class="distance">50km</span></div>
+                    <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                    <div class="date">
+                        <p>
+                            <i class="icon-calendar"></i> <span>12.30(목) 07:00 ~ 02.20(토) 18:00</span>
+                        </p>
+                        <p>
+                            <i class="icon-personnel"></i> <span>20인 플레이</span>
+                        </p>
+                    </div>
+                    <div class="price">
+                        <span>1인 참가비</span>
+                        <strong>₩45,000</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="item recommend"> <!-- 그립추천 .recommend -->
+                <div class="img">
+                    <a href="../play/play_join.html" class="thumb">
+                        <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                    </a>
+                    <div class="d-day">D-5day</div>
+                    <div class="share-area">
+                        <button type="button" class="share"><span class="sr-only">공유</span></button>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="subject"><a href="../play/play_join.html">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                    <div class="club">엘리시안 강촌 나인플러스클럽</div>
+                    <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                    <div class="date">
+                        <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                        <i class="icon-personnel"></i> <span>4인</span>
+                    </div>
+                    <div class="host">
+                        <p>호스트</p>
+                        <div class="member">
+                            <div class="profile">
+                                <span>
+                                    <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                </span>
+                            </div>
+                            <div class="plus">
+                                <span>+1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>1인 참가비</span>
+                        <strong>₩45,000</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="item"> <!-- 그립추천 .recommend -->
+                <div class="img">
+                    <a href="../play/play_join.html" class="thumb">
+                        <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                    </a>
+                    <div class="d-day">D-5day</div>
+                    <div class="share-area">
+                        <button type="button" class="share"><span class="sr-only">공유</span></button>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="subject"><a href="../play/play_join.html">당신이 원하던 그 클럽에서 이런 모임이 있어요!</a></div>
+                    <div class="club">엘리시안 강촌 나인플러스클럽</div>
+                    <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
+                    <div class="date">
+                        <i class="icon-calendar"></i> <span>시작일 2020.05.05 06:00</span>
+                        <i class="icon-personnel"></i> <span>4인</span>
+                    </div>
+                    <div class="host">
+                        <p>호스트</p>
+                        <div class="member">
+                            <div class="profile">
+                                <span>
+                                    <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                </span>
+                            </div>
+                            <div class="plus">
+                                <span>+1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>1인 참가비</span>
+                        <strong>₩45,000</strong>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

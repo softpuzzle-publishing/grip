@@ -25,7 +25,8 @@
 .min-height-0{min-height: 0 !important;}
 
 .font-14{font-size:14px;}
-
+// 라디오 disabled
+.custom-control-input:disabled ~ .custom-control-label{color:#ddd;}
 .btn{
     height: 35px;font-size: 19px;padding: 4px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.6px;    border-radius: 50rem;
   }
@@ -47,7 +48,7 @@
   .min-width-192{min-width:192px;}
   .min-width-220{min-width:220px;}
   .min-width-253{min-width:253px;}
-
+  .w-60{width:60%;}
   .btn-outline-light{color: rgba(161, 161, 161, .6);}
   .btn-gray-light{color: #fff;background-color: #c9c9c9;border-color: #c9c9c9;}
 
@@ -256,6 +257,8 @@
 }
 
 .form-wrap{
+    .text-danger{font-size:14px;}
+    .text-primary{font-size:14px;}
     .form-row-line{
         border-bottom: 1px solid $border-color;padding: 0 0 0 30px;
         > label.text-primary{margin-bottom: 0;}
@@ -569,7 +572,7 @@
         }
         .plus{
             margin-left: -4px;position: relative;
-            span{background: #fff;display: inline-block;width: 35px;height: 35px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 50%;text-align: center;line-height: 35px;color: $primary;font-weight: 700;letter-spacing: -0.42px;}
+            span{background: #fff;display: inline-block;width: 35px;height: 35px;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 50%;text-align: center;line-height: 35px;color: $primary;font-weight: 700;letter-spacing: -0.42px;font-size:12px;}
         }
     }
 }

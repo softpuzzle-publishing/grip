@@ -59,28 +59,45 @@ html.open-search{
     .img{
         height: 0;padding-bottom: 100%;position: relative;border-radius: 8px;overflow: hidden;
         .thumb{position: absolute;}
-        .d-day{width: 89px;position: absolute;left: 15px;top: 15px;z-index: 1;}
+        .d-day{width:90px;position: absolute;left: 15px;top: 15px;z-index: 1;text-align:center;
+            &.end{background-color:#ddd;color:#fff;}
+        }
         .share-area{position: absolute;right: 15px;top: 15px;z-index: 1;}
+        .on-air{width:6px;height:6px;display:inline-block;background-color:#e02020;
+            border-radius: 50%;margin:0 3px 2px 0;
+        }
+        .live-time{position:absolute;top:45px;left:33px;font-size:14px;color:#fff;font-weight: bold;}
     }
     .info{padding: 10px;}
     .subject{
         font-size: 19px;letter-spacing: -0.5px;padding-bottom: 10px;line-height: 1.45;position: relative;
         &::after{content: '';display: block;width: 60px;height: 1px;background:$gray-dark;position: absolute;left: 0;bottom: 0;}
-        a{color: $gray-dark;}
+        a{color: $gray-dark;vertical-align: middle;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; -webkit-box-orient: vertical;
+        }
+        .text-danger{font-size:12px;font-weight:500;margin-left:10px;}
     }
+    .distance{font-size:12px;color:#ff0000;display:inline-block;margin-left:5px;}
     .club{letter-spacing: -0.42px;margin-top: 12px;}
-    .play{font-size: 14px;margin-top: 6px;}
+    .play{font-size: 14px;margin-top: 6px;width: 90%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
     .date{font-size: 14px;margin-top: 4px;
-        span{vertical-align: middle;margin-right: 15px;}
+        span{vertical-align: middle;margin-right: 15px;margin-left:5px;}
         .icon-calendar{transform: translateY(-2px);}
     }
     .host{
-        margin-top: 12px;
-        .member{margin-top: 7px;}
+        margin-top: 12px;position: relative;
+        .member{position:absolute;right:15px;}
+    }
+    .desc{margin-top:15px;display:flex;align-items: center;justify-content: space-between;}
+    .people{
+        color: #767676;
+        p{font-size: 12px;margin-right: 5px;}
+        strong{font-size: 19px;font-weight: 500;
+            span{color:$primary;}
+        }
     }
     .price{
-        position: absolute;right: 10px;bottom: 10px;color: #767676;display: flex;align-items: center;
-        span{font-size: 12px;margin-right: 5px;}
+       color: #767676;
+        p{font-size: 12px;margin-right: 5px;}
         strong{font-size: 19px;font-weight: 500;}
     }
 }

@@ -9,11 +9,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>grip</title>
 	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
-    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
 	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
 	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
 	<link rel="stylesheet" href="../../resources/css/bootstrap.css">
-    <link rel="stylesheet" href="../../resources/css/style.css">
+	<link rel="stylesheet" href="../../resources/css/style.css">
 	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
 	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
 	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -23,352 +23,345 @@
 
 <body>
 
-<div id="wrap">
-    <div id="header-block">
-		<!-- header include -->
-    </div>
-    <div id="container-block">
-        <div class="container">
-			<div class="content">
-                <div class="title-area">
-                    <div class="title"><span class="text-primary">홍길동</span>님의 회원정보 관리</div>
-                    <p class="desc">다녀온 클럽과 가고 싶은 클럽을 추가하여 나만의 클럽지도를 만들어보세요.</p>
-				</div>
-				<div class="subtitle-area">
-					<div class="subtitle">회원정보</div>
-				</div>
-                <div class="form-wrap table-style">
-                    <div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-3 col-md-2">
-								<label class="label-th">프로필</label>
-							</div>
-                            <div class="col">
-                                <div class="row align-items-center">
-									<div class="col">
-										<div class="profile">
-											<span>
-												<img id="headerProfileImg" class="default" src="../../resources/images/icon-male.png">
-											</span>
-											<a href="javascript:;" class="button" data-toggle="modal" data-target="#profileChange"><span class="sr-only">프로필 변경하</span></a>
+	<div id="wrap">
+		<div id="header-block">
+			<!-- header include -->
+		</div>
+		<div id="container-block">
+			<div class="container">
+				<div class="content">
+					<div class="title-area">
+						<div class="title"><span class="text-primary">홍길동</span>님의 회원정보 관리</div>
+						<p class="desc">회원님의 정보를 최신으로 관리해주세요.</p>
+					</div>
+					<div class="subtitle-area">
+						<div class="subtitle">회원정보</div>
+					</div>
+					<div class="form-wrap table-style">
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">프로필</label>
+								</div>
+								<div class="col">
+									<div class="row align-items-center">
+										<div class="col">
+											<div class="profile">
+												<span>
+													<img id="headerProfileImg" class="default" src="../../resources/images/icon-male.png">
+												</span>
+												<a href="javascript:;" class="button" data-toggle="modal" data-target="#profileChange"><span class="sr-only">프로필 변경하기</span></a>
+											</div>
 										</div>
-									</div>
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row-line">
-                        <div class="row align-items-center">
-                            <div class="col-3 col-md-2">
-								<label class="label-th">이름</label>
-							</div>
-                            <div class="col col-md-4">
-								<span class="data">홍길동</span>
-							</div>
-							<!-- 성별 pc용 -->
-							<div class="col-2 d-none d-md-block">
-								<label class="label-th">성별</label>
-							</div>
-                            <div class="col d-none d-md-block">
-								<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
-									<input type="radio" class="custom-control-input" name="formGender" id="genderM">
-									<label class="custom-control-label" for="genderM">남</label>
-								</div>
-								<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
-									<input type="radio" class="custom-control-input" name="formGender" id="genderF">
-									<label class="custom-control-label" for="genderF">여</label>
-								</div>
-                            </div>
-                        </div>
-					</div>
-					<!-- 성별 mobile용 -->
-					<div class="form-row-line d-md-none">
-                        <div class="row align-items-center">
-                            <div class="col-3 col-md-2">
-								<label class="label-th">이름</label>
-							</div>
-                            <div class="col">
-								<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
-									<input type="radio" class="custom-control-input" name="mGender" id="mGenderM">
-									<label class="custom-control-label" for="mGenderM">남</label>
-								</div>
-								<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
-									<input type="radio" class="custom-control-input" name="mGender" id="mGenderF">
-									<label class="custom-control-label" for="mGenderF">여</label>
-								</div>
-							</div>
-                        </div>
-					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-                            <div class="col-3 col-md-2">
-								<label class="label-th">아이디</label>
-							</div>
-                            <div class="col">
-								<span class="data">abcd1234@naver.com</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-3 col-md-2">
-								<label class="label-th">비밀번호</label>
-							</div>
-                            <div class="col">
-								<button type="button" class="btn btn-secondary btn-text-sm" data-target="#modal-password-reset" data-toggle="modal">비밀번호 재설정</button>
-                            </div>
-                        </div>
-					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-12 col-md-2">
-								<label class="label-th">생년월일</label>
-							</div>
-                            <div class="col">
-								<div class="row row-5 align-items-center">
-									<div class="col-auto">
-										<input type="tel" class="form-control width-74 text-center has-border">
-									</div>
-									<div class="col-auto"><span class="form-middle-text">년</span></div>
-									<div class="col-auto">
-										<input type="tel" class="form-control width-74 text-center has-border">
-									</div>
-									<div class="col-auto"><span class="form-middle-text">월</span></div>
-									<div class="col-auto">
-										<input type="tel" class="form-control width-74 text-center has-border">
-									</div>
-									<div class="col-auto"><span class="form-middle-text">일</span></div>
-								</div>
-                            </div>
-                        </div>
-					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-12 col-md-2">
-								<label class="label-th">휴대폰번호</label>
-							</div>
-                            <div class="col">
-								<div class="row row-5 align-items-center">
-									<div class="col-auto">
-										<input type="tel" class="form-control width-74 text-center has-border">
-									</div>
-									<div class="col-auto"><span class="form-middle-text text-center">-</span></div>
-									<div class="col-auto">
-										<input type="tel" class="form-control width-74 text-center has-border">
-									</div>
-									<div class="col-auto"><span class="form-middle-text text-center">-</span></div>
-									<div class="col-auto">
-										<input type="tel" class="form-control width-74 text-center has-border">
-									</div>
-									<div class="col-auto">
-										<button type="button" class="btn btn-secondary btn-text-sm ml-1" data-toggle="modal" data-target="#modal-mobile-change">변경</button>
-									</div>
-								</div>
-                            </div>
-                        </div>
-					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-3 col-md-2">
-								<label class="label-th">주소</label>
-							</div>
-                            <div class="col">
-								<div class="row">
-									<div class="col-6 col-md-auto">
-										<div class="min-width-150">
-											<select name="" id="">
-												<option value="">대전광역시</option>
-											</select>
+										<!-- 성별 pc용 -->
+										<div class="col-2 d-none d-md-block">
+											<label class="label-th">성별</label>
 										</div>
-									</div>
-									<div class="col-6 col-md-auto">
-										<div class="min-width-150">
-											<select name="" id="">
-												<option value="">유성구</option>
-											</select>
+										<div class="col d-none d-md-block">
+											<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+												<input type="radio" class="custom-control-input" name="formGender" id="genderM">
+												<label class="custom-control-label" for="genderM">남</label>
+											</div>
+											<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+												<input type="radio" class="custom-control-input" name="formGender" id="genderF">
+												<label class="custom-control-label" for="genderF">여</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-                        </div>
+						</div>
+						<!-- 성별 mobile용 -->
+						<div class="form-row-line d-md-none">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">성별</label>
+								</div>
+								<div class="col">
+									<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+										<input type="radio" class="custom-control-input" name="mGender" id="mGenderM">
+										<label class="custom-control-label" for="mGenderM">남</label>
+									</div>
+									<div class="custom-control custom-radio custom-radio-sm custom-control-inline">
+										<input type="radio" class="custom-control-input" name="mGender" id="mGenderF">
+										<label class="custom-control-label" for="mGenderF">여</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">이름</label>
+								</div>
+								<div class="col-xl-3 col-md-4">
+									<input type="text" class="form-control inp-text mt-1" value="홍길동">
+								</div>
+								<span class="text-danger ml-3 mt-2">이름을 정확히 입력해주세요</span>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-md-2">
+									<label class="label-th">아이디</label>
+								</div>
+								<div class="col">
+									<span class="data light-color">abcd1234@naver.com</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">비밀번호</label>
+								</div>
+								<div class="col">
+									<button type="button" class="btn btn-secondary btn-text-sm" data-target="#modal-password-reset" data-toggle="modal">비밀번호 재설정</button>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-2">
+									<label class="label-th">생년월일</label>
+								</div>
+								<div class="col-auto">
+									<div class="row row-5 align-items-center">
+										<div class="col-auto">
+											<input type="tel" class="form-control width-74 text-center has-border">
+										</div>
+										<div class="col-auto"><span class="form-middle-text">년</span></div>
+										<div class="col-auto">
+											<input type="tel" class="form-control width-74 text-center has-border">
+										</div>
+										<div class="col-auto"><span class="form-middle-text">월</span></div>
+										<div class="col-auto">
+											<input type="tel" class="form-control width-74 text-center has-border">
+										</div>
+										<div class="col-auto"><span class="form-middle-text">일</span></div>
+									</div>
+								</div>
+								<span class="text-danger ml-3 mt-2">생년월일을 정확히 입력해주세요</span>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-2">
+									<label class="label-th">휴대폰번호</label>
+								</div>
+								<div class="col">
+									<div class="row row-5 align-items-center">
+										<div class="col-auto light-color">
+											010 - <span>2563</span> - <span>9856</span>
+										</div>
+										<div class="col-auto">
+											<button type="button" class="btn btn-secondary btn-text-sm ml-1" data-toggle="modal" data-target="#modal-mobile-change">변경</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">주소</label>
+								</div>
+								<div class="col">
+									<div class="row">
+										<div class="col-6 col-md-auto">
+											<div class="min-width-150">
+												<select name="" id="">
+													<option value="">대전광역시</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-6 col-md-auto">
+											<div class="min-width-150">
+												<select name="" id="">
+													<option value="">유성구</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-6 col-md-2">
+									<label class="label-th">핸디캡</label>
+								</div>
+								<div class="col-6 col-md-auto">
+									<div class="min-width-150">
+										<select name="" id="">
+											<option value="">No handicap</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-6 col-md-auto">
+									<label class="label-th">구력</label>
+								</div>
+								<div class="col-6 col-md-auto">
+									<div class="min-width-130">
+										<select name="" id="">
+											<option value="">10년 이상</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-6 col-md-auto">
+									<label class="label-th">1년 평균 라운딩 횟수</label>
+								</div>
+								<div class="col-6 col-md-auto">
+									<div class="min-width-130">
+										<select name="" id="">
+											<option value="">20~30회</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">가입상태</label>
+								</div>
+								<div class="col-auto">
+									<span class="data">정회원</span>
+								</div>
+								<div class="col-auto">
+									<a href="leave.html" class="btn btn-secondary btn-text-sm">탈퇴하기</a>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row align-items-center">
+								<div class="col-3 col-md-2">
+									<label class="label-th">마케팅활용</label>
+								</div>
+								<div class="col">
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" class="custom-control-input" name="agree" id="agreeY">
+										<label class="custom-control-label" for="agreeY">동의</label>
+									</div>
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" class="custom-control-input" name="agree" id="agreeN">
+										<label class="custom-control-label" for="agreeN">동의하지 않음</label>
+									</div>
+									<div class="text-form text-secondary mt-3">*이벤트 등 그립에서 제공하는 유익한 정보를 SMS나 이메일로 받아보실 수 있습니다.</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-6 col-md-2">
-								<label class="label-th">핸디캡</label>
-							</div>
-                            <div class="col-6 col-md-auto">
-								<div class="min-width-150">
-									<select name="" id="">
-										<option value="">No handicap</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-6 col-md-auto">
-								<label class="label-th">구력</label>
-							</div>
-							<div class="col-6 col-md-auto">
-								<div class="min-width-130">
-									<select name="" id="">
-										<option value="">10년 이상</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-6 col-md-auto">
-								<label class="label-th">1년 평균 라운딩 횟수</label>
-							</div>
-							<div class="col-6 col-md-auto">
-								<div class="min-width-130">
-									<select name="" id="">
-										<option value="">20~30회</option>
-									</select>
-								</div>
-                            </div>
-                        </div>
+					<div class="btn-area">
+						<button class="btn btn-primary min-width-150">확인</button>
 					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-3 col-md-2">
-								<label class="label-th">가입상태</label>
-							</div>
-							<div class="col-auto">
-								<span class="data">정회원</span>
-							</div>
-                            <div class="col-auto">
-								<a href="leave.html" class="btn btn-secondary btn-text-sm">탈퇴하기</a>
-                            </div>
-                        </div>
-					</div>
-					<div class="form-row-line">
-                        <div class="row align-items-center">
-							<div class="col-3 col-md-2">
-								<label class="label-th">마케팅활용</label>
-							</div>
-							<div class="col">
-								<div class="custom-control custom-radio custom-control-inline">
-									<input type="radio" class="custom-control-input" name="agree" id="agreeY">
-									<label class="custom-control-label" for="agreeY">동의</label>
-								</div>
-								<div class="custom-control custom-radio custom-control-inline">
-									<input type="radio" class="custom-control-input" name="agree" id="agreeN">
-									<label class="custom-control-label" for="agreeN">동의하지 않음</label>
-								</div>
-								<div class="text-form text-secondary mt-3">*이벤트 등 그립에서 제공하는 유익한 정보를 SMS나 이메일로 받아보실 수 있습니다.</div>
-                            </div>
-                        </div>
-					</div>
-                </div>
-                <div class="btn-area">
-                    <button class="btn btn-outline-light min-width-150">취소</button>
-                    <button class="btn btn-primary min-width-150">완료</button>
-                </div>
-            </div>
+				</div>
+			</div>
 		</div>
-    </div>
-    <div id="footer-block">
-		<!-- footer include -->
+		<div id="footer-block">
+			<!-- footer include -->
+		</div>
 	</div>
-</div>
 
-<!-- modal : 비밀번호 재설정 -->
-<div class="modal" tabindex="-1" id="modal-password-reset">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">비밀번호 재설정</h5>
-				<p class="modal-desc">영문, 숫자, 특수문자를 혼합하여 8~16자리로 입력해주세요</p>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="form-wrap margin-sm">
-					<div class="form-row-line">
-						<div class="row row-10 align-items-center">
-							<div class="col">
-								<input type="password" class="form-control" placeholder="지금 사용중인 비밀번호">
-							</div>
-							<div class="col-auto">
-								<span class="text-danger">불일치</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-row-line">
-						<div class="row row-10 align-items-center">
-							<div class="col">
-								<input type="password" class="form-control" placeholder="변경할 비밀번호">
-							</div>
-						</div>
-					</div>
-					<div class="form-row-line">
-						<div class="row row-10 align-items-center">
-							<div class="col">
-								<input type="password" class="form-control" placeholder="변경할 비밀번호 한번 더 입력">
-							</div>
-							<div class="col-auto">
-								<span class="text-primary">일치</span>
-							</div>
-						</div>
-					</div>
+	<!-- modal : 비밀번호 재설정 -->
+	<div class="modal" tabindex="-1" id="modal-password-reset">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">비밀번호 재설정</h5>
+					<p class="modal-desc">영문, 숫자를 혼합하여 6자리 이상 입력해주세요</p>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="icon-close"><span class="sr-only">닫기</span></i>
+					</button>
 				</div>
-				<div class="btn-bottom-right">
-					<button type="button" class="btn btn-primary min-width-150" id="btn-find-id">변경하기</button>
+				<div class="modal-body">
+					<div class="form-wrap margin-sm">
+						<div class="form-row-line">
+							<div class="row row-10 align-items-center">
+								<div class="col">
+									<input type="password" class="form-control" placeholder="지금 사용중인 비밀번호">
+								</div>
+								<div class="col-auto">
+									<span class="text-danger">불일치</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row row-10 align-items-center">
+								<div class="col">
+									<input type="password" class="form-control" placeholder="변경할 비밀번호">
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line">
+							<div class="row row-10 align-items-center">
+								<div class="col">
+									<input type="password" class="form-control" placeholder="변경할 비밀번호 한번 더 입력">
+								</div>
+								<div class="col-auto">
+									<span class="text-primary">일치</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-bottom-right">
+						<button type="button" class="btn btn-primary min-width-150" id="btn-find-id">변경하기</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- modal : 휴대폰번호 변경하기 -->
-<div class="modal" tabindex="-1" id="modal-mobile-change">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">휴대폰번호 변경하기</h5>
-				<p class="modal-desc">본인 명의의 휴대폰번호만 가능합니다</p>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="form-wrap margin-sm">
-					<div class="form-row-line">
-						<div class="row row-10 align-items-center">
-							<div class="col">
-								<input type="tel" class="form-control" placeholder="휴대폰번호">
-							</div>
-							<div class="col-auto">
-								<button type="button" class="btn btn-secondary btn-text-sm" disabled>인증</button>
-							</div>
-						</div>
-					</div>
-					<div class="form-row-line">
-						<div class="row row-10 align-items-center">
-							<div class="col">
-								<input type="tel" class="form-control" placeholder="인증번호">
-							</div>
-							<div class="col-auto">
-								<span class="text-secondary">03:59</span>
-							</div>
-							<div class="col-auto">
-								<button type="button" class="btn btn-secondary btn-text-sm">확인</button>
-							</div>
-						</div>
-					</div>
+	<!-- modal : 휴대폰번호 변경하기 -->
+	<div class="modal" tabindex="-1" id="modal-mobile-change">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">휴대폰번호 변경하기</h5>
+					<p class="modal-desc">본인 명의의 휴대폰번호만 가능합니다</p>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="icon-close"><span class="sr-only">닫기</span></i>
+					</button>
 				</div>
-				<div class="btn-bottom-right">
-					<button type="button" class="btn btn-primary min-width-150">변경하기</button>
+				<div class="modal-body">
+					<div class="form-wrap margin-sm">
+						<div class="form-row-line">
+							<div class="row row-10 align-items-center">
+								<div class="col">
+									<input type="tel" class="form-control" placeholder="휴대폰번호">
+								</div>
+								<div class="col-auto">
+									<button type="button" class="btn btn-secondary btn-text-sm" disabled>인증번호 발송</button>
+								</div>
+							</div>
+						</div>
+						<div class="form-row-line w-60">
+							<div class="row row-10 align-items-center">
+								<div class="col">
+									<input type="tel" class="form-control" placeholder="인증번호">
+								</div>
+								<div class="col-auto">
+									<span class="text-secondary">03:59</span>
+								</div>
+								<div class="col-auto">
+									<button type="button" class="btn btn-secondary btn-text-sm">확인</button>
+								</div>
+							</div>
+						</div>
+						<span class="text-primary mt-3 d-sm-inline-block">인증번호는 1분간 재발송할 수 없습니다</span>
+					</div>
+					<div class="btn-bottom-right">
+						<button type="button" class="btn btn-primary min-width-150">변경하기</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<script>
-	$(document).ready(function(){
-	});
-
-</script>
+	<script>
+		$(document).ready(function () {});
+	</script>
 
 </body>
+
 </html>
