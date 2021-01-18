@@ -224,12 +224,22 @@ var common = {
 		//가고싶다
 		$(document).on('click','.like',function(e){
 			var flag = $(this).hasClass('active');
+			if(flag){
+				$('.ment').text("클럽관리 해제");
+				$('.ment').removeClass('active');
+			}else{
+				$('.ment').text("가고싶은클럽으로 저장!");
+				$('.ment').addClass('active');
+			}
 			$('.feedback').attr('data-flag',flag);
 			$('.feedback').fadeIn(500);
+			$('.ment').fadeIn(500);
 			setTimeout(function() {
 				$('.feedback').fadeOut(800);
+				$('.ment').fadeOut(800);
 			}, 1200);
 			$(this).toggleClass('active');
+			
 		});
 
 		//좋아요&싫어요

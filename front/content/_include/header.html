@@ -265,11 +265,13 @@
     </div>
 </div>
 
-<!-- 가고싶음 애니메이션 -->
-<div class="feedback" data-flag="on">
-    <article><i></i><span>가고싶음!</span></article>
+<!-- 가고싶다 애니메이션 -->
+<div class="like-btn">
+    <div class="feedback" data-flag="on">
+        <article><i></i><span>가고싶다!</span></article>
+    </div>
+    <p class="ment"></p>
 </div>
-
 <!-- modal : 예약 일정 -->
 <div class="modal" tabindex="-1" id="modal-reservation">
 	<div class="modal-dialog modal-dialog-centered">
@@ -662,13 +664,33 @@
 					</div>
 				</div>
 				<div class="btn-bottom-right">
-					<button type="button" class="btn btn-primary min-width-150">신고하기</button>
+					<button type="button" class="btn btn-primary min-width-150" data-id="btn-review-declaration-y">신고하기</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
+<!-- alert :신고 완료 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-review-declaration-ok">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p>해당 리뷰가 신고 접수되었습니다<br>
+                        신속히 조치하겠습니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- alert : 조인아웃 확인 -->
 <div class="modal modal-alert" tabindex="-1" id="modal-join-our-confirm">
 	<div class="modal-dialog modal-dialog-centered">
@@ -769,7 +791,12 @@
             },10);
 
         });
-
+        $('[data-id=btn-review-declaration-y]').on('click',function(){
+            setTimeout(function(){
+                $('#modal-review-declaration').modal('hide');
+                $('#modal-review-declaration-ok').modal('show');
+            },10);
+        });
          //조인아웃
          $(document).on('click','#btn-join-out',function(){
             $('#modal-profile').modal('hide');
