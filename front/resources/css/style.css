@@ -247,8 +247,9 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .agree-wrap .custom-checkbox:not(.custom-control-inline) + .custom-checkbox { margin-top: 10px; }
 
-@media (max-width: 991.98px) { .agree-wrap { margin-top: 25px; padding: 0; }
-  .agree-wrap .agree-sub { padding-left: 0; } }
+@media (max-width: 991.98px) { .agree-wrap { margin-top: 25px; padding: 0; } }
+
+.form-control[readonly] { background-color: #fff; }
 
 .form-wrap .text-danger { font-size: 14px; }
 
@@ -259,6 +260,8 @@ html.is-scrolled .go-top { bottom: 30px; }
 .form-wrap .form-row-line > label.text-primary { margin-bottom: 0; }
 
 .form-wrap .form-row-line.has-checkbox { margin-top: 0 !important; padding: 10px 0; }
+
+.form-wrap .form-row-line.rp { padding: 0 5px 0 30px; padding-left: 45px; }
 
 .form-wrap .form-row-line + .form-row-line { margin-top: 37px; }
 
@@ -598,6 +601,10 @@ html.is-scrolled .go-top { bottom: 30px; }
 .datepicker-area .ui-datepicker { width: 100%; padding: 0; }
 
 .datepicker-area .ui-datepicker-header { margin-top: 6px; }
+
+.ui-selectmenu-menu .ui-state-active { border-radius: 0; }
+
+@media (max-width: 767.98px) { .ui-datepicker .ui-state-default { width: 40px; height: 40px; font-size: 16px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
 
 .btn-area { margin-top: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
@@ -1200,7 +1207,7 @@ body.body-main #footer { display: block; }
 
 .btn-step-area[data-step='10'] > .row:nth-of-type(11) { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-@media (max-width: 991.98px) { .btn-step-area { margin: 0; position: fixed; width: 100%; bottom: 0; left: 0; padding: 15px 20px; }
+@media (max-width: 991.98px) { .btn-step-area { margin: 0; position: fixed; width: 100%; bottom: 0; left: 0; padding: 15px 20px; z-index: 2; }
   .btn-step-area span { font-size: 16px; }
   .btn-step-area .btn-prev::before { width: 30px; margin-right: 8px; }
   .btn-step-area .btn-next::after { width: 30px; margin-left: 8px; } }
@@ -2213,7 +2220,7 @@ html.open-search .club-summary { position: static; }
 
 .section-reservation-form .custom-control-inline + .custom-control-inline { margin-left: 200px; }
 
-.section-reservation-form .custom-control-label { font-size: 19px; color: #4f4f4f; font-weight: 500; }
+.section-reservation-form .custom-control-label { font-size: 19px; color: #4f4f4f; font-weight: 400; }
 
 .section-reservation-form textarea.form-control { height: 185px; resize: none; }
 
@@ -2298,7 +2305,7 @@ html.open-search .club-summary { position: static; }
 
 .condition .form-wrap.table-style .form-row-line > .row { min-height: 77px; padding: 20px 0; }
 
-.condition .form-wrap.table-style .form-row-wrap { background: rgba(244, 244, 244, 0.52); border-radius: 10px; margin: 25px 0; }
+.condition .form-wrap.table-style .form-row-wrap { background: #f4f4f4; border-radius: 10px; margin: 50px 0; }
 
 .condition .form-wrap.table-style .form-row-wrap .form-row-line { padding-right: 30px; }
 
@@ -2325,9 +2332,9 @@ html.open-search .club-summary { position: static; }
 
 .checkbox-pill input { opacity: 0; position: absolute; left: -9999px; }
 
-.checkbox-pill span { height: 35px; line-height: 35px; padding: 0 14px; display: block; border-radius: 50rem; color: #a1a1a1; }
+.checkbox-pill span { height: 35px; line-height: 35px; padding: 0 14px; display: inline-block; border-radius: 50rem; color: #a1a1a1; width: auto; }
 
-.checkbox-pill input:checked + span { background: #00c784; color: #fff; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12); }
+.checkbox-pill input:checked + span { background: #00c784; color: #fff; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 .checkbox-pill:last-of-type { margin-right: 0; }
 
@@ -2341,10 +2348,16 @@ html.open-search .club-summary { position: static; }
 
 .radio-pill:last-of-type { margin-right: 0; }
 
-@media (max-width: 991.98px) { .checkbox-pill { margin-right: 5px; }
-  .checkbox-pill span { height: 25px; line-height: 25px; padding: 1px 9px 0; margin: 2px 0; }
+@media (max-width: 991.98px) { .checkbox-pill { margin-right: 5px; width: auto; }
+  .checkbox-pill span { height: 25px; line-height: 25px; padding: 1px 9px 0; margin: 2px 0; white-space: nowrap; }
   .radio-pill { margin-right: 5px; }
   .radio-pill span { height: 25px; line-height: 25px; padding: 1px 9px 0; margin: 2px 0; font-size: 14px; } }
+
+.slider-distance { height: 10px; position: relative; }
+
+.slider-distance::before { content: ""; width: 20px; height: 20px; position: absolute; top: -10px; left: -10px; background-color: #fff; border-radius: 50%; z-index: 2; border: 1px solid #dddd; }
+
+.slider-distance::after { content: ""; width: 20px; height: 20px; position: absolute; top: -10px; right: -10px; background-color: #fff; border-radius: 50%; z-index: 1; border: 1px solid #dddd; }
 
 .slider-area { padding: 0 50px 0 12px; }
 
@@ -2357,6 +2370,12 @@ html.open-search .club-summary { position: static; }
 .ui-slider .ui-slider-handle { background: #fff; border-radius: 50%; -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05); box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05); border: 1px solid #e7e7e7; top: -10px; width: 20px; height: 20px; cursor: pointer; }
 
 .ui-slider .ui-slider-handle::before { content: ''; display: block; width: 5px; height: 5px; background: #00c784; border-radius: 50%; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.ui-slider-pips .ui-slider-pip-inrange { color: #a1a1a1 !important; }
+
+.ui-slider-pips [class*=ui-slider-pip-selected] { color: #4f4f4f !important; }
+
+.ui-slider-pips [class*=ui-slider-pip-initial] { color: #a1a1a1 !important; }
 
 @media (max-width: 991.98px) { .slider-area { padding: 10px 5px 0; } }
 
@@ -2376,7 +2395,7 @@ html.open-search .club-summary { position: static; }
 
 .selected-location { margin-top: 20px; margin-bottom: -5px; }
 
-.btn-badge { height: 30px; border-radius: 30px; border: solid 1px #cac7c5; padding: 0 40px 1px 20px; color: #a68a76; letter-spacing: 0.18px; font-size: 16px; background-color: rgba(53, 51, 49, 0.1); position: relative; margin-bottom: 10px; margin-right: 10px; line-height: 1; }
+.btn-badge { height: 30px; border-radius: 30px; border: 1px solid #a68a76; padding: 0 40px 1px 20px; color: #a68a76; letter-spacing: 0.18px; font-size: 16px; background-color: rgbargba(166, 138, 118, 0.1); position: relative; margin-bottom: 10px; margin-right: 10px; line-height: 1; }
 
 .btn-badge::before { content: ''; display: block; width: 10px; height: 10px; background: url("../images/close.svg") 50% 50% no-repeat; background-size: contain; position: absolute; right: 20px; top: 50%; margin-top: -5px; }
 

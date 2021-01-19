@@ -46,7 +46,7 @@
 }
 @include media-breakpoint-down(md) {
     .btn-step-area{
-        margin: 0;position: fixed;width: 100%;bottom: 0;left: 0;padding: 15px 20px;
+        margin: 0;position: fixed;width: 100%;bottom: 0;left: 0;padding: 15px 20px;z-index: 2;
         span{font-size: 16px;}
         .btn-prev::before{width: 30px;margin-right: 8px;}
         .btn-next::after{width: 30px;margin-left: 8px;}
@@ -1254,7 +1254,7 @@ html.open-search{
     .title-area{margin-bottom: 50px;}
     &:first-of-type{border-bottom: 1px solid #e7e7e7;padding-bottom: 100px;}
     .custom-control-inline + .custom-control-inline{margin-left: 200px;}
-    .custom-control-label{font-size: 19px;color: $gray-dark;font-weight: 500;}
+    .custom-control-label{font-size: 19px;color: $gray-dark;font-weight: 400;}
     textarea.form-control{height: 185px;resize: none;}
 }
 .reservation-ok{
@@ -1352,7 +1352,7 @@ html.open-search{
             > .row{min-height: 77px;padding: 20px 0;}
         }
         .form-row-wrap{
-            background: rgba(244, 244, 244, 0.52);border-radius: 10px;margin: 25px 0;
+            background: #f4f4f4;border-radius: 10px;margin: 50px 0;
             .form-row-line{
                 padding-right: 30px;
             }
@@ -1391,8 +1391,8 @@ html.open-search{
 .checkbox-pill{
     cursor: pointer;margin-right: 9px;
     input{opacity: 0;position: absolute;left: -9999px;}
-    span{height: 35px;line-height: 35px;padding: 0 14px;display: block;border-radius: 50rem;color: #a1a1a1;}
-    input:checked + span{background: $primary;color: #fff;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12);}
+    span{height: 35px;line-height: 35px;padding: 0 14px;display: inline-block;border-radius: 50rem;color: #a1a1a1;width:auto;}
+    input:checked + span{background: $primary;color: #fff;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12);display: flex;align-items: center;justify-content: center;}
     &:last-of-type{margin-right: 0;}
 }
 .radio-pill{
@@ -1404,8 +1404,8 @@ html.open-search{
 }
 @include media-breakpoint-down(md) {
     .checkbox-pill{
-        margin-right: 5px;
-        span{height: 25px;line-height: 25px;padding: 1px 9px 0;margin: 2px 0;}
+        margin-right: 5px;width:auto;
+        span{height: 25px;line-height: 25px;padding: 1px 9px 0;margin: 2px 0;white-space: nowrap;}
     }
     .radio-pill{
         margin-right: 5px;
@@ -1413,7 +1413,14 @@ html.open-search{
     }
 
 }
-
+.slider-distance{height: 10px;position: relative;
+    &::before{
+        content:"";width: 20px;height: 20px;position: absolute;top: -10px;left: -10px;background-color: #fff;border-radius: 50%;z-index: 2;border: 1px solid #dddd;
+    }
+    &::after{
+        content:"";width: 20px;height: 20px;position: absolute;top: -10px;right: -10px;background-color: #fff;border-radius: 50%;z-index: 1;border: 1px solid #dddd;
+    }
+}
 .slider-area{padding: 0 50px 0 12px;}
 .ui-slider{
     margin: 0 10px 10px;
@@ -1424,6 +1431,9 @@ html.open-search{
         &::before{content: '';display: block;width: 5px;height: 5px;background: $primary;border-radius: 50%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
     }
 }
+.ui-slider-pips .ui-slider-pip-inrange{color:#a1a1a1 !important;}
+.ui-slider-pips [class*=ui-slider-pip-selected]{color:#4f4f4f !important;}
+.ui-slider-pips [class*=ui-slider-pip-initial]{color:#a1a1a1 !important;}
 @include media-breakpoint-down(md) {
     .slider-area{padding: 10px 5px 0;}
 }
@@ -1445,7 +1455,7 @@ html.open-search{
 .location-area{margin-bottom: 15px;}
 .selected-location{margin-top: 20px;margin-bottom: -5px;}
 .btn-badge{
-    height: 30px; border-radius: 30px; border: solid 1px #cac7c5;padding: 0 40px 1px 20px;color: #a68a76;letter-spacing: 0.18px;font-size: 16px;background-color: rgba(53, 51, 49, 0.1);position: relative;margin-bottom: 10px;margin-right: 10px;line-height: 1;
+    height: 30px; border-radius: 30px; border:1px solid #a68a76;padding: 0 40px 1px 20px;color: #a68a76;letter-spacing: 0.18px;font-size: 16px;background-color: rgbargba(166, 138, 118, 0.1);position: relative;margin-bottom: 10px;margin-right: 10px;line-height: 1;
     &::before{content: '';display: block;width: 10px;height: 10px;background: url('../images/close.svg') 50% 50% no-repeat;background-size: contain;position: absolute;right:20px;top:50%;margin-top: -5px;}
 }
 @include media-breakpoint-down(md) {

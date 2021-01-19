@@ -260,10 +260,9 @@
 @include media-breakpoint-down(md) {
     .agree-wrap{
         margin-top: 25px;padding: 0;
-        .agree-sub{padding-left: 0;}
     }
 }
-
+.form-control[readonly]{background-color:#fff;}
 .form-wrap{
     .text-danger{font-size:14px;}
     .text-primary{font-size:14px;}
@@ -271,6 +270,7 @@
         border-bottom: 1px solid $border-color;padding: 0 13px 0 30px;
         > label.text-primary{margin-bottom: 0;}
         &.has-checkbox{margin-top: 0 !important;padding: 10px 0;}
+        &.rp{padding:0 5px 0 30px;padding-left:45px;}
     }
     .form-row-line + .form-row-line{margin-top: 37px;}
     .form-control:not(.has-border){border: 0;box-shadow: none;padding-left: 0;padding-right: 0;}
@@ -647,11 +647,14 @@
     .ui-datepicker{width: 100%;padding: 0;}
     .ui-datepicker-header{margin-top: 6px;}
 }
-
-@include media-breakpoint-down(md) {
+.ui-selectmenu-menu{
+    .ui-state-active{border-radius:0;}
 }
 
 
+@include media-breakpoint-down(sm) {
+    .ui-datepicker .ui-state-default{width:40px;height:40px;font-size:16px;margin:0 auto;display: flex;align-items: center;justify-content: center;}
+}
 .btn-area{
     margin-top: 50px;display: flex;justify-content: center;
     .btn{margin: 0 12px;}
@@ -1141,3 +1144,6 @@ html.open-search {
 .checkbox-pill{
     .chx-disabled{color:#d4d4d4;}
 }
+// @media screen and (min-width:350px) and (max-width:750px) {
+//     .modal-dialog{width:375px;}
+// }
