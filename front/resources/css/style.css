@@ -368,7 +368,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .like-btn .feedback[data-flag=true] { background-color: #ddd; }
 
-.like-btn .ment { position: fixed; left: 50%; top: 58%; -webkit-transform: translate(-50%, -58%); transform: translate(-50%, -58%); color: #d8d8d8; font-size: 12px; letter-spacing: -0.5px; }
+.like-btn .ment { position: fixed; left: 50%; top: 58%; -webkit-transform: translate(-50%, -58%); transform: translate(-50%, -58%); color: #d8d8d8; font-size: 12px; letter-spacing: -0.5px; z-index: 9999; }
 
 .like-btn .ment.active { color: #00c784; }
 
@@ -524,11 +524,11 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .more-toggle ul li a p { display: inline-block; width: 10px; height: 10px; background-size: cover; background-repeat: no-repeat; background-position: center; margin-right: 3px; }
 
-.more-toggle ul li a p.modify { background-image: url("../../resources/images/re-01.png"); }
+.more-toggle ul li a p.modify { background-image: url("../images/re-01.png"); }
 
-.more-toggle ul li a p.delete { background-image: url("../../resources/images/re-02.png"); }
+.more-toggle ul li a p.delete { background-image: url("../images/re-02.png"); }
 
-.more-toggle ul li a p.declaration { background-image: url("../../resources/images/re-03.png"); }
+.more-toggle ul li a p.declaration { background-image: url("../images/re-03.png"); }
 
 .more-toggle ul li + li { border-top: 1px solid #e5e5e5; }
 

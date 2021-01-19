@@ -394,7 +394,7 @@
         &[data-flag=false]{background-color: $primary;}
         &[data-flag=true]{background-color: #ddd;}
     }
-    .ment{position:fixed;left:50%;top:58%;transform:translate(-50%, -58%);color: #d8d8d8;font-size:12px;letter-spacing: -0.5px;
+    .ment{position:fixed;left:50%;top:58%;transform:translate(-50%, -58%);color: #d8d8d8;font-size:12px;letter-spacing: -0.5px;z-index: 9999;
         &.active{color:$primary;}
     }
     
@@ -576,9 +576,9 @@
             p{
                 display:inline-block;width: 10px;height:10px;background-size:cover;
                 background-repeat: no-repeat;background-position:center;margin-right: 3px;
-                &.modify{background-image: url('../../resources/images/re-01.png');}
-                &.delete{background-image: url('../../resources/images/re-02.png');}
-                &.declaration{background-image: url('../../resources/images/re-03.png');}
+                &.modify{background-image: url('../images/re-01.png');}
+                &.delete{background-image: url('../images/re-02.png');}
+                &.declaration{background-image: url('../images/re-03.png');}
             }
             
            
