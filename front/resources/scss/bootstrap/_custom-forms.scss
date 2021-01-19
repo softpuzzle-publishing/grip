@@ -192,7 +192,7 @@
       width: 5px;height: 5px;border-radius: 50%;border: 0;top: 7px;left: -22px;background: none;box-shadow: none;transition: none;
     }
     .custom-control-label::after{
-      width: 19px;height: 19px;left: -29px;top: 1px;border: 1px solid #ddd;border-radius: 50%;background: transparent !important;
+      width: 19px;height: 19px;left: -29px;top: 0;border: 1px solid #ddd;border-radius: 50%;background: transparent !important;
     }
     .custom-control-input:checked ~ .custom-control-label {
       &::before {

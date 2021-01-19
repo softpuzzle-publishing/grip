@@ -46,6 +46,10 @@
 
 .custom-control-input:disabled ~ .custom-control-label { color: #ddd; }
 
+.btn-primary:disabled { border-color: #d4d4d4; background-color: #d4d4d4; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.btn-secondary:disabled { border-color: #d4d4d4; background-color: #d4d4d4; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); }
+
 .btn { height: 35px; font-size: 19px; padding: 4px 20px; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); letter-spacing: -0.6px; border-radius: 50rem; }
 
 .btn-sm { height: 25px; font-size: 16px; padding: 0 18px; }
@@ -78,7 +82,8 @@
 
 .btn-gray-light { color: #fff; background-color: #c9c9c9; border-color: #c9c9c9; }
 
-@media (max-width: 991.98px) { .btn { height: 31px; font-size: 16px; padding: 4px 18px; }
+@media (max-width: 991.98px) { .w-60 { width: 100%; }
+  .btn { height: 31px; font-size: 16px; padding: 4px 18px; }
   .btn-sm { height: 22px; font-size: 12px; padding: 0 10px 0; }
   .btn-text-sm { font-size: 13px; padding-left: 15px; padding-right: 15px; padding-top: 6px; }
   .btn-sm.btn-text-sm { font-size: 12px; padding: 0 10px 0; }
@@ -95,8 +100,11 @@
 
 .btn-bottom-right > * + * { margin-left: 25px; }
 
+.btn-bottom-right.over-top { margin-top: 114px; }
+
 @media (max-width: 991.98px) { .btn-bottom-right { margin-top: 20px; }
-  .btn-bottom-right > * + * { margin-left: 10px; } }
+  .btn-bottom-right > * + * { margin-left: 10px; }
+  .btn-bottom-right.over-top { margin-top: 50px; } }
 
 .m-t-100 { margin-top: 100px !important; }
 
@@ -246,7 +254,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .form-wrap .text-primary { font-size: 14px; }
 
-.form-wrap .form-row-line { border-bottom: 1px solid #e5e5e5; padding: 0 0 0 30px; }
+.form-wrap .form-row-line { border-bottom: 1px solid #e5e5e5; padding: 0 13px 0 30px; }
 
 .form-wrap .form-row-line > label.text-primary { margin-bottom: 0; }
 
@@ -575,7 +583,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .ui-datepicker .ui-state-default { background: transparent; border: 0; text-align: center; font-weight: 200; margin: 0; }
 
-.ui-datepicker .ui-state-active { background: #00c784; color: #fff; }
+.ui-datepicker .ui-state-active { background: #00c784; color: #fff; border-radius: 0; }
 
 .ui-datepicker td span, .ui-datepicker td a { text-decoration: none; }
 
@@ -1080,7 +1088,7 @@ html, body { width: 100%; height: 100%; }
 
 #header .menu li.user .profile { width: 20px; height: 20px; margin-right: 5px; }
 
-@media (max-width: 991.98px) { #header { height: 65px; border-bottom: 1px solid #eee; }
+@media (max-width: 991.98px) { #header { height: 65px; border-bottom: 0; }
   #header .container { padding-top: 19px; }
   #header .search { width: auto; height: 30px; position: absolute; left: auto; margin-left: 0; right: 55px; top: 22px; }
   #header .search a { display: block; width: 22px; height: 22px; background: url("../images/search.svg") no-repeat 0 0; background-size: contain; border: 0; border-radius: 0; text-align: center; text-decoration: none; }
@@ -2897,7 +2905,7 @@ html.open-search .club-summary { position: static; }
   .step-2::-ms-input-placeholder { font-size: 16px; font-weight: 500; letter-spacing: -0.28px; color: #e6e6e6; }
   .step-2::placeholder { font-size: 16px; font-weight: 500; letter-spacing: -0.28px; color: #e6e6e6; } }
 
-.inp-text { width: 193px; height: 40px; border: 1px solid #979797 !important; padding: 7px 94px 9px 12px !important; }
+.inp-text { width: 193px; height: 40px; border: 1px solid #979797 !important; padding: 7px 12px 9px 12px !important; }
 
 .light-color { color: #d4d4d4; margin-right: 20px; }
 

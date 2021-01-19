@@ -74,7 +74,7 @@ html,body{
 }
 @include media-breakpoint-down(md) {
     #header{
-        height: 65px;border-bottom: 1px solid #eee;
+        height: 65px;border-bottom: 0;
         .container{padding-top: 19px;}
         .search{
             width: auto;height: 30px;position: absolute;left: auto;margin-left: 0;right: 55px;top: 22px;

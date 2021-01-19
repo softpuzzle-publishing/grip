@@ -27,6 +27,8 @@
 .font-14{font-size:14px;}
 // 라디오 disabled
 .custom-control-input:disabled ~ .custom-control-label{color:#ddd;}
+.btn-primary:disabled{border-color:#d4d4d4;background-color:#d4d4d4;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);}
+.btn-secondary:disabled{border-color:#d4d4d4;background-color:#d4d4d4;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);}
 .btn{
     height: 35px;font-size: 19px;padding: 4px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.6px;    border-radius: 50rem;
   }
@@ -53,6 +55,7 @@
   .btn-gray-light{color: #fff;background-color: #c9c9c9;border-color: #c9c9c9;}
 
   @include media-breakpoint-down(md) {
+    .w-60{width:100%;}
     .btn{
       height: 31px;font-size: 16px;padding: 4px 18px;
     }
@@ -80,15 +83,16 @@
         }
     }
   }
-
   .btn-bottom-right{
     display: flex;justify-content: flex-end;align-items: center;margin-top: 35px;
     > * + *{margin-left: 25px;}
+    &.over-top{margin-top: 114px;}
   }
   @include media-breakpoint-down(md) {
     .btn-bottom-right{
       margin-top: 20px;
       > * + *{margin-left: 10px;}
+      &.over-top{margin-top: 50px;}
     }
   }
 .m-t-100{margin-top:100px !important;}
@@ -264,7 +268,7 @@
     .text-danger{font-size:14px;}
     .text-primary{font-size:14px;}
     .form-row-line{
-        border-bottom: 1px solid $border-color;padding: 0 0 0 30px;
+        border-bottom: 1px solid $border-color;padding: 0 13px 0 30px;
         > label.text-primary{margin-bottom: 0;}
         &.has-checkbox{margin-top: 0 !important;padding: 10px 0;}
     }
@@ -631,7 +635,7 @@
     .ui-datepicker-prev .ui-icon{background: url(../images/on-arr-left.svg) 50% 50% no-repeat;background-size: contain;width: 30px;height: 30px;margin: 0;position: static;}
     .ui-datepicker-next .ui-icon{background: url(../images/on-arr-right.svg) 50% 50% no-repeat;background-size: contain;width: 30px;height: 30px;margin: 0;position: static;}
     .ui-state-default{background: transparent;border: 0;text-align: center;font-weight: 200;margin: 0;}
-    .ui-state-active{background: $primary;color: #fff;}
+    .ui-state-active{background: $primary;color: #fff;border-radius: 0;}
     td span,
     td a{text-decoration: none;}
     th{font-weight: 300;}
