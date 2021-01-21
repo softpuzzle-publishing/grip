@@ -58,7 +58,7 @@
                                     <input type="text" class="form-control" placeholder="명칭 또는 라운드 조건을 입력하세요" id="input-search-all">
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-primary min-width-150">검색</button>
+                                    <button type="submit" class="btn btn-primary min-width-150 search-btn">검색</button>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="club-list">
+                        <div class="club-list search-list">
                             <ul>
                                 <li>
                                     <div class="box">
@@ -92,38 +92,51 @@
                                                     onload="setDirection(this)">
                                             </a>
                                         </div>
-                                        <div class="summary">
-                                            <div class="location">강원도 홍천군</div>
-                                            <div class="name">
-                                                <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽</a>
-                                                <i class="distance">50km</i>
-                                                <div class="time">
-                                                    <span>00:00</span>
+                                        <div class="wrapper">
+                                            <div class="summary">
+                                                <div class="location">강원도 홍천군</div>
+                                                <div class="name">
+                                                    <a href="../club/detail.html" class="club">엘리시안 강촌 나인플러스 골프클럽</a>
+                                                    <i class="distance">50km</i>
+                                                    <div class="time">
+                                                        <span>00:00</span>
+                                                    </div>
+                                                </div>
+                                                <div class="type">멤버십 / 퍼블릭코스 (18H)</div>
+                                                <div class="point">
+                                                    <div class="rating">
+                                                        <span>평점</span>
+                                                        <i data-point="3.5">3.5</i>
+                                                    </div>
+                                                    <div class="level">
+                                                        <span>난이도</span>
+                                                        <i data-point="2.5">2.5</i>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="type">멤버십클럽 (회원용) / 퍼블릭코스 (18H)</div>
-                                            <div class="point">
-                                                <div class="rating">
-                                                    <span>평점</span>
-                                                    <i data-point="3.5">3.5</i>
+                                            <div class="more-toggle" style="flex: 0 0 auto">
+                                                <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                                <ul>
+                                                    <li><a href="javascript:;">
+                                                            <p class="like"></p>가고싶다
+                                                        </a></li>
+                                                    <li><a href="javascript:;" data-id="btn-review-delete">
+                                                            <p class="share"></p>공유하기
+                                                        </a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="util">
+                                                <div class="buttons">
+                                                    <button type="button" class="like"><span class="sr-only">가고싶다</span></button>
+                                                    <button type="button" class="share"><span class="sr-only">공유하기</span></button>
                                                 </div>
-                                                <div class="level">
-                                                    <span>난이도</span>
-                                                    <i data-point="2.5">2.5</i>
+                                                <div class="price">
+                                                    <!-- <p>1인 피</p> -->
+                                                    <strong>12,000원 ~</strong>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="util">
-                                            <div class="buttons">
-                                                <button type="button" class="like"><span class="sr-only">가고싶다</span></button>
-                                                <button type="button" class="share"><span class="sr-only">공유하기</span></button>
-                                            </div>
-                                            <div class="price">
-                                                <p>1인 그린피</p>
-                                                <strong>₩12,000 ~</strong>
-                                            </div>
-                                            <div class="reserv">
-                                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reservation">예약하기</button>
+                                                <div class="reserv">
+                                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reservation">예약하기</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -150,8 +163,12 @@
                                                             <span class="tit">수도권 퇴근후 친목회 모집</span>
                                                         </div>
                                                     </div>
-                                                    <div class="subject">인천 수도권 야간 모집해요. 연습 겸 친목다져요</div>
-                                                    <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
+                                                    <div class="search-subject">
+                                                        <div class="subject">인천 수도권 야간 모집해요. 연습 겸 친목다져요<i class="distance">550km</i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="date">12.30(목) 07:00 ~ <i class="text-danger">모집마감</i></div>
+                                                    <div class="price">1,145,000원</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -161,8 +178,12 @@
                                                     <div class="thumb">
                                                         <img src="../../resources/images/@thumb-event.png" alt="하반기 아마추어 대회 연습 및 스터디" onload="setDirection(this)">
                                                     </div>
-                                                    <div class="subject">하반기 아마추어 대회 연습 및 스터디</div>
-                                                    <div class="date">엘리시안 강촌 나인플러스클럽 <br>2020.05.06 / 07:30</div>
+                                                    <div class="search-subject">
+                                                        <div class="subject">인천 수도권 야간 모집해요. 연습 겸 친목다져요<i class="distance">550km</i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="date">12.30(목) 07:00 ~ <i class="text-danger">모집마감</i></div>
+                                                    <div class="price">1,145,000원</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -314,7 +335,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-row-line overflow-hidden">
+                                <div class="form-row-line overflow-hidden rp">
                                     <label class="tit">인원</label>
                                     <div class="people">
                                         <div class="custom-control custom-radio custom-radio-sm custom-control-inline">
@@ -802,8 +823,6 @@
             $('#modal-profile').modal('hide');
             $('#modal-join-our-confirm').modal('show');
         });
-        
-        
 
         var swiperSearchEvent = new Swiper('#card-list-event .swiper-container', {
             navigation: {
@@ -888,4 +907,38 @@
             }
         });
     });
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 5;
+    var footerHeight = $('.search-btn').outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > footerHeight){
+            $(".search-btn").addClass('hide');
+        } else {
+            $(".search-btn").removeClass('hide');
+        }
+
+        lastScrollTop = st;
+    }
+
 </script>

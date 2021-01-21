@@ -170,7 +170,7 @@
         > a{width: 40px;height: 40px;
             span{font-size: 12px;}
         }
-        html.is-scrolled &{bottom: 16px;}
+        html.is-scrolled &{bottom: 90px;}
     }
 }
 
@@ -190,9 +190,15 @@
         .title{color: #fff;}
         .desc{color: #fff;}
     }
-    &.region{background-image: url('../images/q-99.jpg');}
-    &.recommend{background-image: url('../images/q-98.jpg');}
+    &.region{
+        background-image: url('../images/bg.jpg');height:320px;align-items: inherit;
+        .content{margin-top:43px;}
+    }
+    &.recommend{background-image: url('../images/q-98.jpg');height:320px;align-items: inherit;
+        .content{margin-top:43px;}
+    }
     &.product{background-image: url('../images/q-97.jpg');}
+    
 }
 @include media-breakpoint-down(md) {
     .title-area{
@@ -204,6 +210,12 @@
     }
     .full-title-area{
         height: 126px;margin-top: -30px;margin-bottom: 30px;
+        &.region{height: 254px;
+            .content{margin-top: 24px;}
+        }
+        &.recommend{height: 254px;
+            .content{margin-top: 24px;}
+        }
     }
 }
 
@@ -379,8 +391,8 @@
     }
 }
 .share{
-    display: inline-block;background: url('../images/share-on.svg') no-repeat 50% 50%;background-size: contain;width: 39px;height: 38px;position: relative;border:0;
-    span{font-size: 12px;font-weight: 400;color: $primary;letter-spacing: -0.07px;position: absolute;bottom: -20px;width: 50px;left: 50%;margin-left: -25px;text-align: center;}
+    display: inline-block;background: url('../images/share-off.svg') no-repeat 50% 50%;background-size: contain;width: 39px;height: 38px;position: relative;border:0;
+    span{font-size: 12px;font-weight: 400;color: #c8c8c8;letter-spacing: -0.07px;position: absolute;bottom: -20px;width: 50px;left: 50%;margin-left: -25px;text-align: center;}
 }
 .util-btns{
     .like,
@@ -567,7 +579,8 @@
     }
 }
 
-.more-toggle{
+.more-toggle{position: absolute; right: 10px;top:10px;display:none;
+  
     a{display: block;width: 18px;height: 18px;text-align: center;}
     i{
         display: inline-block;vertical-align: top;width: 4px;height: 4px;background-color: #d8d8d8;border-radius: 4px;position: relative;
@@ -575,7 +588,7 @@
         &:after{content: '';display: block;width: 4px;height: 4px;background-color: #d8d8d8;border-radius: 4px;position: absolute;top:14px}
     }
     ul{
-        position: absolute;right:15px;top:100%;z-index: 1;border: 1px solid #e5e5e5;background-color: #fff;box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);display: none;
+        position: absolute;right:15px;top:100%;z-index: 1;border: 1px solid #e5e5e5;background-color: #fff;box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);display: none;border-radius:5px;
         li a{display: block;text-align: center;width: 80px;height: 30px;line-height: 30px;font-size: 14px;letter-spacing: -0.24px;color: #4a4a4a;text-decoration: none;
             p{
                 display:inline-block;width: 10px;height:10px;background-size:cover;
@@ -591,7 +604,9 @@
     }
     .active ~ ul{display: block;}
 }
-
+@include media-breakpoint-down(md){
+    .more-toggle{display:block;}
+}
 .host{
     .member{
         display: flex;
@@ -755,11 +770,15 @@ html.open-search {
         .form-control{font-size: 14px;height: 46px;}
         .col{padding: 0 3px;}
         .min-width-150{min-width: inherit;}
+        .search-btn{position:fixed;width:100%;height:75px;bottom:0;left:0;border-radius:0;font-size:24px;letter-spacing: -0.9px;z-index: 2;
+            &.hide{display:none;}
+        }
+        #input-search-all::placeholder{font-size:16px;}
     }
     .search-result{margin-top: 40px;}
     .result-top{
         margin-bottom: 20px;
-        .result-title{font-size: 14px;margin-bottom: 15px;}
+        .result-title{font-size: 19px;margin-bottom: 25px;}
     }
 }
 .select-box-style.md + .ui-selectmenu-button.ui-button{
@@ -1043,7 +1062,17 @@ html.open-search {
         p{font-size: 16px;}
     }
 }
-
+.profile-box{
+    display:flex;align-items:center;margin-top:20px;
+    .profile-img{width:19px;height:19px;background-size: cover;background-repeat: no-repeat;background-position: center;}
+    .manager{font-size:14px;font-weight: 200;color:#4f4f4f;
+        letter-spacing: -0.35px;margin:0 5px;
+    }
+    .profile-date{font-size:14px;margin-right: 10px;letter-spacing: -0.35px;color:#b0b0b0;}
+}
+@include media-breakpoint-down(md){
+    .profile-box{margin-top:40px;}
+}
 .view-wrap{
     .view-header{
         position: relative;border-bottom: 1px solid #e7e7e7;padding-bottom: 50px;

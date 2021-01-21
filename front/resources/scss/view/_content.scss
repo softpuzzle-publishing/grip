@@ -325,7 +325,7 @@
     }
 }
 
-.club-list{
+.club-list{position: relative;
     ul{list-style: none;padding: 0;}
     li + li{margin-top: 15px;}
     .box{border: 1px solid $border-color;border-radius: 9px;display: flex;align-items:stretch;min-height:150px;}
@@ -377,6 +377,7 @@
             > i{margin-right: 5px;}
             .icon-calendar{transform: translateY(-1px);}
         }
+        .hit{font-size: 10px;color: #b0b0b0;margin-top: 5px;}
     }
     .util{
         flex: 0 0 auto;padding: 49px 20px 0 0;display: flex;flex-direction: column;justify-content: center;position: relative;
@@ -434,6 +435,20 @@
             .more-toggle{display:none;}
         }
     }
+    &.search-list{
+        .wrapper{width:100%;display:flex;justify-content: space-between;}
+        .more-toggle{display: none;}
+    }
+    &.region{
+        .summary{
+            .desc{display:flex;margin-top: 0;}
+            .location{font-size:12px;}
+            .name{
+                .club{font-size:19px;}
+            }
+            .hash{font-size:14px;margin-top:0;}
+        }
+    }
 }
 @include media-breakpoint-down(md) {
     .club-list{
@@ -445,7 +460,7 @@
             .d-day{font-size: 9px;height: 17px;line-height: 17px;padding-left: 12px;padding-right: 12px;}
         }
         .summary{
-            padding: 6px;
+            padding: 10px;
             .location{font-size: 9px;margin-bottom: 2px;}
             .recommendation{font-size: 9px;margin-bottom: 2px;}
             .name{
@@ -535,6 +550,55 @@
             }
             ul{top:-11px;}
             li + li{margin-top:0;}
+        }
+        &.search-list{
+            position: relative;word-break:keep-all;
+            .wrapper{width:100%;display:block;}
+            .summary{
+                .location{font-size:12px;}
+                .name{width:90%;
+                    .club{font-size:16px;}
+                    .distance{font-size:12px;}
+                }
+                .time{display:none;}
+                .type{font-size:14px;margin-bottom:0;}
+                .rating span{font-size:14px;}
+                .rating i{font-size:12px;
+                    &::before{width:12px;height:12px;}
+                }
+                .level span{font-size:14px;}
+                .level i{font-size:12px;
+                    &::before{width:12px;height:12px;}
+                }
+            }
+            .more-toggle{position: absolute; top: 10px;right:10px;display:block;
+                ul{padding:0 12px;}
+                li{margin-top:0;}
+                ul li a{display:flex;align-items: center;width:100%;height:auto;padding:5px 0;}
+                .like{width:39px;height:38px;}
+                .share{width:39px;height:38px;}
+            }
+            .util{flex-direction:inherit;align-items: center;justify-content:flex-end;padding: 6px 8px 10px 0;
+                .price strong{font-size:14px; font-weight: 500;color:#767676;}
+                .reserv{margin-top: 3px;margin-left: 5px;
+                    .btn{padding-top:0;font-size:14px;}
+                }
+            }
+        }
+        &.region{
+            .summary{
+                .desc{display:block;margin-top: 0;}
+                .location{font-size:12px;}
+                .name{
+                    .club{font-size:16px;}
+                }
+                .hash{font-size:14px;margin-top:0;}
+            }
+            .more-toggle{
+                ul li a{display:flex;align-items: center;justify-content:center;width:128px;height:auto;padding:5px 0;}
+                .like{width:39px;height:38px;}
+                .share{width:39px;height:38px;}
+            }
         }
     }
 }
@@ -633,7 +697,10 @@
 }
 .card-list-play{
     .item{
-        .subject{@include text-truncate-multi(19px, 1.26, 2);}
+        .search-subject{position: relative;}
+        .subject{width:auto;@include text-truncate-multi(19px, 1.26, 2);
+            .distance{position: inherit;bottom: 3px;right:0;font-size:12px;color:#e02020;margin-left:5px;}
+        }
     }
 }
 @include media-breakpoint-down(md) {
@@ -649,7 +716,7 @@
             }
             .category{margin-bottom: 5px;margin-top: 12px;}
             .subject{font-size: 16px;margin-bottom: 5px;}
-            .txt{font-size: 12px;@include text-truncate-multi(12px, 1.6, 2);}
+            .txt{@include text-truncate-multi(14px, 1.6, 2);}
             .date{font-size: 12px;}
         }
         .swiper-slide{width: 165px;}
@@ -661,7 +728,10 @@
     }
     .card-list-play{
         .item{
-            .subject{@include text-truncate-multi(16px, 1.26, 2);}
+            .subject{width:130px;@include text-truncate-multi(16px, 1.26, 2);
+                .distance{position: absolute;bottom: 3px;right:0;font-size:12px;color:#e02020;}
+            }
+            .date{font-size:14px;}
         }
     }
 }
