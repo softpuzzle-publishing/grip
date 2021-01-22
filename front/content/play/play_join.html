@@ -42,6 +42,9 @@
                         <button type="button" class="btn btn-outline-primary min-width-186">참여 취소</button>
                         <button type="button" class="btn btn-primary min-width-186" data-id="btn-play">신청하기</button>
                         <button type="button" class="btn btn-primary min-width-186" disabled>참여 불가</button>
+                        <button type="button" class="btn btn-secondary min-width-186">종료된 플레이</button>
+                        <button type="button" class="btn btn-secondary min-width-186" data-toggle="modal" data-target="#modal-play-success">완료</button>
+                        
                         <div class="host">
                             <div class="member">
                                 <div class="profile">
@@ -460,7 +463,53 @@
 		</div>
 	</div>
 </div>
-
+<!-- 플레이 생성완료 -->
+<div class="modal" tabindex="-1" id="modal-play-success">
+	<div class="modal-dialog modal-dialog-centered modal-play-success">
+		<div class="modal-content height-742">
+			<div class="modal-header">
+				<h5 class="modal-title">플레이 생성완료</h5>
+				<p class="modal-desc modal-desc-join"><span class="text-primary">6월 25일</span> 플레이가 생성되었습니다<br>게스트를 모집해보세요</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="text-center">
+                    <img src="../../resources/images/img-45.png" alt="생성완료">
+                </div>
+                <div class="play-success">
+                    <ul>
+                        <li>
+                            <span class="ball active">1</span>
+                            생성한 플레이 내용은 마감 전까지 언제든 수정할 수 있어요
+                        </li>
+                        <li>
+                            <span class="ball active">2</span>
+                            참여신청이 오면 신청자의 프로필을 클릭해서 함께 플레이 할지 정할 수 있어요
+                        </li>
+                        <li>
+                            <span class="ball active">3</span>
+                            바로 정해지진 않아요. 신청자에게 다시 한번 참여 의사를 물어보고 플레이어로 결정돼요
+                        </li>
+                        <li>
+                            <span class="ball active">4</span>
+                            플레이어가 모였으면 꼭! 모집마감해주세요
+                        </li>
+                        <li>
+                            <span class="ball active">5</span>
+                            인원보다 많은 사람을 선택하면 선착순으로 플레이어가 결정되니 참고하세요
+                        </li>
+                    </ul>
+                    <p class="txt-danger">※ 플레이 내용에 불쾌할 수 있는 내용이 포함되어있다면 삭제될 수 있으니 주의해주세요!</p>
+                </div>
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn btn-primary min-width-150">확인</a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
     $(document).ready(function(){
         var $playerWrap = $('.player-ing ul');

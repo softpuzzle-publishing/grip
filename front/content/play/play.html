@@ -58,7 +58,7 @@
 									</div>
 									<div class="play-type-box">
 										<div class="details">
-											<p>상세 플레이를 선택해주세요</p>
+											<p>세부사항을 선택해주세요</p>
 											<div class="controls">
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="round" id="round1">
@@ -81,7 +81,7 @@
 									</div>
 									<div class="play-type-box">
 										<div class="details">
-											<p>상세 플레이를 선택해주세요 (중복선택 가능)</p>
+											<p>세부사항을 선택해주세요(중복 선택 가능)</p>
 											<div class="controls">
 												<div class="custom-control custom-checkbox custom-control-inline">
 													<input type="checkbox" class="custom-control-input" name="lesson" id="lesson1">
@@ -117,14 +117,14 @@
 												</div>
 												<div class="custom-control custom-checkbox custom-control-inline">
 													<input type="checkbox" class="custom-control-input" name="lesson" id="lesson9">
-													<label class="custom-control-label" for="lesson9">트레이닝</label>
+													<label class="custom-control-label" for="lesson9">골프트레이닝</label>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="play-type-box">
 										<div class="details">
-											<p>상세 플레이를 선택해주세요</p>
+											<p>세부사항을 선택해주세요(중복 선택 가능)</p>
 											<div class="controls">
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="trip" id="trip1">
@@ -132,19 +132,19 @@
 												</div>
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="trip" id="trip2">
-													<label class="custom-control-label" for="trip2">충청권 투어</label>
+													<label class="custom-control-label" for="trip2">강원권 투어</label>
 												</div>
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="trip" id="trip3">
-													<label class="custom-control-label" for="trip3">전라권 투어</label>
+													<label class="custom-control-label" for="trip3">충청권 투어</label>
 												</div>
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="trip" id="trip4">
-													<label class="custom-control-label" for="trip4">경상권 투어</label>
+													<label class="custom-control-label" for="trip4">전라권 투어</label>
 												</div>
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="trip" id="trip5">
-													<label class="custom-control-label" for="trip5">강원권 투어</label>
+													<label class="custom-control-label" for="trip5">경상권 투어</label>
 												</div>
 												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" class="custom-control-input" name="trip" id="trip6">
@@ -161,7 +161,7 @@
 										<div class="details">
 											<p>어떤 친목 및 커뮤니티인가요? 키워드를 입력해주세요</p>
 											<div class="controls m-0">
-												<textarea name="" id="" cols="" rows="2" class="form-control" placeholder="예시) 맛집투어, 카페투어, 술벙개"></textarea>
+												<textarea name="" id="" cols="" rows="2" class="form-control" placeholder="예시) 맛집투어, 카페투어 (15자 이내)"></textarea>
 											</div>
 										</div>
 									</div>
@@ -198,7 +198,9 @@
 											<div class="form-row-line">
 												<label class="tit sup">분</label>
 												<select name="" id="">
-													<option value="">59분</option>
+													<option value="">50분</option>
+													<option value="">40분</option>
+													<option value="">30분</option>
 												</select>
 											</div>
 										</div>
@@ -228,7 +230,9 @@
 											<div class="form-row-line">
 												<label class="tit sup">분</label>
 												<select name="" id="">
-													<option value="">59분</option>
+													<option value="">50분</option>
+													<option value="">40분</option>
+													<option value="">30분</option>
 												</select>
 											</div>
 										</div>
@@ -238,11 +242,12 @@
 									</div>
 								</div>
 								<div class="address-form" max-length="5">
+									<label class="tit sup">장소 지정 (최대 5개)</label>
 									<div class="row row-10 align-items-center">
 										<div class="col">
 											<div class="form-fake">
 												<input type="text" class="form-control" placeholder="주소창을 클릭해 주소를 검색하세요">
-												<button type="button" class="btn btn-secondary btn-text-sm disabled" data-class="btn-select" disabled>대표장소</button>
+												<!-- <button type="button" class="btn btn-secondary btn-text-sm disabled" data-class="btn-select" disabled>대표장소</button> -->
 											</div>
 										</div>
 										<div class="col-auto">
@@ -257,18 +262,18 @@
 					<div class="swiper-slide s3">
 						<div class="slide-min-height">
 							<div class="title-area">
-								<div class="title">게스트와 함께할 <br class="d-md-none">프로그램 내용을 입력해주세요</div>
+								<div class="title">게스트와 함께할 <br class="d-md-none">플레이 내용을 입력해주세요</div>
 							</div>
 							<div class="width-540">
 								<div class="play-program" max-length="5">
 									<ol>
 										<li class="row row-10 align-items-center">
-											<div class="col">
+											<div class="col"> 
 												<div class="form-wrap">
 													<div class="form-row-line">
 														<div class="row">
 															<div class="col-12">
-																<input type="text" class="form-control" placeholder="프로그램 내용을 입력해주세요">
+																<input type="text" class="form-control" placeholder="예: 라운드 후 000에서 식사 (20자 이내)">
 															</div>
 														</div>
 													</div>
@@ -287,7 +292,7 @@
 					<div class="swiper-slide s4">
 						<div class="slide-min-height">
 							<div class="title-area">
-								<div class="title">이번 프로그램은 <br class="d-md-none">몇 명과 함께 하시겠어요?</div>
+								<div class="title">이번 플레이는 <br class="d-md-none">몇 명과 함께 하시겠어요?</div>
 							</div>
 							<div class="width-670">
 								<div class="form-wrap play-form">
@@ -331,10 +336,9 @@
 											<div class="form-row-line">
 												<label class="tit sup">성별</label>
 												<select name="" id="">
-													<option value="">선택 안함</option>
+													<option value="">성별무관</option>
 													<option value="">남성</option>
 													<option value="">여성</option>
-													<option value="">성별무관</option>
 												</select>
 											</div>
 										</div>
@@ -342,14 +346,13 @@
 											<div class="form-row-line">
 												<label class="tit sup">연령</label>
 												<select name="" id="">
-													<option value="">선택 안함</option>
+													<option value="">연령무관</option>
 													<option value="">1020대</option>
 													<option value="">2030대</option>
 													<option value="">3040대</option>
 													<option value="">4050대</option>
 													<option value="">5060대</option>
 													<option value="">6070대</option>
-													<option value="">연령무관</option>
 												</select>
 											</div>
 										</div>
@@ -357,12 +360,11 @@
 											<div class="form-row-line">
 												<label class="tit sup">핸디캡</label>
 												<select name="" id="">
-													<option value="">선택 안함</option>
+													<option value="">핸디캡무관</option>
 													<option value="">스크레치</option>
 													<option value="">싱글</option>
 													<option value="">보기</option>
 													<option value="">백돌이</option>
-													<option value="">핸디캡무관</option>
 												</select>
 											</div>
 										</div>
@@ -374,7 +376,7 @@
 					<div class="swiper-slide s5">
 						<div class="slide-min-height">
 							<div class="title-area">
-								<div class="title">1인당 플레이 참여 비용은 <br class="d-md-none">얼마인가요?</div>
+								<div class="title">1인당 참여 비용은 <br class="d-md-none">얼마인가요?</div>
 							</div>
 							<div class="width-480">
 								<div class="form-wrap play-form">
@@ -457,7 +459,7 @@
 					<div class="swiper-slide s6">
 						<div class="slide-min-height">
 							<div class="title-area">
-								<div class="title">게스트의 마음을 사로잡을 <br class="d-md-none">타이틀을 입력해주세요</div>
+								<div class="title">게스트의 마음을 사로잡을 <br class="d-md-none">타이틀과 태그를 입력해주세요</div>
 							</div>
 							<div class="width-670">
 								<div class="form-wrap play-form">
@@ -465,20 +467,17 @@
 										<div class="col">
 											<div class="form-row-line">
 												<label class="tit sup">타이틀</label>
-												<input type="text" class="form-control text-left" placeholder="타이틀을 입력하세요 (예: 베어크리크 포천에서 모이자!)">
+												<input type="text" class="form-control text-left" placeholder="타이틀을 입력하세요 (예: 강원도 클럽 일주! 싱글플레이어 모여라~)">
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="play-textarea-frame">
-									<div class="form-wrap play-form">
-										<div class="row row-10 align-items-center">
-											<div class="col">
-												<div class="form-row-line">
-													<label class="tit sup">추가내용</label>
-													<textarea name="" id="" cols="" rows="" placeholder="자유롭게 작성해주세요" class="form-control text-left" maxlength="5000" data-byte-target="#textarea-check"></textarea>
-													<div class="byte-check"><span id="textarea-check">0</span>/5000</div>
-												</div>
+								<div class="form-wrap play-form">
+									<div class="row row-10 align-items-center">
+										<div class="col">
+											<div class="form-row-line">
+												<label class="tit sup">태그</label>
+												<input type="text" class="form-control text-left" placeholder="검색될 태그를 입력하세요 (예: #골린이 #백돌이 #초보만 #18홀라운드)(40자 이내)">
 											</div>
 										</div>
 									</div>
@@ -489,40 +488,53 @@
 					<div class="swiper-slide s7">
 						<div class="slide-min-height">
 							<div class="title-area">
-								<div class="title">이번 플레이의 키워드 해시태그와 <br class="d-md-none">메인 이미지를 설정해주세요</div>
+								<div class="title">이번 플레이의 소개와 <br class="d-md-none">이미지를 설정해주세요</div>
 							</div>
-							<div class="width-670">
-								<div class="form-wrap play-form">
+							<div class="width-670 play-textarea-frame">
+								<div class="form-wrap play-form position-relative">
 									<div class="row row-10 align-items-center">
 										<div class="col">
 											<div class="form-row-line">
-												<label class="tit sup">태그</label>
-												<input type="text" class="form-control text-left" placeholder="키워드 해시태그를 입력하세요 (예: #상호명, #성별, #핸디캡)">
+												<label class="tit sup">호스트 및 플레이 소개</label>
+												<textarea name="" id="" cols="" rows="" placeholder="자유롭게 작성해주세요" class="form-control text-left" maxlength="5000" data-byte-target="#textarea-check"></textarea>
+												<div class="byte-check"><span id="textarea-check">0</span>/5000
 											</div>
 										</div>
 									</div>
+								</div>
 									<div class="row row-10 align-items-center">
 										<div class="col">
 											<div class="form-row-line border-bottom-0">
-												<label class="tit sup">이미지 등록</label>
-												<input type="text" class="form-control has-border text-left" placeholder="사진을 선택하세요" data-class="btn-upload">
-											</div>
-										</div>
-									</div>
-									<div class="row row-10 align-items-center row-image-thumb">
-										<div class="col">
-											<div class="form-row-line border-bottom-0">
 												<label class="tit sup">이미지 미리보기 (가운데 정방향 노출)</label>
-												<div class="upload-image">
-													<div class="crop">
-														<div class="thumb">
-															<img src="../../resources/images/001_oakvalley_cc_05_detail4.png" alt="" onload="setDirection(this)">
+												<div class="upload-img d-flex align-items-center justify-content-center">
+													<div class="text-center position-relative">
+														<div class="filebox">
+															<input type="file" id="input-img-1">
+															<label for="input-img-1"><img src="" alt="" id="img"></label>
 														</div>
+														<p class="txt-main">메인 (필수)</p>
+													</div>
+													<div class="filebox">
+														<input type="file" id="input-img-2">
+														<label for="input-img-2"><img src="" alt="" id="img"></label>
+													</div>
+													<div class="filebox">
+														<input type="file" id="input-img-3">
+														<label for="input-img-3"><img src="" alt="" id="img"></label>
+													</div>
+													<div class="filebox">
+														<input type="file" id="input-img-4">
+														<label for="input-img-4"><img src="" alt="" id="img"></label>
+													</div>
+													<div class="filebox">
+														<input type="file" id="input-img-5">
+														<label for="input-img-5"><img src="" alt="" id="img"></label>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
+									
 								</div>
 							</div>
 						</div>
@@ -533,7 +545,13 @@
 								<div class="title">그립 앤드 플레이 <br class="d-md-none">이용약관 (필수)</div>
 							</div>
 							<div class="width-620">
-								<div class="agree-check-wrap">
+								<div class="agree-all">
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="form0">
+										<label class="custom-control-label" for="form0">전체동의</label>
+									</div>
+								</div>
+								<div class="agree-check-wrap play">
 									<div class="custom-control custom-checkbox">
 										<input type="checkbox" class="custom-control-input" id="agree1">
 										<label class="custom-control-label" for="agree1">그립 앤드 플레이는 호스트의 직접 참여를 원칙으로 합니다</label>
@@ -563,20 +581,6 @@
 										<label class="custom-control-label" for="agree7">올바른 골프문화를 형성하기 위해 상호간 비방 및 욕설, 폭언은 금지합니다</label>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide s9">
-						<div class="slide-min-height">
-							<div class="title-area mb-0">
-								<div class="title mb-0"><span class="text-primary">6월 25일</span> 그립 앤드 플레이가 <br>개설되었습니다</div>
-							</div>
-							<div class="text-center">
-								<img src="../../resources/images/illu-02.png" alt="">
-							</div>
-							<div class="btn-area btn-area-join">
-								<a href="" class="btn btn-primary min-width-192">메인 바로가기</a>
-								<a href="" class="btn btn-primary min-width-192">플레이 관리 바로가기</a>
 							</div>
 						</div>
 					</div>
@@ -651,7 +655,7 @@
 
 <!-- modal : 플레이 장소 검색 -->
 <div class="modal" tabindex="-1" id="modal-address">
-	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-dialog modal-dialog-centered search-place">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">플레이 장소 검색</h5>
@@ -662,7 +666,7 @@
 			<div class="modal-body">
 				<div class="row row-20 align-items-center address-search">
 					<div class="col">
-						<input type="text" class="form-control" placeholder="상호명 검색">
+						<input type="text" class="form-control" placeholder="상호명 또는 주소를 입력하세요">
 					</div>
 					<div class="col-auto">
 						<button class="btn btn-secondary btn-text-sm">검색</button>
@@ -776,7 +780,7 @@
 				$parent = $(this).closest('.address-form');
 				var max = $(this).closest('.address-form').attr('max-length');
 				var ing = $(this).closest('.address-form').find('.row').length;
-				var rowHtml = '<div class="row row-10 align-items-center"><div class="col"><div class="form-fake"><input type="text" class="form-control" placeholder="주소창을 클릭해 주소를 검색하세요"><button type="button" class="btn btn-secondary btn-text-sm disabled" data-class="btn-select" disabled>대표장소</button></div></div><div class="col-auto"><a href="" class="btn-control btn-plus"><i class="icon-plus"></i></a><a href="" class="btn-control btn-minus"><i class="icon-minus"></i></a></div></div>';
+				var rowHtml = '<div class="row row-10 align-items-center"><div class="col"><div class="form-fake"><input type="text" class="form-control" placeholder="주소창을 클릭해 주소를 검색하세요"></div></div><div class="col-auto"><a href="" class="btn-control btn-plus"><i class="icon-plus"></i></a><a href="" class="btn-control btn-minus"><i class="icon-minus"></i></a></div></div>';
 
 				if(ing < max){
 					$(this).closest('.address-form').append(rowHtml);

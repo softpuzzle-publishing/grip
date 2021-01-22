@@ -31,15 +31,22 @@
         <div class="container">
 			<div class="content">
                 <div class="title-area tab-is-next">
-                    <div class="title"><span class="text-primary">홍길동</span>님의 플레이 관리</div>
-                    <p class="desc">생성한 플레이와 참여했던 플레이를 한번에 관리하세요</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <div class="title"><span class="text-primary">홍길동</span>님의 플레이 관리</div>
+                            <p class="desc">호스트했거나 참여한 플레이를 한번에 관리하세요</p>
+                        </div>
+                        <div>
+                            <a href="../play/play.html" class="btn btn-outline-primary">플레이 만들기</a>
+                        </div>
+                    </div>
                     <div class="tab">
                         <ul class="nav nav-pills" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="tab1" aria-selected="true">플레이 호스트</a>
+                                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="tab1" aria-selected="true">호스트</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="tab2" aria-selected="false">플레이 게스트</a>
+                                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="tab2" aria-selected="false">게스트</a>
                             </li>
                         </ul>
                     </div>
@@ -48,9 +55,13 @@
                     <div class="tab-pane active show" id="t1" role="tabpanel">
                         <div class="result-top has-border">
                             <div class="row justify-content-between align-items-end">
-                                <div class="col-auto">
+                                <div class="col-auto d-flex align-items-end">
                                     <div class="result-title mb-0">
-                                        플레이 참여내역 <span class="text-secondary">3</span>
+                                        플레이 <span class="text-secondary">3</span>
+                                    </div>
+                                    <div class="status">
+                                        <p>모집중 <span>2</span></p>
+                                        <p>모집완료 <span>2</span></p>
                                     </div>
                                 </div>
                                 <div class="col-auto">
@@ -71,13 +82,12 @@
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
-                                                <span class="d-day">D-5day</span>
-                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <div class="d-day">D-5day</div>
+                                                <span class="play">싱글 플레이어여!<br> 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                             </a>
@@ -87,10 +97,49 @@
                                                 <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                 <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                 <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                 <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                 <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                <p class="recruit_approval">함께 플레이해요</p>
+                                                <p class="recruit_approval">함께 플레이해요</p>  
+                                                <p class="recruit_remove">호스트의 플레이 삭제</p>
+                                            </div>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel1">
+                                                <label class="custom-control-label" for="chkDel1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="recruit">
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <div class="d-day"><span class="on-air"></span>D-5day</div>
+                                                <p class="live-time right">06:59:25</p>
+                                                <span class="play">싱글 플레이어여!<br> 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
+                                                <span class="info-wrap">
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="dim">
+                                            <div class="message">
+                                                <p class="recruit_close">잘 다녀왔습니다~!</p>
+                                                <p class="recruit_host_cancel">플레이 호스트 취소</p>
+                                                <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
+                                                <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
+                                                <p class="recruit_member_cancel">플레이 참여 취소</p>
+                                                <p class="recruit_rejection">다음 기회에 뵐게요</p>
+                                                <p class="recruit_approval">함께 플레이해요</p>  
+                                                <p class="recruit_remove">호스트의 플레이 삭제</p>
                                             </div>
                                         </div>
                                         <div class="check">
@@ -110,11 +159,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -122,10 +170,11 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>  
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -148,11 +197,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -160,10 +208,11 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -186,11 +235,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -198,10 +246,11 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>  
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -214,7 +263,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li data-status="recruitment_completed"><!-- 모집을 완료했습니다 -->
+                                <li data-status="recruitment_completed"><!-- 모집 완료! 플레이를 준비하세요~ -->
                                     <div class="box">
                                         <div class="img">
                                             <a href="../play/play_join.html">
@@ -223,11 +272,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -235,10 +283,11 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>  
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -260,11 +309,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -272,10 +320,11 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -297,11 +346,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -309,10 +357,11 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -334,11 +383,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -346,10 +394,49 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel3">
+                                                <label class="custom-control-label" for="chkDel3"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="recruit_remove"><!-- 호스트의 플레이 삭제 -->
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
+                                                <span class="info-wrap">
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
+                                                    </span>
+                                                </span>
+                                                <div class="dim">
+                                                    <div class="message">
+                                                        <p class="recruit_close">잘 다녀왔습니다~!</p>
+                                                        <p class="recruit_host_cancel">플레이 호스트 취소</p>
+                                                        <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
+                                                        <p class="recruit_member_cancel">플레이 참여 취소</p>
+                                                        <p class="recruit_rejection">다음 기회에 뵐게요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   
+                                                        <p class="recruit_remove">호스트의 플레이 삭제</p>
+                                                        
                                                     </div>
                                                 </div>
                                             </a>
@@ -368,9 +455,9 @@
                     <div class="tab-pane" id="t2" role="tabpanel">
                         <div class="result-top has-border">
                             <div class="row justify-content-between align-items-end">
-                                <div class="col-auto">
+                                <div class="col-auto"> 
                                     <div class="result-title mb-0">
-                                        플레이 참여내역 <span class="text-secondary">4</span>
+                                        플레이 <span class="text-secondary">4</span>
                                     </div>
                                 </div>
                                 <div class="col-auto">
@@ -391,13 +478,15 @@
                                                 <span class="thumb">
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
-                                                <span class="d-day">D-5day</span>
-                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <div class="d-day"><span class="on-air"></span>D-5day</div>
+                                                <p class="live-time right">06:59:25</p>
+                                                <span class="play">싱글 플레이어여!<br> 베어크리크 춘천에서 모이자!
+                                                    <span class="notice">참여확정을 기다리고 있어요!</span>
+                                                </span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                             </a>
@@ -407,10 +496,46 @@
                                                 <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                 <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                 <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                 <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                 <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                <p class="recruit_approval">함께 플레이해요</p>
+                                                <p class="recruit_approval">함께 플레이해요</p>   <p class="recruit_remove">호스트의 플레이 삭제</p>
+                                            </div>
+                                        </div>
+                                        <div class="check">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="chkDel1">
+                                                <label class="custom-control-label" for="chkDel1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-status="recruit">
+                                    <div class="box">
+                                        <div class="img">
+                                            <a href="../play/play_join.html">
+                                                <span class="thumb">
+                                                    <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
+                                                </span>
+                                                <span class="d-day">D-5day</span>
+                                                <span class="play">싱글 플레이어여!<br> 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
+                                                <span class="info-wrap">
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="dim">
+                                            <div class="message">
+                                                <p class="recruit_close">잘 다녀왔습니다~!</p>
+                                                <p class="recruit_host_cancel">플레이 호스트 취소</p>
+                                                <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
+                                                <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
+                                                <p class="recruit_member_cancel">플레이 참여 취소</p>
+                                                <p class="recruit_rejection">다음 기회에 뵐게요</p>
+                                                <p class="recruit_approval">함께 플레이해요</p>   <p class="recruit_remove">호스트의 플레이 삭제</p>
                                             </div>
                                         </div>
                                         <div class="check">
@@ -429,12 +554,11 @@
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
                                                 <span class="d-day">D-5day</span>
-                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="play">싱글 플레이어여!<br> 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -442,10 +566,10 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -467,12 +591,11 @@
                                                     <img src="../../resources/images/001_oakvalley_cc_04_reservation.png" alt="" onload="setDirection(this)">
                                                 </span>
                                                 <span class="d-day">D-5day</span>
-                                                <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="play">싱글 플레이어여!<br> 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -480,10 +603,10 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -506,11 +629,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -518,10 +640,10 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -534,7 +656,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li data-status="recruitment_completed"><!-- 모집을 완료했습니다 -->
+                                <li data-status="recruitment_completed"><!-- 모집 완료! 플레이를 준비하세요~ -->
                                     <div class="box">
                                         <div class="img">
                                             <a href="../play/play_join.html">
@@ -543,11 +665,10 @@
                                                 </span>
                                                 <span class="d-day">D-5day</span>
                                                 <span class="play">싱글 플레이어여! 베어크리크 춘천에서 모이자!</span>
+                                                <span class="place">엘리시안 강촌 나인플러스 골프클럽 외 2곳</span>
                                                 <span class="info-wrap">
-                                                    <span class="info">
-                                                        <span class="date">2020.05.05 06:00</span>
-                                                        <span class="hole">필드레슨</span>
-                                                        <span class="personnel">4인</span>
+                                                    <span class="info play-date">
+                                                        <span class="date">12.05 (화) 06:00 ~</span>
                                                     </span>
                                                 </span>
                                                 <div class="dim">
@@ -555,10 +676,10 @@
                                                         <p class="recruit_close">잘 다녀왔습니다~!</p>
                                                         <p class="recruit_host_cancel">플레이 호스트 취소</p>
                                                         <p class="recruit_admin_cancel">정책에 의해 중지되었습니다</p>
-                                                        <p class="recruitment_completed">모집을 완료했습니다</p>
+                                                        <p class="recruitment_completed">모집 완료! 플레이를 준비하세요~</p>
                                                         <p class="recruit_member_cancel">플레이 참여 취소</p>
                                                         <p class="recruit_rejection">다음 기회에 뵐게요</p>
-                                                        <p class="recruit_approval">함께 플레이해요</p>
+                                                        <p class="recruit_approval">함께 플레이해요</p>   <p class="recruit_remove">호스트의 플레이 삭제</p>
                                                     </div>
                                                 </div>
                                             </a>

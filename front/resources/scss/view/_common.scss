@@ -50,6 +50,9 @@
   .min-width-192{min-width:192px;}
   .min-width-220{min-width:220px;}
   .min-width-253{min-width:253px;}
+  .height-410{height:410px;}
+  .height-742{height:742px;}
+  
   .w-60{width:60%;}
   .btn-outline-light{color: rgba(161, 161, 161, .6);}
   .btn-gray-light{color: #fff;background-color: #c9c9c9;border-color: #c9c9c9;}
@@ -76,7 +79,7 @@
     .min-width-150{min-width:120px;}
     .min-width-186{min-width:150px;}
     .min-width-220{min-width:auto;}
-   
+    
     .modal-alert{
         .btn-area .btn{
             height: 35px;font-size:15px;
@@ -750,6 +753,10 @@ html.open-search {
 .result-top{
     margin-bottom: 25px;
     .result-title{font-size: 19px;font-weight: 400;}
+    .status{
+        display:flex;margin-left:10px;
+        p{font-size:13px; font-weight: 500; letter-spacing: -0.23px;color:#a1a1a1;margin-right:5px;}
+    }
     &.has-border{
         border-bottom: 1px solid #e7e7e7;padding-bottom: 15px;
     }
@@ -1019,6 +1026,12 @@ html.open-search {
             padding:0 30px 30px;
         }
         .modal-footer{padding:30px;}
+    }
+    &.search-place{
+        .modal-body{
+            padding:35px;
+            .address-search{margin-left:-10px;margin-right: -10px;}
+        }
     }
 }
 @include media-breakpoint-down(md){

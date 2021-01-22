@@ -63,10 +63,14 @@ html.open-search{
             &.end{background-color:#ddd;color:#fff;}
         }
         .share-area{position: absolute;right: 15px;top: 15px;z-index: 1;}
-        .on-air{width:6px;height:6px;display:inline-block;background-color:#e02020;
-            border-radius: 50%;margin:0 3px 2px 0;
+        @at-root{
+            .on-air{width:6px;height:6px;display:inline-block;background-color:#e02020;
+                border-radius: 50%;margin:0 3px 2px 0;
+            }
+            .live-time{position:absolute;top:50px;left:33px;font-size:14px;color:#fff;font-weight: bold;
+                &.right{right:35px;left:inherit}
+            }
         }
-        .live-time{position:absolute;top:45px;left:33px;font-size:14px;color:#fff;font-weight: bold;}
     }
     .info{padding: 10px;}
     .subject{
