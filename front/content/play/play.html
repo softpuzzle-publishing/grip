@@ -446,9 +446,10 @@
 												<input type="radio" class="custom-control-input" name="price" id="price11">
 												<label class="custom-control-label" for="price11">입장료</label>
 											</div>
-											<div class="custom-control custom-radio custom-control-inline">
+											<div class="custom-control custom-radio custom-control-inline last-radio">
 												<input type="radio" class="custom-control-input" name="price" id="price12">
 												<label class="custom-control-label" for="price12">기타</label>
+												<input type="text" class="etc">
 											</div>
 										</div>
 									</div>
@@ -704,6 +705,123 @@
 	</div>
 </div>
 
+<!-- 플레이 등록하기1 -->
+<div class="modal" tabindex="-1" id="modal-play-enrollment">
+	<div class="modal-dialog modal-dialog-centered modal-play-enrollment">
+		<div class="modal-content height-742">
+			<div class="modal-header">
+				<h5 class="modal-title">플레이 등록하기</h5>
+				<p class="modal-desc modal-desc-join">플레이 호스트는<span class="text-primary"> 처음</span>이시군요!</p>
+				<p class="desc">한번 호스트가 되시면 이전에 만드셨던 플레이를 불러올 수 있어요<br>
+					그럼 신나는 플레이를 같이 만들어볼까요?</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="text-center">
+                    <img src="../../resources/images/cart.png" alt="생성완료">
+                </div>
+                <div class="play-success">
+                    <ul>
+                        <li>
+                            <span class="ball active">1</span>
+                            필수 입력사항은 빠짐없이 입력해 주셔야 합니다
+                        </li>
+                        <li>
+                            <span class="ball active">2</span>
+                            좋은 사진과 친절한 플레이 소개가 있을수록 참여율이 올라가요
+                        </li>
+                        <li>
+                            <span class="ball active">3</span>
+                            달아 주신 태그와 타이틀은 그립 검색창에서 검색되니 꼭! 신경 써주세요
+                        </li>
+                    </ul>
+                </div>
+            
+			</div>
+			<div class="modal-footer">
+				<div class="btn-area">
+                    <a href="javascript:void(0)" class="btn btn-primary min-width-150">확인</a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 플레이 등록하기2 -->
+<div class="modal" tabindex="-1" id="modal-play-exist">
+	<div class="modal-dialog modal-dialog-centered modal-play-exist">
+		<div class="modal-content height-742">
+			<div class="modal-header">
+				<h5 class="modal-title">플레이 등록하기</h5>
+				<p class="modal-desc modal-desc-join">이전에 만드신 플레이를 불러올까요?</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="agree-check-wrap play">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk1">
+						<label class="custom-control-label" for="chk1">베어크리크 춘천에서 모여라~~!!</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk2">
+						<label class="custom-control-label" for="chk2">싱글 플레이어 모두모두 모여 동네한바퀴 워후 좋아요~~</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk3">
+						<label class="custom-control-label" for="chk3">안녕하세요 행복한 백돌이 모임이 즐겁습니다</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk4">
+						<label class="custom-control-label" for="chk4">경기도 모임 한판 때릴까요?</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>		
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk5">
+						<label class="custom-control-label" for="chk5">경기도 모임 결성하고 싶네요~</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk6">
+						<label class="custom-control-label" for="chk6">아름다운 가평 어떤가요</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="agree7">
+						<label class="custom-control-label" for="agree7">아난티남해 특가 이벤트에 함께할 모집원 구해요~ 이번이 아니면 싸게 못가요… </label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk7">
+						<label class="custom-control-label" for="chk7">베어크리크 춘천에서 모여라~~!!</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk8">
+						<label class="custom-control-label" for="chk8">베어크리크 춘천에서 모여라~~!! 2탄입니다!</label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="chk9">
+						<label class="custom-control-label" for="chk9">베어크리크 춘천에서 모여라~~!! 2탄입니다! </label>
+						<p class="date"><span>2020.02.12</span> 생성</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="btn-area">
+					<button class="btn btn-primary min-width-150">새로 만들기</button>
+					<button class="btn btn-primary min-width-150" disabled>선택 불러오기</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
 	var Play = {
 		/** 초기 로딩시 실행 */
@@ -833,6 +951,10 @@
 				console.log(this)
 				console.log($(this)[0]);
 			});
+
+			//플레이 등록하기 모달1,2
+			// $('#modal-play-enrollment').modal('show');
+			$('#modal-play-exist').modal('show');
 		},
 	}
 
