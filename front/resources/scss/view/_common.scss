@@ -32,6 +32,9 @@
 .btn{
     height: 35px;font-size: 19px;padding: 4px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.6px;    border-radius: 50rem;
   }
+  .btn-xsm{
+    height: 20px;font-size: 10px;padding: 0 10px 0;
+  }
   .btn-sm{
     height: 25px;font-size: 16px;padding: 0 18px;
   }
@@ -62,6 +65,7 @@
     .btn{
       height: 31px;font-size: 16px;padding: 4px 18px;
     }
+    
     .btn-sm{
       height: 22px;font-size: 12px;padding: 0 10px 0;
     }

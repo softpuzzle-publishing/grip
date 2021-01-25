@@ -834,6 +834,13 @@ html.open-search{
             [class^=col]{height: 200px;}
             border-radius: 0 0 9px 9px;overflow: hidden;
         }
+        .play-join{
+            margin-top: 20px;
+            .img{
+                width:77px;height:77px;margin-right:7px;
+                a{border-radius: 5px;}
+            }
+        }
     }
 }
 @include media-breakpoint-down(md) {
@@ -2072,14 +2079,17 @@ html.open-search{
     .label{font-weight: 400;max-width: 80px;flex: 0 0 80px;}
     .cnt{
         span{margin-right: 5px;}
+        .badge{margin-right: 15px;}
         > i{color: $danger;font-weight: 200;}
     }
-    .num{margin-right: 10px;}
+    .num{width:8px;height:8px;background-color:$primary; border-radius: 50%;margin-right: 8px;}
     .time{
         margin-right: 23px;
         &::before{display: none;}
     }
     .badge{margin-top: 6px;}
+    .place{font-size:14px;color:#a0a0a0;letter-spacing: -0.22px;font-weight: 500;margin-bottom: 10px;}
+    .player{margin-top: 25px;}
 }
 @include media-breakpoint-down(md) {
     .play-details-wrap{
@@ -2138,13 +2148,18 @@ html.open-search{
         > li + li{border-top: 1px dotted #b6b6b6;}
     }
     .user{display: flex;align-items: center;flex-wrap: wrap;margin-bottom: 10px;}
-    .profile{margin-right: 15px;width: 36px;height: 36px;}
+    .profile{margin-right: 15px;width:40px;height:40px;text-align:center;
+        span{
+            img{width: 36px;height: 36px;}
+        }
+    }
     .msg{
-        display: flex;flex-wrap: wrap;line-height: 1.5;align-items: center;
+        line-height: 1.5;
         .reply-form-frame{margin-top: 0;}
         .reply-form-frame textarea.form-control{height: 60px;}
     }
-    .name{font-size: 19px;color: $gray-dark;}
+    .tagname{font-size:14px;font-weight: 500;color:#4a4a4a;}
+    .name{font-size: 19px;color: $gray-dark;margin-right: 15px;}
     .text{font-size: 14px;color: $gray-dark;margin-right: 15px;}
     .date{font-size: 14px;font-weight: 200;color: #a6a6a6;margin-right: 15px;}
     .go{font-size: 12px;color: #a6a6a6;}
@@ -2171,7 +2186,11 @@ html.open-search{
                 & + .re{margin-top: 15px;}
             }
         }
-        .re{position: relative;}
+        .re{position: relative;background-color: #fcfcfc;padding:9px 23px;
+            .msg{
+                .text{padding-left: 55px;}    
+            }
+        }
         .re + .re{margin-top: 15px;}
         .d-flex{flex-wrap: wrap;}
     }
