@@ -3109,9 +3109,9 @@ html.open-search .club-summary { position: static; }
 
 .modal-play-exist .modal-body .agree-check-wrap.play { padding: 0; }
 
-.modal-play-exist .modal-body .custom-checkbox .date { font-size: 14px; letter-spacing: -0.24px; color: #a4a4a4; margin-top: 3px; }
+.modal-play-exist .modal-body .custom-radio .date { font-size: 14px; letter-spacing: -0.24px; color: #a4a4a4; margin-top: 3px; }
 
-.modal-play-exist .modal-body .custom-checkbox .custom-control-label::before { margin-top: 10px; }
+.modal-play-exist .modal-body .custom-radio .custom-control-label::before { margin-top: 10px; }
 
 body.body-main #header { position: fixed; z-index: 1; width: 100%; -webkit-transition: all .35s .3s ease-in-out; transition: all .35s .3s ease-in-out; }
 

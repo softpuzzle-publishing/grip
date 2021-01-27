@@ -2350,9 +2350,9 @@ html.open-search{
     .modal-body{
         padding:37px 0 0 65px;overflow-y:scroll;
         .agree-check-wrap.play{padding:0;}
-        .custom-checkbox{
+        .custom-radio{
             .date{font-size:14px;letter-spacing: -0.24px;color:#a4a4a4;margin-top: 3px;}
         }
-        .custom-checkbox .custom-control-label::before{margin-top: 10px;}
+        .custom-radio .custom-control-label::before{margin-top: 10px;}
     }
 }
