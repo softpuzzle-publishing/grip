@@ -62,10 +62,13 @@
 
   @include media-breakpoint-down(md) {
     .w-60{width:100%;}
+    
     .btn{
       height: 31px;font-size: 16px;padding: 4px 18px;
     }
-    
+    .btn-xsm{
+        width:70px;height: 20px;font-size: 10px;padding: 0 10px 0;
+    }
     .btn-sm{
       height: 22px;font-size: 12px;padding: 0 10px 0;
     }
@@ -586,8 +589,8 @@
     }
 }
 
-.more-toggle{position: absolute; right: 10px;top:10px;display:none;
-  
+.more-toggle{position: absolute; right: 10px;top:10px;display:block;
+    &.play-join{top:50px;}
     a{display: block;width: 18px;height: 18px;text-align: center;}
     i{
         display: inline-block;vertical-align: top;width: 4px;height: 4px;background-color: #d8d8d8;border-radius: 4px;position: relative;
@@ -612,7 +615,9 @@
     .active ~ ul{display: block;}
 }
 @include media-breakpoint-down(md){
-    .more-toggle{display:block;}
+    .more-toggle{display:block;
+        &.play-join{top:5px;right:50px;}
+    }
 }
 .host{
     .member{
