@@ -2080,7 +2080,7 @@ html.open-search{
     .cnt{
         span{margin-right: 5px;}
         .badge{margin-right: 15px;}
-        > i{color: $danger;font-weight: 200;}
+        .align-middle{color: $danger;font-weight: 200;}
     }
     .num{width:8px;height:8px;background-color:$primary; border-radius: 50%;margin-right: 8px;}
     .time{

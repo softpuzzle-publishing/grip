@@ -2904,7 +2904,7 @@ html.open-search .club-summary { position: static; }
 
 .play-details .cnt .badge { margin-right: 15px; }
 
-.play-details .cnt > i { color: #e02020; font-weight: 200; }
+.play-details .cnt .align-middle { color: #e02020; font-weight: 200; }
 
 .play-details .num { width: 8px; height: 8px; background-color: #00c784; border-radius: 50%; margin-right: 8px; }
 
