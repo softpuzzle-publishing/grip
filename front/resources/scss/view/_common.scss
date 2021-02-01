@@ -27,10 +27,11 @@
 .font-14{font-size:14px;}
 // 라디오 disabled
 .custom-control-input:disabled ~ .custom-control-label{color:#ddd;}
+.btn-white{background-color:#fff;color:$primary;}
 .btn-primary:disabled{border-color:#d4d4d4;background-color:#d4d4d4;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);}
 .btn-secondary:disabled{border-color:#d4d4d4;background-color:#d4d4d4;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);}
 .btn{
-    height: 35px;font-size: 19px;padding: 4px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.6px;    border-radius: 50rem;
+    height: 35px;font-size: 19px;padding: 4px 20px;box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);letter-spacing: -0.6px; border-radius: 50rem;
   }
   .btn-xsm{
     height: 20px;font-size: 10px;padding: 0 10px 0;
@@ -59,6 +60,8 @@
   .w-60{width:60%;}
   .btn-outline-light{color: rgba(161, 161, 161, .6);}
   .btn-gray-light{color: #fff;background-color: #c9c9c9;border-color: #c9c9c9;}
+  
+  .cancel-btn{color:#767676;font-size:12px;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02);margin-left:15px;text-decoration: underline;}
 
   @include media-breakpoint-down(md) {
     .w-60{width:100%;}

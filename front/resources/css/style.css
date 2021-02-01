@@ -46,6 +46,8 @@
 
 .custom-control-input:disabled ~ .custom-control-label { color: #ddd; }
 
+.btn-white { background-color: #fff; color: #00c784; }
+
 .btn-primary:disabled { border-color: #d4d4d4; background-color: #d4d4d4; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .btn-secondary:disabled { border-color: #d4d4d4; background-color: #d4d4d4; -webkit-box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2); }
@@ -87,6 +89,8 @@
 .btn-outline-light { color: rgba(161, 161, 161, 0.6); }
 
 .btn-gray-light { color: #fff; background-color: #c9c9c9; border-color: #c9c9c9; }
+
+.cancel-btn { color: #767676; font-size: 12px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.02); margin-left: 15px; text-decoration: underline; }
 
 @media (max-width: 991.98px) { .w-60 { width: 100%; }
   .btn { height: 31px; font-size: 16px; padding: 4px 18px; }
@@ -2952,6 +2956,8 @@ html.open-search .club-summary { position: static; }
 
 .player .active .status { display: block; }
 
+.player .my span { border-radius: 50%; border: 1px solid #00c784; }
+
 .player.player-ing li[data-host="true"] .status { display: block; }
 
 @media (max-width: 991.98px) { .player ul { margin-left: -15px; margin-right: -15px; }
@@ -3020,7 +3026,7 @@ html.open-search .club-summary { position: static; }
 
 .reply-form-frame.active + .re { margin-top: 15px; }
 
-.reply .a .re { position: relative; background: rgba(244, 244, 244, 0.3); padding: 9px 23px; border-radius: 9px; }
+.reply .a .re { position: relative; padding: 9px 23px; border-radius: 9px; background: rgba(244, 244, 244, 0.3); }
 
 .reply .a .re .msg .text { padding-left: 55px; }
 
@@ -3038,13 +3044,19 @@ html.open-search .club-summary { position: static; }
 
 .reply-form .agree p { margin-bottom: 4px; color: #a68a76; font-size: 12px; font-weight: 200; }
 
-.reply .re-comment { position: relative; display: block; padding-left: 53px; margin-top: 15px; }
+.amend-badge { font-size: 8px; font-weight: 500; color: #a6a6a6; border: 1px solid #a6a6a6; border-radius: 8px; padding: 0 6px 0 4px; display: inline-block; margin: 0 5px; }
+
+.reply .re-comment { position: relative; display: block; padding-left: 53px; margin-top: 15px; display: none; }
 
 .reply .re-comment::before { content: ''; display: block; width: 17px; height: 15px; background: url(../images/att-88.svg) no-repeat 50% 50%; position: absolute; top: 0; left: 30px; }
 
-.reply .re-comment .bg { background: rgba(244, 244, 244, 0.3); position: relative; border-radius: 8px; padding: 15px 23px 15px; }
+.reply .re-comment .bg { background: rgba(244, 244, 244, 0.3); position: relative; border-radius: 8px; padding: 15px 23px 15px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
-.reply .re-comment .reply-form-frame { display: block; }
+.reply .re-comment .re-name { width: 65px; margin-top: 15px; }
+
+.reply .re-comment .reply-form-frame { width: 100%; display: block; }
+
+.reply .re-comment.active { display: block; }
 
 @media (max-width: 991.98px) { .reply .msg > * { margin-bottom: 3px; }
   .reply .name { font-size: 14px; }
@@ -3135,6 +3147,30 @@ html.open-search .club-summary { position: static; }
 .modal-play-exist .modal-body .custom-radio .date { font-size: 14px; letter-spacing: -0.24px; color: #a4a4a4; margin-top: 3px; }
 
 .modal-play-exist .modal-body .custom-radio .custom-control-label::before { margin-top: 10px; }
+
+.profile-apply li { padding: 25px 0; border-bottom: 1px solid #ddd; }
+
+.profile-apply .img.horizontal { width: 127px; height: 93px; }
+
+.profile-apply .thumb { border-radius: 7px; }
+
+.profile-apply .comeback { font-size: 14px; font-weight: 500; letter-spacing: -0.3px; color: #a1a1a1; margin-bottom: 15px; }
+
+.profile-apply .box { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.profile-apply .wrapper { margin-left: 10px; }
+
+.profile-apply .summary .location { font-size: 12px; font-weight: bold; letter-spacing: -0.3px; color: #b0b0b0; }
+
+.profile-apply .summary .name span { display: inline-block; font-size: 19px; margin: 3px 0; font-weight: 300; letter-spacing: -0.5px; color: #4f4f4f; }
+
+.profile-apply .summary .name i { font-size: 12px; color: #e02020; }
+
+.profile-apply .summary .type { font-size: 14px; font-weight: 300; letter-spacing: -0.35px; color: #4f4f4f; margin-bottom: 3px; }
+
+.profile-apply .summary .point { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.profile-apply .summary .point .level { margin-left: 23px; }
 
 body.body-main #header { position: fixed; z-index: 1; width: 100%; -webkit-transition: all .35s .3s ease-in-out; transition: all .35s .3s ease-in-out; }
 

@@ -2,104 +2,730 @@
 <html lang="ko">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="cache-control" content="no-cache" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>grip</title>
-	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>grip</title>
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
     <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
-	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
-	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
-	<link rel="stylesheet" href="../../resources/plugin/fullpage/fullpage.css">
-	<link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugin/fullpage/fullpage.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="../../resources/css/style.css">
-	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
-	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
-	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
-	<script src="../../resources/plugin/fullpage/fullpage.js"></script>
-	<script src="../../resources/js/ui.js"></script>
+    <script src="../../resources/plugin/jquery/jquery.min.js"></script>
+    <script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+    <script src="../../resources/plugin/fullpage/fullpage.js"></script>
+    <script src="../../resources/js/ui.js"></script>
 </head>
 
 <body>
 
-<div id="wrap">
-    <div id="header-block">
-		<!-- header include -->
-    </div>
-    <div id="container-block">
-        <div class="play-join-top">
-            <div class="container">
-                <div class="content">
-                    <div class="info">
-                        <span class="d-day">D-5day</span><span class="text-primary">골프레슨</span>
-                    </div>
-                    <div class="title">
-                        <h2 class="subject">싱글 플레이어!<br class="d-md-none">베어크리크 춘천에서 모이자!</h2>
-                        <div class="host">
-                            <div class="member">
-                                <div class="profile">
-                                    <span>
-                                        <img src="../../resources/images/icon-male.png" alt="홍길동님">
-                                    </span>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div class="play-join-top">
+                <div class="container">
+                    <div class="content">
+                        <div class="info">
+                            <span class="d-day">D-5day</span><span class="text-primary">골프레슨</span>
+                        </div>
+                        <div class="title">
+                            <h2 class="subject">싱글 플레이어!<br class="d-md-none">베어크리크 춘천에서 모이자!</h2>
+                            <div class="host">
+                                <div class="member">
+                                    <div class="profile">
+                                        <span>
+                                            <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                        </span>
+                                    </div>
+                                    <div class="plus">
+                                        <span>+1</span>
+                                    </div>
                                 </div>
-                                <div class="plus">
-                                    <span>+1</span>
+                            </div>
+                        </div>
+                        <div class="hash">#싱글 #춘천 #18H #싱글플레이어 #베어크리크</div>
+                        <div class="application">
+                            <button type="button" class="btn btn-outline-primary min-width-186">참여 취소</button>
+                            
+                            <button type="button" class="btn btn-primary min-width-186" data-id="btn-play">신청하기</button>
+
+                            <button type="button" class="btn btn-gray-light min-width-186">종료된 플레이</button>
+
+                            <button type="button" class="btn btn-secondary min-width-186" data-toggle="modal" data-target="#modal-play-success">완료</button>
+
+                            <button type="button" class="btn btn-primary min-width-186" data-toggle="modal" data-target="#modal-play-deadline-confirm">모집마감</button>
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-white min-width-186" data-id="btn-play">신청한 플레이</button><a href="javascript:void(0)" class="cancel-btn">신청 취소</a>
+                            </div>
+                        </div>
+                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
+                        <div class="more-toggle play-join">
+                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                            <ul>
+                                <li><a href="javascript:;" data-toggle="modal" data-target="#modal-review-declaration">
+                                        <p class="modify"></p>수정하기
+                                    </a></li>
+
+                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete" data-toggle="modal" data-target="#modal-play-delete-confirm">
+                                        <p class="delete"></p>삭제하기
+                                    </a></li>
+
+                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                        <p class="declaration"></p>신고하기
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="club-top">
+                            <div class="gallery">
+                                <div class="play-join">
+                                    <div class="row row-10">
+                                        <div class="img">
+                                            <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
+                                                <img src="../../resources/images/001_oakvalley_cc_05_detail1.png" alt="" onload="setDirection(this)">
+                                            </a>
+                                        </div>
+                                        <div class="img">
+                                            <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
+                                                <img src="../../resources/images/001_oakvalley_cc_05_detail2.png" alt="" onload="setDirection(this)">
+                                            </a>
+                                        </div>
+                                        <div class="img">
+                                            <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
+                                                <img src="../../resources/images/001_oakvalley_cc_05_detail3.png" alt="" onload="setDirection(this)">
+                                            </a>
+                                        </div>
+                                        <div class="img">
+                                            <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
+                                                <img src="../../resources/images/001_oakvalley_cc_05_detail4.png" alt="" onload="setDirection(this)">
+                                            </a>
+                                        </div>
+                                        <div class="img">
+                                            <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
+                                                <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hash">#싱글 #춘천 #18H #싱글플레이어 #베어크리크</div>
-                    <div class="application">
-                        <button type="button" class="btn btn-outline-primary min-width-186">참여 취소</button>
-                        <button type="button" class="btn btn-primary min-width-186" data-id="btn-play">신청하기</button>
-                        <button type="button" class="btn btn-primary min-width-186" disabled>참여 불가</button>
-                        <button type="button" class="btn btn-gray-light min-width-186">종료된 플레이</button>
-                        <button type="button" class="btn btn-secondary min-width-186" data-toggle="modal" data-target="#modal-play-success">완료</button>
-                        <button type="button" class="btn btn-primary min-width-186" data-toggle="modal" data-target="#modal-play-deadline-confirm">모집마감</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <section class="section-play-join">
+                        <div class="subtitle-area">
+                            <div class="subtitle">플레이 정보</div>
+                        </div>
+                        <div class="play-details">
+                            <div class="d-flex">
+                                <div class="label">장소</div>
+                                <div class="cnt">
+                                    <div class="d-flex">
+                                        <span>엘리시안 강촌 나인플러스 골프클럽</span><button class="btn btn-secondary btn-xsm mr-1">대표장소</button><i class="align-middle">50km</i>
+                                    </div>
+                                    <p class="place">경기도 춘천시 남이면 도깨비로 127</p>
+                                    <p>KMH 떼제베 컨트리클럽</p>
+                                    <p>베어크리크 춘천 컨트리클럽</p>
+
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="label">내용</div>
+                                <div class="cnt"><span>필드레슨 (18H)</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="label">시작일정</div>
+                                <div class="cnt"><span>2020.06.23 (화) 12:20 ~ 2020.07.02 (목) 21:30</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="label">참가비용</div>
+                                <div class="cnt"><span>200,000 (인당)</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="label">포함사항</div>
+                                <div class="cnt"><span>점심 식대 포함, 1일차 저녁 식대 포함, 스파이크 대여, 기념품</span></div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="label">상세내용</div>
+                                <div class="cnt"><span class="badge badge-grass">실내연습장</span><span class="badge badge-grass">드라이빙레인지</span><span class="badge badge-grass">숏게임장</span><span class="badge badge-grass">퍼팅그린</span><span class="badge badge-grass">스크린골프</span><span class="badge badge-grass">필드레슨(18H)</span><span class="badge badge-grass">필드레슨(9H)</span><span class="badge badge-grass">필드레슨</span>
+                                </div>
+                            </div>
+                    </section>
+                    <section class="section-play-join">
+                        <div class="subtitle-area">
+                            <div class="subtitle">프로그램</div>
+                        </div>
+                        <div class="play-details">
+                            <div class="d-flex align-items-center">
+                                <div class="num"></div>
+                                <div class="cnt">베어크리크 춘천 클럽하우스 앞 집합</div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="num"></div>
+                                <div class="cnt">점심은 그늘집 푸드코트 식사 (약 열두시 반)</div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="num"></div>
+                                <div class="cnt">오후 2시 차례대로 2차 라운드 시작</div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="num"></div>
+                                <div class="cnt">라운드 종료</div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="num"></div>
+                                <div class="cnt">각자 외부 식사하시면 됩니다~</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-play-join">
+                        <div class="subtitle-area">
+                            <div class="subtitle">호스트 및 플레이 소개</div>
+                        </div>
+                        <div class="play-details">
+                            <div class="d-flex">
+                                <div class="cnt">베어크리크에 춘천에서 함께 라운딩할 플레이어를 모집합니다. 매너 골프를 즐기시는 분이라면 언제든 환영입니다. 그리고 죄송하게도 원활한 게임을 위해 90타 초과되시는 분과 내기골프를 즐기는 분은 정중히 사양합니다. 그럼 많은 참여 부탁드립니다!!!
+                                </div>
+                            </div>
+                            <div class="player">
+                                <p>플레이어 요구사항</p>
+                                <div class="cnt">
+                                    <span class="badge badge-outline-primary">성별 - <i>남자</i></span>
+                                    <span class="badge badge-outline-primary">연령 - <i>2030대</i></span>
+                                    <span class="badge badge-outline-primary">핸디캡 -<i>+5~+10</i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-play-join">
+                        <div class="subtitle-area">
+                            <div class="subtitle">플레이어</div>
+                            <p class="desc desc-sm">*프로필 이미지를 클릭하여 <br class="d-md-none">다른 플레이어의 정보를 확인할 수 있습니다</p>
+                        </div>
+                        <div class="player player-ing">
+                            <ul player-max="4" player-ing="2" style="display:none">
+                                <li class="active" data-host="true">
+                                    <!-- 호스트일때 data-host="true" -->
+                                    <a href="#modal-profile" data-toggle="modal" class="profile">
+                                        <span><img src="../../resources/images/icon-male.png" alt="가모탁"></span>
+                                    </a>
+                                    <div class="name">가모탁</div>
+                                    <div class="status"><i class="text-primary">호스트</i></div>
+                                </li>
+                                <li class="active">
+                                    <!-- 프로필 있을때 .active -->
+                                    <a href="#modal-profile" data-toggle="modal" class="profile">
+                                        <span><img src="../../resources/images/icon-female.png" alt="도하나"></span>
+                                    </a>
+                                    <div class="name">도하나</div>
+                                </li>
+                                <li class="active my">
+                                    <!-- 프로필 있을때 .active -->
+                                    <!-- 본인 일 때 .my-->
+                                    <a href="#modal-profile" data-toggle="modal" class="profile">
+                                        <span><img src="../../resources/images/icon-male.png" alt="소문"></span>
+                                    </a>
+                                    <div class="name">소문 (나)</div>
+                                </li>
+                                <li class="active">
+                                    <!-- 프로필 있을때 .active -->
+                                    <a href="#modal-profile" data-toggle="modal" class="profile">
+                                        <span><img src="../../resources/images/icon-male.png" alt="지청신"></span>
+                                    </a>
+                                    <div class="name">지청신</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="section-play-join">
+                        <div class="subtitle-area">
+                            <div class="subtitle">신청현황</div>
+                            <p class="desc desc-sm">*프로필 이미지를 클릭하여 <br class="d-md-none">다른 플레이어의 정보를 확인할 수 있습니다</p>
+                        </div>
+                        <div class="player">
+                            <ul>
+                                <li class="active">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#modal-profile-apply" class="profile">
+                                        <span><img src="../../resources/images/icon-male.png" alt="홍길동"></span>
+                                    </a>
+                                    <div class="name">홍길동</div>
+                                    <div class="status"><i class="text-secondary">대기중</i></div>
+                                </li>
+                                <li class="active">
+                                    <a href="#modal-profile" data-toggle="modal" data-role="button" class="profile">
+                                        <span><img src="../../resources/images/icon-female.png" alt="고길동"></span>
+                                    </a>
+                                    <div class="name">홍길순</div>
+                                    <div class="status"><i class="text-secondary">대기중</i></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="section-play-join">
+                        <div class="subtitle-area">
+                            <div class="subtitle">호스트와 묻고 답하기</div>
+                        </div>
+                        <div class="reply">
+                            <ul>
+                                <li>
+                                    <div class="q">
+                                        <div class="user">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="홍길동">
+                                                </span>
+                                            </div>
+                                            <div class="name">도하나</div>
+                                            <div class="date">2019.03.08 12:02</div>
+                                            <a href="javascript:;" class="go">답글달기</a>
+                                        </div>
+                                        <div class="msg">
+                                            <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요? 노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?
+                                            </div>
+                                        </div>
+                                        <div class="more-toggle">
+                                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                            <ul>
+                                                <li><a href="javascript:;">
+                                                        <p class="modify"></p>수정하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                        <p class="delete"></p>삭제하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                                        <p class="declaration"></p>신고하기
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="re-comment">
+                                        <div class="bg">
+                                            <p class="re-name">소문</p>
+                                            <div class="reply-form-frame">
+                                                <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check"></textarea>
+                                                <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="a show">
+                                        <!-- 답변 있을때 .show -->
+                                        <div class="bg">
+                                            <div class="re">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="profile">
+                                                        <span>
+                                                            <img src="../../resources/images/icon-male.png" alt="홍길동">
+                                                        </span>
+                                                        <div class="tagname">도하나</div>
+                                                    </div>
+                                                    <div class="user">
+                                                        <div class="name">소문</div>
+                                                        <div class="date">2019.03.08 12:02</div>
+                                                        <a href="javascript:;" class="go">답글달기</a>
+                                                    </div>
+                                                </div>
+                                                <div class="msg">
+                                                    <div class="text">이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로</div>
+                                                </div>
+                                                <div class="more-toggle">
+                                                    <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                                    <ul>
+                                                        <li><a href="javascript:;">
+                                                                <p class="modify"></p>수정하기
+                                                            </a></li>
+                                                        <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                                <p class="delete"></p>삭제하기
+                                                            </a></li>
+                                                        <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                                                <p class="declaration"></p>신고하기
+                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="re-comment">
+                                                <div class="bg">
+                                                    <p class="re-name">소문</p>
+                                                    <div class="reply-form-frame">
+                                                        <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check"></textarea>
+                                                        <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 대댓글 수정 -->
+                                        <!-- <div class="re">
+                                            <div class="d-flex align-items-center">
+                                                <div class="profile">
+                                                    <span>
+                                                        <img src="../../resources/images/icon-male.png" alt="홍길동">
+                                                    </span>
+                                                </div>
+                                                <div class="user">
+                                                    <div class="name">소문</div>
+                                                    <div class="date">2019.03.08 12:02</div>
+                                                </div>
+                                            </div>
+                                            <div class="msg mt-2">
+                                                <div class="reply-form">
+                                                    <div class="reply-form-frame">
+                                                        <textarea name="" id="" cols="" rows="" placeholder="수정되는 폼입니다." class="form-control" data-byte-target="#textarea-check"> 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로
+                                                        </textarea>
+                                                        <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="more-toggle">
+                                                <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                                <ul>
+                                                    <li><a href="javascript:;">
+                                                            <p class="modify"></p>수정하기
+                                                        </a></li>
+                                                    <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                            <p class="delete"></p>삭제하기
+                                                        </a></li>
+                                                    <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                                            <p class="declaration"></p>신고하기
+                                                        </a></li>
+                                                </ul>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="q">
+                                        <div class="user">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="가모탁">
+                                                </span>
+                                            </div>
+                                            <div class="name">가모탁</div>
+                                            <div class="date">2019.03.08 12:02</div>
+                                            <a href="javascript:;" class="go">답글달기</a>
+                                        </div>
+                                        <div class="msg">
+                                            <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?<span class="amend-badge">수정됨</span></div>
+                                        </div>
+                                        <div class="more-toggle">
+                                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                            <ul>
+                                                <li><a href="javascript:;">
+                                                        <p class="modify"></p>수정하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                        <p class="delete"></p>삭제하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                                        <p class="declaration"></p>신고하기
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="re-comment">
+                                        <div class="bg">
+                                            <p class="re-name">소문</p>
+                                            <div class="reply-form-frame">
+                                                <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check"></textarea>
+                                                <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 비밀 작성 글 -->
+                                <li>
+                                    <div class="q">
+                                        <div class="user">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="지청신">
+                                                </span>
+                                            </div>
+                                            <div class="name">지청신</div>
+                                            <div class="date">2019.03.08 12:02</div>
+                                            <a href="javascript:;" class="go">답글달기</a>
+                                        </div>
+                                        <div class="msg">
+                                            <div class="text"><i class="ic-lock"></i>비밀글입니다</div>
+                                        </div>
+                                        <div class="more-toggle">
+                                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                            <ul>
+                                                <li><a href="javascript:;">
+                                                        <p class="modify"></p>수정하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                        <p class="delete"></p>삭제하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                                        <p class="declaration"></p>신고하기
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="re-comment">
+                                        <div class="bg">
+                                            <p class="re-name">소문</p>
+                                            <div class="reply-form-frame">
+                                                <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check"></textarea>
+                                                <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 관리자 삭제 글 -->
+                                <li>
+                                    <div class="q">
+                                        <div class="user">
+                                            <div class="profile">
+                                                <span>
+                                                    <img src="../../resources/images/icon-male.png" alt="지**">
+                                                </span>
+                                            </div>
+                                            <div class="name">지**</div>
+                                            <div class="date">2019.03.08 12:02</div>
+                                        </div>
+                                        <div class="msg">
+                                            <div class="text">관리자에 의해 삭제된 댓글입니다</div>
+                                        </div>
+                                        <div class="more-toggle">
+                                            <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                                            <ul>
+                                                <li><a href="javascript:;">
+                                                        <p class="modify"></p>수정하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                        <p class="delete"></p>삭제하기
+                                                    </a></li>
+                                                <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
+                                                        <p class="declaration"></p>신고하기
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="reply-form">
+                            <div class="reply-form-frame">
+                                <textarea name="" id="" cols="" rows="" placeholder="궁금한 내용을 호스트에게 문의해보세요!" class="form-control" data-byte-target="#textarea-check"></textarea>
+                                <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                            </div>
+                            <div class="agree">
+                                <p>*비밀글로 문의시 호스트와 작성자만 확인할 수 있습니다</p>
+                                <div class="custom-control custom-checkbox custom-checkbox-square custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" name="agree" id="secret">
+                                    <label class="custom-control-label" for="secret">비밀글로 문의</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light min-width-220" data-toggle="modal" data-target="#modal-play-cancel-confirm">플레이 취소하기</button>
+                        <button type="button" class="btn btn-primary min-width-220" onclick="document.location.href='../management_play/management_play.html'">플레이 관리로 돌아가기</button>
                     </div>
-                    <button type="button" class="share"><span class="sr-only">공유하기</span></button>
-                    <div class="more-toggle play-join">
-                        <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 플레이 참여하기 -->
+    <div class="modal" tabindex="-1" id="modal-play-join">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">플레이 참여하기</h5>
+                    <p class="modal-desc modal-desc-join"><span class="text-primary">홍길동</span>님의 플레이에<br class="d-sm-none"> 참여하시겠습니까?</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="play-details-wrap">
+                        <div class="agree-check-wrap">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree1">
+                                <label class="custom-control-label" for="agree1">그립 앤드 플레이는 게스트의 직접 참여를 원칙으로 합니다</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree2">
+                                <label class="custom-control-label" for="agree2">금전적 거래는 상호간 책임 하에 진행하며, 필수적인 경우로 제한합니다</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree3">
+                                <label class="custom-control-label" for="agree3">플레이 참여는 신청 후 호스트의 승낙으로 확정됩니다</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree4">
+                                <label class="custom-control-label" for="agree4">보다 즐거운 플레이를 위해 게스트는 호스트에게 프로그램의 구체적인 <br class="d-none d-md-block">내용을 문의할 수 있습니다</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree5">
+                                <label class="custom-control-label" for="agree5">플레이 참여 확정 후, 무차별적인 취소는 제한되며, 호스트와의 합의 하에 결정되어야 합니다</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree6">
+                                <label class="custom-control-label" for="agree6">어떠한 경우에도 렛츠그립은 고객의 개인정보를 노출/공개, 제공하지 않으며 호스트와 <br class="d-none d-md-block">게스트간 상호 동의 및 책임 하에 정보를 공유해야 합니다</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree7">
+                                <label class="custom-control-label" for="agree7">올바른 골프문화를 형성하기 위해 상호간 비방 및 욕설, 폭언은 금지합니다</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="play-noti">
+                        <p><span>※</span>호스트가 신청을 수락하면 회원님의 최종 참여의사를 다시 확인합니다 (확정 전 자유롭게 취소 가능)</p>
+                        <p><span>※</span>회원님의 개인정보는 어떠한 경우에도 호스트에게 공개되지 않습니다</p>
+                        <p><span>※</span>플레이에 관해 궁금한 사항이 있으시면 호스트에게 댓글로 문의해주세요</p>
+                    </div>
+                    <div class="btn-area m-t-20">
+                        <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal">아니오</button>
+                        <button type="button" class="btn btn-primary min-width-150" data-id="btn-play-yes">예</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 참여 신청 완료 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-complete">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <em>참여 신청 완료</em>
+                        <p>호스트의 응답을 기다려주세요</p>
+                    </div>
+                    <div class="btn-area">
+                        <a href="../main/main.html" class="btn btn-primary btn-text-sm min-width-150">확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 플레이 취소 확인 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-cancel-confirm">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p><span class="text-primary">플레이</span>를 취소하시겠습니까? <br>삭제된 플레이는 복원이 불가합니다</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">예</button>
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 플레이 생성완료 -->
+    <div class="modal" tabindex="-1" id="modal-play-success">
+        <div class="modal-dialog modal-dialog-centered modal-play-success">
+            <div class="modal-content height-742">
+                <div class="modal-header">
+                    <h5 class="modal-title">플레이 생성완료</h5>
+                    <p class="modal-desc modal-desc-join"><span class="text-primary">6월 25일</span> 플레이가 생성되었습니다<br>게스트를 모집해보세요</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="../../resources/images/img-45.png" alt="생성완료">
+                    </div>
+                    <div class="play-success">
                         <ul>
-                            <li><a href="javascript:;" data-toggle="modal" data-target="#modal-review-declaration"><p class="modify"></p>수정하기</a></li>
-
-                            <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete" data-toggle="modal" data-target="#modal-play-delete-confirm"><p class="delete"></p>삭제하기</a></li>
-
-                            <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
+                            <li>
+                                <span class="ball active">1</span>
+                                생성한 플레이 내용은 마감 전까지 언제든 수정할 수 있어요
+                            </li>
+                            <li>
+                                <span class="ball active">2</span>
+                                참여신청이 오면 신청자의 프로필을 클릭해서 함께 플레이 할지 정할 수 있어요
+                            </li>
+                            <li>
+                                <span class="ball active">3</span>
+                                바로 정해지진 않아요. 신청자에게 다시 한번 참여 의사를 물어보고 플레이어로 결정돼요
+                            </li>
+                            <li>
+                                <span class="ball active">4</span>
+                                플레이어가 모였으면 꼭! 모집마감해주세요
+                            </li>
+                            <li>
+                                <span class="ball active">5</span>
+                                인원보다 많은 사람을 선택하면 선착순으로 플레이어가 결정되니 참고하세요
+                            </li>
                         </ul>
+                        <p class="txt-danger">※ 플레이 내용에 불쾌할 수 있는 내용이 포함되어있다면 삭제될 수 있으니 주의해주세요!</p>
                     </div>
-                    <div class="club-top">
-                        <div class="gallery">
-                            <div class="play-join">
-                                <div class="row row-10">
-                                    <div class="img">
-                                        <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
-                                            <img src="../../resources/images/001_oakvalley_cc_05_detail1.png" alt="" onload="setDirection(this)">
-                                        </a>
-                                    </div>
-                                    <div class="img">
-                                        <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
-                                            <img src="../../resources/images/001_oakvalley_cc_05_detail2.png" alt="" onload="setDirection(this)">
-                                        </a>
-                                    </div>
-                                    <div class="img">
-                                        <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
-                                            <img src="../../resources/images/001_oakvalley_cc_05_detail3.png" alt="" onload="setDirection(this)">
-                                        </a>
-                                    </div>
-                                    <div class="img">
-                                        <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
-                                            <img src="../../resources/images/001_oakvalley_cc_05_detail4.png" alt="" onload="setDirection(this)">
-                                        </a>
-                                    </div>
-                                    <div class="img">
-                                        <a href="javascript:;" class="thumb" data-toggle="modal" data-target="#modal-play-gallery">
-                                            <img src="../../resources/images/001_oakvalley_cc_05_detail5.png" alt="" onload="setDirection(this)">
-                                        </a>
-                                    </div>
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn btn-primary min-width-150">확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal : 갤러리 -->
+    <div class="modal modal-gallery" tabindex="-1" id="modal-play-gallery">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="gallery-top">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail1.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail2.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail3.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail4.png)"></div>
+                                <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail5.png)"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-button-white swiper-button-next-gallery"></div>
+                        <div class="swiper-button-prev swiper-button-white swiper-button-prev-gallery"></div>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail1.png)"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail2.png)"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail3.png)"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail4.png)"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail5.png)"></div>
                                 </div>
                             </div>
                         </div>
@@ -107,772 +733,292 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="content">
-                <section class="section-play-join">
-                    <div class="subtitle-area">
-                        <div class="subtitle">플레이 정보</div>
+    </div>
+    <!-- alert : 플레이 삭제 확인 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-delete-confirm">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>
+                            플레이를 <span class="text-danger">삭제</span>할까요?<br>
+                            삭제된 플레이는 복구되지 않습니다
+                        </p>
                     </div>
-                    <div class="play-details">
-                        <div class="d-flex">
-                            <div class="label">장소</div>
-                            <div class="cnt">
-                                <div class="d-flex">
-                                    <span>엘리시안 강촌 나인플러스 골프클럽</span><button class="btn btn-secondary btn-xsm mr-1">대표장소</button><i class="align-middle">50km</i>
-                                </div>
-                                <p class="place">경기도 춘천시 남이면 도깨비로 127</p>
-                                <p>KMH 떼제베 컨트리클럽</p>
-                                <p>베어크리크 춘천 컨트리클럽</p>
-                            
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">내용</div>
-                            <div class="cnt"><span>필드레슨 (18H)</span></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">시작일정</div>
-                            <div class="cnt"><span>2020.06.23 (화) 12:20 ~ 2020.07.02 (목) 21:30</span></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">참가비용</div>
-                            <div class="cnt"><span>200,000 (인당)</span></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">포함사항</div>
-                            <div class="cnt"><span>점심 식대 포함, 1일차 저녁 식대 포함, 스파이크 대여, 기념품</span></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">상세내용</div>
-                            <div class="cnt"><span class="badge badge-grass">실내연습장</span><span class="badge badge-grass">드라이빙레인지</span><span class="badge badge-grass">숏게임장</span><span class="badge badge-grass">퍼팅그린</span><span class="badge badge-grass">스크린골프</span><span class="badge badge-grass">필드레슨(18H)</span><span class="badge badge-grass">필드레슨(9H)</span><span class="badge badge-grass">필드레슨</span>
-                        </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-delete-y">예</button>
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
                     </div>
-                </section>
-                <section class="section-play-join">
-                    <div class="subtitle-area">
-                        <div class="subtitle">프로그램</div>
-                    </div>
-                    <div class="play-details">
-                        <div class="d-flex align-items-center">
-                            <div class="num"></div>
-                            <div class="cnt">베어크리크 춘천 클럽하우스 앞 집합</div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="num"></div>
-                            <div class="cnt">점심은 그늘집 푸드코트 식사 (약 열두시 반)</div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="num"></div>
-                            <div class="cnt">오후 2시 차례대로 2차 라운드 시작</div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="num"></div>
-                            <div class="cnt">라운드 종료</div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="num"></div>
-                            <div class="cnt">각자 외부 식사하시면 됩니다~</div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-play-join">
-                    <div class="subtitle-area">
-                        <div class="subtitle">호스트 및 플레이 소개</div>
-                    </div>
-                    <div class="play-details">
-                        <div class="d-flex">
-                            <div class="cnt">베어크리크에 춘천에서 함께 라운딩할 플레이어를 모집합니다. 매너 골프를 즐기시는 분이라면 언제든 환영입니다. 그리고 죄송하게도 원활한 게임을 위해 90타 초과되시는 분과 내기골프를 즐기는 분은 정중히 사양합니다. 그럼 많은 참여 부탁드립니다!!!
-                            </div>
-                        </div>
-                        <div class="player">
-                            <p>플레이어 요구사항</p>
-                            <div class="cnt">
-                                <span class="badge badge-outline-primary">성별 - <i>남자</i></span>
-                                <span class="badge badge-outline-primary">연령 - <i>2030대</i></span>
-                                <span class="badge badge-outline-primary">핸디캡 -<i>+5~+10</i></span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-play-join">
-                    <div class="subtitle-area">
-                        <div class="subtitle">플레이어</div>
-                        <p class="desc desc-sm">*프로필 이미지를 클릭하여 <br class="d-md-none">다른 플레이어의 정보를 확인할 수 있습니다</p>
-                    </div>
-                    <div class="player player-ing">
-                        <ul player-max="4" player-ing="2" style="display:none">
-                            <li class="active" data-host="true">  <!-- 호스트일때 data-host="true" -->
-                                <a href="#modal-profile" data-toggle="modal" class="profile">
-                                    <span><img src="../../resources/images/icon-male.png" alt="홍길동"></span>
-                                </a>
-                                <div class="name">홍길동</div>
-                                <div class="status"><i class="text-primary">호스트</i></div>
-                            </li>
-                            <li  class="active"> <!-- 프로필 있을때 .active -->
-                                <a href="#modal-profile" data-toggle="modal" class="profile">
-                                    <span><img src="../../resources/images/icon-female.png" alt="홍길순"></span>
-                                </a>
-                                <div class="name">홍길순</div>
-                            </li>
-                            <li> <!-- 기본 틀 -->
-                                <a href="#none" class="profile">
-                                    <span><img src="" alt=""></span>
-                                </a>
-                                <div class="name">모집중</div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="section-play-join">
-                    <div class="subtitle-area">
-                        <div class="subtitle">신청현황</div>
-                        <p class="desc desc-sm">*프로필 이미지를 클릭하여 <br class="d-md-none">다른 플레이어의 정보를 확인할 수 있습니다</p>
-                    </div>
-                    <div class="player">
-                        <ul>
-                            <li class="active">
-                                <a href="#modal-profile" data-toggle="modal" data-role="button" class="profile">
-                                    <span><img src="../../resources/images/icon-male.png" alt="홍길동"></span>
-                                </a>
-                                <div class="name">홍길동</div>
-                                <div class="status"><i class="text-secondary">대기중</i></div>
-                            </li>
-                            <li class="active">
-                                <a href="#modal-profile" data-toggle="modal" data-role="button" class="profile">
-                                    <span><img src="../../resources/images/icon-female.png" alt="고길동"></span>
-                                </a>
-                                <div class="name">홍길순</div>
-                                <div class="status"><i class="text-secondary">대기중</i></div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="section-play-join">
-                    <div class="subtitle-area">
-                        <div class="subtitle">호스트와 묻고 답하기</div>
-                    </div>
-                    <div class="reply">
-                        <ul>
-                            <li>
-                                <div class="q">
-                                    <div class="user">
-                                        <div class="profile">
-                                            <span>
-                                                <img src="../../resources/images/icon-male.png" alt="홍길동">
-                                            </span>
-                                        </div>
-                                        <div class="name">도하나</div>
-                                        <div class="date">2019.03.08 12:02</div>
-                                        <a href="javascript:;" class="go">답글달기</a>
-                                    </div>
-                                    <div class="msg">
-                                        <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요? 노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?
-                                        </div>
-                                    </div>
-                                    <div class="more-toggle">
-                                        <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                        <ul>
-                                            <li><a href="javascript:;"><p class="modify"></p>수정하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete"><p class="delete"></p>삭제하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="a show"> <!-- 답변 있을때 .show -->
-                                    <div class="bg">
-                                        <div class="re">
-                                            <div class="d-flex align-items-center">
-                                                <div class="profile">
-                                                    <span>
-                                                        <img src="../../resources/images/icon-male.png" alt="홍길동">
-                                                    </span>
-                                                    <div class="tagname">도하나</div>
-                                                </div>
-                                                <div class="user">
-                                                    <div class="name">소문</div>
-                                                    <div class="date">2019.03.08 12:02</div>
-                                                    <a href="javascript:;" class="go">답글달기</a>
-                                                </div>
-                                            </div>
-                                            <div class="msg">
-                                                <div class="text">모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로 이동합니다</div>
-                                            </div>
-                                            <div class="more-toggle">
-                                                <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                                <ul>
-                                                    <li><a href="javascript:;"><p class="modify"></p>수정하기</a></li>
-                                                    <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete"><p class="delete"></p>삭제하기</a></li>
-                                                    <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <!-- 대댓글 수정 -->
-                            <div class="re">
-                                <div class="user">
-                                    <div class="profile">
-                                        <span>
-                                            <img src="../../resources/images/icon-male.png" alt="홍길동">
-                                        </span>
-                                    </div>
-                                    <div class="name">도하나</div>
-                                    <div class="date">2019.03.08 12:02</div>
-                                </div>
-                                <div class="msg">
-                                    <div class="reply-form">
-                                        <div class="reply-form-frame">
-                                            <textarea name="" id="" cols="" rows="" placeholder="수정되는 폼입니다." class="form-control" data-byte-target="#textarea-check"></textarea>
-                                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="more-toggle">
-                                    <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                    <ul>
-                                        <li><a href="javascript:;"><p class="modify"></p>수정하기</a></li>
-                                        <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete"><p class="delete"></p>삭제하기</a></li>
-                                        <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="q">
-                                    <div class="user">
-                                        <div class="profile">
-                                            <span>
-                                                <img src="../../resources/images/icon-male.png" alt="가모탁">
-                                            </span>
-                                        </div>
-                                        <div class="name">가모탁</div>
-                                        <div class="date">2019.03.08 12:02</div>
-                                        <a href="javascript:;" class="go">답글달기</a>
-                                    </div>
-                                    <div class="msg">
-                                        <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?</div>
-                                    </div>
-                                    <div class="more-toggle">
-                                        <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                        <ul>
-                                            <li><a href="javascript:;"><p class="modify"></p>수정하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete"><p class="delete"></p>삭제하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="re-comment">
-                                    <div class="bg">
-                                        <p class="re-name">소문</p>
-                                        <div class="reply-form-frame">
-                                            <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요" class="form-control" data-byte-target="#textarea-check"></textarea>
-                                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                           
-                            <!-- 비밀 작성 글 -->
-                            <li>
-                                <div class="q">
-                                    <div class="user">
-                                        <div class="profile">
-                                            <span>
-                                                <img src="../../resources/images/icon-male.png" alt="지청신">
-                                            </span>
-                                        </div>
-                                        <div class="name">지청신</div>
-                                        <div class="date">2019.03.08 12:02</div>
-                                        <a href="javascript:;" class="go">답글달기</a>
-                                    </div>
-                                    <div class="msg">
-                                        <div class="text"><i class="ic-lock"></i>비밀글입니다</div>
-                                    </div>
-                                    <div class="more-toggle">
-                                        <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                        <ul>
-                                            <li><a href="javascript:;"><p class="modify"></p>수정하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete"><p class="delete"></p>삭제하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="a">
-                                    <div class="bg">
-                                        <div class="reply-form-frame">
-                                            <input type="text" placeholder="답글을 달아보세요!" class="form-control"></input>
-                                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- 관리자 삭제 글 -->
-                            <li>
-                                <div class="q">
-                                    <div class="user">
-                                        <div class="profile">
-                                            <span>
-                                                <img src="../../resources/images/icon-male.png" alt="지**">
-                                            </span>
-                                        </div>
-                                        <div class="name">지**</div>
-                                        <div class="date">2019.03.08 12:02</div>
-                                    </div>
-                                    <div class="msg">
-                                        <div class="text">관리자에 의해 삭제된 댓글입니다</div>
-                                    </div>
-                                    <div class="more-toggle">
-                                        <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                        <ul>
-                                            <li><a href="javascript:;"><p class="modify"></p>수정하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete"><p class="delete"></p>삭제하기</a></li>
-                                            <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration"><p class="declaration"></p>신고하기</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="a">
-                                    <div class="bg">
-                                        <div class="reply-form-frame">
-                                            <input type="text" placeholder="답글을 달아보세요!" class="form-control"></input>
-                                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="reply-form">
-                        <div class="reply-form-frame">
-                            <textarea name="" id="" cols="" rows="" placeholder="궁금한 내용을 호스트에게 문의해보세요!" class="form-control" data-byte-target="#textarea-check"></textarea>
-                            <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                        </div>
-                        <div class="agree">
-                            <p>*비밀글로 문의시 호스트와 작성자만 확인할 수 있습니다</p>
-                            <div class="custom-control custom-checkbox custom-checkbox-square custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" name="agree" id="secret">
-                                <label class="custom-control-label" for="secret">비밀글로 문의</label>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="btn-area">
-                    <button type="button" class="btn btn-outline-light min-width-220" data-toggle="modal" data-target="#modal-play-cancel-confirm">플레이 취소하기</button>
-                    <button type="button" class="btn btn-primary min-width-220" onclick="document.location.href='../management_play/management_play.html'">플레이 관리로 돌아가기</button>
                 </div>
             </div>
-		</div>
+        </div>
     </div>
-    <div id="footer-block">
-        <!-- footer include -->
+    <!-- alert : 플레이 삭제 완료 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-delete-ok">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>플레이가 삭제되었습니다</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<!-- modal : 플레이 참여하기 -->
-<div class="modal" tabindex="-1" id="modal-play-join">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">플레이 참여하기</h5>
-				<p class="modal-desc modal-desc-join"><span class="text-primary">홍길동</span>님의 플레이에 <br class="d-sm-none">조인하시겠습니까?</p>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="play-details-wrap">
-                    <div class="play-details">
-                        <div class="d-flex">
-                            <div class="label">장소</div>
-                            <div class="cnt"><span>엘리시안 강촌 나인플러스 골프클럽</span><i>50km</i></div>
+    <!-- alert : 모집마감 확인 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-deadline-confirm">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>
+                            플레이어 모집을 마감하시겠습니까?<br>
+                            선정되지 않은 신청자는 모두 삭제되며<br>
+                            추가 모집 및 수정, <span class="text-danger">삭제</span>가 불가합니다
+                        </p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-deadline-y">예</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 모집마감 완료 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-deadline-ok">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>플레이어 모집이 마감되었습니다</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal : 신청 현황 -->
+    <div class="modal" tabindex="-1" id="modal-profile-apply">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="profile-layer">
+                        <div class="profile">
+                            <span>
+                                <img src="../../resources/images/icon-male.png" alt="홍길동">
+                            </span>
                         </div>
-                        <div class="d-flex">
-                            <div class="label">내용</div>
-                            <div class="cnt"><span>필드레슨 (18H)</span></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">시작일정</div>
-                            <div class="cnt"><span>2020.06.23. 12:20</span><i>D-3day</i></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">종료일정</div>
-                            <div class="cnt"><span>2020.06.23. 12:20</span></div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="label">참가비용</div>
-                            <div class="cnt"><span>[1인] ₩200,000</span></div>
-                        </div>
+                        <div class="name">홍길동</div>
+                        <dl class="user-spec">
+                            <dt>핸디캡</dt>
+                            <dd>+16 ~ +20</dd>
+                            <dt>구력</dt>
+                            <dd>10년 이상</dd>
+                        </dl>
+                        <dl class="user-activity">
+                            <dt>리뷰</dt>
+                            <dd>10</dd>
+                            <dt>공감</dt>
+                            <dd>10</dd>
+                            <dt>호스팅</dt>
+                            <dd>10</dd>
+                            <dt>플레이</dt>
+                            <dd>10</dd>
+                        </dl>
                     </div>
-                </div>
-                <div class="play-noti">
-                    <p><span>※</span>호스트가 수락한 후에 플레이에 참여하실 수 있습니다</p>
-                    <p><span>※</span>플레이의 참여가 확정되기 전까지는 어떠한 경우에도 회원님의 개인정보가 호스트에게 공유되지 않습니다</p>
-                </div>
-                <div class="btn-area m-t-20">
-                    <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal">아니오</button>
-                    <button type="button" class="btn btn-primary min-width-150" data-id="btn-play-yes">예</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- modal : 플레이 참여하기 약관 동의 -->
-<div class="modal" tabindex="-1" id="modal-play-agree">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">그립 앤드 플레이 이용약관 (필수) </h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="agree-check-wrap">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree1">
-                        <label class="custom-control-label" for="agree1">그립 앤드 플레이는 게스트의 직접 참여를 원칙으로 합니다</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree2">
-                        <label class="custom-control-label" for="agree2">금전적 거래는 상호간 책임 하에 진행하며, 필수적인 경우로 제한합니다</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree3">
-                        <label class="custom-control-label" for="agree3">플레이 참여는 신청 후 호스트의 승낙으로 확정됩니다</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree4">
-                        <label class="custom-control-label" for="agree4">보다 즐거운 플레이를 위해 게스트는 호스트에게 프로그램의 구체적인 <br class="d-none d-md-block">내용을 문의할 수 있습니다</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree5">
-                        <label class="custom-control-label" for="agree5">플레이 참여 확정 후, 무차별적인 취소는 제한되며, 호스트와의 합의 하에 결정되어야 합니다</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree6">
-                        <label class="custom-control-label" for="agree6">어떠한 경우에도 렛츠그립은 고객의 개인정보를 노출/공개, 제공하지 않으며 호스트와 <br class="d-none d-md-block">게스트간 상호 동의  및 책임 하에 정보를 공유해야 합니다</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="agree7">
-                        <label class="custom-control-label" for="agree7">올바른 골프문화를 형성하기 위해 상호간 비방 및 욕설, 폭언은 금지합니다</label>
-                    </div>
-                </div>
-                <div class="btn-area m-t-20">
-                    <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary min-width-150" data-id="btn-play-agree">전체동의</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- alert : 조인 신청 완료 -->
-<div class="modal modal-alert" tabindex="-1" id="modal-play-complete">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="modal-alert-msg">
-                    <em>조인 신청 완료</em>
-                    <p>호스트의 응답을 기다려주세요</p>
-                </div>
-                <div class="btn-area">
-                    <a href="../management_play/management_play.html" class="btn btn-primary btn-text-sm min-width-150">플레이 관리 이동</a>
-                    <a href="../main/main.html" class="btn btn-primary btn-text-sm min-width-150">메인으로</a>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- alert : 플레이 취소 확인 -->
-<div class="modal modal-alert" tabindex="-1" id="modal-play-cancel-confirm">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="modal-alert-msg">
-                    <p><span class="text-primary">플레이</span>를 취소하시겠습니까? <br>삭제된 플레이는 복원이 불가합니다</p>
-                </div>
-                <div class="btn-area">
-                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">예</button>
-                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- 플레이 생성완료 -->
-<div class="modal" tabindex="-1" id="modal-play-success">
-	<div class="modal-dialog modal-dialog-centered modal-play-success">
-		<div class="modal-content height-742">
-			<div class="modal-header">
-				<h5 class="modal-title">플레이 생성완료</h5>
-				<p class="modal-desc modal-desc-join"><span class="text-primary">6월 25일</span> 플레이가 생성되었습니다<br>게스트를 모집해보세요</p>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="text-center">
-                    <img src="../../resources/images/img-45.png" alt="생성완료">
-                </div>
-                <div class="play-success">
-                    <ul>
+                    <!-- 아무것도 없을 때 -->
+                    <!-- <div class="data-empty">
+                        <p>작성된 리뷰가 없습니다</p>
+                    </div> -->
+                    <ul class="profile-apply">
                         <li>
-                            <span class="ball active">1</span>
-                            생성한 플레이 내용은 마감 전까지 언제든 수정할 수 있어요
+                            <p class="comeback">다녀온 날짜 : 2020년 11월 15일</p>
+                            <div class="box">
+                                <div class="img horizontal">
+                                    <a href="../club/detail.html" class="thumb">
+                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" class="horizontal">
+                                    </a>
+                                </div>
+                                <div class="wrapper">
+                                    <div class="summary">
+                                        <div class="location">강원도 홍천군</div>
+                                        <div class="name">
+                                            <span>엘리시안 강촌 나인플러스 골프클럽</span>
+                                            <i class="distance">50km</i>
+                                        </div>
+                                        <div class="type">멤버십 / 퍼블릭코스 (18H)</div>
+                                        <div class="point">
+                                            <div class="rating">
+                                                <span>평점</span>
+                                                <i data-point="3.5">3.5</i>
+                                            </div>
+                                            <div class="level">
+                                                <span>난이도</span>
+                                                <i data-point="2.5">2.5</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <span class="ball active">2</span>
-                            참여신청이 오면 신청자의 프로필을 클릭해서 함께 플레이 할지 정할 수 있어요
+                            <p class="comeback">다녀온 날짜 : 2020년 11월 15일</p>
+                            <div class="box">
+                                <div class="img horizontal">
+                                    <a href="../club/detail.html" class="thumb">
+                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" class="horizontal">
+                                    </a>
+                                </div>
+                                <div class="wrapper">
+                                    <div class="summary">
+                                        <div class="location">강원도 홍천군</div>
+                                        <div class="name">
+                                            <span>엘리시안 강촌 나인플러스 골프클럽</span>
+                                            <i class="distance">50km</i>
+                                        </div>
+                                        <div class="type">멤버십 / 퍼블릭코스 (18H)</div>
+                                        <div class="point">
+                                            <div class="rating">
+                                                <span>평점</span>
+                                                <i data-point="3.5">3.5</i>
+                                            </div>
+                                            <div class="level">
+                                                <span>난이도</span>
+                                                <i data-point="2.5">2.5</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <span class="ball active">3</span>
-                            바로 정해지진 않아요. 신청자에게 다시 한번 참여 의사를 물어보고 플레이어로 결정돼요
-                        </li>
-                        <li>
-                            <span class="ball active">4</span>
-                            플레이어가 모였으면 꼭! 모집마감해주세요
-                        </li>
-                        <li>
-                            <span class="ball active">5</span>
-                            인원보다 많은 사람을 선택하면 선착순으로 플레이어가 결정되니 참고하세요
+                            <p class="comeback">다녀온 날짜 : 2020년 11월 15일</p>
+                            <div class="box">
+                                <div class="img horizontal">
+                                    <a href="../club/detail.html" class="thumb">
+                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" class="horizontal">
+                                    </a>
+                                </div>
+                                <div class="wrapper">
+                                    <div class="summary">
+                                        <div class="location">강원도 홍천군</div>
+                                        <div class="name">
+                                            <span>엘리시안 강촌 나인플러스 골프클럽</span>
+                                            <i class="distance">50km</i>
+                                        </div>
+                                        <div class="type">멤버십 / 퍼블릭코스 (18H)</div>
+                                        <div class="point">
+                                            <div class="rating">
+                                                <span>평점</span>
+                                                <i data-point="3.5">3.5</i>
+                                            </div>
+                                            <div class="level">
+                                                <span>난이도</span>
+                                                <i data-point="2.5">2.5</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                    <p class="txt-danger">※ 플레이 내용에 불쾌할 수 있는 내용이 포함되어있다면 삭제될 수 있으니 주의해주세요!</p>
                 </div>
-                <div class="btn-area">
-                    <a href="javascript:void(0)" class="btn btn-primary min-width-150">확인</a>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- modal : 갤러리 -->
-<div class="modal modal-gallery" tabindex="-1" id="modal-play-gallery">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-            <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="gallery-top">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail1.png)"></div>
-                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail2.png)"></div>
-                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail3.png)"></div>
-                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail4.png)"></div>
-                            <div class="swiper-slide" style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail5.png)"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next swiper-button-white swiper-button-next-gallery"></div>
-                    <div class="swiper-button-prev swiper-button-white swiper-button-prev-gallery"></div>
-                </div>
-                <div class="gallery-thumbs">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide" >
-                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail1.png)"></div>
-                            </div>
-                            <div class="swiper-slide" >
-                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail2.png)"></div>
-                            </div>
-                            <div class="swiper-slide" >
-                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail3.png)"></div>
-                            </div>
-                            <div class="swiper-slide" >
-                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail4.png)"></div>
-                            </div>
-                            <div class="swiper-slide" >
-                                <div style="background-image:url(../../resources/images/001_oakvalley_cc_05_detail5.png)"></div>
-                            </div>
-                        </div>
+                <div class="modal-footer">
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light min-width-150">신청거절</button>
+                        <button type="button" class="btn btn-primary min-width-150" data-dismiss="modal">신청수락</button>
                     </div>
                 </div>
-			</div>
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var $playerWrap = $('.player-ing ul');
+            var max = $playerWrap.attr('player-max');
+            var itemHtml = '';
 
-<!-- alert : 플레이 삭제 확인 -->
-<div class="modal modal-alert" tabindex="-1" id="modal-play-delete-confirm">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="modal-alert-msg">
-                    <p>
-                        플레이를 <span class="text-danger">삭제</span>할까요?<br>
-                        삭제된 플레이는 복구되지 않습니다
-                        </p>
-                </div>
-                <div class="btn-area">
-                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-delete-y">예</button>
-                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
+            itemHtml += '<li>';
+            itemHtml += '<a href="#none" class="profile">';
+            itemHtml += '<span><img src="" alt=""></span>';
+            itemHtml += '</a>';
+            itemHtml += '<div class="name">모집중</div>';
+            itemHtml += '<div class="status"><i class="text-primary">호스트</i></div>';
+            itemHtml += '</li>';
 
-<!-- alert : 플레이 삭제 완료 -->
-<div class="modal modal-alert" tabindex="-1" id="modal-play-delete-ok">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="modal-alert-msg">
-                    <p>플레이가 삭제되었습니다</p>
-                </div>
-                <div class="btn-area">
-                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- alert : 모집마감 확인 -->
-<div class="modal modal-alert" tabindex="-1" id="modal-play-deadline-confirm">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="modal-alert-msg">
-                    <p>
-                        플레이어 모집을 마감하시겠습니까?<br>
-                        선정되지 않은 신청자는 모두 삭제되며<br>
-                        추가 모집 및 수정, <span class="text-danger">삭제</span>가 불가합니다
-                    </p>
-                </div>
-                <div class="btn-area">
-                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
-                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-deadline-y">예</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- alert : 모집마감 완료 -->
-<div class="modal modal-alert" tabindex="-1" id="modal-play-deadline-ok">
-	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<i class="icon-close"><span class="sr-only">닫기</span></i>
-				</button>
-			</div>
-			<div class="modal-body">
-                <div class="modal-alert-msg">
-                    <p>플레이어 모집이 마감되었습니다</p>
-                </div>
-                <div class="btn-area">
-                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</div>
-<script>
-    $(document).ready(function(){
-        var $playerWrap = $('.player-ing ul');
-        var max = $playerWrap.attr('player-max');
-        var itemHtml = '';
-
-        itemHtml += '<li>';
-        itemHtml +=     '<a href="#none" class="profile">';
-        itemHtml +=         '<span><img src="" alt=""></span>';
-        itemHtml +=     '</a>';
-        itemHtml +=     '<div class="name">모집중</div>';
-        itemHtml +=     '<div class="status"><i class="text-primary">호스트</i></div>';
-        itemHtml += '</li>';
-
-        //호스트가 설정한 인원 수 만큼 item 생성
-        for(var i = 0; i < max; i++){
-            $playerWrap.append(itemHtml);
-        }
-        $playerWrap.show();
-
-        //답글달기 toggle
-        $(document).on('click','.reply .go',function(){
-            var $a = $(this).closest('li').find('.a');
-            var $form = $a.find('.reply-form-frame');
-
-            if(!$a.hasClass('show')){ //답변 영역 닫혀 있을때
-                if(!$form.hasClass('active')){
-                    $a.addClass('show');
-                    $form.addClass('active');
-                }
-            }else{ //답변 영역 열려 있을때
-                if(!$form.hasClass('active')){
-                    $form.addClass('active');
-                }else{
-                    if($a.find('.re').length == 0){
-                        $a.removeClass('show');
-                        $form.removeClass('active');
-                    }
-                    else{
-                        $form.removeClass('active');
-                    }
-                }
+            //호스트가 설정한 인원 수 만큼 item 생성
+            for (var i = 0; i < max; i++) {
+                $playerWrap.append(itemHtml);
             }
-        });
+            $playerWrap.show();
 
-        //신청하기
-        $(document).on('click','[data-id="btn-play"]',function(){
-            $('#modal-play-join').modal('show');
-        });
+            //답글달기 toggle
+            $(document).on('click', '.reply .go', function () {
+                var a = $(this).closest('li').find('.re-comment');
+                a.toggleClass('active');
+            });
 
-        //신청하기 - 예
-        $(document).on('click','[data-id="btn-play-yes"]',function(){
-            $('#modal-play-join').modal('hide');
-            $('#modal-play-agree').modal('show');
-        });
+            //신청하기
+            $(document).on('click', '[data-id="btn-play"]', function () {
+                $('#modal-play-join').modal('show');
+            });
 
-        //신청하기 - 약관동의
-        $(document).on('click','[data-id="btn-play-agree"]',function(){
-            $('#modal-play-agree').modal('hide');
-            $('#modal-play-complete').modal('show');
-        });
+            //신청하기 - 예
+            $(document).on('click', '[data-id="btn-play-yes"]', function () {
+                $('#modal-play-join').modal('hide');
+                $('#modal-play-agree').modal('show');
+            });
 
-        //삭제 하기
-        $(document).on('click','[data-id="btn-play-deadline-y"]',function(){
-            $('#modal-play-deadline-ok').modal('show');
+            //신청하기 - 약관동의
+            $(document).on('click', '[data-id="btn-play-agree"]', function () {
+                $('#modal-play-agree').modal('hide');
+                $('#modal-play-complete').modal('show');
+            });
+
+            //삭제 하기
+            $(document).on('click', '[data-id="btn-play-deadline-y"]', function () {
+                $('#modal-play-deadline-ok').modal('show');
+            });
+            //모집마감
+            $(document).on('click', '[data-id="btn-play-delete-y"]', function () {
+                $('#modal-play-delete-ok').modal('show');
+            });
         });
-        //모집마감
-        $(document).on('click','[data-id="btn-play-delete-y"]',function(){
-            $('#modal-play-delete-ok').modal('show');
-        });
-    });
-    var galleryThumbs;
+        var galleryThumbs;
         var galleryTop;
         var gallerIndex;
-        $('.gallery .thumb').on('click',function(){
+        $('.gallery .thumb').on('click', function () {
             gallerIndex = $(this).parent().index();
         });
 
@@ -880,7 +1026,7 @@
         $('#modal-play-gallery').on('shown.bs.modal', function (e) {
             var idx = $(event.relatedTarget).data('idx');
             //최초 실행
-            if(galleryThumbs === undefined){
+            if (galleryThumbs === undefined) {
                 galleryThumbs = new Swiper('.gallery-thumbs .swiper-container', {
                     spaceBetween: 10,
                     slidesPerView: 'auto',
@@ -902,16 +1048,14 @@
                 });
             }
             //최초 이후
-            else{
+            else {
                 galleryTop.slideTo(gallerIndex);
             }
         });
         //갤러리 모달 닫힐때
-        $('#modal-play-gallery').on('hidden.bs.modal', function (e) {
-        });
-        
-</script>
+        $('#modal-play-gallery').on('hidden.bs.modal', function (e) {});
+    </script>
 
 </body>
-</html>
 
+</html>
