@@ -53,6 +53,10 @@
                         </div>
                         <div class="hash">#싱글 #춘천 #18H #싱글플레이어 #베어크리크</div>
                         <div class="application">
+                            <div class="d-flex align-items-center">
+                                <button type="button" class="btn btn-white min-width-186" data-id="btn-play">신청한 플레이</button><a href="javascript:void(0)" class="cancel-btn">신청 취소</a>
+                            </div>
+                            
                             <button type="button" class="btn btn-outline-primary min-width-186">참여 취소</button>
                             
                             <button type="button" class="btn btn-primary min-width-186" data-id="btn-play">신청하기</button>
@@ -62,15 +66,13 @@
                             <button type="button" class="btn btn-secondary min-width-186" data-toggle="modal" data-target="#modal-play-success">완료</button>
 
                             <button type="button" class="btn btn-primary min-width-186" data-toggle="modal" data-target="#modal-play-deadline-confirm">모집마감</button>
-                            <div class="d-flex align-items-center">
-                                <button type="button" class="btn btn-white min-width-186" data-id="btn-play">신청한 플레이</button><a href="javascript:void(0)" class="cancel-btn">신청 취소</a>
-                            </div>
+                            
                         </div>
                         <button type="button" class="share"><span class="sr-only">공유하기</span></button>
                         <div class="more-toggle play-join">
                             <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
                             <ul>
-                                <li><a href="javascript:;" data-toggle="modal" data-target="#modal-review-declaration">
+                                <li><a href="javascript:;" data-id="modify-btn">
                                         <p class="modify"></p>수정하기
                                     </a></li>
 
@@ -144,7 +146,7 @@
                             </div>
                             <div class="d-flex">
                                 <div class="label">시작일정</div>
-                                <div class="cnt"><span>2020.06.23 (화) 12:20 ~ 2020.07.02 (목) 21:30</span></div>
+                                <div class="cnt"><span>2020.06.23 (화) 12:20 ~ <br class="d-block d-lg-none">2020.07.02 (목) 21:30</span></div>
                             </div>
                             <div class="d-flex">
                                 <div class="label">참가비용</div>
@@ -291,14 +293,23 @@
                                         <div class="msg">
                                             <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요? 노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?
                                             </div>
+                                            <!-- 수정폼은 .modify 추가 -->
+                                            <div class="re-comment modify">
+                                                <div class="bg">
+                                                    <div class="reply-form-frame">
+                                                        <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요? 노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?</textarea>
+                                                        <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="more-toggle">
                                             <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
                                             <ul>
-                                                <li><a href="javascript:;">
+                                                <li><a href="javascript:;" data-id="modify-btn">
                                                         <p class="modify"></p>수정하기
                                                     </a></li>
-                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-comment-delete">
                                                         <p class="delete"></p>삭제하기
                                                     </a></li>
                                                 <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
@@ -334,15 +345,25 @@
                                                     </div>
                                                 </div>
                                                 <div class="msg">
-                                                    <div class="text">이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로</div>
+                                                    <div class="text">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?
+                                                    </div>
+                                                    <!-- 답글 수정일 경우 .re-modify -->
+                                                    <div class="re-comment re-modify">
+                                                        <div class="bg">
+                                                            <div class="reply-form-frame">
+                                                                <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check">노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요? 노캐디면 모노레일인가요? 아니면 셀프카드로 이동하나요?</textarea>
+                                                                <button type="button" class="btn btn-primary btn-text-sm">등록</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="more-toggle">
                                                     <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
                                                     <ul>
-                                                        <li><a href="javascript:;">
-                                                                <p class="modify"></p>수정하기
+                                                        <li><a href="javascript:;" data-id="modify-btn">
+                                                                <p class="modify" data-id="modify-btn"></p>수정하기
                                                             </a></li>
-                                                        <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                        <li><a href="javascript:;" class="text-danger" data-id="btn-comment-delete">
                                                                 <p class="delete"></p>삭제하기
                                                             </a></li>
                                                         <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
@@ -351,53 +372,16 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="re-comment">
-                                                <div class="bg">
-                                                    <p class="re-name">소문</p>
-                                                    <div class="reply-form-frame">
-                                                        <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check"></textarea>
-                                                        <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="re-comment">
+                                        <div class="bg">
+                                            <p class="re-name">소문</p>
+                                            <div class="reply-form-frame">
+                                                <textarea name="" id="" cols="" rows="" placeholder="답글을 달아보세요~" class="form-control" data-byte-target="#textarea-check"></textarea>
+                                                <button type="button" class="btn btn-primary btn-text-sm">등록</button>
                                             </div>
                                         </div>
-                                        <!-- 대댓글 수정 -->
-                                        <!-- <div class="re">
-                                            <div class="d-flex align-items-center">
-                                                <div class="profile">
-                                                    <span>
-                                                        <img src="../../resources/images/icon-male.png" alt="홍길동">
-                                                    </span>
-                                                </div>
-                                                <div class="user">
-                                                    <div class="name">소문</div>
-                                                    <div class="date">2019.03.08 12:02</div>
-                                                </div>
-                                            </div>
-                                            <div class="msg mt-2">
-                                                <div class="reply-form">
-                                                    <div class="reply-form-frame">
-                                                        <textarea name="" id="" cols="" rows="" placeholder="수정되는 폼입니다." class="form-control" data-byte-target="#textarea-check"> 이동합니다모노레일로 이동합니다모노레일로 이동합니다모노레일로
-                                                        </textarea>
-                                                        <button type="button" class="btn btn-primary btn-text-sm">등록</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="more-toggle">
-                                                <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
-                                                <ul>
-                                                    <li><a href="javascript:;">
-                                                            <p class="modify"></p>수정하기
-                                                        </a></li>
-                                                    <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
-                                                            <p class="delete"></p>삭제하기
-                                                        </a></li>
-                                                    <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
-                                                            <p class="declaration"></p>신고하기
-                                                        </a></li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
                                     </div>
                                 </li>
                                 <li>
@@ -418,10 +402,10 @@
                                         <div class="more-toggle">
                                             <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
                                             <ul>
-                                                <li><a href="javascript:;">
+                                                <li><a href="javascript:;" data-id="modify-btn">
                                                         <p class="modify"></p>수정하기
                                                     </a></li>
-                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-comment-delete">
                                                         <p class="delete"></p>삭제하기
                                                     </a></li>
                                                 <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
@@ -459,10 +443,10 @@
                                         <div class="more-toggle">
                                             <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
                                             <ul>
-                                                <li><a href="javascript:;">
+                                                <li><a href="javascript:;" data-id="modify-btn">
                                                         <p class="modify"></p>수정하기
                                                     </a></li>
-                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-comment-delete">
                                                         <p class="delete"></p>삭제하기
                                                     </a></li>
                                                 <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
@@ -499,10 +483,10 @@
                                         <div class="more-toggle">
                                             <a href="javascript:;"><i><span class="sr-only">더보기</span></i></a>
                                             <ul>
-                                                <li><a href="javascript:;">
+                                                <li><a href="javascript:;" data-id="modify-btn">
                                                         <p class="modify"></p>수정하기
                                                     </a></li>
-                                                <li><a href="javascript:;" class="text-danger" data-id="btn-review-delete">
+                                                <li><a href="javascript:;" class="text-danger" data-id="btn-comment-delete">
                                                         <p class="delete"></p>삭제하기
                                                     </a></li>
                                                 <li><a href="javascript:;" class="text-danger" data-toggle="modal" data-target="#modal-review-declaration">
@@ -528,10 +512,10 @@
                             </div>
                         </div>
                     </section>
-                    <div class="btn-area">
+                    <!-- <div class="btn-area">
                         <button type="button" class="btn btn-outline-light min-width-220" data-toggle="modal" data-target="#modal-play-cancel-confirm">플레이 취소하기</button>
                         <button type="button" class="btn btn-primary min-width-220" onclick="document.location.href='../management_play/management_play.html'">플레이 관리로 돌아가기</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -542,7 +526,7 @@
 
     <!-- modal : 플레이 참여하기 -->
     <div class="modal" tabindex="-1" id="modal-play-join">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-play-join">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">플레이 참여하기</h5>
@@ -553,34 +537,35 @@
                 </div>
                 <div class="modal-body">
                     <div class="play-details-wrap">
-                        <div class="agree-check-wrap">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree1">
-                                <label class="custom-control-label" for="agree1">그립 앤드 플레이는 게스트의 직접 참여를 원칙으로 합니다</label>
+                        <div class="agree-wrap">
+                            <div class="agree-all">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="form0">
+                                    <label class="custom-control-label" for="form0">전체동의 (필수)</label>
+                                </div>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree2">
-                                <label class="custom-control-label" for="agree2">금전적 거래는 상호간 책임 하에 진행하며, 필수적인 경우로 제한합니다</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree3">
-                                <label class="custom-control-label" for="agree3">플레이 참여는 신청 후 호스트의 승낙으로 확정됩니다</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree4">
-                                <label class="custom-control-label" for="agree4">보다 즐거운 플레이를 위해 게스트는 호스트에게 프로그램의 구체적인 <br class="d-none d-md-block">내용을 문의할 수 있습니다</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree5">
-                                <label class="custom-control-label" for="agree5">플레이 참여 확정 후, 무차별적인 취소는 제한되며, 호스트와의 합의 하에 결정되어야 합니다</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree6">
-                                <label class="custom-control-label" for="agree6">어떠한 경우에도 렛츠그립은 고객의 개인정보를 노출/공개, 제공하지 않으며 호스트와 <br class="d-none d-md-block">게스트간 상호 동의 및 책임 하에 정보를 공유해야 합니다</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="agree7">
-                                <label class="custom-control-label" for="agree7">올바른 골프문화를 형성하기 위해 상호간 비방 및 욕설, 폭언은 금지합니다</label>
+                            <div class="agree-sub">
+                                <div class="checkitem">
+                                    <span class="all-check">플레이는 게스트의 직접 참여를 원칙으로 합니다</span>
+                                </div>
+                                <div class="checkitem">
+                                    <span class="all-check">플레이 참여는 신청 후 호스트의 승낙으로 확정됩니다</span>
+                                </div>
+                                <div class="checkitem">
+                                    <span class="all-check">참여 확정 후 특정 사유가 없는 플레이 참여 취소는 제한되며, 부득이 취소해야 하는 경우에는 호스트와 사전 합의를 통해 결정해야 합니다</span>
+                                </div>
+                                <div class="checkitem">
+                                    <span class="all-check">금전적 거래는 필수적인 경우로 제한하며 상호간의 책임하에 진행됩니다</span>
+                                </div>
+                                <div class="checkitem">
+                                    <span class="all-check">그립은 어떠한 경우에도 회원의 개인정보를 노출하거나 공개하지 않으며, 플레이 진행을 위해 필요한 경우 게스트는 호스트와 상호간 동의 및 책임 하에 개인정보를 공유해야 합니다</span>
+                                </div>
+                                <div class="checkitem">
+                                    <span class="all-check">보다 원활한 플레이 진행을 위해 게스트는 호스트에게 문의할 수 있습니다</span>
+                                </div>
+                                <div class="checkitem">
+                                    <span class="all-check">올바른 골프문화를 만들기 위해 상호간 비방, 욕설, 폭언 등은 금지합니다</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -591,7 +576,7 @@
                     </div>
                     <div class="btn-area m-t-20">
                         <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal">아니오</button>
-                        <button type="button" class="btn btn-primary min-width-150" data-id="btn-play-yes">예</button>
+                        <button type="button" class="btn btn-primary min-width-150" data-dismiss="modal" data-id="btn-play-yes">예</button>
                     </div>
                 </div>
             </div>
@@ -956,8 +941,139 @@
                 </div>
                 <div class="modal-footer">
                     <div class="btn-area">
-                        <button type="button" class="btn btn-outline-light min-width-150">신청거절</button>
-                        <button type="button" class="btn btn-primary min-width-150" data-dismiss="modal">신청수락</button>
+                        <button type="button" class="btn btn-outline-light min-width-150" data-toggle="modal" data-target="#modal-play-out" data-dismiss="modal">내보내기</button>
+                        <button type="button" class="btn btn-outline-light min-width-150" data-dismiss="modal" data-id="btn-play-reject">신청거절</button>
+                        <button type="button" class="btn btn-primary min-width-150" data-dismiss="modal" data-id="btn-play-participation">신청수락</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- alert : 내보내기 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-out">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>플레이어 선정을 <span class="text-danger">취소</span>하시겠습니까?<br>
+                            해당 게스트는 플레이에 <span class="text-danger">재참여할 수 없습니다</span></p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-out-y">예</button>
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 내보내기 완료 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-out-ok">
+        <div class="modal-dialog modal-dialog-centered out">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p class="title">게스트 선정 취소</p>
+                        <p class="desc">플레이어 리스트에서 삭제되었습니다</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 플레이어 참여수락 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-participation">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>참여신청을 수락하시겠습니까?<br>
+                            신청자에게 참여확정 요청이 발송됩니다</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-participation-y">예</button>
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 플레이어 신청수락 완료 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-participation-ok">
+        <div class="modal-dialog modal-dialog-centered out">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p class="title">플레이 참여 신청 수락</p>
+                        <p class="desc">게스트의 참여 확정 여부를 기다려주세요</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 플레이어 신청거절 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-reject">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p>참여신청을 <span class="text-danger">거절</span>하시겠습니까?<br>
+                            신청자는 플레이에 <span class="text-danger">재신청할 수 없습니다</span></p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-play-reject-y">예</button>
+                        <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert : 플레이어 신청거절 완료 -->
+    <div class="modal modal-alert" tabindex="-1" id="modal-play-reject-ok">
+        <div class="modal-dialog modal-dialog-centered out">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon-close"><span class="sr-only">닫기</span></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-msg">
+                        <p class="title">플레이 참여 신청 거절</p>
+                        <p class="desc">플레이 신청현황에서 삭제되었습니다</p>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
@@ -985,8 +1101,8 @@
 
             //답글달기 toggle
             $(document).on('click', '.reply .go', function () {
-                var a = $(this).closest('li').find('.re-comment');
-                a.toggleClass('active');
+                var $a = $(this).closest('li').find('.re-comment');
+                $a.toggleClass('active');
             });
 
             //신청하기
@@ -996,16 +1112,24 @@
 
             //신청하기 - 예
             $(document).on('click', '[data-id="btn-play-yes"]', function () {
-                $('#modal-play-join').modal('hide');
-                $('#modal-play-agree').modal('show');
-            });
-
-            //신청하기 - 약관동의
-            $(document).on('click', '[data-id="btn-play-agree"]', function () {
-                $('#modal-play-agree').modal('hide');
                 $('#modal-play-complete').modal('show');
             });
-
+            //플레이어 신청수락
+            $(document).on('click', '[data-id="btn-play-participation"]', function () {
+                $('#modal-play-participation').modal('show');
+            });
+            //플레이어 신청수락 - 예
+            $(document).on('click', '[data-id="btn-play-participation-y"]', function () {
+                $('#modal-play-participation-ok').modal('show');
+            });
+            //플레이어 신청거절
+            $(document).on('click', '[data-id="btn-play-reject"]', function () {
+                $('#modal-play-reject').modal('show');
+            });
+            //플레이어 신청거절 - 예
+            $(document).on('click', '[data-id="btn-play-reject-y"]', function () {
+                $('#modal-play-reject-ok').modal('show');
+            });
             //삭제 하기
             $(document).on('click', '[data-id="btn-play-deadline-y"]', function () {
                 $('#modal-play-deadline-ok').modal('show');
@@ -1013,6 +1137,10 @@
             //모집마감
             $(document).on('click', '[data-id="btn-play-delete-y"]', function () {
                 $('#modal-play-delete-ok').modal('show');
+            });
+            //내보내기 성공
+            $(document).on('click', '[data-id="btn-play-out-y"]', function () {
+                $('#modal-play-out-ok').modal('show');
             });
         });
         var galleryThumbs;
@@ -1054,6 +1182,26 @@
         });
         //갤러리 모달 닫힐때
         $('#modal-play-gallery').on('hidden.bs.modal', function (e) {});
+        
+        
+        //댓글 삭제하시겠습니까?
+        $('[data-id=btn-comment-delete]').on('click',function(){
+            $('#modal-comment-delete-confirm').modal('show');
+        });
+        //댓글 삭제 - 예
+        $('[data-id=btn-comment-delete-y]').on('click',function(){
+             //$('#modal-comment-delete-ok').modal('show');
+        });
+        $('.agree-all').on('click', function(){
+            $('.all-check').addClass('active');
+        })
+
+
+        // $('[data-id=modify-btn]').on('click',function(){
+        //     var $q = $(this).closest('.q').find('.msg .text');
+        //     var $a = $(this).closest('.a.show').find('.msg .text');
+             
+        // });
     </script>
 
 </body>

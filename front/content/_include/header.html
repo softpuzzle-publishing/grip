@@ -645,14 +645,55 @@
 		</div>
 	</div>
 </div>
+<!-- alert : 댓글 삭제 확인 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-comment-delete-confirm">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p>댓글을 삭제할까요?<br><span class="text-danger">삭제</span>된 댓글은 복구되지 않습니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal" data-id="btn-comment-delete-y">예</button>
+                    <button type="button" class="btn btn-outline-light btn-text-sm min-width-150" data-dismiss="modal">아니오</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!-- alert : 댓글 삭제 완료 -->
+<div class="modal modal-alert" tabindex="-1" id="modal-comment-delete-ok">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="icon-close"><span class="sr-only">닫기</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="modal-alert-msg">
+                    <p>댓글이 삭제되었습니다</p>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn btn-primary btn-text-sm min-width-150" data-dismiss="modal">확인</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- modal : 신고하기 -->
 <div class="modal" tabindex="-1" id="modal-review-declaration">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title text-danger">신고하기</h5>
-				<p class="modal-desc">리뷰 신고사유를 선택해주세요</p>
+				<p class="modal-desc">신고사유를 선택해주세요</p>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<i class="icon-close"><span class="sr-only">닫기</span></i>
 				</button>
@@ -662,25 +703,25 @@
 					<div class="form-row-line has-checkbox">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="de1">
-                            <label class="custom-control-label" for="de1">부적절한 홍보 게시물</label>
+                            <label class="custom-control-label" for="de1">부적절한 홍보</label>
                         </div>
 					</div>
 					<div class="form-row-line has-checkbox">
 						<div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="de2">
-                            <label class="custom-control-label" for="de2">선정적인 게시물</label>
+                            <label class="custom-control-label" for="de2">선정적인 내용</label>
                         </div>
                     </div>
                     <div class="form-row-line has-checkbox">
 						<div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="de3">
-                            <label class="custom-control-label" for="de3">욕설/비방등의 게시물</label>
+                            <label class="custom-control-label" for="de3">욕설, 비방 등을 포함</label>
                         </div>
                     </div>
                     <div class="form-row-line has-checkbox">
 						<div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="de4">
-                            <label class="custom-control-label" for="de4">불쾌한 표현의 게시물</label>
+                            <label class="custom-control-label" for="de4">불쾌한 언행</label>
                         </div>
 					</div>
 				</div>

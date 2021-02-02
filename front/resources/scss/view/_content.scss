@@ -2052,11 +2052,13 @@ html.open-search{
     .play-join-top{
         padding: 35px 0;margin-top: -30px;
         .info{display: block;}
-        .subject{font-size: 24px;margin-bottom: 5px;}
+        .subject{font-size: 24px;margin-bottom: 0;}
         .application{
-            .btn{width: 100%;border-radius: 0;height: 50px;position: fixed;left: 0;bottom: 0;z-index: 99;}
+            .btn{width: 100%;border-radius: 0;height: 75px;position: fixed;left: 0;bottom: 0;z-index: 99;font-size:24px;}
         }
         .share{top: -5px;}
+        .title{align-items: flex-end;}
+        .hash{font-size:16px;}
     }
 }
 
@@ -2078,7 +2080,8 @@ html.open-search{
 }
 
 .play-details-wrap{
-    border-top: 1px solid #e1e1e1;border-bottom: 1px solid #e1e1e1;padding: 25px;
+    border-top: 1px solid #e1e1e1;border-bottom: 1px solid #e1e1e1;padding: 25px 0;
+    .agree-wrap{margin-top: 0;padding:0;}
 }
 .play-details{
     > .d-flex{line-height: 1.45;}
@@ -2103,13 +2106,18 @@ html.open-search{
         padding: 25px 5px;
     }
     .play-details{
-        .label{font-weight: 400;max-width: 70px;flex: 0 0 70px;}
+        .label{font-weight: 400;max-width: 70px;flex: 0 0 70px; font-size:16px;}
         .num{margin-right: 6px;}
         .time{
             margin-right: 13px;
             &::before{display: none;}
         }
-        .badge{margin-top: 6px;font-size: 12px;height: 27px;padding: 6px 15px;}
+        .cnt{
+            font-size:16px;
+            p, span{font-size:16px;}
+            .place{font-size:14px;}
+            .badge{margin-top: 6px;font-size: 15px;height: 35px;padding: 9px 21px;margin-right:5px;}
+        }
     }
 }
 
@@ -2225,7 +2233,7 @@ html.open-search{
         .amend-badge{font-size:8px;font-weight: 500;color: #a6a6a6;border:1px solid #a6a6a6;border-radius: 8px;padding:0 6px 0 4px;display:inline-block;margin:0 5px;}
     }
     .re-comment{
-        position: relative;display:block;padding-left: 53px;margin-top: 15px;display:none;
+        position: relative;padding-left: 53px;margin-top: 15px;display:none;
         &::before {
             content: ''; display: block;width: 17px;height: 15px;background: url(../images/att-88.svg) no-repeat 50% 50%;position: absolute;top: 0;left: 30px;
         }
@@ -2237,6 +2245,21 @@ html.open-search{
             width: 100%;display:block;
         }
         &.active{display:block;}
+        &.modify{
+            display:none;padding-left:0;
+            &::before{
+                display:none;
+            }
+            .bg{padding: 0;}
+        }
+        &.re-modify{
+            display:none;padding-left:55px;margin-top:0;
+            &::before{
+                display:none;
+            }
+            .reply-form-frame{padding:0;}
+            .bg{padding: 0;}
+        }
     }
 }
 
@@ -2249,23 +2272,37 @@ html.open-search{
         .date{font-size: 12px;}
         @at-root{
             .reply-form-frame{
+                padding:10px 0;border:0;border-radius:0;background:none;text-align:right;
                 input.form-control{padding: 0 80px 0 15px;}
-                .btn{right: 15px;padding-top: 5px;}
+                textarea.form-control{height:60px;border:1px solid #ddd;padding:10px;}
+                .btn{right: 0;padding-top: 5px;position: inherit;bottom:inherit;
+                    transform:inherit;margin-top:10px;
+                }
             }
         }
         .a{
-            padding-left: 45px;
-            &::before{left: 20px;}
-            .bg{padding-left: 15px;padding-right: 15px;}
+            padding-left: 25px;
+            &::before{left: 0;}
+            .bg{padding-left: 0;padding-right: 0;}
         }
         @at-root{
             .reply-form{
                 .reply-form-frame{
-                    margin-top: 15px;padding: 15px;
+                    margin-top: 15px;padding: 15px 0;
+                    textarea.form-control{height:114px;}
+                    .btn{bottom:0;}
                 }
+                .agree{margin-top:0;}
             }
         }
+        .re-comment{
+            padding-left: 25px;
+            &::before{left: 0;}
+            .bg{padding:9px 11px;}
+            .re-name{text-align: center;}
+        }
     }
+
 }
 
 .modal-desc-join{font-size: 32px;font-weight: 100;line-height: 1.25;}
