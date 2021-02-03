@@ -510,26 +510,31 @@
 												<div class="upload-img d-flex align-items-center justify-content-center">
 													<div class="text-center position-relative">
 														<div class="filebox">
-															<input type="file" id="input-img-1">
+															<input type="file" class="inp-file" id="input-img-1">
 															<label for="input-img-1"><img src="" alt="" id="img"></label>
+															<a href="javascript:void(0)" class="close-btn"></a>
 														</div>
 														<p class="txt-main">메인 (필수)</p>
 													</div>
 													<div class="filebox">
-														<input type="file" id="input-img-2">
+														<input type="file" class="inp-file"  id="input-img-2">
 														<label for="input-img-2"><img src="" alt="" id="img"></label>
+														<a href="javascript:void(0)" class="close-btn"></a>
 													</div>
 													<div class="filebox">
-														<input type="file" id="input-img-3">
+														<input type="file" class="inp-file" id="input-img-3">
 														<label for="input-img-3"><img src="" alt="" id="img"></label>
+														<a href="javascript:void(0)" class="close-btn"></a>
 													</div>
 													<div class="filebox">
-														<input type="file" id="input-img-4">
+														<input type="file" class="inp-file"  id="input-img-4">
 														<label for="input-img-4"><img src="" alt="" id="img"></label>
+														<a href="javascript:void(0)" class="close-btn"></a>
 													</div>
 													<div class="filebox">
-														<input type="file" id="input-img-5">
+														<input type="file" class="inp-file"  id="input-img-5">
 														<label for="input-img-5"><img src="" alt="" id="img"></label>
+														<a href="javascript:void(0)" class="close-btn"></a>
 													</div>
 												</div>
 											</div>
@@ -960,6 +965,13 @@
 
 	$(document).ready(function(){
 		Play.init();
+
+
+		$(".inp-file").change(function(){
+			var close_btn = $(this).closest('.filebox').find('.close-btn');
+			close_btn.show();
+		})
+
 	});
 
 
