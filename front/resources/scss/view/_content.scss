@@ -2202,7 +2202,7 @@ html.open-search{
                 border: 1px solid #e1e1e1;border-radius: 8px;position: relative;background: #fff;display: none;padding:15px 23px;
                 textarea.form-control{height: 82px;border: 0;box-shadow: none;padding: 0;}
                 input.form-control{height:84px;border: 0;box-shadow: none;padding: 0 100px 0 23px;background: transparent;}
-                .btn{height: 29px;padding-top: 3px;padding-left: 15px;padding-right: 15px;position: absolute;right: 23px;bottom: 50%;transform: translateY(50%);}
+                .btn{height: 29px;padding-top: 3px;padding-left: 15px;padding-right: 15px;position: absolute;right: 23px;bottom: 25%;transform: translateY(50%);}
                 &.active{width:95%;}
             }
             .reply-form-frame.active{
@@ -2257,7 +2257,6 @@ html.open-search{
             &::before{
                 display:none;
             }
-            .reply-form-frame{padding:0;}
             .bg{padding: 0;}
         }
     }

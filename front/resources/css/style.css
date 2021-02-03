@@ -3037,7 +3037,7 @@ html.open-search .club-summary { position: static; }
 
 .reply-form-frame input.form-control { height: 84px; border: 0; box-shadow: none; padding: 0 100px 0 23px; background: transparent; }
 
-.reply-form-frame .btn { height: 29px; padding-top: 3px; padding-left: 15px; padding-right: 15px; position: absolute; right: 23px; bottom: 50%; transform: translateY(50%); }
+.reply-form-frame .btn { height: 29px; padding-top: 3px; padding-left: 15px; padding-right: 15px; position: absolute; right: 23px; bottom: 25%; transform: translateY(50%); }
 
 .reply-form-frame.active { width: 95%; }
 
@@ -3086,8 +3086,6 @@ html.open-search .club-summary { position: static; }
 .reply .re-comment.re-modify { display: none; padding-left: 55px; margin-top: 0; }
 
 .reply .re-comment.re-modify::before { display: none; }
-
-.reply .re-comment.re-modify .reply-form-frame { padding: 0; }
 
 .reply .re-comment.re-modify .bg { padding: 0; }
 

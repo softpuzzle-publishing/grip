@@ -1179,11 +1179,7 @@
             else {
                 galleryTop.slideTo(gallerIndex);
             }
-        });
-        //갤러리 모달 닫힐때
-        $('#modal-play-gallery').on('hidden.bs.modal', function (e) {});
-        
-        
+        }); 
         //댓글 삭제하시겠습니까?
         $('[data-id=btn-comment-delete]').on('click',function(){
             $('#modal-comment-delete-confirm').modal('show');
@@ -1197,11 +1193,22 @@
         })
 
 
-        // $('[data-id=modify-btn]').on('click',function(){
-        //     var $q = $(this).closest('.q').find('.msg .text');
-        //     var $a = $(this).closest('.a.show').find('.msg .text');
-             
-        // });
+        $('[data-id=modify-btn]').on('click',function(){
+            var $q = $(this).closest('.q').find('.msg .text');
+            var comment = $(this).closest('.q').find('.re-comment.modify');
+            var $a = $(this).closest('.a.show .re').find('.msg .text');
+            var re_comment = $(this).closest('.a.show .re').find('.re-comment.re-modify');
+            if($q){
+                $q.hide();
+                comment.show();
+                // return;
+            }
+            if($a){
+                $a.hide();
+                re_comment.show();
+            }
+            
+        });
     </script>
 
 </body>
