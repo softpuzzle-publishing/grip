@@ -69,6 +69,7 @@ html.open-search{
             }
             .live-time{position:absolute;top:50px;left:33px;font-size:14px;color:#fff;font-weight: bold;
                 &.right{right:35px;left:inherit}
+                &.center{left:50%;top:65%;transform:translate(-50%, 0)}
             }
         }
     }

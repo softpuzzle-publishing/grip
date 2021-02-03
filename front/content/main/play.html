@@ -33,31 +33,17 @@
         <div class="container">
             <div class="content">
                 <div class="title-area">
-                    <div class="title">그립 앤드 플레이에서 <br>다양한 골퍼들과 네트워크를 만들어보세요</div>
+                    <div class="title">마음에 드는 플레이가 있나요? <br>어색함은 버리고 지금 신청하세요!</div>  
+                     
                     <a href="../play/play.html" class="btn btn-outline-primary min-width-150 btn-play-making">플레이 생성</a>
-                </div>
-                <div class="tab d-none d-lg-block">
-                    <ul class="nav nav-pills" role="tablist">
-                        <li class="nav-item active" role="presentation">
-                            <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-selected="true">라운드</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-selected="false">레슨 및 트레이닝</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-selected="false">여행</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#t4" role="tab" aria-selected="false">친목 및 커뮤니티</a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="result-top">
                     <div class="row justify-content-end align-items-end">
                         <div class="col-auto text-right">
                             <ul class="sort" data-sorting="asc">
-                                <li><a href="javascript:;" class="active">일정순</a></li>
-                                <li><a href="javascript:;">등록순</a></li>
+                                <li><a href="javascript:;" class="active">등록순</a></li>
+                                <li><a href="javascript:;">일정순</a></li>
+                                <li><a href="javascript:;">거리순</a></li>
                                 <li><a href="javascript:;">가격순</a></li>
                             </ul>
                         </div>
@@ -70,121 +56,50 @@
                                 <div class="img">
                                     <a href="../play/play_join.html" class="thumb">
                                         <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)">
-                                        <span class="d-day">D-5day</span>
+                                        <span class="notice text-danger d-sm-none">모집마감</span>
+                                        <span class="d-day"><span class="on-air"></span>D-5day</span>
+                                        <span class="live-time center">62:23:45</span>
                                     </a>
+                                    <div class="badge-box">
+                                        <span class="crown-badge"></span> 
+                                    </div>
                                 </div>
-                                <div class="summary">
-                                    <div class="info">
-                                        <div class="name">
-                                            <a href="../play/play_join.html" class="subject">싱글 플레이어! 베어크리크 춘천에서 모이자!</a>
-                                        </div>
-                                        <div class="place">
-                                            <span class="club">베어크리크 춘천 컨트리클럽</span>
-                                            <span class="distance">55km</span>
-                                        </div>
-                                        <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
-                                        <div class="date">
-                                            <i class="icon-calendar"></i> <span><em class="d-none d-sm-inline-block">시작일</em> 2020.05.05 06:00</span>
-                                            <i class="icon-personnel"></i> <span>4인</span>
-                                            <div class="host d-none d-sm-block"><!-- 주최자 pc용 -->
+                                <div class="layout">
+                                    <div class="summary">
+                                        <div class="info">
+                                            <div class="name">
+                                                <a href="../play/play_join.html" class="subject">싱글 플레이어! 베어크리크 춘천에서 모이자! 싱글 플레이어! 베어크리크 춘천에서 모이자!</a>
                                                 <div class="member">
                                                     <div class="profile">
                                                         <span>
-                                                            <img src="../../resources/images/icon-male.png" alt="홍길동님">
+                                                            <img src="../../resources/images/icon-male.png" alt="홍길동">
                                                         </span>
                                                     </div>
-                                                    <div class="plus">
-                                                        <span>+1</span>
-                                                    </div>
+                                                    <span class="nic">홍길동</span>
+                                                    <span class="distance d-sm-none">55km</span>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="util">
-                                    <div class="buttons">
-                                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
-                                    </div>
-                                    <div class="price">
-                                        <p>1인 참가비</p>
-                                        <strong>₩45,000</strong>
-                                    </div>
-                                    <div class="reserv">
-                                        <a href="../play/play_join.html" class="btn btn-primary btn-sm">자세히 보기</a>
-                                    </div>
-                                    <div class="host d-sm-none"> <!-- 주최자 mobile용 -->
-                                        <div class="member">
-                                            <div class="profile">
-                                                <span>
-                                                    <img src="../../resources/images/icon-male.png" alt="홍길동님">
-                                                </span>
+                                            <div class="place d-none d-sm-block">
+                                                <span class="club">베어크리크 춘천 컨트리클럽</span>
+                                                <span class="distance">55km</span>
+                                                <span class="etc">외<span>5</span>곳</span>
                                             </div>
-                                            <div class="plus">
-                                                <span>+1</span>
+                                            <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)- 드라이빙레인지, 필드레슨(9H)</div>
+                                            <div class="date">
+                                                <i class="icon-calendar"></i> <span><em class="d-none d-sm-inline-block"></em>12.30(목) 07:00 ~ 02.20(토) 18:00</span>
+                                                <i class="icon-personnel d-none d-sm-block"></i> <span class="d-none d-sm-block">4인 플레이</span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="box">
-                                <div class="img">
-                                    <a href="../play/play_join.html" class="thumb">
-                                        <img src="../../resources/images/001_oakvalley_cc_02_card.png" alt="" onload="setDirection(this)">
-                                        <span class="d-day">D-95day</span>
-                                    </a>
-                                </div>
-                                <div class="summary">
-                                    <div class="info">
-                                        <div class="name">
-                                            <a href="../play/play_join.html" class="subject">싱글 플레이어! 베어크리크 춘천에서 모이자!</a>
+                                    <div class="util">
+                                        <p class="notice text-danger d-none d-sm-block">모집마감</p>
+                                        <div class="remain-people">
+                                            <p>남은인원</p>
+                                            <strong><span class="text-primary">15</span>자리 남음</strong>
                                         </div>
-                                        <div class="place">
-                                            <span class="club">베어크리크 춘천 컨트리클럽</span>
-                                            <span class="distance">55km</span>
-                                        </div>
-                                        <div class="play"><span class="text-primary">골프레슨</span> - 드라이빙레인지, 필드레슨(9H)</div>
-                                        <div class="date">
-                                            <i class="icon-calendar"></i> <span><em class="d-none d-sm-inline-block">시작일</em> 2020.05.05 06:00</span>
-                                            <i class="icon-personnel"></i> <span>4인</span>
-                                            <div class="host d-none d-sm-block"><!-- 주최자 pc용 -->
-                                                <div class="member">
-                                                    <div class="profile">
-                                                        <span>
-                                                            <img src="../../resources/images/icon-male.png" alt="홍길동님">
-                                                        </span>
-                                                    </div>
-                                                    <div class="plus">
-                                                        <span>+1</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="util">
-                                    <div class="buttons">
-                                        <button type="button" class="share"><span class="sr-only">공유하기</span></button>
-                                    </div>
-                                    <div class="price">
-                                        <p>1인 참가비</p>
-                                        <strong>₩115,000</strong>
-                                    </div>
-                                    <div class="reserv">
-                                        <a href="../play/play_join.html" class="btn btn-primary btn-sm">자세히 보기</a>
-                                    </div>
-                                    <div class="host d-sm-none"> <!-- 주최자 mobile용 -->
-                                        <div class="member">
-                                            <div class="profile">
-                                                <span>
-                                                    <img src="../../resources/images/icon-male.png" alt="홍길동님">
-                                                </span>
-                                            </div>
-                                            <div class="plus">
-                                                <span>+1</span>
-                                            </div>
+                                        <div class="price">
+                                            <p>참가비</p>
+                                            <strong>1,200,000원</strong>
                                         </div>
                                     </div>
                                 </div>
@@ -192,8 +107,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="more">
+                    <a href="javascript:;"><span>더보기</span></a>
+                </div>
                 <div class="play-making">
-                    <span>원하시는 조건의 플레이가 없다고요?</span>
+                    <span>호스트가 되어 맘이 맞는 팀을 짜볼까요?</span>
                     <strong><a href="../play/play.html">플레이 만들기</a></strong>
                 </div>
             </div>

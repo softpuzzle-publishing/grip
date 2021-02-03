@@ -209,7 +209,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 @media (max-width: 991.98px) { .title-area .title { font-size: 24px; line-height: 1.42; }
   .title-area .desc { font-size: 16px; }
-  .title-area .btn-play-making { position: fixed; left: 0; bottom: 0; width: 100%; border-radius: 0; height: 50px; background-color: #00c784; border-color: #00c784; color: #fff; padding-top: 13px; }
+  .title-area .btn-play-making { display: none; }
   #center-block .title-area { margin-bottom: 40px; }
   .title-area.tab-is-next { margin-bottom: 25px; }
   .full-title-area { height: 126px; margin-top: -30px; margin-bottom: 30px; }
@@ -239,7 +239,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .profile { width: 60px; height: 60px; display: inline-block; position: relative; }
 
-.profile > span { display: block; width: 100%; height: 100%; overflow: hidden; position: relative; border-radius: 100%; background: #fff; }
+.profile > span { display: block; width: 100%; height: 100%; overflow: hidden; position: relative; border-radius: 100%; }
 
 .profile > span > img { width: 100%; height: 100%; object-fit: cover; vertical-align: top; }
 
@@ -982,7 +982,9 @@ html.open-search .search-area { -webkit-transform: translate(0) scale(1); -moz-t
 .modal-dialog.out .modal-alert-msg .desc { font-size: 16px; letter-spacing: -0.25px; color: #767676; margin-top: 8px; }
 
 @media (max-width: 991.98px) { .modal-dialog.scroll .modal-body { height: 300px; padding: 15px 20px 20px; }
-  .modal-dialog.scroll .modal-footer { padding: 20px; } }
+  .modal-dialog.scroll .modal-footer { padding: 20px; }
+  .modal-dialog.modal-play-join .modal-body { padding: 15px 25px; }
+  .modal-dialog.modal-play-join .modal-body .agree-wrap { padding: 0; } }
 
 .modal-share .modal-header .close { right: 20px; top: 20px; }
 
@@ -1573,6 +1575,8 @@ body.body-main #footer { display: block; }
 
 .club-list .summary .place .distance { font-size: 12px; color: #e02020; }
 
+.club-list .summary .place .etc { font-size: 14px; letter-spacing: -0.35px; color: #4f4f4f; margin-left: 5px; }
+
 .club-list .summary .play { font-size: 14px; color: #4f4f4f; margin-top: 7px; }
 
 .club-list .summary .date { display: flex; align-items: center; font-size: 14px; margin-top: 4px; color: #4f4f4f; }
@@ -1587,7 +1591,7 @@ body.body-main #footer { display: block; }
 
 .club-list .summary .hit { font-size: 10px; color: #b0b0b0; margin-top: 5px; }
 
-.club-list .util { flex: 0 0 auto; padding: 49px 20px 0 0; display: flex; flex-direction: column; justify-content: center; position: relative; }
+.club-list .util { flex: 0 0 auto; padding: 40px 20px 20px 0; display: flex; flex-direction: column; justify-content: center; position: relative; }
 
 .club-list .util .buttons { text-align: center; position: absolute; right: 24px; top: 11px; z-index: 1; }
 
@@ -1601,7 +1605,13 @@ body.body-main #footer { display: block; }
 
 .club-list .util .price-extra div { font-size: 12px; font-weight: 200; letter-spacing: -0.45px; line-height: 1.45; }
 
-.club-list .util .price p { font-size: 12px; margin-bottom: 2px; letter-spacing: 0; }
+.club-list .util .remain-people { margin-bottom: 5px; }
+
+.club-list .util .remain-people p { font-size: 12px; letter-spacing: 0; }
+
+.club-list .util .remain-people strong { display: block; font-size: 19px; letter-spacing: 0; }
+
+.club-list .util .price p { font-size: 12px; letter-spacing: 0; }
 
 .club-list .util .price strong { display: block; font-size: 19px; letter-spacing: 0; }
 
@@ -1637,7 +1647,27 @@ body.body-main #footer { display: block; }
 
 .club-list.detail .util { padding-right: 20px; }
 
-.club-list li.recommendation .img .thumb::after { content: '그립추천'; display: block; background: #ffca00; white-space: nowrap; color: #fff; text-align: center; padding: 6px 18px 0; height: 27px; border-radius: 9px 9px 0 0; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); }
+.club-list li.recommendation .img { position: relative; }
+
+.club-list li.recommendation .img .notice { font-size: 13px; font-weight: 500; position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); }
+
+.club-list li.recommendation .img .badge-box { position: absolute; top: 13px; left: 11px; }
+
+.club-list li.recommendation .img .crown-badge { width: 24px; height: 24px; background: url(../images/crown.png) no-repeat 50% 50%; background-size: contain; display: inline-block; }
+
+.club-list li.recommendation .layout { width: 100%; display: flex; justify-content: space-between; }
+
+.club-list li.recommendation .summary .name { display: flex; align-items: center; }
+
+.club-list li.recommendation .summary .name .subject { width: 450px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.club-list li.recommendation .summary .name .member { display: flex; align-items: center; }
+
+.club-list li.recommendation .summary .name .profile { width: 16px; height: 16px; }
+
+.club-list li.recommendation .summary .name .nic { font-size: 12px; font-weight: 500; letter-spacing: -0.3px; color: #a0a0a0; }
+
+.club-list li.recommendation .util .notice { font-size: 12px; font-weight: 500; position: absolute; top: 23px; }
 
 .club-list.step-1 .util .more-toggle { display: none; }
 
@@ -1697,7 +1727,23 @@ body.body-main #footer { display: block; }
   .club-list.in-receipt .img { width: 90px; }
   .club-list.in-receipt .summary { padding-left: 10px; padding-right: 6px; }
   .club-list.in-receipt .util { padding-right: 16px; }
-  .club-list li.recommendation .img .thumb::after { padding: 4px 10px 0; height: 17px; font-size: 10px; }
+  .club-list li.recommendation .img { position: relative; }
+  .club-list li.recommendation .img .notice { width: 100%; text-align: center; font-size: 13px; font-weight: 500; position: absolute; left: 50%; top: 35%; transform: translate(-50%, -50%); }
+  .club-list li.recommendation .img .badge-box { position: absolute; top: 13px; left: 11px; }
+  .club-list li.recommendation .img .crown-badge { width: 24px; height: 24px; background: url(../images/crown.png) no-repeat 50% 50%; background-size: contain; display: inline-block; }
+  .club-list li.recommendation .img .live-time.center { top: 56%; }
+  .club-list li.recommendation .layout { flex-flow: column; }
+  .club-list li.recommendation .summary .name { display: flex; align-items: center; }
+  .club-list li.recommendation .summary .name .subject { width: 150px; font-size: 16px; display: -webkit-box; height: 45px; line-height: 1.4; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: inherit; }
+  .club-list li.recommendation .summary .name .member { display: flex; align-items: center; }
+  .club-list li.recommendation .summary .name .profile { width: 16px; height: 16px; }
+  .club-list li.recommendation .summary .name .nic { font-size: 12px; font-weight: 500; letter-spacing: -0.3px; color: #a0a0a0; }
+  .club-list li.recommendation .summary .play { font-size: 14px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 230px; }
+  .club-list li.recommendation .summary .date { font-size: 14px; }
+  .club-list li.recommendation .util { padding: 0 10px 10px; flex-direction: row; text-align: left; justify-content: space-between; }
+  .club-list li.recommendation .util .notice { font-size: 12px; font-weight: 500; position: absolute; top: 23px; }
+  .club-list li.recommendation .util .remain-people strong { font-size: 16px; }
+  .club-list li.recommendation .util .price strong { font-size: 16px; }
   .club-list.detail .img { width: 90px; }
   .club-list.detail .summary { padding: 9px; }
   .club-list.detail .util { padding-right: 9px; }
@@ -2872,8 +2918,10 @@ html.open-search .club-summary { position: static; }
 
 .play-making strong { vertical-align: middle; color: #00c784; font-weight: 400; font-size: 19px; margin-left: 6px; }
 
-@media (max-width: 991.98px) { .play-making { padding-bottom: 45px; }
-  .play-making strong { font-size: 14px; } }
+@media (max-width: 991.98px) { .play-making { position: fixed; background-color: #00c784; width: 100%; left: 0; bottom: 0; display: flex; flex-flow: column; padding: 5px 0 15px 0; }
+  .play-making strong { font-size: 24px; font-weight: 500; }
+  .play-making span { color: #fff; font-size: 14px; letter-spacing: -0.22px; }
+  .play-making a { color: #fff; } }
 
 .play-join-top { background: rgba(244, 244, 244, 0.3); padding: 54px 0 81px; margin-top: -24px; }
 
@@ -2989,7 +3037,7 @@ html.open-search .club-summary { position: static; }
 
 .reply > ul > li:first-child { padding-top: 0; }
 
-.reply > ul > li + li { border-top: 1px dotted #b6b6b6; }
+.reply > ul > li + li { background-image: linear-gradient(to right, #b6b6b6 20%, rgba(255, 255, 255, 0) 20%); background-position: top; background-size: 8px 1px; background-repeat: repeat-x; }
 
 .reply .user { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
 
@@ -3015,7 +3063,7 @@ html.open-search .club-summary { position: static; }
 
 .reply .go { font-size: 12px; color: #a6a6a6; }
 
-.reply .more-toggle { position: absolute; right: 0; top: 10px; display: block; }
+.reply .more-toggle { position: absolute; right: 10px; top: 15px; display: block; }
 
 .reply .q { position: relative; }
 
@@ -3049,7 +3097,7 @@ html.open-search .club-summary { position: static; }
 
 .reply .a .re { position: relative; padding: 9px 23px; border-radius: 9px; background: rgba(244, 244, 244, 0.3); }
 
-.reply .a .re .msg .text { padding-left: 55px; }
+.reply .a .re .msg .text { padding-left: 55px; padding-bottom: 10px; }
 
 .reply .a .re + .re { margin-top: 15px; }
 
@@ -3205,7 +3253,7 @@ html.open-search .club-summary { position: static; }
 
 .profile-apply .summary .name span { display: inline-block; font-size: 19px; margin: 3px 0; font-weight: 300; letter-spacing: -0.5px; color: #4f4f4f; }
 
-.profile-apply .summary .name i { font-size: 12px; color: #e02020; }
+.profile-apply .summary .name .distance { font-size: 12px; color: #e02020; margin-left: 5px; }
 
 .profile-apply .summary .type { font-size: 14px; font-weight: 300; letter-spacing: -0.35px; color: #4f4f4f; margin-bottom: 3px; }
 
@@ -3275,6 +3323,8 @@ html.open-search #header-block { position: static; }
 .live-time { position: absolute; top: 50px; left: 33px; font-size: 14px; color: #fff; font-weight: bold; }
 
 .live-time.right { right: 35px; left: inherit; }
+
+.live-time.center { left: 50%; top: 65%; transform: translate(-50%, 0); }
 
 .play-list .info { padding: 10px; }
 
