@@ -145,8 +145,10 @@ html.open-mobile-menu{
     .copyright{
         color: #808080;margin-top: 25px;
         p{margin-bottom: 7px;}
+        span{margin-right:10px;display:inline-block;}
     }
     body.body-main &{display: block;}
+    body.body-util &{display: block;padding:80px 0;}
 }
 @include media-breakpoint-down(md) {
     #footer{
