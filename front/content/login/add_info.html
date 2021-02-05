@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>grip</title>
+	<link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+	<link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+	<script src="../../resources/plugin/jquery/jquery.min.js"></script>
+	<script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.js"></script>
+</head>
+
+<body class="body-center no-menu no-search"> <!-- 헤더 메뉴 없음 -->
+
+<div id="wrap">
+    <div id="header-block">
+		<!-- header include --> 
+    </div>
+    <div id="center-block">
+        <div class="container">
+			<div class="swiper-container" id="swiper-join">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area">
+								<div class="title">홍길동님의 골프이력 및 핸디캡</div>
+								<p class="desc">그립의 색다른 맞춤형 추천을 위해 프로필을 완성해주세요</p>
+							</div>
+							<div class="gender-select sm">
+								<label data-selected="male" class="on">
+									<div class="profile">
+										<span>
+											<img src="../../resources/images/icon-male.png" alt="남자">
+										</span>
+									</div>
+								</label>
+								<label data-selected="female">
+									<div class="profile">
+										<span>
+											<img src="../../resources/images/icon-female.png" alt="여자">
+										</span>
+									</div>
+								</label>
+							</div>
+							<div class="form-wrap">
+								<div class="form-row-line">
+									<label for="handi1" class="text-primary">골프를 시작한지 얼마나 되셨나요?</label>
+									<div class="row">
+										<div class="col-12">
+											<select name="" id="handi1">
+												<option value="" selected disabled hidden>1~3년</option>
+												<option value="">3~5년</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<label for="handi2" class="text-primary">핸디캡이 어떻게 되시나요?</label>
+									<div class="row">
+										<div class="col-12">
+											<select name="" id="handi2">
+												<option value="">No handicap</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-row-line">
+									<label for="handi3" class="text-primary">1년에 라운드는 얼마나 자주 나가시나요?</label>
+									<div class="row">
+										<div class="col-12">
+											<select name="" id="handi3">
+												<option value="">1~3회</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+                        <div class="agree-wrap">
+                            <strong>이용약관 동의</strong>
+                            <div class="agree-all">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="form0">
+                                    <label class="custom-control-label" for="form0">전체동의</label>
+                                </div>
+                            </div>
+                            <div class="agree-sub">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="form1">
+                                    <label class="custom-control-label" for="form1">서비스이용약관 (필수)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="form2">
+                                    <label class="custom-control-label" for="form2">개인정보취급방침 (필수)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="form3">
+                                    <label class="custom-control-label" for="form3">3자 제공동의 (필수)</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="form4">
+                                    <label class="custom-control-label" for="form4">위치기반서비스이용약관 (필수)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+						<div class="slide-min-height">
+							<div class="title-area mb-0">
+								<div class="title">회원님의 정보가 업데이트 되었습니다</div>
+								<p class="desc">새로워진 그립을 편하게 즐겨보세요!</p>
+							</div>
+							<div class="success-icon">
+                                <img src="../../resources/images/tm-04.png" alt="회원님의">
+                                <img src="../../resources/images/tm-03.png" alt="정보가" class="cross">
+                                <img src="../../resources/images/tm-02.png" alt="업데이트">
+                                <img src="../../resources/images/tm-01.png" alt="되었습니다" class="cross">
+							</div>
+							<div class="btn-area btn-area-join">
+								<a href="" class="btn btn-primary min-width-186">확인</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-step-area" data-step="0">
+				<div class="row justify-content-end">
+					<div class="col-auto">
+						<a href="1" class="btn-next"><span>다음</span></a>
+					</div>
+				</div>
+				<div class="row justify-content-between">
+					<div class="col-auto">
+						<a href="0" class="btn-prev"><span>이전</span></a>
+					</div>
+					<div class="col-auto">
+						<a href="2" class="btn-next"><span>다음</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<script>
+	var Join = {
+		/** 초기 로딩시 실행 */
+		init : function (){
+
+			swiperStep = new Swiper('#swiper-join', {
+				speed: 400,
+				spaceBetween: 0,
+				autoHeight: true,
+				allowTouchMove: false,
+				on: {
+					init: function () {
+
+					},
+					slideChange: function () {
+						$('.btn-step-area').attr('data-step',swiperStep.activeIndex);
+					}
+				}
+			});
+			/** 이벤트 */
+			Join.event();
+		},
+
+		/** 이벤트 */
+		event: function() {
+			//이전&다음 버튼 클릭
+			$('.btn-step-area a').on('click',function(e){
+				e.preventDefault();
+				//이전
+				if($(this).hasClass('btn-prev')){
+					swiperStep.slideTo(swiperStep.activeIndex-1);
+				}
+				//다음
+				else if($(this).hasClass('btn-next')){
+					swiperStep.slideTo(swiperStep.activeIndex+1);
+				}
+			});
+
+		},
+	}
+
+	$(document).ready(function(){
+        Join.init();
+	});
+
+
+</script>
+
+</body>
+</html>

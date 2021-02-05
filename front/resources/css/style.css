@@ -987,12 +987,18 @@ html.open-search .search-area { -webkit-transform: translate(0) scale(1); -moz-t
 
 .modal-dialog.login .modal-body { padding: 25px 60px 35px; }
 
+.modal-dialog.add-info .modal-content { height: 410px; }
+
+.modal-dialog.add-info .modal-body { padding: 43px 60px 35px; }
+
 @media (max-width: 991.98px) { .modal-dialog.scroll .modal-body { height: 300px; padding: 15px 20px 20px; }
   .modal-dialog.scroll .modal-footer { padding: 20px; }
   .modal-dialog.modal-play-join .modal-body { padding: 15px 25px; }
   .modal-dialog.modal-play-join .modal-body .agree-wrap { padding: 0; }
   .modal-dialog.login .modal-content { height: auto; }
-  .modal-dialog.login .modal-body { padding: 25px 20px 20px; } }
+  .modal-dialog.login .modal-body { padding: 25px 20px 20px; }
+  .modal-dialog.add-info .modal-content { height: auto; }
+  .modal-dialog.add-info .modal-body { padding: 25px 20px 20px; } }
 
 .modal-share .modal-header .close { right: 20px; top: 20px; }
 
@@ -3250,7 +3256,7 @@ html.open-search .club-summary { position: static; }
 
 .play-noti p span { display: inline-block; width: 20px; margin-left: -20px; }
 
-@media (max-width: 991.98px) { .modal-desc-join { font-size: 24px; } }
+@media (max-width: 991.98px) { .modal-desc-join { font-size: 23px; } }
 
 .modal .agree-check-wrap .custom-control { margin-bottom: 6px; }
 
@@ -3302,9 +3308,23 @@ html.open-search .club-summary { position: static; }
 
 .play-success .txt-danger { color: #a68a76; font-size: 14px; font-weight: 500; }
 
+@media (max-width: 991.98px) { .play-success { padding: 15px; }
+  .play-success ul li { font-size: 16px; padding-bottom: 10px; display: flex; }
+  .play-success ul li .ball { display: inline-block; width: 26px; height: 26px; margin-right: 15px; background-color: #00c784; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .play-success ul li .txt { width: 90%; }
+  .play-success .txt-danger { color: #a68a76; font-size: 14px; font-weight: 500; } }
+
+.modal-play-success .modal-content { padding: 0 0 45px 0; }
+
+.modal-play-success .modal-content.height-742 { height: auto; }
+
 .modal-play-success .modal-body { padding: 0; }
 
 .modal-play-success .modal-body .btn-area { margin-top: 25px; }
+
+@media (max-width: 991.98px) { .modal-play-success .modal-content { padding: 0 0 45px 0; }
+  .modal-play-success .modal-body { padding: 0; }
+  .modal-play-success .modal-body .btn-area { margin-top: 25px; } }
 
 .modal-play-enrollment .modal-header .desc { margin-top: 10px; }
 
@@ -3349,6 +3369,21 @@ html.open-search .club-summary { position: static; }
 .profile-apply .summary .point { display: flex; }
 
 .profile-apply .summary .point .level { margin-left: 23px; }
+
+.add-info .txt { font-size: 16px; color: #4f4f4f; letter-spacing: -0.25px; margin-top: 10px; }
+
+.add-info .profile-img { margin: 50px 0 67px 0; }
+
+.success-icon { display: flex; align-items: flex-start; margin: 130px 0 250px 0; }
+
+.success-icon img { padding: 0 7.5px; }
+
+.success-icon .cross { margin-top: 65px; }
+
+@media (max-width: 991.98px) { .add-info .profile-img { margin: 30px 0; }
+  .success-icon { display: flex; align-items: flex-start; justify-content: center; margin: 50px 0 100px 0; }
+  .success-icon img { padding: 0; width: 80px; height: 80px; }
+  .success-icon .cross { margin-top: 65px; } }
 
 body.body-main #header { position: fixed; z-index: 1; width: 100%; transition: all .35s .3s ease-in-out; }
 

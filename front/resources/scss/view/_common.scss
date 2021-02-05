@@ -1085,6 +1085,12 @@ html.open-search {
             padding: 25px 60px 35px;
         }
     }
+    &.add-info{
+        .modal-content{height:410px;}
+        .modal-body{
+            padding: 43px 60px 35px;
+        }
+    }
 }
 @include media-breakpoint-down(md){
     .modal-dialog{
@@ -1103,6 +1109,12 @@ html.open-search {
             }
         }
         &.login{
+            .modal-content{height:auto;}
+            .modal-body{
+                padding:25px 20px 20px;
+            }
+        }
+        &.add-info{
             .modal-content{height:auto;}
             .modal-body{
                 padding:25px 20px 20px;

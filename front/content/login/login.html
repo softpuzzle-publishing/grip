@@ -303,7 +303,24 @@
 		</div>
 	</div>
 </div>
-
+<!-- 추가정보 입력 -->
+<div class="modal" tabindex="-1" id="modal-new-info" data-backdrop="static">
+	<div class="modal-dialog modal-dialog-centered add-info">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="add-info text-center">
+					<p class="text-primary">그립이 더욱 새로워졌습니다!</p>
+					<p class="txt">회원님에게 꼭 맞는 정보를 한눈에, 더 쉽게 즐길 수 있도록<br class="d-none d-sm-block">
+						회원님의 프로필을 채워주세요~</p>
+					<img src="../../resources/images/m-icon.png" alt="프로필 이미지" class="profile-img">
+				</div>
+				<div class="text-center">
+					<a href="add_info.html" class="btn btn-primary min-width-150">다음</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
 	$(document).ready(function(){
 		var swiperStep = new Swiper('.swiper-container', {
@@ -368,6 +385,8 @@
 		});
 	});
 
+	// 추가정보 입력
+	$('#modal-new-info').modal('show');
 </script>
 
 </body>
