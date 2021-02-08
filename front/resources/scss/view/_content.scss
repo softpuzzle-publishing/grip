@@ -1789,7 +1789,6 @@ html.open-search{
             &::before{
                 content: '';width: 0;height: 0;border-style: solid;border-width: 0 3px 8px 3px;border-color: transparent transparent #e8faf4 transparent;position: absolute;left: 20px;top: -8px;
             }
-            .btn{float: right;}
         }
         &.read{
              > a{color: #a6a6a6;font-size: 300;}
