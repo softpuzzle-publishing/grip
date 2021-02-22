@@ -290,7 +290,7 @@ html.open-search{
 }
 
 #main{
-    .container{padding-left: 92px;padding-right: 92px;}
+    .container{padding-left: 92px;padding-right: 92px;position: relative;}
     .search{
         width: 442px;height: 35px;margin: 0 auto;position: relative;margin-top: 95px;
         a {width: 100%;height: 100%;display: block;color: #d3d3d3;letter-spacing: -0.6px; background-color: #f9f9f9;border: 1px solid #e4e4e4; border-radius: 30px; text-align: center;text-decoration: none;box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05);}
@@ -315,7 +315,7 @@ html.open-search{
     .nav{justify-content: center;}
     .datepicker-area{margin-top: 75px;}
     .ui-datepicker.ui-datepicker-multi{
-        width: 100% !important;position: relative;padding: 0 50px;background: transparent;
+        width: 100% !important;height:410px;position: relative;padding: 0 50px;background: transparent;
         .ui-datepicker-group{padding:0 50px;}
         .ui-datepicker-header{background: transparent;margin-top: 0;position: static;border-bottom: 0;height: auto;padding-left: 0;margin-bottom: 30px;}
         .ui-datepicker-title{font-size: 28px;color: #4a4a4a;letter-spacing: -0.49px;line-height: 1;}

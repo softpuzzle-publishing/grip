@@ -16,6 +16,9 @@ html,body{
 
 #center-block{
     padding-top: 28px;
+    &.join{height:850px;position: relative;
+        .container{height: 100%;}
+    }
     .container{max-width: 570px;}
     .max-width-670{max-width: 670px}
     .max-width-755{max-width: 755px}
@@ -60,7 +63,7 @@ html,body{
         ul{display: flex;align-items: center;padding-top:19px;}
         li{
             position: relative;display: flex;align-items: center;
-            a{font-size: 13px;font-weight: 400;letter-spacing: -0.23px;color: #979797;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);vertical-align: middle;}
+            a{font-size: 13px;font-weight: 400;letter-spacing: -0.23px;color: #979797;;vertical-align: middle;}
             & + li{margin-left: 10px;padding-left: 10px;}
             & + li::before{
                 content: '';display: block;width: 1px;height: 10px;background-color: #bbb;position: absolute;left: 0;top: 50%;margin-top: -5px;

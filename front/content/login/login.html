@@ -112,7 +112,8 @@
 						</div>
 					</div>
 				</div>
-				<p class="text-primary mt-2">인증되었습니다!</p>
+				<!-- <p class="text-primary mt-2 font-14">인증되었습니다!</p> -->
+				<p class="text-danger mt-2 font-14">인증번호를 입력해주세요!</p>
 				<div class="btn-bottom-right login">
 					<button type="button" class="btn btn-primary min-width-150" id="btn-find-id">아이디 찾기</button>
 				</div>
@@ -141,24 +142,25 @@
 						<p>thkim@mytutto.com</p>
 					</div> -->
 				</div>
-				<div class="btn-bottom-right">
+				
+				<div class="btn-bottom-right login">
 					<button type="button" class="btn btn-primary min-width-150">비밀번호 찾기</button>
 					<button type="button" class="btn btn-primary min-width-150">로그인</button>
 				</div>
-<!-- 				
-				<div class="btn-bottom-right">
+				<!-- <div class="btn-bottom-right login">
 					<button onclick="location.href='../join/join.html'" type="button" class="btn btn-primary min-width-150">회원가입</button>
 				</div>
-				<div class="btn-bottom-right">
+				<div class="btn-bottom-right login">
 					<button id="reset-password" type="button" class="btn btn-primary min-width-150">비밀번호 재설정</button>
 				</div> -->
 			</div>
+			
 		</div>
 	</div>
 </div>
 <!-- modal : 비밀번호 재설정 인증 -->
 <div class="modal" tabindex="-1" id="modal-pw">
-	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-dialog modal-dialog-centered login">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">비밀번호 재설정</h5>
@@ -202,10 +204,8 @@
 						</div>
 					</div>
 				</div>
-				<p class="text-primary mt-2">인증되었습니다!</p>
-				<p class="text-danger mt-2">인증번호를 입력해주세요</p>
-				<p class="text-danger mt-2">인증번호를 다시 확인해주세요</p>
-				<div class="btn-bottom-right">
+				<p class="text-primary mt-2 font-14">인증되었습니다!</p>
+				<div class="btn-bottom-right login">
 					<button type="button" class="btn btn-primary min-width-150" id="reset-password-success">비밀번호 재설정</button>
 				</div>
 			</div>
@@ -251,7 +251,7 @@
 </div>
 <!-- modal : 비밀번호 찾기 결과 -->
 <div class="modal" tabindex="-1" id="modal-pw-result">
-	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-dialog modal-dialog-centered login">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">비밀번호 재설정 </h5>
@@ -265,7 +265,7 @@
 					<div>비밀번호 재설정이 완료되었습니다<br>
 						로그인 페이지로 이동합니다</div>
 				</div>
-				<div class="btn-bottom-right">
+				<div class="btn-bottom-right login">
 					<button type="button" onclick="location.href='login.html'" class="btn btn-primary min-width-150">확인</button>
 				</div>
 			</div>
@@ -274,7 +274,7 @@
 </div>
 <!--modal 비밀번호 찾기 팝업 -->
 <div class="modal" id="modal-pw-find" tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-dialog modal-dialog-centered login">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">비밀번호 찾기</h5>
@@ -296,7 +296,7 @@
 				<div class="text-password">
 					입력해주신 이메일을 확인해주세요<br>해당 메일로 비밀번호 변경에 관한 안내 메일이 전송됩니다
 				</div>
-				<div class="btn-bottom-right">
+				<div class="btn-bottom-right login">
 					<button id="findPwBtn" type="button" class="btn btn-primary min-width-150" disabled>비밀번호 찾기</button>
 				</div>
 			</div>
