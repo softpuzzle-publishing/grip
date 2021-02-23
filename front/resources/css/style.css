@@ -42,6 +42,10 @@
 
 .min-height-0 { min-height: 0 !important; }
 
+.default-line { line-height: 1.5; }
+
+.font-12 { font-size: 12px; }
+
 .font-14 { font-size: 14px; }
 
 .custom-control-input:disabled ~ .custom-control-label { color: #ddd; }
@@ -411,9 +415,9 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .thumb img.horizontal { height: 100%; width: auto; }
 
-.time::before { content: ''; background: url("../images/time-01.svg") no-repeat 50% 50%; background-size: contain; width: 15px; height: 15px; display: inline-block; margin-right: 2px; transform: translateY(2px); }
+.time::before { content: ''; background: url("../images/time-01.svg") no-repeat 50% 50%; background-size: contain; width: 13px; height: 13px; display: inline-block; margin-right: 2px; transform: translateY(2px); }
 
-.time span { color: #00c784; font-size: 14px; }
+.time span { color: #00c784; font-size: 12px; }
 
 .rating-star { display: flex; align-items: center; }
 
@@ -574,7 +578,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .host .member .profile { width: 35px; height: 35px; }
 
-.host .member .profile span { box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); border: 1px solid #fff; }
+.host .member .profile span { box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2); }
 
 .host .member .plus { margin-left: -4px; position: relative; }
 
@@ -609,7 +613,7 @@ html.is-scrolled .go-top { bottom: 30px; }
 
 .ui-datepicker .ui-datepicker-next .ui-icon { background: url(../images/on-arr-right.svg) 50% 50% no-repeat; background-size: contain; width: 30px; height: 30px; margin: 0; position: static; }
 
-.ui-datepicker .ui-state-default { background: transparent; border: 0; text-align: center; font-weight: 200; margin: 0; }
+.ui-datepicker .ui-state-default { background: transparent; border: 0; text-align: center; font-weight: 200; margin: 0; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; }
 
 .ui-datepicker .ui-state-active { background: #00c784; color: #fff; border-radius: 0; }
 
@@ -740,7 +744,9 @@ html.open-search .search-area { -webkit-transform: translate(0) scale(1); -moz-t
 
 .review-form .editor { border: 1px solid #eee; height: 300px; box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05); border-radius: 8px; padding: 20px; position: relative; }
 
-.review-form .editor textarea { width: 100%; height: 100%; border: 1px solid #eee; border: 0; padding: 0; margin: 0; overflow: hidden; }
+.review-form .editor textarea { width: 100%; height: 100%; border: 1px solid #eee; border: 0; padding: 0; margin: 0; overflow: hidden; resize: none; font-weight: 200; }
+
+.review-form .editor textarea::placeholder { color: #d4d4d4; }
 
 .review-form .editor .length { position: absolute; right: 20px; bottom: 20px; font-size: 14px; letter-spacing: -0.08px; font-weight: 500; color: #9b9b9b; }
 
@@ -1006,7 +1012,7 @@ html.open-search .search-area { -webkit-transform: translate(0) scale(1); -moz-t
 
 .modal-share .modal-body { padding-left: 10px; padding-right: 10px; padding-top: 10px; }
 
-.share-wrap p { font-size: 19px; font-weight: 400; letter-spacing: -0.79px; text-align: center; margin-bottom: 20px; line-height: 1.4; }
+.share-wrap p { font-size: 16px; font-weight: 400; letter-spacing: -0.79px; text-align: center; margin-bottom: 20px; line-height: 1.4; }
 
 .share-wrap .toolbox { text-align: center; }
 
@@ -1705,7 +1711,11 @@ body.body-util #footer { display: block; padding: 80px 0; }
 
 .club-list .util .remain-people strong { display: block; font-size: 19px; letter-spacing: 0; }
 
+.club-list .util .price { line-height: 1.5; }
+
 .club-list .util .price p { font-size: 12px; letter-spacing: 0; }
+
+.club-list .util .price .greenfee { margin-top: 15px; }
 
 .club-list .util .price strong { display: block; font-size: 19px; letter-spacing: 0; }
 
@@ -2248,9 +2258,9 @@ html.open-search .club-summary { position: static; }
 
 .modal-gallery .modal-content { background: transparent; }
 
-.modal-gallery .modal-body { padding: 15px 0 0 0; }
+.modal-gallery .modal-body { padding: 67px 0 0 0; }
 
-.modal-gallery .close { float: none; position: absolute; right: 0; top: 0; opacity: 1; z-index: 1; }
+.modal-gallery .close { float: none; position: absolute; right: -70px; top: 0; opacity: 1; z-index: 1; }
 
 .modal-gallery .icon-close { background-image: url("../images/x-white.svg"); width: 18px; height: 19px; }
 
@@ -2272,7 +2282,9 @@ html.open-search .club-summary { position: static; }
 
 .gallery-thumbs .swiper-slide > div { cursor: pointer; width: 100%; height: 100%; opacity: 0.4; position: relative; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; border-radius: 7px; overflow: hidden; }
 
-.gallery-thumbs .swiper-slide > div::before { content: ''; border: 2px solid #00c784; position: absolute; left: 0; top: 0; right: 0; bottom: 0; border-radius: 7px; }
+.gallery-thumbs .swiper-slide > div::before { content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; border-radius: 7px; }
+
+.gallery-thumbs .swiper-slide.swiper-slide-thumb-active > div::before { border: 2px solid #00c784; }
 
 .gallery-thumbs .swiper-slide-thumb-active > div { opacity: 1; }
 
@@ -3264,7 +3276,7 @@ html.open-search .club-summary { position: static; }
 
 .modal .agree-check-wrap .custom-control { margin-bottom: 6px; }
 
-.text-password { color: #a68a76; line-height: 1.4; margin-top: 20px; }
+.text-password { color: #a68a76; line-height: 1.5; margin-top: 20px; }
 
 .downarea { margin-top: 56px; }
 
@@ -3374,7 +3386,7 @@ html.open-search .club-summary { position: static; }
 
 .profile-apply .summary .point .level { margin-left: 23px; }
 
-.add-info .txt { font-size: 16px; color: #4f4f4f; letter-spacing: -0.25px; margin-top: 10px; }
+.add-info .txt { font-size: 16px; color: #4f4f4f; letter-spacing: -0.25px; margin-top: 10px; line-height: 1.5; }
 
 .add-info .profile-img { margin: 50px 0 67px 0; }
 
@@ -3402,7 +3414,7 @@ html.open-search #header-block { position: static; }
 
 #nav { position: fixed; right: 156px; top: 50%; z-index: 70; transform: translateY(-50%); }
 
-#nav ul { border-right: 1px solid #c7c7c7; }
+#nav ul { border-right: 1px solid #c7c7c7; text-align: right; }
 
 #nav li { padding-right: 5px; position: relative; margin-top: 13px; }
 
@@ -3454,7 +3466,7 @@ html.open-search #header-block { position: static; }
 
 .live-time.center { left: 50%; top: 65%; transform: translate(-50%, 0); }
 
-.play-list .info { padding: 10px; }
+.play-list .info { padding: 10px; line-height: 1.5; }
 
 .play-list .subject { font-size: 19px; letter-spacing: -0.5px; padding-bottom: 10px; line-height: 1.45; position: relative; }
 

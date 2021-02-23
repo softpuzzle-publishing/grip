@@ -21,7 +21,7 @@ html.open-search{
 
 #nav{
     position: fixed;right: 156px;top: 50%;z-index: 70;transform: translateY(-50%);
-    ul{border-right: 1px solid #c7c7c7;}
+    ul{border-right: 1px solid #c7c7c7;text-align:right;}
     li{
         padding-right: 5px;position: relative;margin-top: 13px;
         a{color: #c7c7c7;}
@@ -73,7 +73,7 @@ html.open-search{
             }
         }
     }
-    .info{padding: 10px;}
+    .info{padding: 10px;line-height: 1.5;}
     .subject{
         font-size: 19px;letter-spacing: -0.5px;padding-bottom: 10px;line-height: 1.45;position: relative;
         &::after{content: '';display: block;width: 60px;height: 1px;background:$gray-dark;position: absolute;left: 0;bottom: 0;}
