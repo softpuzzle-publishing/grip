@@ -757,6 +757,7 @@
                 .tit{font-size: 19px;line-height: 1.16;color: #fff;font-weight: 500;text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);text-align: center;padding: 0 50px;}
             }
         }
+        .category.search{font-size:12px; margin-top: 10px;}
         .subject{font-size: 19px;font-weight: 400;margin-bottom: 5px;margin-top: 12px;letter-spacing: -0.5px;@include text-truncate();}
         .txt{@include text-truncate-multi(16px, 1.4, 2);}
         .date{line-height: 1.38;}
@@ -1057,7 +1058,7 @@ html.open-search{
         position: absolute;left: 0;top: 0;height: 2px;margin-top: -1px;transition: width 1.3s cubic-bezier(0.1, 0.76, 0.33, 0.99);background: $primary;
     }
     .progress-distance-point{
-        display: block;color: $primary;position: absolute;top: -68px;right: -35px;text-align: center;width: 70px;
+        display: block;color: $primary;position: absolute;top: -71px;right: -35px;text-align: center;width: 70px;
         strong{display: block;margin-bottom: 5px;font-weight: 500;}
         .icon-flg{content: '';display: inline-block;vertical-align: top;width: 28px;height: 48px;background: url('../images/flag-01.svg') no-repeat 50% 50%;background-size: contain;transform: translateX(10px);}
     }
@@ -1357,7 +1358,7 @@ html.open-search{
 }
 
 .review-in-profile{
-    > li{position: relative;border-bottom: 1px solid #e7e7e7;padding:50px 0;}
+    > li{position: relative;border-bottom: 1px dotted #e7e7e7;padding:50px 0 15px 0;}
     .club{
         display: flex;align-items: center;
         .img{margin-right: 12px;height: 76px;width: 119px;flex: 0 0 auto;}
@@ -2587,5 +2588,11 @@ html.open-search{
         .cross{margin-top: 65px;}
     }
 }
-
-
+.map-content{
+    margin-bottom:75px;
+}
+@include media-breakpoint-down(md){
+    .map-content{
+        margin-bottom:30px;
+    }
+}

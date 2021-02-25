@@ -26,6 +26,7 @@
 .default-line{line-height:1.5;}
 .font-12{font-size:12px;}
 .font-14{font-size:14px;}
+.none-shadow{box-shadow: none;}
 // 라디오 disabled
 .custom-control-input:disabled ~ .custom-control-label{color:#ddd;}
 .btn-white{background-color:#fff;color:$primary;}
@@ -313,6 +314,9 @@
     }
     &.table-style{
         .label-th{font-weight: 500;color: $secondary;}
+        &.myinfo{
+            .label-th{font-weight: 400;}
+        }
         .form-row-line{
             > .row{min-height: 83px;padding: 20px 0;}
             input.form-control.has-border{height: 40px;padding-left: 5px;padding-right: 5px;}
