@@ -378,7 +378,7 @@
         }
         .place{
             display: flex;align-items: center;margin-top: 20px;
-            .club{font-size: 14px;color: $gray-dark;letter-spacing: -0.35px;margin-right: 10px;}
+            .club{font-size: 14px;color: $gray-dark;letter-spacing: -0.35px;margin-right: 5px;}
             .distance{font-size: 12px;color: $danger;}
             .etc{font-size:14px;letter-spacing:-0.35px;color:#4f4f4f;margin-left: 5px;}
         }
@@ -460,7 +460,7 @@
         .summary{
             .name{
                 display:flex;align-items:center;
-                .subject{width:450px;
+                .subject{max-width:450px;width:auto;
                    overflow: hidden;white-space:nowrap;text-overflow:ellipsis;
                 }
                 .member{display:flex;align-items: center;display:inline-block;}
@@ -683,7 +683,7 @@
     padding: 50px 0;display:flex;align-items: center;justify-content: center;
     flex-flow: column;text-align: center;
     button{width:150px;height:35px;margin-top:50px;font-size:19px;font-weight: 500;}
-    p{color:#a1a1a1;font-size:19px;font-weight: 500;}
+    p{color:#a1a1a1;font-size:19px;font-weight: 400;}
     span{font-size:14px;color:#a1a1a1;margin-top:15px;}
 }
 @include media-breakpoint-down(md){
@@ -1789,8 +1789,8 @@ html.open-search{
     li{
         .d-flex{align-items: center;padding: 25px 0;}
         .category{width: 120px;padding-right: 30px;}
-        .title{padding-right: 5px;font-weight: 500;}
-        .date{font-size: 14px;}
+        .title{padding-right: 5px;font-weight: 400;}
+        .date{font-size: 14px;font-weight: 300;}
 
         .details{
             display: none;margin: 0 70px 30px 30px;position: relative;background: #e8faf4;padding: 20px 30px;border-radius: 8px;line-height: 1.45;
@@ -1870,7 +1870,10 @@ html.open-search{
     .row.row-image-thumb{margin-top: 25px;}
     .form-row-line{
         position: relative;padding-left: 0;
-        .tit{font-size: 12px;color: $primary;display: block;}
+        &.padd{padding:0 23px;}
+        .tit{font-size: 12px;color: $primary;display: block;
+            &.people{padding: 0 23px;}
+        }
         .form-control.has-border{margin-top: 10px;}
     }
     .col-auto{
@@ -1892,6 +1895,10 @@ html.open-search{
             p{font-size: 18px;margin-top: 10px;}
             .unit{margin-right: 0;}
         }
+        .form-row-line.padd{padding:0;
+            .tit.people{padding:0;}
+        }
+
     }
 }
 
@@ -1978,17 +1985,23 @@ html.open-search{
 .play-type-box{
     border: 1px solid #fff;border-radius: 8px;min-height: 180px;display: none;transition: all .2s .6s;
     .details{
-        padding: 18px 27px;
+        padding: 18px 20px 18px 27px;
         p{color: $primary;margin-bottom: 15px;}
     }
     .last-radio{
         width:100%;
         label{width:10%;}
     }
+    .etc-box{width:100%;
+        .custom-control{width:100%;}
+        label{width:7%}
+        .form-control{height:40px;}
+    }
+    
     .etc{width:100%;border:0;border-bottom:1px solid #dedede;height:30px;}
-    .custom-control-inline{margin-right: 18px;}
+    .custom-control-inline{margin-right: 20px;}
     .custom-control-inline + .custom-control-inline{margin-left: 0;}
-    .custom-control{padding-left: 40px;}
+    .custom-control{padding-left: 30px; padding-bottom:7px;}
     .custom-control-label{
         &::after,
         &::before{width: 25px;height: 25px;left: -32px;top: -3px;}
@@ -1998,6 +2011,17 @@ html.open-search{
     }
     .controls{
         display: flex;flex-wrap: wrap;align-items: center;height: 70px;
+    }
+    &.round{min-height:154px;
+        .custom-control-inline{margin-right: 40px;}
+    }
+    &.training{min-height: 185px;}
+    &.trip{min-height:154px;
+        .custom-control-inline{margin-right: 45px;}
+    }
+    &.community{min-height:154px;}
+    &.price{min-height: 185px;
+        .custom-control-inline{margin-right:28px;}
     }
 }
 @include media-breakpoint-down(md) {
@@ -2021,7 +2045,12 @@ html.open-search{
             height: auto;margin: -3px 0;
             textarea.form-control{height: 63px;padding: 9px 12px;}
         }
+        .etc-box{
+            label{width:15%;}
+            .form-control{height:35px;}
+        }
     }
+    .m-none-margin{margin-right:0;margin-left:0;}
 }
 
 .play-program{
@@ -2442,7 +2471,7 @@ html.open-search{
 
 .upload-img{
     .txt-main{width:100%;position: absolute;left:50%;transform: translate(-50%, 0);
-        font-size:12px;color:$secondary;font-weight: 500;}
+        font-size:12px;color:$secondary;font-weight: 500;margin-top: 10px;}
 }
 .filebox{
     position: relative;margin-top: 10px;padding:0 7.5px;
@@ -2464,7 +2493,7 @@ html.open-search{
     }
     .close-btn{
         width: 10px;height:10px;background: url(../images/x-black.svg) no-repeat 50% 50%;
-        position: absolute;display:none;top:10px;right:10px;
+        position: absolute;display:none;top:10px;right:20px;
     }
 }
 @include media-breakpoint-down(md){

@@ -168,7 +168,7 @@
 
 .cs-loader-inner label:nth-child(1) { -webkit-animation: lol 3s 500ms infinite ease-in-out; animation: lol 3s 500ms infinite ease-in-out; }
 
-.go-top { position: fixed; right: 30px; bottom: -100px; z-index: 100; transition: all 0.2s .3s; }
+.go-top { position: fixed; right: 30px; bottom: -100px; z-index: 100; transition: all 0.2s .3s; opacity: 0; }
 
 .go-top > a { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; justify-content: center; align-items: center; align-content: center; width: 50px; height: 50px; border-radius: 25px; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1); background-color: #00c784; }
 
@@ -176,7 +176,7 @@
 
 .go-top > a span:before { content: ''; background: url("../images/top-arr.svg") 50% 50% no-repeat; display: block; width: 10px; height: 6px; background-size: 100% auto; margin: 0 auto 3px; }
 
-html.is-scrolled .go-top { bottom: 30px; }
+html.is-scrolled .go-top { bottom: 30px; opacity: 1; }
 
 @media (max-width: 991.98px) { .go-top { right: 16px; }
   .go-top > a { width: 40px; height: 40px; }
@@ -1675,7 +1675,7 @@ body.body-util #footer { display: block; padding: 80px 0; }
 
 .club-list .summary .place { display: flex; align-items: center; margin-top: 20px; }
 
-.club-list .summary .place .club { font-size: 14px; color: #4f4f4f; letter-spacing: -0.35px; margin-right: 10px; }
+.club-list .summary .place .club { font-size: 14px; color: #4f4f4f; letter-spacing: -0.35px; margin-right: 5px; }
 
 .club-list .summary .place .distance { font-size: 12px; color: #e02020; }
 
@@ -1767,7 +1767,7 @@ body.body-util #footer { display: block; padding: 80px 0; }
 
 .club-list li.recommendation .summary .name { display: flex; align-items: center; }
 
-.club-list li.recommendation .summary .name .subject { width: 450px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.club-list li.recommendation .summary .name .subject { max-width: 450px; width: auto; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
 .club-list li.recommendation .summary .name .member { display: flex; align-items: center; display: inline-block; }
 
@@ -1899,7 +1899,7 @@ body.body-util #footer { display: block; padding: 80px 0; }
 
 .none-club button { width: 150px; height: 35px; margin-top: 50px; font-size: 19px; font-weight: 500; }
 
-.none-club p { color: #a1a1a1; font-size: 19px; font-weight: 500; }
+.none-club p { color: #a1a1a1; font-size: 19px; font-weight: 400; }
 
 .none-club span { font-size: 14px; color: #a1a1a1; margin-top: 15px; }
 
@@ -2801,9 +2801,9 @@ html.open-search .club-summary { position: static; }
 
 .accordion-list li .category { width: 120px; padding-right: 30px; }
 
-.accordion-list li .title { padding-right: 5px; font-weight: 500; }
+.accordion-list li .title { padding-right: 5px; font-weight: 400; }
 
-.accordion-list li .date { font-size: 14px; }
+.accordion-list li .date { font-size: 14px; font-weight: 300; }
 
 .accordion-list li .details { display: none; margin: 0 70px 30px 30px; position: relative; background: #e8faf4; padding: 20px 30px; border-radius: 8px; line-height: 1.45; }
 
@@ -2862,7 +2862,11 @@ html.open-search .club-summary { position: static; }
 
 .play-form .form-row-line { position: relative; padding-left: 0; }
 
+.play-form .form-row-line.padd { padding: 0 23px; }
+
 .play-form .form-row-line .tit { font-size: 12px; color: #00c784; display: block; }
+
+.play-form .form-row-line .tit.people { padding: 0 23px; }
 
 .play-form .form-row-line .form-control.has-border { margin-top: 10px; }
 
@@ -2883,7 +2887,9 @@ html.open-search .club-summary { position: static; }
   .play-form [class^=col] { padding-left: 10px; padding-right: 10px; }
   .play-form .col-12 { margin-bottom: 15px; }
   .play-form .col-auto p { font-size: 18px; margin-top: 10px; }
-  .play-form .col-auto .unit { margin-right: 0; } }
+  .play-form .col-auto .unit { margin-right: 0; }
+  .play-form .form-row-line.padd { padding: 0; }
+  .play-form .form-row-line.padd .tit.people { padding: 0; } }
 
 .address-form .tit.sup { font-size: 12px; color: #00c784; letter-spacing: -0.21px; margin-bottom: 25px; }
 
@@ -2949,7 +2955,7 @@ html.open-search .club-summary { position: static; }
 
 .play-type-box { border: 1px solid #fff; border-radius: 8px; min-height: 180px; display: none; transition: all .2s .6s; }
 
-.play-type-box .details { padding: 18px 27px; }
+.play-type-box .details { padding: 18px 20px 18px 27px; }
 
 .play-type-box .details p { color: #00c784; margin-bottom: 15px; }
 
@@ -2957,19 +2963,43 @@ html.open-search .club-summary { position: static; }
 
 .play-type-box .last-radio label { width: 10%; }
 
+.play-type-box .etc-box { width: 100%; }
+
+.play-type-box .etc-box .custom-control { width: 100%; }
+
+.play-type-box .etc-box label { width: 7%; }
+
+.play-type-box .etc-box .form-control { height: 40px; }
+
 .play-type-box .etc { width: 100%; border: 0; border-bottom: 1px solid #dedede; height: 30px; }
 
-.play-type-box .custom-control-inline { margin-right: 18px; }
+.play-type-box .custom-control-inline { margin-right: 20px; }
 
 .play-type-box .custom-control-inline + .custom-control-inline { margin-left: 0; }
 
-.play-type-box .custom-control { padding-left: 40px; }
+.play-type-box .custom-control { padding-left: 30px; padding-bottom: 7px; }
 
 .play-type-box .custom-control-label::after, .play-type-box .custom-control-label::before { width: 25px; height: 25px; left: -32px; top: -3px; }
 
 .play-type-box.show { border: 1px solid #00c784; display: block; }
 
 .play-type-box .controls { display: flex; flex-wrap: wrap; align-items: center; height: 70px; }
+
+.play-type-box.round { min-height: 154px; }
+
+.play-type-box.round .custom-control-inline { margin-right: 40px; }
+
+.play-type-box.training { min-height: 185px; }
+
+.play-type-box.trip { min-height: 154px; }
+
+.play-type-box.trip .custom-control-inline { margin-right: 45px; }
+
+.play-type-box.community { min-height: 154px; }
+
+.play-type-box.price { min-height: 185px; }
+
+.play-type-box.price .custom-control-inline { margin-right: 28px; }
 
 @media (max-width: 991.98px) { .play-type-box { min-height: inherit; }
   .play-type-box .last-radio label { width: 30%; }
@@ -2979,7 +3009,10 @@ html.open-search .club-summary { position: static; }
   .play-type-box .custom-control { padding-left: 32px; padding-top: 3px; padding-bottom: 3px; }
   .play-type-box .custom-control-label::after, .play-type-box .custom-control-label::before { width: 22px; height: 22px; left: -29px; top: -2px; }
   .play-type-box .controls { height: auto; margin: -3px 0; }
-  .play-type-box .controls textarea.form-control { height: 63px; padding: 9px 12px; } }
+  .play-type-box .controls textarea.form-control { height: 63px; padding: 9px 12px; }
+  .play-type-box .etc-box label { width: 15%; }
+  .play-type-box .etc-box .form-control { height: 35px; }
+  .m-none-margin { margin-right: 0; margin-left: 0; } }
 
 .play-program ol { counter-reset: item; }
 
@@ -3305,7 +3338,7 @@ html.open-search .club-summary { position: static; }
 
 .light-color { color: #d4d4d4; margin-right: 20px; }
 
-.upload-img .txt-main { width: 100%; position: absolute; left: 50%; transform: translate(-50%, 0); font-size: 12px; color: #a68a76; font-weight: 500; }
+.upload-img .txt-main { width: 100%; position: absolute; left: 50%; transform: translate(-50%, 0); font-size: 12px; color: #a68a76; font-weight: 500; margin-top: 10px; }
 
 .filebox { position: relative; margin-top: 10px; padding: 0 7.5px; }
 
@@ -3317,7 +3350,7 @@ html.open-search .club-summary { position: static; }
 
 .filebox label img { width: 100%; height: 100%; vertical-align: top; text-indent: 9999px; }
 
-.filebox .close-btn { width: 10px; height: 10px; background: url(../images/x-black.svg) no-repeat 50% 50%; position: absolute; display: none; top: 10px; right: 10px; }
+.filebox .close-btn { width: 10px; height: 10px; background: url(../images/x-black.svg) no-repeat 50% 50%; position: absolute; display: none; top: 10px; right: 20px; }
 
 @media (max-width: 991.98px) { .filebox { padding: 0 5px; }
   .filebox label { padding: 0 5px; width: 55px; height: 55px; } }

@@ -175,13 +175,13 @@
 }
 
 .go-top{
-    position: fixed;right:30px;bottom: -100px;z-index: 100;transition:all 0.2s .3s;
+    position: fixed;right:30px;bottom: -100px;z-index: 100;transition:all 0.2s .3s;opacity:0;
     > a{
         display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;justify-content: center;align-items: center;align-content: center;width: 50px;height: 50px;border-radius: 25px;box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);background-color: $primary;
         span{display: block;color: #fff;font-size: 15px;letter-spacing: -0.26px;font-weight: 200;text-align: center;}
         span:before{content: '';background: url('../images/top-arr.svg') 50% 50% no-repeat;display: block;width: 10px;height: 6px;background-size: 100% auto;margin: 0 auto 3px;}
     }
-    html.is-scrolled &{bottom: 30px;}
+    html.is-scrolled &{bottom: 30px; opacity: 1;}
 }
 @include media-breakpoint-down(md) {
     .go-top{
