@@ -2243,7 +2243,7 @@ html.open-search .club-summary { position: static; }
 
 .chart .chart-bar .x .hole.morethan1000 .bar { height: 112% !important; }
 
-.chart .chart-bar .x .hole.morethan1000 .bar:before { content: ''; display: block; background: url("../images/mm-01.svg") 50% 0 no-repeat; -webkit-background-size: 100% auto; background-size: contain; position: absolute; left: 0; top: 5%; width: 100%; height: 15px; }
+.chart .chart-bar .x .hole.morethan1000 .bar:before { content: ''; display: block; background: url("../images/mm-01.svg") 50% 0 no-repeat; -webkit-background-size: 100% auto; background-size: contain; position: absolute; left: 0; top: 5%; width: 100%; height: 15px; z-index: 1; }
 
 @media (max-width: 991.98px) { .chart { margin-top: 5px; }
   .chart .unit { font-size: 13px; }
@@ -2256,8 +2256,9 @@ html.open-search .club-summary { position: static; }
   .chart .chart-bar .x .hole { width: 11.1111%; padding: 0; display: block; }
   .chart .chart-bar .x .hole i { bottom: -20px; font-size: 12px; }
   .chart .chart-bar .x .hole em { font-size: 11px; bottom: -36px; }
-  .chart .chart-bar .x .hole .bar { width: 15px; }
+  .chart .chart-bar .x .hole .bar { width: 15px; margin: 0 auto; }
   .chart .chart-bar .x .hole .bar span { font-size: 11px; margin-left: -13px; margin-top: -18px; }
+  .chart .chart-bar .x .hole .bar .graph { width: 100%; }
   .chart .chart-bar .x .hole .bar:before { height: 8px; } }
 
 .modal-gallery .modal-dialog { max-width: 766px; }
@@ -3054,6 +3055,14 @@ html.open-search .club-summary { position: static; }
 .agree-check-wrap .custom-control { margin-bottom: 19px; }
 
 .agree-check-wrap.play { padding: 15px 0 0 25px; }
+
+.agree-check-wrap.play .custom-checkbox .custom-control-input:disabled ~ .custom-control-label.chk-all { color: #767676; }
+
+.agree-check-wrap.play .custom-checkbox .custom-control-input:disabled ~ .custom-control-label.chk-all::before { background-color: transparent; }
+
+.agree-check-wrap.play .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label.chk-all { color: #767676; }
+
+.agree-check-wrap.play .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label.chk-all::before { background-color: #00c784; }
 
 @media (max-width: 991.98px) { .agree-check-wrap .custom-control { margin-bottom: 5px; } }
 
