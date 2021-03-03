@@ -844,7 +844,7 @@ html.open-search {
 .review-form {
     margin-top: -30px;
     .editor{ border: 1px solid #eee;height: 300px;box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05);border-radius: 8px;padding: 20px;position: relative;}
-    .editor textarea {width: 100%; height: 100%; border: 1px solid #eee;border: 0;padding: 0;margin: 0;overflow: hidden;resize:none;font-weight:200;
+    .editor textarea {width: 100%; height: 100%; border: 1px solid #eee;border: 0;padding: 0;margin: 0;overflow: hidden;resize:none;font-weight:200;line-height:1.5;
         &::placeholder{color:#d4d4d4;}
     }
     .editor .length{position: absolute;right:20px;bottom:20px;font-size: 14px;letter-spacing: -0.08px;font-weight: 500;color: #9b9b9b;}

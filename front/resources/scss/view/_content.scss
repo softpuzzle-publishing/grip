@@ -443,7 +443,8 @@
     &.detail{
         .img{width:206px;}
         .summary{padding:20px;}
-        .util{padding-right:20px;}
+        .util{padding: 0 20px 0 0;}
+        .price{margin-bottom:5px;}
     }
     li.recommendation{
         // .img .thumb::after{
@@ -1103,13 +1104,13 @@ html.open-search{
                 em{font-style: normal;color: $secondary;font-size: 15px;font-weight: 500;display: block;position: absolute;left:0;bottom: -53px;width: 100%;}
                 .bar{width: 100%;height: 100%;position: relative;}
                 .graph{
-                    display: block;width: 30px;position: absolute;left:50%;bottom:0;-ms-transform: translate(-50%, 0);-webkit-transform:  translate(-50%, 0);transform:  translate(-50%, 0);background-color: $secondary;transition:all 0.15s;
+                    display: block;width: 30px;max-height:115%;position: absolute;left:50%;bottom:0;-ms-transform: translate(-50%, 0);-webkit-transform:  translate(-50%, 0);transform:  translate(-50%, 0);background-color: $secondary;transition:all 0.15s;
                     span{display: block;margin-top: -25px;font-size: 15px;color: $secondary;font-weight: 400;letter-spacing: -0.09px;width: 42px;margin-left: -6px;}
                 }
             }
             .hole.morethan1000{
                 .bar{height: 112% !important;}
-                .bar:before{content: '';display: block;background: url('../images/mm-01.svg') 50% 0 no-repeat;-webkit-background-size: 100% auto;background-size: contain;position: absolute;left:0;top:5%;width: 100%;height: 15px; z-index: 1;}
+                .bar:before{content: '';display: block;background: url('../images/mm-01.png') 50% 0 no-repeat;-webkit-background-size: 100% auto;background-size: contain;position: absolute;left:0;top:-7%;width: 100%;height: 11px; z-index: 1;}
             }
         }
     }
@@ -1918,7 +1919,10 @@ html.open-search{
 @include media-breakpoint-down(md) {
 
 }
-
+.modal-content.place{
+    height:510px;
+    .btn-area{position:absolute;bottom:30px;right:30px;}
+}
 .text-help-address{
     font-size: 14px;line-height: 1.64;color: #a00202;margin-top: 17px;
 }
@@ -2515,7 +2519,7 @@ html.open-search{
 .play-success{
     padding:15px 0 0 65px;
     ul{
-        li{font-size:16px;padding-bottom: 10px;display:flex;
+        li{font-size:16px;padding-bottom: 10px;display:flex;align-items:center;
             .ball{display:inline-block;width:26px;height:26px;margin-right:15px;background-color:$primary;border-radius: 50%;color: #fff;display:flex;
             align-items: center;justify-content: center;font-size:14px;}
             
@@ -2608,6 +2612,7 @@ html.open-search{
     .txt{font-size:16px; color:#4f4f4f; letter-spacing: -0.25px;margin-top:10px;line-height: 1.5;}
     .profile-img{margin:50px 0 67px 0;}
 }
+.slide-height{height:510px !important;}
 .success-icon{
     display:flex;align-items:flex-start;margin: 130px 0 250px 0;
     img{padding: 0 7.5px;}
